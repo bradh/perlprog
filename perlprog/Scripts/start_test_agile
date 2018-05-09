@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+#print " rm mhi.log dans 5 secondes "
+#sleep 5
+#rm -f mhi.log
+print "Démarrage de loc1_main dans 5 secondes"
+sleep 1
+print "Démarrage de loc1_main dans 4 secondes"
+sleep 1
+print "Démarrage de loc1_main dans 3 secondes"
+sleep 1
+print "Démarrage de loc1_main dans 2 secondes"
+sleep 1
+print "Démarrage de loc1_main dans 1 secondes"
+sleep 1
+print "Démarrage de loc1_main dans 0 secondes"
+
+loc1_main 120 > /dev/null 2>&1 &
+
+PID_MAIN=$!
+print $PID_MAIN
+ 
+host_test_driver c2_host_test_driver.conf > /dev/null 2>&1 &
+
+PID_C2_TEST=$!
+print $PID_C2_TEST
+
+host_test_driver host_test_driver_2.conf > /dev/null 2>&1 &
+
+PID_L16NCM_TEST=$!
+print $PID_L16NCM_TEST
+
+if [ $# -ne 0 ]
+ then 
+		TEST_DURATION=$1
+	else
+		TEST_DURATION=300
+fi
+
+while [ $TEST_DURATION -ne 0 ]
+do
+  
+	sleep 1
+	TEST_DURATION=$TEST_DURATION-1
+
+done
+
+kill -9 $PID_C2_TEST $PID_L16NCM_TEST $PID_MAIN
+
+print "Test terminé"

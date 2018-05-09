@@ -1,0 +1,14 @@
+#!/usr/bin/perl 
+#
+# use strict;
+# use Getopt;
+
+if ($ENV{PWD} =~ /\/(\w+)$/) {$nom = $1;}
+print "$nom\n";
+
+system ("viewer $nom.xdh $nom.res");
+system ("rm -f viewer*.*");
+system ("rm -f *.trt");
+system ("grep '*' loc1_main.log>errors.log");
+
+exit 0;

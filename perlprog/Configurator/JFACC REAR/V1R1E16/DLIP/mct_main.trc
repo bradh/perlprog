@@ -1,0 +1,141 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The mct_main.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [%D101% | NORMAL_DEBUG | %D101% | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+CSC_RTE                                 %D101%
+CSC_RTE_FULL_SOCKET_DUMP                %D102%
+CSC_OS                                  %D103%
+CSC_ADT                                 %D104%
+CSC_PERSISTENCE                         %D105%
+RTE_ACTIVE_QUEUE_BUS                    %D106%
+--
+-- Group :  2
+CSC_APU_MSG                             %D107%
+--
+-- Group :  4
+CSC_AC_COMMON_SERVICES                  %D108%
+CSC_KERNEL                              %D109%
+CSC_KERNEL_AC_API                       %D110%
+--
+-- Group :  5
+CSC_INIT_MIDS_CONNECTION                %D111%
+CSC_MIDS_INIT_AND_STATUS                %D112%
+CSC_TEST_AND_MONITORING                 %D113%
+CSC_MIDS_INIT_DATA_UPDATE               %D114%
+CSC_MIDS_IF_RECORDING                   %D115%
+CSC_JFT                                 %D116%
+CSC_MIDS_TIME                           %D117%
+--
+-- Group :  7
+ADT                                     %D118%
+AIRFIELD_STATUS_MGR                     %D119%
+C2_TO_C2_FLIGHT_PATH_MGR                %D120%
+CU_CHANGE_MGR                           %D121%
+CU_REPORT_MGR                           %D122%
+COMMAND_MGR                             %D123%
+CONFLICTS_MGR                           %D124%
+CONFLICTS_MGR_UTILITIES                 %D125%
+CORRELATION_MGR                         %D126%
+DLIP_DD                                 %D127%
+DL_MSG                                  %D128%
+DATA_UPDATE_REQUEST_MGR                 %D129%
+DB                                      %D130%
+EMERGENCY_STATUS_MGR                    %D131%
+EMERGENCY_STATUS_MGR_UTILITIES          %D132%
+EMISSION_MGR                            %D133%
+EMISSION_MGR_UTILITIES                  %D134%
+ENGAGEMENT_STATUS_MGR                   %D135%
+EXERCISE_STATUS_MGR                     %D136%
+FOM02_ANALYSER                          %D137%
+FILTER_ROUTE                            %D138%
+FILTER_ROUTE_UTILITIES                  %D139%
+FILTERING                               %D140%
+FLIGHT_PATH_MGR                         %D141%
+FORCE_TELL_STATUS_MGR                   %D142%
+FORCE_TELL_STATUS_MGR_UTILITIES         %D143%
+FREE_TEXT_MGR                           %D144%
+HANDOVER_MGR                            %D145%
+HOST_DD                                 %D146%
+HOST_CONVERTER                          %D147%
+HOST_MSG                                %D148%
+INDIRECT_PPLI_MGR                       %D149%
+INTERNAL_MSG                            %D150%
+QHSM_MGR                                %D151%
+L11_DD                                  %D152%
+FXM_PACKER                              %D153%
+L16_AIRFIELD_STATUS_MGR                 %D154%
+L16_CONVERSIONS                         %D155%
+L16_DD                                  %D156%
+L16_EMERGENCY_STATUS_MGR                %D157%
+L16_EMISSION_MGR                        %D158%
+L16_ENGAGEMENT_STATUS_MGR               %D159%
+L16_EXERCISE_STATUS_MGR                 %D160%
+L16_FILTER_ROUTE                        %D161%
+L16_FORCE_TELL_STATUS_MGR               %D162%
+L16_FREE_TEXT_MGR                       %D163%
+L16_MISSION_ASSIGNMENT_MGR              %D164%
+L16_PAIRING_MGR                         %D165%
+L16_PLATFORM_STATUS_MGR                 %D166%
+L16_R2_MGR                              %D167%
+L16_REMOTE_TRACK_DROP_MGR               %D168%
+L16_RECEIPT_COMPLIANCE_MGR              %D169%
+L16_STRENGTH_UPDATE_MGR                 %D170%
+L16_VECTOR_MGR                          %D171%
+LTN_SERVER                              %D172%
+LINK_CTRL                               %D173%
+MANUAL_TRANSMISSION_MGR                 %D174%
+MLK                                     %D175%
+MISSION_ASSIGNMENT_MGR                  %D176%
+MISSION_CORRELATOR_MGR                  %D177%
+MISSION_MNGT_MGR                        %D178%
+MSG_FLOW_TRACER                         %D179%
+MSG_QUEUE_MGR                           %D180%
+OBSERVERS                               %D181%
+OWN_UNIT_DATA_MGR                       %D182%
+PAIRING_MGR                             %D183%
+PARAMETERS_MGR                          %D184%
+PLATFORM_STATUS_MGR                     %D185%
+POINTER_MGR                             %D186%
+R2_MGR                                  %D187%
+R2_MGR_UTILITIES                        %D188%
+RECEIPT_COMPLIANCE_MGR                  %D189%
+REMOTE_TRACK_DROP_MGR                   %D190%
+SLAVE_MGR                               %D191%
+STRENGTH_UPDATE_MGR                     %D192%
+SUPERVISION_API                         %D193%
+SYSTN_LTN_ASSOCIATION_MGR               %D194%
+TARGET_CORL_MGR                         %D195%
+TARGET_MGR                              %D196%
+TRACK_IDENTIFIER_MGR                    %D197%
+TRACK_STATISTIC_MGR                     %D198%
+TRANSMISSION_STATUS_MGR                 %D199%
+VECTOR_MGR                              %D200%
+
+--
+-- Group :  9
+HOST_INTERFACE                          %D201%
+L16_CTRL                                %D202%
+OSIM_INTERFACE                          %D203%
+INTERFACE_CORE_ADAPTER                  %D204%
+SUPERVISION                             %D205%
+MCT_TIME                                %D206%
+RECORDER                                %D207%
+--
+-- Group :  11
+PRIORITY_MGR                            %D208%
+--
+-- Group :  17
+CSC_MIDS_INTERFACE_CORE_ADAPTER         %D209%
+CSC_MIDS_INTERFACE_ABSTRACT             %D210%
+CSC_MIDS_INTERFACE_MULTI_PLATFORM_D     %D211%
+--
+-- Group :  18
+DATA_BUS                                %D212%
+L16_DATA_BUS                            %D213%

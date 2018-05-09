@@ -1,0 +1,607 @@
+#!/usr/bin/perl -w
+# filterMessage permet le filtre et le tri des messages ADH AHD TDH THD FIM et FOM
+# entrant et sortant du DLIP
+# Cette version fonctionne avec le DLIP LOC1 version V2R0
+# Mise à jour le 8 octobre 2002 par S. Mouchot
+
+use Getopt::Std;
+
+my @TableauFiltre;
+my $FichierInput;
+my $heureDebut;
+my $minuteDebut;
+my $secondeDebut;
+my $chronoDebut;
+my $chronoFin;
+
+getopts("hf:r:");
+
+# print $ENV{PWDb;
+if ($opt_h) { 
+  print "filtreMessages [-f nom_fichier_filtre] [-r répertoire_fichier_sortie\n";
+  print "filtreMessages permet d'extraire les msg ADH, AHD, THD, TDH  du fichier mhi.log \n et les messages j du fichier loc1_main.log \n";
+  #foreach (@TableauFiltre) { print $_."\n"};
+  exit(0);
+}
+
+# lecture du fichier de filtrage
+
+my $FichierInput = "filtreMessage.flt";
+if($opt_f) { 
+  $FichierInput = "$opt_f";
+}
+
+$repOut=".";
+if($opt_r) { 
+  $repOut= "./$opt_r";
+}
+
+#### Sub-routines #####
+
+# "extractAdh permet d'extraire les msg ADH, TDH  du fichier mhi.log  .\n";
+
+sub extractAdh {
+
+$FichierInput = "mhi.log";
+
+open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree mhi.log\n";
+
+open Fout, ">$repOut/adh.rslt" or die "impossible de creer le fichier d'Ifom $repOut/Adh.rslt\n ";
+$label=0;
+$Msg_ID=999;
+while(<Fin>){
+	if($_ =~ /Msg_ID=(\d+), Cnx_ID=(\d+)\s==>/ && $label == 0) {$Msg_ID = $1;$Cnx_ID=$2;$label = 1}
+	if($_ =~ /^(\d+):(\d+):(\d+.\d+)\s(0000)(.*$)/ && $label == 1) {
+	  $label = 0;
+	  #print "$Msg_ID\n";
+	  $mess = "0001".$5;
+
+# correction du timer mhi.log de 0.5 sec
+
+		$SEC = ($1*60*60)+($2*60)+$3 + 0.5;
+		#print "$1:$2:$3\n";
+		#print "$SEC\n";
+		if($SEC =~ /^\d\./) { $SEC = "000".$SEC; }
+		if($SEC =~ /^\d\d\./) { $SEC = "00".$SEC;}
+		if($SEC =~ /^\d\d\d\./) { $SEC = "0".$SEC;}
+		print Fout "$SEC:ADH:$Msg_ID:Cnx_ID:$Cnx_ID:$mess\n";
+	 } 
+}
+
+close Fin;
+close Fout;
+
+}
+# selectAdh permet de selectionner les ADH du fichier adh.rslt
+
+sub selectAdh {
+  my $messageID = shift;
+  my $cnxID = shift;
+  my $FichierInput = "$repOut/adh.rslt";
+  my $fichierOutput = "$repOut/adh_$messageID\_cnx\_$cnxID.rslt";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree adh.rslt \n";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'Ifom $repOut/Adh.rslt\n ";
+  
+  while(<Fin>){
+    my @chrono = split ":", $_ ;
+    #print "$chrono[0]\n";
+    #$toto=isInTime($chrono[0]);
+    #print "$toto\n";
+    if($_ =~ /ADH:(\d+):Cnx_ID:(\d+)/ ) {
+      if ($1 == $messageID && ($2 == $cnxID || $2 == "000") && isInTime($chrono[0]) =~ /oui/) {
+	print Fout $_;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# selectAhd permet de selectionner les AHD du fichier ahd.rslt
+sub selectAhd {
+  my $messageID = shift;
+  my $cnxID = shift;
+  my $FichierInput = "$repOut/ahd.rslt";
+  my $fichierOutput = "$repOut/ahd_$messageID\_cnx\_$cnxID.rslt";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree ahd.rslt \n";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'Ifom $repOut/Ahd.rslt\n ";
+  while(<Fin>){
+    my @chrono = split ":", $_ ;
+    if($_ =~ /AHD:(\d+):Cnx_ID:(\d+)/) {
+      if ($1 == $messageID && $2 == $cnxID && isInTime($chrono[0]) =~ /oui/) {
+	print "$messageID".":"."$1";
+	print Fout $_;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# "extractAhd permet d'extraire les msg AHD, THD  du fichier mhi.log  .\n";
+sub extractAhd {
+  my $FichierInput = "mhi.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree mhi.log\n";
+  open Fout, ">$repOut/ahd.rslt" or die "impossible de creer le fichier d'Ifom $repOut/Ahd.rslt\n ";
+  my $Msg_ID=999;
+  my $label=0;
+  my $mess;
+  my $SEC;
+  while(<Fin>){
+    if($_ =~ /Msg_ID=(\d+), Cnx_ID=(\d+)\s<==/ && $label == 0) {
+      $Msg_ID = $1;$Cnx_ID = $2;$label=1;
+    }
+    if($_ =~ /^(\d+):(\d+):(\d+.\d+)\s(\d\d\d\d)(.*$)/ && $label == 1){
+      $label = 0;
+      $mess = "0002".$5;
+      #print "$Msg_ID:$Cnx_ID\n";
+      # correction du timer de mhi.log + 0.5 sec
+      
+      $SEC = ($1*60*60)+($2*60)+$3+0.5 ;
+      #print "$1:$2:$3\n";
+      #print "$SEC\n";
+      if($SEC =~ /^\d\./) {
+	$SEC = "000".$SEC; 
+      }
+      if($SEC =~ /^\d\d\./) {
+	$SEC = "00".$SEC;
+      }
+      if($SEC =~ /^\d\d\d\./) {
+	$SEC = "0".$SEC;
+      }
+      print Fout "$SEC:AHD:$Msg_ID:Cnx_ID:$Cnx_ID:$mess\n";
+    }
+    close Fin;
+    close Fout;
+  }
+}
+
+# "extractFom permet d'extraire les msg Fom du fichier log de loc1_main.\n";}
+sub extractFom {
+  my $fichierLog = "./loc1_main.log";
+  open Flog, "<$fichierLog" or die "impossible d'ouvrir le fichier de log";
+  open fIfom, ">$repOut/fom.rslt" or die "impossible de creer le fichier d'Ifom $repOut/Ifom.rslt";
+  my $ligne=0;
+  while(<Flog>){
+    if($_ =~ /^\+\s*(\d+\.\d+)\s+IFOM/) {
+      $SEC=$1;
+      if($SEC =~ /^\d\./) { $SEC = "000".$SEC; }
+      if($SEC =~ /^\d\d\./) { $SEC = "00".$SEC;}
+      if($SEC =~ /^\d\d\d\./) { $SEC = "0".$SEC;}
+    }
+    if($_ =~ /i(fom)_id:\s+(\d+).+ data:\s+(.*$)/){
+      $r1 = $1;
+      $r2 = $2;
+      $data = $3;
+      $data =~ s/\s//g; 
+      $data =~ s/^\d\d\d\d//;
+      #print $2;
+      print fIfom "$SEC:$r1:$r2:$data\n";
+    } 
+       close fIfom;
+       close Flog;  
+  }
+}
+# "extractFim permet d'extraire les msg Fom du fichier log de loc1_main.\n";}
+sub extractFim {
+  my $fichierLog = "./loc1_main.log";
+  open Flog, "<$fichierLog" or die "impossible d'ouvrir le fichier de log";
+  open fIfim, ">$repOut/fim.rslt" or die "impossible de creer le fichier d'Ifom $repOut/fim.rslt";
+  my $ligne=0;
+  while(<Flog>){
+    if($_ =~ /^\+\s*(\d+\.\d+)\s+EMITTING_IFIM/) {
+      $SEC=$1;
+      if($SEC =~ /^\d\./) { $SEC = "000".$SEC; }
+      if($SEC =~ /^\d\d\./) { $SEC = "00".$SEC;}
+      if($SEC =~ /^\d\d\d\./) { $SEC = "0".$SEC;}
+    }
+    if($_ =~ /i(fim)_id:\s+(\d+).+ data:\s+(.*$)/) {
+      $r1 = $1;
+      $r2 = $2;
+      $data = $3;
+      $data =~ s/\s//g; 
+      $data =~ s/^\d\d\d\d//;
+      #print $2;
+      print fIfim "$SEC:$r1:$r2:$data\n";
+    } 
+  }	 
+  close fIfim;
+  close Flog;
+}
+
+# "selectFom permet de selectionner les msg fomN du fichier fom.rslt.\n";}
+sub selectFom {
+  my $num = shift;
+  my $FichierInput = "$repOut/fom.rslt";
+  my $fichierOutput = "$repOut/fom_$num.rslt";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'Ifom $repOut/fom$num.rslt";
+  while(<Fin>){
+    #print $_;
+    my @chrono = split ":", $_ ;
+    if($_ =~ /:fom:(\d+):/) {
+      #print isInTime($chrono[0])."$1"."$chrono[0]"."\n";
+      if($num == $1 && isInTime($chrono[0]) =~ /oui/) {
+	print Fout $_ ;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# "selectFim permet de selectionner les msg fomN du fichier fim.rslt.\n";}
+sub selectFim {
+  my $num = shift;
+  my $FichierInput = "$repOut/fim.rslt";
+  my $fichierOutput = "$repOut/fim_$num.rslt";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'Ifim $repOut/Ifim.rslt";
+  while(<Fin>){
+    # print $_;
+    my @chrono = split ":", $_ ;
+    if($_ =~ /:fim:(\d+):/) {
+      if($num == $1 && isInTime($chrono[0]) =~ /oui/) {
+	print Fout $_ ;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# "selectJout permet de selectionner les msg J du fichier fom1.rslt.\n";}
+sub selectJout {
+  # paramètre du label et du sub label
+  my $mask_label = 0x007C;
+  my $lsb_label = 2;
+
+  my $mask_sublabel = 0x0380;
+  my $lsb_sublabel = 7;
+
+  my $FichierInput = "fom_1.rslt";
+
+  my $lbl = shift;
+  my $sbLbl = shift;
+
+  my $mess;
+
+  my $fichierOutput = "$repOut/J_$lbl\_$sbLbl\_in.rslt";
+
+  open Fin, "<$repOut/$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'fom $repOut/fom1.rslt";
+  my $j=20;
+  while(<Fin>){
+    if($_ =~ /fom:1:(.+)/) { $mess = $1;}
+    if($_ =~ /(^.*):fom:1:\w{$j}(\w{4})/) {
+      my $heure = $1;
+      
+      my $mot1 = hex $2; 
+      #print "mot : $mot1\n";
+      #$mot2 = $3;
+      $i = $lsb_label;
+      $label =  $mot1 & $mask_label; 
+      $label= $label>>$i;
+      #print $label; print "\n";
+      $i = $lsb_sublabel;
+      $sublabel = $mot1 & $mask_sublabel;
+      $sublabel = $sublabel>>$i;
+      #print $label . " :". $sublabel."\n";
+      # suppression de l'entete du fom
+      $mess =~ s/\w{$j}(\w+)/$1/;
+      if($label eq $lbl && $sbLbl eq $sublabel) {
+	print Fout "$heure:j:$label:$sublabel:$mess\n" ;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# "selectJin permet de selectionner les msg J du fichier fim1.rslt.\n";}
+sub selectJin {
+  # paramètre du label et du sub label
+  my $mask_label = 0x007C;
+  my $lsb_label = 2;
+
+  my $mask_sublabel = 0x0380;
+  my $lsb_sublabel = 7;
+  
+  my $lbl = shift;
+  my $sbLbl = shift;
+
+  my $FichierInput = "fim_1.rslt";
+  my $fichierOutput = "$repOut/J_$lbl\_$sbLbl\_out.rslt";
+
+  open Fin, "<$repOut/$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$fichierOutput" or die "impossible de creer le fichier d'fim $repOut/fim1.rslt";
+  my $j=32; 
+  while(<Fin>){
+    if($_ =~ /fim:1:(.+)/) { $mess = $1;}
+    if($_ =~ /(^.*):fim:1:\w{$j}(\w{4})/) {
+      $heure = $1;
+      $mot1 = hex $2; 
+      #print $mot1."mot1\n";
+      #$mot2 = $3;
+      $i = $lsb_label;
+      $label =  $mot1 & $mask_label; 
+      $label= $label>>$i;
+      #print $label; print "\n";
+      $i = $lsb_sublabel;
+      $sublabel = $mot1 & $mask_sublabel;
+      $sublabel = $sublabel>>$i;
+      #print $label . " :". $sublabel."\n";
+      # suppression de l'entete du fim
+      $mess =~ s/\w{$j}(\w+)/$1/;
+      if($label eq $lbl && $sbLbl eq $sublabel) {
+	print Fout "$heure:j:$label:$sublabel:$mess\n" ;
+      }
+    }
+  }
+  close Fin;
+  close Fout;
+  return $fichierOutput;
+}
+
+# extraction des alertes
+sub extractAlert {
+  my $FichierInput = "loc1_main.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$repOut/alert.rslt" or die "impossible de creer le fichier d'fom $repOut/alert.rslt";
+  while(<Fin>){
+    if($_ =~ /^\*\*\s/) {print Fout $_;}
+  }
+  close Fin;
+  close Fout;
+}
+# extraction des warning
+sub extractWarning {
+  my $FichierInput = "loc1_main.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$repOut/warning.rslt" or die "impossible de creer le fichier des warning $repOut/warning.rslt";
+  while(<Fin>){
+    if($_ =~ /^\*\s/) {print Fout $_;}
+  }
+  close Fin;
+  close Fout;
+}
+
+# extraction des erreurs
+sub extractError {
+  my $FichierInput = "loc1_main.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$repOut/error.rslt" or die "impossible de creer le fichier d'erreurs $repOut/error.rslt";
+  while(<Fin>){
+    if($_ =~ /^\*\*\*\s/) {print Fout $_;}
+  }
+  close Fin;
+  close Fout;
+}
+
+# extraction de la date du fichier log et calcule l'heure de début du log
+sub extractDate {
+  my $FichierInput = "loc1_main.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$repOut/date.rslt" or die "impossible de creer le fichier $repOut/date.rslt";
+  my $boucle = 0;
+  my $boucle2=1;
+  while(<Fin>) {
+    if($_ =~ /^\++\s(\d+.\d+)\s+SWITCH_TO_STATE_0/) {
+      $chrono = $1;
+      $boucle = 1;
+    }
+    else {
+      $dateDebut = "inconnue";
+      $heureDebut = 0;
+      $minuteDebut = 0;
+      $secondeDebut = 0;
+    }
+    if($_ =~ /(\d+\/\d+\/\d+) - (\d+):(\d+):(\d+)/ && $boucle && $boucle2){
+      
+      $dateDebut = $1;
+      $heureDebut= $2;
+      $minuteDebut = $3;
+      $secondeDebut = $4;
+      
+      convChrono($chrono);
+      $heureDebut = $heureDebut - $heure;
+      $minuteDebut = $minuteDebut - $minute;
+      $secondeDebut = $secondeDebut - $seconde;
+      
+      print Fout "Date:$dateDebut\n";
+      print Fout "Heure:$heureDebut\n";
+      print Fout "Minute:$minuteDebut\n";
+      print Fout "Seconde:$secondeDebut\n";
+      $boucle = 0;		
+      $boucle2 = 0;
+    }
+  }
+  close Fin;
+  close Fout;
+}
+
+# extraction de la version loc1
+sub extractVersion {
+  my $FichierInput = "loc1_main.log";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree";
+  open Fout, ">$repOut/version.rslt" or die "impossible de creer le fichier $repOut/version.rslt";
+  while(<Fin>) {
+    if($_ =~ /version/) {print Fout $_;}
+  }
+  close Fin;
+  close Fout;
+}
+
+# convertit un chrono en nombre d'heure de minute et de seconde
+sub convChrono {
+  my $chrono = shift;
+  # print "chron : $chrono \n";
+  $heure = int $chrono/3600;
+  # print "$heure\n";
+  $minute = int (($chrono - ($heure*3600))/60);
+  # print "$minute\n";
+  $seconde = $chrono - ($heure*3600) - ($minute *60);
+  # print "$seconde\n";
+  return;
+}
+
+# convertit une heure en chrono référence log
+sub convTime {
+  $heure = shift;
+  $minute = shift;
+  $seconde = shift;
+  
+  $chrono1 = $heure*3600 + $minute*60 + $seconde;
+  $chrono2 = $heureDebut*3600 + $minuteDebut*60 + $secondeDebut;
+  #print "heure : $heure\n";
+  #print "heure debut : $heureDebut\n";
+  #print "chrono2 : $chrono2\n";
+  return ($chrono1 - $chrono2);
+}
+
+# test si le chrono est compris entre chronoDebut et chronoFin
+
+sub isInTime {
+  $chronox = shift;
+  #print "chrono: $chronox \n";
+  #print "fin   : $chronoFin \n";
+  #print "debut : $chronoDebut) \n";
+  if ($chronox < $chronoFin && $chronox > $chronoDebut) { return "oui";}
+  else { return "non";}
+}
+
+# Main program
+if(!$opt_h){
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree filtreMessage.flt\n";
+  @TableauFiltre = ();
+  while(<Fin>){
+    if($_ =~ /^\#/ or length $_ ==1) {
+      next;
+    }
+    else {
+      chomp($_);
+      push @TableauFiltre, $_;
+      print $_."\n";
+    }
+  }
+  close Fin;
+
+  # extraction des fichiers de base
+  extractVersion();
+  extractDate();
+  extractAlert();
+  extractWarning();
+  extractError();
+  extractAdh();
+  extractAhd();
+  extractFom();
+  extractFim();
+  # filtrage des messages J TDH THD
+  my @TableauFichier;
+  my @Filtre;
+  # Calcul des variables $chronoDebut et $chronoFin
+  foreach (@TableauFiltre) {
+    @Filtre = split ":", $_;
+    if($Filtre[0] =~ /debut/) {
+      $chronoDebut = convTime($Filtre[1], $Filtre[2], $Filtre[3] );
+      print "chrono debut : $chronoDebut\n";
+    }
+    if($Filtre[0] =~ /fin/) {
+      $chronoFin = convTime($Filtre[1], $Filtre[2], $Filtre[3] );
+      print "chrono fin : $chronoFin\n";
+    }
+  }
+
+  selectFim("1");
+  selectFom("1");
+
+  foreach (@TableauFiltre){
+    @Filtre = split ":", $_;
+    #print $Filtre[0];
+    if ($Filtre[0] =~ /fim/) {
+      push @TableauFichier, selectFim($Filtre[1]);
+    }
+    if ($Filtre[0] =~ /fom/) {
+      push @TableauFichier, selectFom($Filtre[1]);
+    }
+    if ($Filtre[0] =~ /j/) {
+      push @TableauFichier, selectJout($Filtre[1], $Filtre[2]);
+      push @TableauFichier, selectJin($Filtre[1], $Filtre[2]);
+    }
+    if ($Filtre[0] =~ /dh/) {
+      push @TableauFichier, selectAdh($Filtre[1], $Filtre[3]);
+    }			
+    if ($Filtre[0] =~ /hd/) {
+      push @TableauFichier, selectAhd($Filtre[1], $Filtre[3]);
+    }
+  }
+
+  #### Concatenation des fichiers dans final.rslt
+  system ( "rm $repOut/final.rslt" );
+  foreach(@TableauFichier) {
+    print "$_\n";
+    # system"echo $_";
+    system("cat $_ >> $repOut/final.rslt ");
+  }
+
+  #### Tri chronologique de final.rslt dans finalsort.rslt
+  system("cat $repOut/final.rslt | sort -o $repOut/finalsort.rslt");
+
+  #### Conversion du fichier finalsort.rslt au format viewer finalsort.vwr
+  $FichierInput = "$repOut/finalsort.rslt";
+  open Fin, "<$FichierInput" or die "impossible d'ouvrir le fichier d'entree finalsort.rslt\n";
+  open Fout, ">$repOut/finalsort.vwr" or die "impossible de creer le fichier de sortie $repOut/finalsort.vwr\n ";
+  while (<Fin>) {
+    @TableauLigne = split ":", $_;
+    my $Imax = scalar @TableauLigne; # indice max du tableau
+    # print $Imax ."\n";
+    # print $TableauLigne[1];
+    if ($TableauLigne[1] eq "ADH" or $TableauLigne[1] eq "AHD") {
+      if ($TableauLigne[Imax-1] =~ /^\d{4}(.{4})(.*)/){
+	$toto = $2;
+	convChrono($TableauLigne[0]);
+	if ($seconde < 10) {
+	printf Fout ( "%02d:%02d:0%2.3f 0000$1$2\n", $heure, $minute, $seconde);
+      }
+	else {
+	  printf Fout ( "%02d:%02d:%2.3f 0000$1$2\n", $heure, $minute, $seconde);
+	}
+      }
+    }
+    elsif ($TableauLigne[1] == "fom") {}
+    elsif ($TableauLigne[1] == "fim") {}
+    elsif ($TableauLigne[1] == "j") {
+    	      my $hour = $tableauLigne[0];
+	      my $label = $tableauLigne[2];
+	      $label = hex $label;
+	      $label = "00$label";		
+	      $label = substr($label,-2,2);
+	      my $sub_label = $tableauLigne[3];
+	      $sub_label = hex $sub_label;
+	      $sub_label = "00$sub_label";		
+	      $sub_label = substr($sub_label,-2,2);
+	      my $j_message =  $tableauLigne[4];
+	      
+	      my $j_length = length $j_message;
+	      my $length = $j_length + 18;
+	      $length = hex $length;
+	      $length = "00000000$length";		
+	      $length = substr($length,-8,8);
+	      $j_message =~ s/(.{4})/$1 /g;
+	      print "$hour $length 0E $label $sub_label 00 0000 0000 0000 0000 0000 0000 0000 $j_message\n"; 
+	    }
+  }
+  close Fin;
+  close Fout;
+
+  #### Appel du viewer
+  system("viewer $repOut/finalsort.vwr $repOut/ouput.vwr");
+} 	
+exit(0);
+
+

@@ -1,0 +1,1015 @@
+<HTML xmlns:ms="urn:schemas-microsoft-com:xslt" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="http://alladin/namespace">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1; charset=UTF-16">
+<TITLE>STD_T_C2_L16_AT_MIDS_MNG_NOMINAL</TITLE>
+</HEAD>
+<H1 align="center">STD_T_C2_L16_AT_MIDS_MNG_NOMINAL</H1>
+<body><br><br><br><table border="1.0" rules="all" cellpadding="0" cellspacing="0">
+<tr>
+<td width="1000"><b><u>Titre du test</u> : </b>STD_T_C2_L16_AT_MIDS_MNG_NOMINAL</td>
+</tr>
+<tr>
+<td><b><u>MIDS Management &amp; configuration</u></b><br>This test deals with initialisation, control and monitoring of the equipments allowing the DLIP to interface to the TDL networks, particularly the MIDS terminal.<br>The MIDS is initialized by the TI through the chain TI / DLIP / SLP / RECORDER / MIDS.<br></td>
+</tr>
+<tr>
+<td><b><u>Nombre d'interfaces</u> : </b>4</td>
+</tr>
+</table><br><br><br><br><br><table border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col width="150">
+<col width="250">
+<col width="0">
+<col width="250">
+<col width="260" align="center">
+<col width="230" align="center">
+<col width="80" align="center">
+</colgroup>
+<tr align="center">
+<td align="left">Step</td>
+<td align="left">HOST</td>
+<td align="right">DLIP</td>
+<td align="right">LDT</td>
+<td align="center">Commentaires</td>
+<td align="center">Exigences</td>
+<td align="center">Result</td>
+</tr>
+<tr>
+<td colspan="7">
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 1</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">00:00:10.000 
+  THD441 CONNECTION REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH441 CONNECTION ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">CONNECTION REPORT = ACCEPTED<br>APP LOGICAL ID = 100<br>PROTOCOL = TCP SERVER<br>INTERNET ADDRESS = 3355513395<br>PORT = 10001<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:12.000 
+  THD400 APP INIT REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH400 APP INIT ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">CONNECTION REPORT = ACCEPTED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Connection Request</u><br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0275 : Receipt of a c- onnection request<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 2</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">00:00:20.000 
+  THD070 OPEN RESOURCE REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>PORT = 1024<br>RESOURCE TYPE = MIDS<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Open Resource Request</u><br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 3</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%"> </td>
+<td width="50%">
+<font size="2">DEM_CONFIG_VMF
+      to Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:00:20.002 
+  REP_CONFIG_VMF
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">
+       I
+      
+      to Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:00:20.004 
+  
+       I
+      
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">CR = Ok<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">DEM_ACT_HEURE
+      to Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:00:20.006 
+  REP_ACT_HEURE
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">CR = Ok<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:20.007 
+  DEM_CONFIG_VMF
+      from Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">REP_CONFIG_VMF
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td valign="top" width="50%"><br><font size="2">00:00:20.009 
+  
+       I
+      
+      from Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">
+       I
+      
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:20.011 
+  
+       I
+      
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">CR = Ok<br></font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">00:00:20.013 
+  DEM_CNX_TERM
+      from Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">DEM_CNX_TERM</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">REP_CNX_TERM
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:20.015 
+  REP_CNX_TERM
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr></table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Open TI server</u><br>The DLIP opens the TI server and the TI application connects with DLIP.<br><br>Upon reception of an "open MIDS resource request" from the host, the DLIP arms a timeout {timeout_rep_cnx_term} for the MIDS connection opening.<br><br><u>On the PC TI</u><br>Activate the net entry of the MIDS terminal via the item "Command -&gt; Terminal -&gt; Net Entry".<br>Update the MIDS Init data file via the item "Command -&gt; Terminal -&gt; Update ".<br><br><u>VMF Configuration</u><br>- Ex of a DEM_CONFIG_VMF to the SLP (configuration of all VMF)<br><br><u>FOM Configuration</u><br>- Ex of a DEM_CONFIG_FOM to the SLP (list of all FOM the DLIP wants to receive)<br><br><br><u>MIDS Time</u><br>- Ex of a DEM_ACT_HEURE to the SLP (activation of the transfer of the MIDS Hour to the DLIP clients via IND_ACT_HEURE)<br><br><u>VMF Configuration</u><br>- Rx of a DEM_CONFIG_VMF form the TI<br><br><u>FOM Configuration</u><br>- Rx of a DEM_SEL_FOM from TI (FOM List = 03, 27)<br>- Ex of a DEM_SEL_FOM to SLP (FOM List = 03, 27)<br><br><u>Connexion Opening Request</u><br>- Rx of a DEM_CNX_TERM from TI<br>- Ex of a DEM_CNX_TERM to SLP<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0015<br>STMARTHA_0600<br>STMARTHA_0605<br>STMARTHA_0610<br>STMARTHA_0615<br>STMARTHA_0620<br>STMARTHA_0625<br>STMARTHA_0630<br>STMARTHA_C2_MIDS_INIT_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 4</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%"> </td>
+<td width="50%">
+<font size="2">DEM_INS_SERV
+      to Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH070 OPEN RESOURCE ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>REPORT = OK<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = CONNECTED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>MIDS Registration</u><br>- Rx of DEM_INS_SERV form SLP (register FOM03 to receive IND_ETAT_TERM, FOM27 to receive Transmit_Mode)<br>- Ex of TDH070 (OK) in the timer Timeout_DEM_CNX_TERM<br>- Ex of a TDH068 (Connected)<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0015<br>STMARTHA_0600<br>STMARTHA_0605<br>STMARTHA_0610<br>STMARTHA_0615<br>STMARTHA_0620<br>STMARTHA_0625<br>STMARTHA_0630<br>STMARTHA_C2_MIDS_INIT_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 5</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" width="50%">
+<font size="2">00:00:21.000 
+  DEM_INS_SERV
+      from Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%">
+<font size="2">DEM_INS_SERV</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">Message Brut (IND_REP)
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:21.002 
+  Message Brut (IND_REP_APU)
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">IND_ETATRES
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:21.004 
+  IND_ETATRES
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">IND_ETAT_TERM
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:21.006 
+  IND_ETAT_TERM
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = INITIALIZED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Coarse Synchronization</u><br>- Rx of DEM_INS_SERV form the TI : register FOM03 to receive IND_ETAT_TERM<br>- Ex of DEM_INS_SERV to the SLP (only services whcih differ form the previous DEM_INS_SERV message are sent)<br><br>On reception of FOM03 from MIDS to the SLP (Etat_Fic_Init_Term = Valid_Data, Etat_Entree_Reseau = Coarse_Synchro_Achieved)<br>- Rx of IND_ETATRES from the SLP (ETAT_RES = 4 - Synchro Grossière terminée)<br>- Rx of IND_ETAT_TERM from the SLP (Coarse_Synchro, Valid_Data)<br><br><u>On the PC TI</u><br>Check that the MIDS terminal is set to " Coarse Synchronization Achieved ".<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0015<br>STMARTHA_0600<br>STMARTHA_0605<br>STMARTHA_0610<br>STMARTHA_0615<br>STMARTHA_0620<br>STMARTHA_0625<br>STMARTHA_0630<br>STMARTHA_C2_MIDS_INIT_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 6</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" width="50%">
+<font size="2">
+       I
+      
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">NUM FOM 175 = 27<br></font>
+</td>
+<td valign="top" width="50%">
+<font size="2">00:00:30.000 
+  
+       I
+      
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">NUM FOM 175 = 27<br></font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">IND_ETATRES
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:30.002 
+  IND_ETATRES
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">ETAT RES = Synchro Fine Term<br></font>
+</td>
+</tr><tr>
+<td valign="top" width="50%"><br><font size="2">IND_ETAT_TERM
+      to Host_Interface_1
+      to Host_Interface_1</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:30.004 
+  IND_ETAT_TERM
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr><tr>
+<td width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = OPERATIONAL RADIO SILENCE<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Fine Synchronization</u><br>On reception of a FOM27 from the MIDS to the SLP  (AP003 Transmit_Mode = TDMA_Silent)<br>- Rx of a IND_REC_FOM from the SLP (FOM27)<br>- Ex of a IND_REC_FOM to the TI (FOM27)<br><br>On recpetion of a FOM03 form the MIDS to the SLP (Etat_Fic_Init_Term = Valid_Data, Etat_Entree_Reseau = Fine_Synchro_Achieved)<br>- Rx of a IND_ETATRES from the SLP (Etat_Res = 3)<br>- Ex of a IND_ETATRES to the TI<br>- Rx of a IND_ETAT_TERM from the SLP (Fine_Synchro, Valid_Data)<br>- Ex of a IND_ETAT_TERM to the TI<br><br><u>On the PC TI</u><br>Check that the MIDS terminal is set to " Fine Synchronization Achieved ".<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0015<br>STMARTHA_0600<br>STMARTHA_0605<br>STMARTHA_0610<br>STMARTHA_0615<br>STMARTHA_0620<br>STMARTHA_0625<br>STMARTHA_0630<br>STMARTHA_C2_MIDS_INIT_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 7</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%"> </td>
+<td width="50%">
+<font size="2">00:00:45.000 
+  
+       I
+      
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">NUM FOM 175 = 27<br></font>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = OPERATIONAL<br></font>
+</td>
+<td valign="top" width="50%"><br><font size="2">00:00:45.001 
+  
+       I
+      
+      from Slp_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">NUM FOM 175 = 3<br></font>
+</td>
+</tr></table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>MIDS Operationnal</u><br>On reception of a FOM27 form the MIDS to the SLP (AP003 Transmit_Mode = Normal)<br>- Rx of IND_REC_FOM (FOM27) from SLP<br>- Ex of IND_REC_FOM (FOM27) to TI<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0015<br>STMARTHA_0600<br>STMARTHA_0605<br>STMARTHA_0610<br>STMARTHA_0615<br>STMARTHA_0620<br>STMARTHA_0625<br>STMARTHA_0630<br>STMARTHA_C2_MIDS_INIT_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 8</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">TDH072 INIT LINK ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK IDENTIFICATION = 2<br>REPORT = OK<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH069 TDL STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK TYPE = L16 AT<br>LINK IDENTIFICATION = 2<br>DATA LINK STATUS 2 = INITIALIZED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = CONNECTED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2">
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0262<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 9</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">TDH093 LINK CONTROL ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK IDENTIFICATION = 2<br>REPORT = OK<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH069 TDL STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK TYPE = L16 AT<br>LINK IDENTIFICATION = 2<br>DATA LINK STATUS 2 = OPERATIONAL RADIO SILENCE<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:01:59.885 
+  THD072 INIT LINK REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:09.860 
+  THD093 LINK CONTROL REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH069 TDL STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK TYPE = L16 AT<br>LINK IDENTIFICATION = 2<br>DATA LINK STATUS 2 = OPERATIONAL<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2">
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 10</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">00:02:30.000 
+  THD071 CLOSE RESOURCE REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH071 CLOSE RESOURCE ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>REPORT = NOK<br>DIAG 2 = PRIMITIVE PARAMETER ERROR<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Reject an "open MIDS resource</u><br>The purpose is to verify that DLIP rejects an "open MIDS resource request" from the host when this resource is already opened.<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_C2_MIDS_MNG_0015<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 11</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">00:03:00.000 
+  THD304 OWN UNIT DATA
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">OWN PLATFORM SYSTEM TN = 7<br>EMERGENCY INDICATOR = INDICATOR ON<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br>DISPLACED POSITION INDICATOR = INDICATOR ON<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br>LATITUDE = +9° 59' 60.000" Degrees<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br>LONGITUDE = +15° 0' 0.038" Degrees<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br>CONTROL CHANNEL = 100<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br>PLATFORM = 1<br>PARAMETER UPDATE INDICATOR = PARAMETER UPDATE<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH304 OWN UNIT DATA ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">REPORT = OK<br>EMERGENCY INDICATOR PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br>DISPLACED POSITION INDICATOR PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br>LATITUDE PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br>LONGITUDE PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br>CONTROL CHANNEL PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br>PLATFORM PARAMETER REPORT = PARAMETER SET TO REQUESTED VALUE<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">J2.5 
+       I
+      /E0/C1/C3/C4- Land (Ground) Point PPLI (Universal J)
+      to Link_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">SOURCE TRACK NUMBER = 7<br>DISPLACED POSITION INDICATOR = ACTUAL UNIT POSITION CONTAINED IN CONTINUA- TION WORD<br>EMERGENCY INDICATOR = EMERGENCY STATUS<br>GEODETIC POSITION QUALITY = &lt; OR = TO 282 FT<br>LAND (GROUND) PLATFORM = TROOP CONCENTRATION/UNIT<br>CONTROL CHANNEL = 100<br>LATITUDE 0.0103 MINUTE = +45° 0' 0.309" DEGREES<br>LONGITUDE 0.0103 MINUTE = +14° 59' 59.846" DEGREES<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:04:00.000 
+  THD071 CLOSE RESOURCE REQ
+      from Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>AP Change</u><br>For test purpose, eight initialization data files are present in the MIDS memory matching the eight sets of initialization data of the terminal.<br><br>The initialization data file used in this test (FAJT0005B-01-003_00170.idf) shall contain defaults values for the following Adaptable Parameters :<br>Emergency Indicator (AP060) = 0<br>Force Tell Indicator (AP061) = 0<br>Exercise Indicator (AP063) = 0<br>Displaced Position Indicator (AP062) = 0<br>Platform Activity (AP064) = 0 (No Statement, Unknown)<br>Land (Ground) PF = 0 (No Statement, Unknown)<br>Control Channel (AP281) = 127<br>LATITUDE (AP029) = 42°00'00" N<br>LONGITUDE (AP030) = 12°00'00" E<br>Voice Call Sign Indicator (AP386) = 0<br>Voice Call Sign (AP302) = 0<br>Voice Frequency Channel (AP303) = 0<br><br>Check that the modification of AP Parameters are taken into account in J2.5 DLIP PPLI. The J2.5 message is read on the L16 simulator interface used to simulate remote unit.<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_C2_MIDS_PARAM_0001<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 12</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = FAILURE<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH069 TDL STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">LINK TYPE = L16 AT<br>LINK IDENTIFICATION = 2<br>DATA LINK STATUS 2 = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Power off the MIDS terminal</u><br>A "resource status" (MIDS_FAILURE) message is transmitted periodically every 12 s by the DLIP to the host as soon as the TCP connection between MIDS and SLP is broken (MIDS powered off).<br><br>Verify that the MIDS FAILURE information is sent within 20 seconds.<br><br><u>Data link connection loss</u><br>Verify that the Link returns in L16 Off state.<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_0261a<br>STMARTHA_PERF_0005<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 13</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">TDH071 CLOSE RESOURCE ANS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>REPORT = OK<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">TDH068 RESOURCE STATUS
+      to Host_Interface</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">RESOURCE ID = 1<br>EQUIPMENT STATUS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2"><u>Close MIDS resource</u><br>The purpose is to verify that the DLIP automatically de-activate the MIDS resource and closes the TCP connection with it.<br>The DLIP closes the TI.<br><br>
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">STMARTHA_C2_MIDS_MNG_0010<br>
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</HTML>

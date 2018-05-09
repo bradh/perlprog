@@ -1,0 +1,3 @@
+#!/usr/bin/ksh
+kill -9 `psl|awk '{ print $1 }'`
+

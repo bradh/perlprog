@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DEPLOYMENT_PARAMETERS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Interfaces parameters -->
+	<INTERFACE_CONFIGURATION NAME="HMI"  
+	IP="127.0.0.1" 
+	PORT="2125"/>
+	<INTERFACE_CONFIGURATION NAME="DLIP"  
+	IP="192.168.0.255" 
+	PORT="14008"/>
+	<!--  DLIP => port listen = PORT +1 :: PORT Sender => PORT  -->
+	<!-- Links -->
+	<LINK_CONFIGURATION ID="1"
+	TYPE="L11" 
+	NAME="link L11" />
+	
+	<!-- Resources -->
+	
+	<RESOURCE_CONFIGURATION ID="1"  
+	NAME="MODEM1"  
+	TYPE="L11_MODEM"  
+	IP="127.0.0.1" 
+	PORT="1024">
+	<PLAT_PARAM URL="plat14.xml" /> 
+	</RESOURCE_CONFIGURATION>
+	
+		
+
+</DEPLOYMENT_PARAMETERS>

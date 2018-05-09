@@ -1,0 +1,42 @@
+Projet;0;0;IP@;0;0;TCP port;0;0;DLIP;mct_main.cfg;;TDL_ROUTER;mct_main.cfg;;TDL_ROUTER;tdl_router_main.cfg;
+Name;JFACC REAR;V1R1E16;I01;Toplink broadcast IP@;200.1.18.255;P01;MIDS interface;1024;0;0;0;T001;Own_Unit_System_TN;1
+TDL_ROUTER;VXRXEX;0;I02;Toplink IP@;200.1.18.60;P02;DLIP JREP internal link;2703;0;0;0;T002;Source_Node;60
+DLIP;VXRXEX;0;I03;Toplink remote @IP;127.0.0.1;P03;Host interface min;1030;0;0;0;T003;Source_Sub_Node_L16;206
+0;0;0;I04;MIDS @IP;200.1.18.33;P04;Host interface max;1039;0;0;0;T004;Source_Sub_Node_L11A;205
+0;0;0;I05;SIMPLE remote server 1;200.1.18.28;P05;Channel 4 server;50014;0;0;0;T005;Test_Mode;False
+0;0;0;I06;SLP_TCP_Address; 200.1.18.28;P06;Channel 4 client;50015;0;0;0;T006;Overall_Filter_Timeout;1.0
+0;0;0;I07;OSIM port;0;P07;Toplink persistant;3026;0;0;0;T007;K_LINKT_Active_Without_R2_Timeout;48.0
+0;0;0;I08;C2 Host port (DLIP);0;P08;SIMPLE technical;2399;0;0;0;T008;Hot_Data_Root_Dir;.
+0;0;0;0;0;0;P09;SIMPLE tactical;2400;0;0;0;T009;Ctrl_Data_Req_Timeout;1.0
+0;0;0;0;0;0;P10;DLP interface ;1025;0;0;0;T010;Max_Msg_In_Arcade_Buffer;200
+0;0;0;0;0;0;P11;SIMPLE remote server1;1061;0;0;0;T011;Max_Time_Before_Forcing_Recording;7
+0;0;0;0;0;0;P12;SIMPLE_IF_TACTICAL_PORT;0;0;0;0;T012;ACCS_LOC1_Centre_Name;ROUTEUR
+0;0;0;0;0;0;P13;SIMPLE_IF_TECHNICAL_PORT;0;0;0;0;T013;Switchover;FALSE
+0;0;0;0;0;0;P14;SIMPLE_IF_PORT;0;0;0;0;T014;Recording_File_Name;tdl_router_recording
+0;0;0;0;0;0;P15;JREP mngt link port;20777;0;0;0;T015;Recording_File_Max_Size;4
+0;0;0;0;0;0;P16;SLP_TCP_Port                ;5005;0;0;0;T016;Recording_Files_Max_Count;2
+0;0;0;0;0;0;P17;OSIM port;8200;0;0;0;T017;L16_MIDS_Recording;Logical_Recording
+0;0;0;0;0;0;P18;C2 Host port (DLIP);8202;0;0;0;T018;L16_JRE_Recording;Physical_Recording
+0;0;0;0;0;0;0;0;0;0;0;0;T019;L16_SIMPLE_Recording;No_Recording
+0;0;0;0;0;0;0;0;0;0;0;0;T020;MIDS_PLATFORM_Recording;No_Recording
+0;0;0;0;0;0;0;0;0;0;0;0;T021;MR_Routing_DLP_Indicator;True
+0;0;0;0;0;0;0;0;0;0;0;0;T022;MR_Routing_JRE_Indicator;True
+0;0;0;0;0;0;0;0;0;0;0;0;T023;MR_Routing_MIDS_Indicator;True
+0;0;0;0;0;0;0;0;0;0;0;0;T024;MR_Routing_SIMPLE_Indicator;True
+0;0;0;0;0;0;0;0;0;0;0;0;T025;Context_File;./DLIP_CONTEXT.xml
+0;0;0;0;0;0;0;0;0;0;0;0;T026;DLP_default_STN;112
+0;0;0;0;0;0;0;0;0;0;0;0;T027;Management_Configuration;Standalone
+0;0;0;0;0;0;0;0;0;0;0;0;T028;Routing_Config;normal
+0;0;0;0;0;0;0;0;0;0;0;0;T029;L16_Designator_Id;30
+0;0;0;0;0;0;0;0;0;0;0;0;T030;ISIS_Reception_Time_Out;60
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0

@@ -1,0 +1,172 @@
+NAME
+
+     ps -   display status of current processes 
+     
+
+SYNOPSIS
+
+     ps [afmnostxFT] [ r [ delay ] ] [ -p pid ] [ -u uid ] [ -g pgrp ] 
+     
+
+DESCRIPTION
+
+     ps displays the current status of processes in the system and shows
+     at the bottom of its display total memory used by the processes and
+     memory available (In the case of virtual memory it will show virtual
+     memory available). The statistics available for each process are as
+     follows: 
+     
+     pid                 Process ID number.
+     
+     tid                 Thread ID number. If this thread is not the
+                         initial thread of this process, the thread ID
+                         number is followed by a plus sign (+).
+     
+     ppid                Process ID of the parent process.
+     
+     pgrp                Process group number.
+     
+     pri                 System priority.
+     
+     text                Size of text (executable code) segment, in terms
+                         of 1KB units. If the text segment is being shared
+                         with another process displayed by ps, the text
+                         size is followed by an asterisk.
+     
+     stack               Size of the process stack segment.
+     
+     data                Size of the process data segment.
+     
+     sem                 Semaphore ID number on which process is waiting,
+                         if any.
+     
+     time                User and system time used so far by the thread if
+                         option t (includes thread IDs) is present.
+                         Otherwise, user and system time used so far by
+                         the process, given as follows:
+     
+                         ss.ss     Seconds (less than a minute)
+     
+                         mm:ss     Minutes and seconds (less than an hour).
+     
+                         hh:mm:ss  Hours, minutes and seconds (< 100 hours).
+     
+                         dd+hh:mm  Days, hours, and minutes (< 100 days).
+     
+                         ddddd+hh  Days and hours (at least 100 days).
+     
+     dev                 Control device of the process, as recorded in /dev.
+     
+     flags               Change value of process' (or thread's) flags.
+     
+     user                User name (based on effective user ID) of the
+                         process owner.
+     
+     S                   Current process state, one of
+     
+                         C         Currently executing process (will
+                                   usually be ps itself).
+     
+                         R         Ready to run, but not running.
+     
+                         S         Suspended by a signal (SIGSTOP,
+                                   SIGTSTP, SIGTTIN, or SIGTTOU).
+     
+                         W         Waiting on a semaphore for some resource.
+     
+                         B         New process awaiting completion of its
+                                   fork operation.
+     
+                         Z         Zombie waiting to be cleaned up by the
+                                   init process.
+     
+     name                Pathname of the executing process or thread.
+                         Currently, the operating system only maintains
+                         the first 32 bytes of the pathname.
+     
+     dlim                Current data size resource limit, in terms of 1KB
+                         units.
+     
+     d%                  Percentage of data size limit currently used.
+     
+     slim                Current stack size resource limit.
+     
+     s%                  Percentage of stack size limit currently used.
+     
+     smem                Shared memory pages in use, and number of shared
+                         memory regions. 
+     
+     files               Number of files currently open for this process
+                         or thread.
+     
+     By default, ps displays all processes with the same effective user ID
+     as the current real user ID. 
+     
+
+OPTIONS
+
+     a                   Includes processes owned by others.
+     
+     f                   Substitute the flags field for the dev field
+     
+     m                   Show memory usage display instead of normal
+                         system use display. This option provides the
+                         dlim, d%, slim, s%, and smem fields but leaves
+                         out sem, time, dev, user, and S.
+     
+     n                   Includes the operating system "null"
+                         pseudo-process in the output. The accumulated
+                         time for the null process is an indication of
+                         system idle time.
+     
+     o                   Includes the supervisor stack size and process
+                         state segment size in the stack and data size
+                         values.
+     
+     -p pid              Includes information for process pid.
+     
+     -g pgrp             Includes information for all processes with
+                         process group number pgrp.
+     
+     r delay             Tells ps to indefinitely repeat. The display
+                         (selected by the other options) is drawn at the
+                         top of the CRT. By default, ps waits 10 seconds
+                         between updates; delay may be given to increase
+                         or decrease the update frequency.
+     
+     s                   Substitute the sem field for the time field.
+     
+     t                   Includes thread IDs.
+     
+     -u uid              Includes information for all processes owned by
+                         user uid.
+     
+     x                   Includes processes, owned by you, with no control
+                         device.
+     
+     F                   Show the number of files currently open for each
+                         process or thread.
+     
+     T                   Includes stream tasks.
+     
+
+FILES
+
+     /dev/mem            memory device, used to get information about
+                         processes.
+     
+
+SEE ALSO
+
+     Utility Programs -  kill(1), who(1)
+     
+     System Calls     -  info(2)
+     
+
+DIAGNOSTICS 
+
+     Since ps cannot sample and display the status off all processes at
+     the speed at which the processes run, its accuracy is limited. 
+     
+
+[4]+  Stopped                 man ps

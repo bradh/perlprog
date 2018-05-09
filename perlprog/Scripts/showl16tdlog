@@ -1,0 +1,3 @@
+#!/usr/bin/ksh
+touch l16_test_driver.log
+tail -f l16_test_driver.log

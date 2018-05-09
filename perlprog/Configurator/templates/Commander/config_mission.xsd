@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="TopLink">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Core">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TDL_Kernel">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="DLP_DEFAULT_STN" type="unsignedInt_DLP_DEFAULT_STN" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="JREP">
+                                <xs:complexType>
+                                    <xs:sequence />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Remote_L11">
+                                <xs:complexType>
+                                    <xs:sequence />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="C2">
+                    <xs:complexType>
+                        <xs:sequence />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="unsignedInt_DLP_DEFAULT_STN">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="32267" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

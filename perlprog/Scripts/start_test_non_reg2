@@ -1,0 +1,65 @@
+#!/usr/bin/perl -w
+
+
+use Getopt::Std;
+
+getopts("hc:v:t:s:");
+
+my @TEST_LIST = (
+		 ("L16_SURV_NET_001",300)
+		 ("L16_SURV_NET_002",300)
+		 ("L16_SURV_TNM_001",300)
+		 ("L16_GEN_FTXT_001",300)
+		 ("L16_GEN_SR_001",300)
+		 ("L16_SURV_DPC_001",300)
+		 ("L16_SURV_DPC_002",300)
+		 ("L16_SURV_GEN_001",300)
+		 ("L16_SURV_IFF_001",300)
+		 ("L16_SURV_IFF_002",300)
+		 ("L16_SURV_IFF_003",300)
+		 ("L16_SURV_RSD_001",300)
+		 ("L16_SURV_STL_001",300)
+		 ("L16_SURV_THW_001",300)
+		 ("L16_CGA_HOVL_001",300)
+                 ("L16_CGA_HOVW_001",300)
+                 ("L16_CCM_PSS_001",300)
+                 ("L16_SURV_DUR_001",300)
+                 ("L16_SURV_ASS_001",300)
+                 ("L16_SURV_STC_001",300)
+                 ("L16_SURV_ESO_001",300)
+                 ("L16_SURV_CDO_001",300)
+                 ("L16_SURV_ALR_001",300)
+                 ("L16_SURV_CNF_001",300)
+                 ("L16_SURV_SUP_001",300)
+                 ("L16_SURV_TSD_001",300)
+                 ("L16_CGA_PRI_001",300)
+                 ("L16_SURV_R2_001",300)
+                 ("L16_SURV_POI_001",300)
+                 ("L16_SURV_FIL_001",300)
+                 ("L16_CTRL_FPA_001",300)
+                 ("L16_SURV_FILM_001",300)
+                 ("L16_SURV_FIL_002",300)
+                 ("L16_SURV_TNM_001",300)
+                 ("L16_SURV_TID_001",300)
+                 ("L16_CGA_COM_001",300)
+                 ("L16_CGA_RC_001",300)
+	       );
+my $REP_VERSION = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_CIBLE;
+my $CAT = 2;
+my $VERSION_DLIP = "v3r1e3";
+my $NOM_TEST;
+my $TIME = 300;
+
+for $NOM_TEST (@TEST_LIST) { 
+  #print "$NOM_TEST\n";
+  $REP_CIBLE = "$REP_VERSION/category$CAT/$VERSION_DLIP/$NOM_TEST";
+  chdir "$REP_CIBLE" or die "Impossible positionner le rep $REP_CIBLE\n";
+  $TOTO = `pwd`;
+  chomp $TOTO;
+  print "Repertoire de test $TOTO positionné \n";
+  system("start_test_local -c $CAT -v $VERSION_DLIP -t $NOM_TEST -s $TIME");
+}
+
+exit 0;
+

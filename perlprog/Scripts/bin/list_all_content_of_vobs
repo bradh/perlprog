@@ -1,0 +1,11 @@
+#!/bin/ksh
+
+alias ct=cleartool
+
+echo "Result will be in /tmp/vobcontent.txt"
+
+[ -f /tmp/vobcontent.txt ] && rm /tmp/vobcontent.txt
+for VOB in `ct lsvob | grep -v loc1_vob | awk '{print $2}'`
+do
+  ct find $VOB -all -type f -print | sed "s/@@$//" >> /tmp/vobcontent.txt
+done

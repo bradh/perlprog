@@ -1,0 +1,8 @@
+MIDS_Hostname               = %I02%
+MIDS_TCP_Port               = %P10%
+C2_Host_TCP_Server_Port     = %P16% 
+C2_Host_UDP_Receiving_Port  = 9101
+C2_Host_UDP_Sending_To_Port = 9103
+C2_Host_UDP_Sending_To_Host = 127.0.0.1
+OSIM_Host_Server_Port       = %P17%
+NTP_Sync_File               = %D001%

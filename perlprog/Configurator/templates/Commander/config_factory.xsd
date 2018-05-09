@@ -1,0 +1,1065 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="TopLink">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Core">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TDL_Kernel">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Are_PPLI_Reported_In_DCL_For_JRE_Links" type="Boolean" />
+                                        <xs:element name="ACCS_LOC1_Centre_Name" type="string_ACCS_LOC1_Centre_Name" />
+                                        <xs:element name="Ctrl_Data_Req_Timeout" type="float_Ctrl_Data_Req_Timeout" />
+                                        <xs:element name="Discrete_TCP_Port" type="unsignedInt_Discrete_TCP_Port" />
+                                        <xs:element name="DLIP_Remote_Address" type="ip_address" />
+                                        <xs:element name="DLP_Routing_mode" type="Coded_DLP_Routing_mode" />
+                                        <xs:element name="DTS_TCP_Port" type="unsignedInt_DTS_TCP_Port" />
+                                        <xs:element name="Host_Channel4_Recv_Port" type="unsignedInt_Host_Channel4_Recv_Port" />
+                                        <xs:element name="Host_Channel4_Send_Port" type="unsignedInt_Host_Channel4_Recv_Port" />
+                                        <xs:element name="Host_TCP_Port_Min_Host_TCP_Port_Max" type="unsignedInt_Host_Channel4_Recv_Port" />
+                                        <xs:element name="Host_UDP_Port_Min_Host_UDP_Port_Max" type="unsignedInt_Host_Channel4_Recv_Port" />
+                                        <xs:element name="Hot_Data_Root_Dir" type="string_Hot_Data_Root_Dir" />
+                                        <xs:element name="ISIS_Reception_Time_Out" type="unsignedInt_ISIS_Reception_Time_Out" />
+                                        <xs:element name="K_LINKT_Active_Without_R2_Timeout" type="float_K_LINKT_Active_Without_R2_Timeout" />
+                                        <xs:element name="L11A_Simu_UDP_Port" type="unsignedInt_Host_Channel4_Recv_Port" />
+                                        <xs:element name="L16_designator_Id" type="unsignedInt_Discrete_TCP_Port" />
+                                        <xs:element name="Live_Check_Send_Period" type="float_Live_Check_Send_Period" />
+                                        <xs:element name="Management_Configuration" type="Coded_Management_Configuration" />
+                                        <xs:element name="Max_Msg_In_Arcade_Buffer" type="unsignedInt_Max_Msg_In_Arcade_Buffer" />
+                                        <xs:element name="Max_Time_Before_Forcing_Recording" type="unsignedInt_Max_Time_Before_Forcing_Recording" />
+                                        <xs:element name="MIDS_TCP_Port" type="unsignedInt_Discrete_TCP_Port" />
+                                        <xs:element name="Monitor_Live_Check" type="Boolean" />
+                                        <xs:element name="MR_ROUTING" type="Boolean" />
+                                        <xs:element name="MR_Routing_DLP_Indicator" type="Boolean" />
+                                        <xs:element name="MR_Routing_JRE_Indicator" type="Boolean" />
+                                        <xs:element name="MR_Routing_MIDS_Indicator" type="Boolean" />
+                                        <xs:element name="MR_Routing_SIMPLE_Indicator" type="Boolean" />
+                                        <xs:element name="Network_Broadcast_Address" type="ip_address" />
+                                        <xs:element name="Overall_Filter_Timeout" type="float_Overall_Filter_Timeout" />
+                                        <xs:element name="ROUTING_FROM_HOST_TO_JRE" type="Boolean" />
+                                        <xs:element name="ROUTING_FROM_HOST_TO_MIDS" type="Boolean" />
+                                        <xs:element name="ROUTING_TO_HOST_FROM_JRE" type="Boolean" />
+                                        <xs:element name="ROUTING_TO_HOST_FROM_MIDS" type="Boolean" />
+                                        <xs:element name="Switchover" type="Boolean" />
+                                        <xs:element name="SwitchoverTimeout" type="float_SwitchoverTimeout" />
+                                        <xs:element name="Terminate_DLIP_Upon_ISIS_Lost" type="Boolean" />
+                                        <xs:element name="Test_Mode" type="Boolean" />
+                                        <xs:element name="SIMPLE_IF">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SIMPLE_IF">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="SIMPLE_IF_IP_ADDRESS" type="ip_address" />
+                                                                <xs:element name="SIMPLE_IF_NETWORK_DEBUG" type="Boolean" />
+                                                                <xs:element name="SIMPLE_IF_DEBUG" type="Boolean" />
+                                                                <xs:element name="SIMPLE_DEBUG" type="Boolean" />
+                                                                <xs:element name="SIMPLE_IF_TASK_PRIORITY" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="CORE_TECHNICAL">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="HOST_IP_ADDRESS" type="ip_address" />
+                                                                <xs:element name="HOST_PROTOCOL" type="Coded_HOST_PROTOCOL" />
+                                                                <xs:element name="HOST_PORT" type="Integer_HOST_PORT" />
+                                                                <xs:element name="HOST_DEBUG" type="Boolean" />
+                                                                <xs:element name="HOST_CONNECTION_TIMEOUT" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="HOST_CONNECTION_MAX_ERRORS" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="HOST_FREQUENCY_SIMPLE_CONNECTION_STATUS" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="HOST_FREQUENCY_SIMPLE_TIME_SYNC" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="CORE_TACTICAL_L11">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="HOST_IP_ADDRESS" type="ip_address" />
+                                                                <xs:element name="HOST_PROTOCOL" type="Coded_HOST_PROTOCOL" />
+                                                                <xs:element name="HOST_PORT" type="Integer_HOST_PORT" />
+                                                                <xs:element name="HOST_DEBUG" type="Boolean" />
+                                                                <xs:element name="SIMPLE_IF_PORT" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="HOST_CONNECTION_TIMEOUT" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="HOST_CONNECTION_MAX_ERRORS" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="SIMPLE">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="SIMPLE_PROTOCOL" type="Coded_SIMPLE_PROTOCOL" />
+                                                                <xs:element name="SIMPLE_IF_PORT" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_CONNECTION_TIMEOUT" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_SECURITY_LEVEL" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_L16_TYPE" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_L16_TERMINAL_ROLE" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_L16_TERMINAL_STN" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_L11_DTS_TYPE" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_L11_ROLE" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_PACKET_TYPE_1_ALLOWED" type="Boolean" />
+                                                                <xs:element name="SIMPLE_PACKET_TYPE_2_ALLOWED" type="Boolean" />
+                                                                <xs:element name="SIMPLE_PACKET_TYPE_5_ALLOWED" type="Boolean" />
+                                                                <xs:element name="SIMPLE_PACKET_TYPE_8_ALLOWED" type="Boolean" />
+                                                                <xs:element name="SIMPLE_PACKET_TYPE_10_ALLOWED" type="Boolean" />
+                                                                <xs:element name="SIMPLE_TIME_SYNCHRO_MODE" type="Coded_SIMPLE_TIME_SYNCHRO_MODE" />
+                                                                <xs:element name="SIMPLE_TIME_SYNCHRO_ALLOWED_DIFFERENCE" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_FREQUENCY_STATUS_CONFIGURATION" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_FREQUENCY_STR_TIME_SYNCHRO" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_EXERCISE_OFFSET" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="SIMPLE_MODE_MBM" type="Boolean" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="midsRegistration">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="MIDSparameters">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="MIDS_Type" type="Coded_MIDS_Type" />
+                                                                <xs:element name="TP" type="Coded_TP" />
+                                                                <xs:element name="ACP" type="Coded_TP" />
+                                                                <xs:element name="GCP" type="Coded_TP" />
+                                                                <xs:element name="CORE" type="Coded_TP" />
+                                                                <xs:element name="MSG" type="Coded_TP" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="PPLI">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="PPLI_TYPE" type="Coded_PPLI_TYPE" />
+                                                                <xs:element name="PPLI_ENV" type="Coded_PPLI_ENV" />
+                                                                <xs:element name="EMERGENCY_INDICATOR" type="Boolean" />
+                                                                <xs:element name="COMMAND_AND_CONTROL_INDICATOR" type="Boolean" />
+                                                                <xs:element name="RTT_REPLY_STATUS_INDICATOR" type="Coded_RTT_REPLY_STATUS_INDICATOR" />
+                                                                <xs:element name="MISSION_CORRELATOR" type="unsignedInt_MISSION_CORRELATOR" />
+                                                                <xs:element name="ELEVATION_QUALITY" type="unsignedInt_ELEVATION_QUALITY" />
+                                                                <xs:element name="PLATFORM" type="unsignedInt_PLATFORM" />
+                                                                <xs:element name="PLATFORM_ACTIVITY" type="unsignedInt_PLATFORM_ACTIVITY" />
+                                                                <xs:element name="VOICE_CALL_SIGN_INDICATOR" type="Boolean" />
+                                                                <xs:element name="VOICE_FREQUENCY_CHANNEL" type="unsignedInt_VOICE_FREQUENCY_CHANNEL" />
+                                                                <xs:element name="CONTROL_CHANNEL" type="unsignedInt_PLATFORM" />
+                                                                <xs:element name="HELICOPTER_CARRYING" type="Coded_HELICOPTER_CARRYING" />
+                                                                <xs:element name="UNIT_TYPE" type="unsignedInt_ELEVATION_QUALITY" />
+                                                                <xs:element name="MISSILE_UNIT" type="Coded_MISSILE_UNIT" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LIST_ID_FIM">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element maxOccurs="5" minOccurs="0" name="item" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="LIST_ID_FOM">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element maxOccurs="12" minOccurs="0" name="item" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="List_Jmsg_Fom01">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="record_item">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Id_Label" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                            <xs:element name="Sublabel" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="L16.Param">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="AIS_Is_Used" type="Boolean" />
+                                                    <xs:element name="FIM01_Feedback_Enable" type="Boolean" />
+                                                    <xs:element name="FOM02_Reporting_Enable" type="Boolean" />
+                                                    <xs:element name="FOM12_Loopback_Enable" type="Boolean" />
+                                                    <xs:element name="Platform_List" type="unsignedInt_Discrete_TCP_Port" />
+                                                    <xs:element maxOccurs="1" minOccurs="0" name="item" type="unsignedInt_Platform_Nb" />
+                                                    <xs:element name="Platform_Port_List" type="unsignedInt_Discrete_TCP_Port" />
+                                                    <xs:element maxOccurs="1" minOccurs="0" name="item" type="Coded_Platform_Role_List" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="JREP">
+                                <xs:complexType>
+                                    <xs:sequence />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Remote_L11">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="configuration">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="TopLinK">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="address" type="ip_address" />
+                                                                <xs:element name="porT_tx" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                                <xs:element name="Port_rx" type="Integer_SIMPLE_IF_TASK_PRIORITY" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="remote_l11">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="remote">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="network">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="address" type="ip_address" />
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="simple">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="address" type="ip_address" />
+                                                                                        <xs:element name="single_m_tx" type="Boolean" />
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="queue">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="cpu">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="log">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="C2">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Correlation_Immediate_Sending_Drop" type="Boolean" />
+                            <xs:element name="End_Association_After_Correlation" type="Boolean" />
+                            <xs:element name="Is_Jre_Interface_Logging_Enabled" type="Boolean" />
+                            <xs:element name="Send_Addressed_Message_To_Inactive_Unit" type="Boolean" />
+                            <xs:element name="TN_Offset_Value" type="float_TN_Offset_Value" />
+                            <xs:element name="Associated_Track" type="Boolean" />
+                            <xs:element name="Assume_Eng_Status_Diffusion_When_Loosing_Ctrl" type="Boolean" />
+                            <xs:element name="Controlled_Unit" type="Boolean" />
+                            <xs:element name="Controlling_Unit" type="Boolean" />
+                            <xs:element name="Correlation_Automatic_Drop" type="Boolean" />
+                            <xs:element name="Correlation_DL_Reject_Processed" type="Boolean" />
+                            <xs:element name="Count_Rx_Track_After_Filtering" type="Boolean" />
+                            <xs:element name="Emergency_Indicator" type="Boolean" />
+                            <xs:element name="Emergency_Point" type="Boolean" />
+                            <xs:element name="Enabling_Broadcast_NonC2_Pointer" type="Boolean" />
+                            <xs:element name="Enabling_Indirect_Unit_L11_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_J10_2_Reception_Constraints_Ed6" type="Boolean" />
+                            <xs:element name="Enabling_J3_6_Drop_After_Impact_Time" type="Boolean" />
+                            <xs:element name="Enabling_J9_0_To_Unit_In_Radio_Silence" type="Boolean" />
+                            <xs:element name="Enabling_L11_Incomplete_Track_Reception" type="Boolean" />
+                            <xs:element name="Enabling_Land_RT_Track_TQ_Start_Decrement_And_Decrement_Period" type="Boolean" />
+                            <xs:element name="Enabling_NRT_EW_Track_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_NRT_Subsurface_Track_ASW_Data_L11_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_NRT_Surface_Track_L11_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_PPLI_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_Report_ADH325_For_Indirect_PPLI" type="Boolean" />
+                            <xs:element name="Enabling_Report_Of_Each_CUR_Reception_To_Host" type="Boolean" />
+                            <xs:element name="Enabling_Report_Of_Each_Pairing_Reception_To_Host" type="Boolean" />
+                            <xs:element name="Enabling_Report_Of_Each_WES_Reception_To_Host" type="Boolean" />
+                            <xs:element name="Enabling_RT_Land_Track_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_RT_Subsurface_Track_L11_Staleness_Limit" type="Boolean" />
+                            <xs:element name="Enabling_Track_Status_Message_On_TQ_Decrement" type="Boolean" />
+                            <xs:element name="Engaged_Track" type="Boolean" />
+                            <xs:element name="Filtering_Exception_Non_Simulated_Interface_Unit" type="Boolean" />
+                            <xs:element name="Force_Tell_Indicator" type="Boolean" />
+                            <xs:element name="Identity_Hostile" type="Boolean" />
+                            <xs:element name="Identity_Unknown" type="Boolean" />
+                            <xs:element name="Is_Behaviour_Changed_When_No_MR_Received_In_L16" type="Boolean" />
+                            <xs:element name="Is_Remote_Response_Inhibited_During_Remote_Correlation" type="Boolean" />
+                            <xs:element name="Joker_Faker_Are_Filtered_By_Exercise_Filter" type="Boolean" />
+                            <xs:element name="Keep_RC_Value_On_Mission_For_Unit_In_Radio_Silence" type="Boolean" />
+                            <xs:element name="L11_FT_Time_Out" type="Integer_L11_FT_Time_Out" />
+                            <xs:element name="Manual_Strength_Change_Regardless_Of_Control" type="Boolean" />
+                            <xs:element name="No_Correl_Msg_Tx_For_Ballistic_Obj" type="Boolean" />
+                            <xs:element name="No_Diff_Report_Without_R2_For_Space_Track_Only" type="Boolean" />
+                            <xs:element name="No_Drop_On_Remote_Only_Space_Track" type="Boolean" />
+                            <xs:element name="Only_Lost_Point_Shall_Be_Retransmitted" type="Boolean" />
+                            <xs:element name="Paired_Track" type="Boolean" />
+                            <xs:element name="Refuse_Platform_Status_For_Other_Non_Controlled_Unit" type="Boolean" />
+                            <xs:element name="Platform_Fighter" type="Boolean" />
+                            <xs:element name="Platform_Interceptor" type="Boolean" />
+                            <xs:element name="Send_Engagement_Status_Message" type="Boolean" />
+                            <xs:element name="Send_Not_Stored_Remote_Threat_Warning_To_The_Host" type="Boolean" />
+                            <xs:element name="Special_Interest_Indicator" type="Boolean" />
+                            <xs:element name="Special_Processing_Indicator" type="Boolean" />
+                            <xs:element name="Stop_Tx_Without_Drop_Track" type="Boolean" />
+                            <xs:element name="Threat_Track" type="Boolean" />
+                            <xs:element name="Transmit_Received_Land_Point_From_Data_Link_To_Host_Even_When_DLIP_Has_R2" type="Boolean" />
+                            <xs:element name="Uncontrolled_Unit_Mng" type="Boolean" />
+                            <xs:element name="Unicity_Outside_Our_Block" type="Boolean" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="Coded_DLP_Routing_mode">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="THD562" />
+            <xs:enumeration value="SYSTEMATIC" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_TP">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_HOST_PROTOCOL">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TCP_CLIENT" />
+            <xs:enumeration value="TCP_SERVER" />
+            <xs:enumeration value="UDP MULTICAST" />
+            <xs:enumeration value="UDP_BROADCAST" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_Management_Configuration">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="None (Standard)" />
+            <xs:enumeration value="NMS" />
+            <xs:enumeration value="Standalone" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_Host_Channel4_Recv_Port">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1024" />
+            <xs:maxInclusive value="65535" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="float_Overall_Filter_Timeout">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0" />
+            <xs:maxInclusive value="96.0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="float_TN_Offset_Value">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="50.0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_PPLI_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NO STATEMENT" />
+            <xs:enumeration value="OWN" />
+            <xs:enumeration value="DLP" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ip_address">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="((1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]).){3}(1?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])" />
+            <xs:pattern value="localhost" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_RTT_REPLY_STATUS_INDICATOR">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0- RTT REPLY FUNCTION NORMAL" />
+            <xs:enumeration value="1- RTT REPLY FUNCTION NOT OPERATIONAL" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_Discrete_TCP_Port">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="65535" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_MIDS_Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="D" />
+            <xs:enumeration value="R" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Integer_SIMPLE_IF_TASK_PRIORITY">
+        <xs:restriction base="xs:integer" />
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_PLATFORM_ACTIVITY">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="63" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_Platform_Nb">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_Max_Msg_In_Arcade_Buffer">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="400" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_MISSILE_UNIT">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0 &#8211; NO_STATEMENT" />
+            <xs:enumeration value="1 &#8211; PU_IS_A_MISSILE_UNIT" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_ELEVATION_QUALITY">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="15" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Integer_HOST_PORT">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1024" />
+            <xs:maxInclusive value="32500" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_MISSION_CORRELATOR">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="255" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_HELICOPTER_CARRYING">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0 &#8211; NO_STATEMENT" />
+            <xs:enumeration value="1 &#8211; HELICOPTER_CAPABLE" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="string_Hot_Data_Root_Dir">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="Coded_Platform_Role_List">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="USER" />
+            <xs:enumeration value="MASTER" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="float_Ctrl_Data_Req_Timeout">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0" />
+            <xs:maxInclusive value="9223372036.85" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="float_K_LINKT_Active_Without_R2_Timeout">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0" />
+            <xs:maxInclusive value="48.0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_SIMPLE_TIME_SYNCHRO_MODE">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NO" />
+            <xs:enumeration value="SLAVE" />
+            <xs:enumeration value="MASTER" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Integer_Max_Stored_CU_Report">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="10000" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_PLATFORM">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="127" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Integer_L11_FT_Time_Out">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="30" />
+            <xs:maxInclusive value="120" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_SIMPLE_PROTOCOL">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TCP_CLIENT" />
+            <xs:enumeration value="TCP_SERVER" />
+            <xs:enumeration value="UPD_MULTICAST" />
+            <xs:enumeration value="UDP_BROADCAST" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Boolean">
+        <xs:restriction base="xs:boolean" />
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_Max_Time_Before_Forcing_Recording">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_DTS_TCP_Port">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="32767" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Coded_PPLI_ENV">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AIR" />
+            <xs:enumeration value="SURFACE" />
+            <xs:enumeration value="LAND" />
+            <xs:enumeration value="SUBSURFACE" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_ISIS_Reception_Time_Out">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="6000" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="unsignedInt_VOICE_FREQUENCY_CHANNEL">
+        <xs:restriction base="xs:unsignedInt">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="8191" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="float_Live_Check_Send_Period">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.0" />
+            <xs:maxInclusive value="65535.0" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="string_ACCS_LOC1_Centre_Name">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="float_SwitchoverTimeout">
+        <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+</xs:schema>

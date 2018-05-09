@@ -1,0 +1,23 @@
+# Scenario Definition Document
+
+scenario_name:
+
+>time
+start_time:
+end_time:
+
+>System
+
+>host
+host_type:L16NCM/DLCM/C2
+
+>link 16
+own_LTN:
+first_LTN:
+last_LTN:
+
+>resource
+ressource_
+ressource_TN
+
+>evenement

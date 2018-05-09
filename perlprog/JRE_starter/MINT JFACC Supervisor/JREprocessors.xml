@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_jre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <config_jrep jrep_designator="SAMPT">    
+    <jrep_mngt_link>   
+      <local_ip_address>PC_VISU</local_ip_address>
+      <local_ip_port>50090</local_ip_port>				
+      <remote_ip_address>JRE-Gateway</remote_ip_address>
+      <remote_ip_port>50090</remote_ip_port>
+    </jrep_mngt_link>
+  </config_jrep>
+</config_jre>	

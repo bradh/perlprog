@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Requirements : [SDD_JREM_010] -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Jre Network configuration Xml schema
+      Copyright Thales Communicators 2007. All rights reserved.
+    </xsd:documentation>
+  </xsd:annotation>
+  
+  <!-- root element param_jre -->
+  <xsd:element name="jrep_parameters" type="jre_parameters_type"/>
+  
+  <!-- group representing the common element of Dlip link -->
+  <xsd:group name="ip_characteristics">
+    <xsd:sequence>
+      <xsd:element name="local_ip_address" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="local_ip_port" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="remote_ip_address" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="remote_ip_port" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:group>
+
+  <!-- definition of a jrep_dlip_link -->
+  <xsd:complexType name="jrep_dlip_linkType">
+    <xsd:sequence>
+      <xsd:group ref="ip_characteristics"/>
+      <!-- optional -->
+      <!-- xsd:element name="track_number_list" type="track_number_listType" minOccurs="0" maxOccurs="1"/ -->
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- definition of list of config_jrep -->
+  <xsd:complexType name="jre_parameters_type">
+    <xsd:sequence>
+      <xsd:element name="jrep_designator" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+      <!-- definiton of jrep_dlip_link  (L16) only one occurence -->
+      <xsd:element name="jrep_dlip_link" type="jrep_dlip_linkType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="clientcnx_timeout" type="clientcnx_timeout_type"/>
+      <xsd:element name="cmd_timeout" type="cmd_timeout_type"/>
+      <xsd:element name="connectfeedback_timeout" type="connectfeedback_timeout_type"/>
+      <xsd:element name="ctr_maxconflict" type="ctr_maxconflict_type"/>
+      <xsd:element name="ctr_maxinfo" type="ctr_maxinfo_type"/>
+      <xsd:element name="ctr_maxquery" type="ctr_maxquery_type"/>
+      <xsd:element name="directcnxlist_timeout" type="directcnxlist_timeout_type"/>
+      <xsd:element name="fail_timeout" type="fail_timeout_type"/>
+      <xsd:element name="info_timeout" type="info_timeout_type"/>
+      <xsd:element name="internalstateinfoset_timeout" type="isis_timeout_type"/>
+      <xsd:element name="internalstateinfosettodlip_timeout" type="isisdlip_timeout_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="j2_0_stanag_edition" type="stanag_edition_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jreiplinkcapabletimereference_list" type="capable_time_reference_type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="jrel16linkcapabletimereference_list" type="capable_time_reference_type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ju_ppliactivity_timeout" type="ju_ppliactivity_timeout_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="localindicators_timeout" type="localindicators_type"/>
+      <xsd:element name="mngt_retransmission_count" type="mngt_retransmission_count_type"/>
+      <xsd:element name="netconnectmatrix_timeout" type="netconnectmatrix_timeout_type"/>
+      <xsd:element name="nofilterforagivenindex_value" type="nofilterforagivenindex_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="nointervallatencyreception_timeout" type="nointervallatencyreception_timeout_type"/>
+      <xsd:element name="query_timeout" type="query_timeout_type"/>
+      <xsd:element name="rc_retransmission_number" type="rc_retransmission_number_type"/>
+      <xsd:element name="rtt_alarm_timeout" type="rtt_alarm_timeout_type"/>
+      <xsd:element name="rtt_timeout" type="rtt_timeout_type"/>
+      <xsd:element name="secondarytn_maxcount" type="secondarytn_maxcount_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="secondarytnlist_timeout" type="secondarytnlist_timeout_type"/>
+      <xsd:element name="secondarytn_check" type="secondarytn_check_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="t_rartt_init_value" type="t_rartt_init_value_type"/>
+      <xsd:element name="t_retry" type="t_retry_type"/>
+      <xsd:element name="time_accuracy" type="time_accuracy" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="dcl_deactivateaddressprocess" type="dcl_deactivate_address_process_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="is_rtt_control_response_report" type="rtt_control_response_report_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="startsocket_timeout" type="startsocket_timeout_type"/>
+      <xsd:element name="disable_convert_j2_x_to_j2_0" type="disable_convert_j2_x_to_j2_0_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jre_link_restart" type="jre_link_restart_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jre_link_reconnection_time" type="jre_link_reconnection_time_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jre_routing_mode" type="jre_routing_mode_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="mr_deletion" type="mr_deletion_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="tl_length" type="tl_length_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="is_sender_id_checked" type="is_sender_id_checked_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jre_disconnection_delay" type="jre_disconnection_delay_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="jre_ip_link_extrapolation_deactivated" type="jre_ip_link_extrapolation_deactivated_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ip_is_syslog_recording_activated" type="ip_is_syslog_recording_activated_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="is_rcd_recording_activated" type="is_rcd_recording_activated_type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="port_address_check" type="port_address_check_type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- definition of Ip_ClientCnx_Timeout -->
+  <xsd:simpleType name="clientcnx_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="180"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_Cmd_Timeout -->
+  <xsd:simpleType name="cmd_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="1000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+    
+  <!-- definition of Ip_ConnectFeedback_Timeout -->
+  <xsd:simpleType name="connectfeedback_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="10"/>
+      <xsd:maxInclusive value="120"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_CTR_MaxConflict -->
+  <xsd:simpleType name="ctr_maxconflict_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_CTR_MaxInfo -->
+  <xsd:simpleType name="ctr_maxinfo_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_CTR_MaxQuery -->
+  <xsd:simpleType name="ctr_maxquery_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_DirectCnxList_Timeout -->
+  <xsd:simpleType name="directcnxlist_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="10"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_Fail_Timeout -->
+  <xsd:simpleType name="fail_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="100000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_Info_Timeout -->
+  <xsd:simpleType name="info_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_InternalStateInfoSet_Timeout -->
+  <xsd:simpleType name="isis_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="30"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_InternalStateInfoSet_Timeout -->
+  <xsd:simpleType name="isisdlip_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="6000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- complex defintions -->
+  <xsd:complexType name="capable_time_reference_type">
+    <xsd:sequence>
+      <xsd:element name="jre_network_controller" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="round_trip" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="fixed_delay" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="event_strobe" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="coordinated_universal_time" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="jreiplinkpreferedtimereference" type="preferred_reference_type"/>
+    <xsd:attribute name="jrel16linkpreferedtimereference" type="preferred_reference_type"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="preferred_reference_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="jre_network_controller"/>
+      <xsd:enumeration value="round_trip"/>
+      <xsd:enumeration value="fixed_delay"/>
+      <xsd:enumeration value="event_strobe"/>
+      <xsd:enumeration value="coordinated_universal_time"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- end of complex definitions -->
+
+  <!-- definition of Ip_JU_PPLIActivity_Timeout  -->
+  <xsd:simpleType name="ju_ppliactivity_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_LocalIndicators_Timeout -->
+  <xsd:simpleType name="localindicators_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="120"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_Mngt_Retransmission_Count -->
+  <xsd:simpleType name="mngt_retransmission_count_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_NetConnectMatrix_Timeout  -->
+  <xsd:simpleType name="netconnectmatrix_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="10"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_NoFilterForAGivenIndex_Value -->
+  <xsd:simpleType name="nofilterforagivenindex_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="255"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_NoIntervalLatencyReception_Timeout -->
+  <xsd:simpleType name="nointervallatencyreception_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="10000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_Query_Timeout  -->
+  <xsd:simpleType name="query_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+   <!-- definition of Ip_RC_Retransmission_Number  -->
+  <xsd:simpleType name="rc_retransmission_number_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+ <!-- definition of Ip_RTT_Alarm_Timeout  -->
+  <xsd:simpleType name="rtt_alarm_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="360"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_RTT_Timeout  -->
+  <xsd:simpleType name="rtt_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="60"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_SecondaryTn_MaxCount  -->
+  <xsd:simpleType name="secondarytn_maxcount_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="150"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_SecondaryTnList_Timeout  -->
+  <xsd:simpleType name="secondarytnlist_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="10"/>
+      <xsd:maxInclusive value="240"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_SecondaryTN_Check  -->
+  <xsd:simpleType name="secondarytn_check_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_T_RARTT_Init_Value  -->
+  <xsd:simpleType name="t_rartt_init_value_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_T_RETRY  -->
+  <xsd:simpleType name="t_retry_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="300"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_TIME_ACCURACY  -->
+  <xsd:simpleType name="time_accuracy">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="16000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_StartSocket_Timeout  -->
+  <xsd:simpleType name="startsocket_timeout_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="20"/>
+      <xsd:maxInclusive value="300"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_DCL_DeactivateAddressProcess -->
+  <xsd:simpleType name="dcl_deactivate_address_process_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_Is_RTT_Control_Response_Report -->
+  <xsd:simpleType name="rtt_control_response_report_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_J2_0_Stanag_Edition  -->
+  <xsd:simpleType name="stanag_edition_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Edition_2"/>
+      <xsd:enumeration value="Edition_3"/>
+      <xsd:enumeration value="Edition_4"/>
+      <xsd:enumeration value="Edition_5"/>
+      <xsd:enumeration value="ML256"/>
+      <xsd:enumeration value="MIL_STD_6016C"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_Disable_Convert_j2_x_to_j2_0  -->
+  <xsd:simpleType name="disable_convert_j2_x_to_j2_0_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true"/>
+      <xsd:enumeration value="false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Mr_Deletion  -->
+  <xsd:simpleType name="mr_deletion_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="mr_deleted"/>
+      <xsd:enumeration value="mr_transmitted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_JRE_Link_Reconnection_Time -->
+  <xsd:simpleType name="jre_link_reconnection_time_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="30000"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_JRE_Link_Restart -->
+  <xsd:simpleType name="jre_link_restart_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true"/>
+      <xsd:enumeration value="false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_JRE_Routing_Mode -->
+  <xsd:simpleType name="jre_routing_mode_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="routing_in_dlip"/>
+      <xsd:enumeration value="routing_in_jrep"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of Ip_TL_Length -->
+  <xsd:simpleType name="tl_length_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  
+  <!-- definition of Is_sender_id_checked  -->
+  <xsd:simpleType name="is_sender_id_checked_type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="true"/>
+      <xsd:enumeration value="false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- definition of Ip_JRE_Disconnection_Delay -->
+  <xsd:simpleType name="jre_disconnection_delay_type">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="86400"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- definition of jre_ip_link_extrapolation_deactivated  -->
+  <xsd:simpleType name="jre_ip_link_extrapolation_deactivated_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  
+    <!-- definition of Ip_Is_Syslog_Recording_Activated -->
+  <xsd:simpleType name="ip_is_syslog_recording_activated_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+ 
+    <!-- definition of Is_RCD_Recording_Activated -->
+  <xsd:simpleType name="is_rcd_recording_activated_type">
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+
+  <!-- definition of TCP_Address_Check  -->
+  <xsd:simpleType name="port_address_check_type">
+      <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+</xsd:schema>

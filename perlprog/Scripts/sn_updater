@@ -1,0 +1,33 @@
+if [ $# != 1 ]
+then
+ echo "usage: sn_updater <file>"
+ echo "Update the sequence number field into host messages"
+else
+ dos2unix $1 |
+ awk '{	
+ 	if ($1 != "--")
+ 	{
+	 Data=""
+	 Sequence_Number_Size=8
+	 Header_Size=16
+	 for (i=2;i<=NF;i++) Data=sprintf ("%s%s",Data,$i)
+	 Header_1=substr(Data, 1, Header_Size/2)
+	 Header_2=substr(Data, (Header_Size/2)+1, Header_Size/2)
+	 Msg_Data=substr(Data, Header_Size+Sequence_Number_Size+1)
+	 printf ("%s %s %s %08x%s\n", $1,Header_1,Header_2,Iterator, Msg_Data)
+	 Iterator ++
+	}
+	else print $0
+     }' Iterator=1 |
+ awk '{	
+	$0=toupper ($0)
+ 	if ($1 != "--")
+ 	{
+	 Block_Size=4
+	 printf ("%s %s %s ", $1,$2,$3)
+	 for(j=0;j<(length($4)/Block_Size);j++) printf ("%s ", substr($4,1+(j*Block_Size),Block_Size))
+	 printf "\n"
+	}
+	else print $0
+     }' > $1
+fi

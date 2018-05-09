@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FACTORY_PARAMETERS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Software parameters -->
+<DLP_TYPE>CORE</DLP_TYPE>
+
+<!-- Time in ms between two status reading -->
+<MONITORING_UPDATE>10000</MONITORING_UPDATE>
+
+
+<!-- L11 Own Platform TN  -->
+<OWN_PLAT_TN>1</OWN_PLAT_TN>
+
+<!-- Configuration -->
+<L11_CONFIGURATION>1</L11_CONFIGURATION>
+
+<!-- Limitations -->
+<LIMITATIONS>
+	<LINK NAME=%F001%>1</LINK>
+	<ROUTE NAME=%F002%>1</ROUTE>
+	<RESOURCE NAME=%F003%>1</RESOURCE>
+</LIMITATIONS>
+
+<!-- Link parameters to initialize a link  -->
+<LINKS_PARAM>
+	<LINK NAME=%F004%>
+		<PARAMETER NAME=%F005% 
+		TYPE=%F006%/>
+		<!--    <PARAMETER NAME=%F007% TYPE=%F008%/> -->
+		<PARAMETER NAME=%F009% 
+		TYPE=%F010%/>
+		<PARAMETER NAME=%F011% 
+		TYPE=%F012%/>
+		<PARAMETER NAME=%F013% 
+		TYPE=%F014%/>
+	</LINK>
+</LINKS_PARAM>
+
+<!-- Modifiable Link parameters -->
+<LINKS_PARAM_MODIFIABLE>
+	<LINK NAME=%F015%>
+
+		<!-- Identification -->
+		<PARAMETER NAME=%F016% 
+		TYPE=%F017%/>
+
+		<!-- Data Link State -->
+		<PARAMETER NAME=%F018% 
+		TYPE=%F019% 
+		VALUES=%F020%/>
+		<!-- <PARAMETER NAME=%F021% TYPE=%F022% VALUES=%F023%/> -->
+
+		<!-- DLRP -->
+		<PARAMETER NAME=%F024% 
+		TYPE=%F025%/>
+		<PARAMETER NAME=%F026% 
+		TYPE=%F027%/>
+		<PARAMETER NAME=%F028% 
+		TYPE=%F029%/>
+		<PARAMETER NAME=%F030% 
+		TYPE=%F031%/>
+		<PARAMETER NAME=%F032% 
+		TYPE=%F033%/>
+		<PARAMETER NAME=%F034% 
+		TYPE=%F035%/>
+                     
+		<!-- POFA -->
+		<PARAMETER NAME=%F036% 
+		TYPE=%F037% 
+		VALUES=%F038% /> 
+
+	</LINK>
+</LINKS_PARAM_MODIFIABLE>
+
+<!-- Link Parameters to monitor -->
+<LINK_PARAM_TO_MONITOR>
+
+	<LINK NAME=%F039%>
+
+		<!-- Identification -->
+		<PARAMETER NAME=%F040% 
+		TYPE=%F041%/>
+		<PARAMETER NAME=%F042% 
+		TYPE=%F043%/>
+		<PARAMETER NAME=%F044% 
+		TYPE=%F045%/>
+		<PARAMETER NAME=%F046% 
+		TYPE=%F047%/>
+		<PARAMETER NAME=%F048% 
+		TYPE=%F049%/>
+		<!-- Network Statistics -->
+		<!-- <PARAMETER NAME=%F050% TYPE=%F051%/> -->
+		<PARAMETER NAME=%F052% 
+		TYPE=%F053%/>
+		<PARAMETER NAME=%F054% 
+		TYPE=%F055%/>
+		<!-- <PARAMETER NAME=%F056% TYPE=%F057%/> -->
+		<!-- <PARAMETER NAME=%F058% TYPE=%F059%/> -->
+		<PARAMETER NAME=%F060% 
+		TYPE=%F061%/>
+		<PARAMETER NAME=%F062% 
+		TYPE=%F063%/>
+		<PARAMETER NAME=%F064% 
+		TYPE=%F065%/>
+		<!--<PARAMETER NAME=%F066% TYPE=%F067%/> -->
+		<!-- Network State -->
+		<!-- <PARAMETER NAME=%F068% TYPE=%F069%/>-->
+		<PARAMETER NAME=%F070% 
+		TYPE=%F071%/>
+		<PARAMETER NAME=%F072% 
+		TYPE=%F073%/>
+		<PARAMETER NAME=%F074% 
+		TYPE=%F075%/>
+		<PARAMETER NAME=%F076% 
+		TYPE=%F077%/>
+		<PARAMETER NAME=%F078% 
+		TYPE=%F079%/>
+		<!-- <PARAMETER NAME=%F080% TYPE=%F081%/>-->
+
+		<!-- DLRP --> 
+		<PARAMETER NAME=%F082% 
+		TYPE=%F083%/>
+		<PARAMETER NAME=%F084% 
+		TYPE=%F085%/>
+
+		<!--POFA -->
+		<PARAMETER NAME=%F086% 
+		TYPE=%F087%/>
+		<PARAMETER NAME=%F088% 
+		TYPE=%F089%/>
+		<PARAMETER NAME=%F090% 
+		TYPE=%F091%/>
+		<PARAMETER NAME=%F092% 
+		TYPE=%F093%/>
+		</LINK>
+
+</LINK_PARAM_TO_MONITOR>
+
+<!-- Resource Parameters to monitor -->
+
+
+<!-- Modifiable Resource parameters -->
+
+
+<!-- Attribution Link/Resource table -->
+<LINK_RESOURCE>
+	<LINK NAME=%F094%>
+		<RESOURCE NAME=%F095% 
+		NB_PER_ROUTE=%F096%/>
+	</LINK>
+</LINK_RESOURCE>
+
+</FACTORY_PARAMETERS>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DlipContextData>
+ <localPlatformConfiguration OwnSystemTn="0">
+  <ownUnitPosition Altitude="0" Course="0" Latitude="0" Longitude="0" Speed="0"/>
+ </localPlatformConfiguration>
+ <networkConfiguration>
+  <linkParameters LinkIdentification="1" LinkState="1" LinkType="1" OwnPlatformLinkTn="100"/>
+  <routeConfiguration RouteIdentification="5" RouteState="0" RouteType="1"/>
+  <routeConfiguration RouteIdentification="100" RouteState="0" RouteType="2"/>
+  <routeConfiguration RouteIdentification="201" RouteState="0" RouteType="2"/>
+  <routeConfiguration RouteIdentification="202" RouteState="0" RouteType="2"/>
+  <routeConfiguration RouteIdentification="110" RouteState="0" RouteType="2"/>
+ </networkConfiguration>
+</DlipContextData>
+

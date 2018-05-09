@@ -1,0 +1,110 @@
+De: PIERRE Jean-Marc-P - CLB
+Envoyé: vendredi 28 avril 2006 11:01
+À: MOUCHOT Stéphane - CLB
+Objet: Scenario opérationnel de filtres SAMPT
+
+Voici le scénario "max" en termes de filtres géographiques - qui est le scénario "nominal" de TAD.
+
+Ceci est extrait de nos échanges techniques :
+\\aristote\dlip_ref\dlip_doc\Affaire\SAMPT\Systeme\Mails_Techniques\Client_TAD\Reponses_mails_techniques\Referentiel\TCFSAMPT06-0186_CR_échanges_technique_TCF_TAD-06-04-2006.doc
+
+      033
+     070-06 : scénarios filtres
+     Veuillez trouver ci-joint nos scénarios opérationnels d'utilisation des filtres pour le SAMP/T.
+
+      Deux scénarios sont à retenir:
+
+      le premier proche d'une utilisation opérationnelle classique du SAMP/T, le second afin de justifier les performances "contractuelles" imposées par les "Principes fonctionnels L16 de l'ICD Coordination Unités Air - SAMP/T".
+
+      Les filtres sont utilisés pour réduire la charge de traitement lorsque la charge réseau est importante. Il semble donc naturel pour TAD de demander l'utilisation des scénarios nominaux définis par la STB CI_L16 au § 3.2.1.9.2.
+
+       
+
+      Scénario opérationnel 1
+
+      Les filtres proposés sont : 
+
+       pour la zone d'intérêt du SAMP/T : un filtre circulaire en émission réception avec une altitude max ;
+
+      un filtre sur TN en émission et réception ;
+
+      deux  filtres sectoriels identité différents en émission et réception.
+
+       
+
+      Scénario opérationnel 2
+
+      Rappel des principes fonctionnels L16 ICD Coordination Unités Air - SAMP/T § 5.5.3:
+
+      « Le ME SAMP/T dispose de 14 filtres dont 2 géographiques en émission et 14 filtres dont 2 géographiques en réception. »
+
+      Utilisation des scénarios nominaux définis par la STB CI_L16 au § 3.2.1.9.2 avec :
+
+      1 filtre circulaire en émission/réception avec une altitude max (la zone d'intérêt SAMP/T - soit 2 filtres géographiques) ;
+
+      1 filtre sectoriel en émission/réception (soit 2 filtres géographiques) ;
+
+      12 autres filtres non géographiques en émission/réception.
+     Scénario opérationnel 1 : "classique"
+
+      Filtres positionnés en Tx :
+
+      THD170 (pos=0) : Block Specific TN
+
+      THD170 (pos=1) : Block Altitude + Block Circle
+
+      THD170 (pos=2) : Block Category / Identity + Block Circular Sector
+
+      THD170 (pos=3) : Block Category / Identity + Block Circular Sector
+
+       
+
+      Filtres positionnés en Rx : idem Tx
+
+       
+
+      Total filtres géographiques = 6 > valeur SRS
+
+      Total critères élémentaires de filtrage = 14          (2 x 7)
+
+       
+
+      cf. SRS : l'Altitude n'est pas comptée comme zone géographique
+
+       
+
+      ð      Etudier la possibilité de modifier la SRS pour 4 filtres géographiques « complexes » + 2 circulaires
+
+       
+
+       
+
+      Scénario opérationnel 2 : "performances"
+
+      Filtres positionnés en Tx :
+
+      THD170 (pos=1) : Block Altitude + Block Circle
+
+      THD170 (pos=2) : Block "Geographic"
+
+      THD170 (pos=3) : non geographic filter block
+
+      ...12 filtres...
+
+      THD170 (pos=14) : non geographic filter block
+
+       
+
+      Filtres positionnés en Rx : idem Tx
+
+       
+
+      Total filtres géographiques = 4
+
+      Total critères élémentaires de filtrage = 30          (2 x 15)
+
+       
+
+      cf. SRS : l'Altitude n'est pas comptée comme zone géographique
+     OK, Action TCF
+     

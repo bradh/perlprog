@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     JREP Internal Paramters XML Schema
+     Copyright Thales Communicators 2007. All right reserved.<link_designator>1</link_designator>
+  -->
+<jrep_parameters>
+   <jrep_designator>NULL</jrep_designator>
+   <jrep_dlip_link>
+      <local_ip_address>127.0.0.1</local_ip_address>
+      <local_ip_port>2702</local_ip_port>
+      <remote_ip_address>24.1.1.20</remote_ip_address>
+      <remote_ip_port>2704</remote_ip_port>
+   </jrep_dlip_link>
+   <clientcnx_timeout>2</clientcnx_timeout>
+   <cmd_timeout>240</cmd_timeout>
+   <connectfeedback_timeout>60</connectfeedback_timeout>
+   <ctr_maxconflict>6</ctr_maxconflict>
+   <ctr_maxinfo>4</ctr_maxinfo>
+   <ctr_maxquery>3</ctr_maxquery>
+   <directcnxlist_timeout>180</directcnxlist_timeout>
+   <fail_timeout>1500</fail_timeout>
+   <info_timeout>30</info_timeout>
+   <internalstateinfoset_timeout>30</internalstateinfoset_timeout>
+   <internalstateinfosettodlip_timeout>10</internalstateinfosettodlip_timeout>
+   <j2_0_stanag_edition>MIL_STD_6016C</j2_0_stanag_edition>
+   <jreiplinkcapabletimereference_list jreiplinkpreferedtimereference="round_trip">
+      <jre_network_controller>false</jre_network_controller>
+      <round_trip>true</round_trip>
+      <fixed_delay>false</fixed_delay>
+      <event_strobe>false</event_strobe>
+      <coordinated_universal_time>true</coordinated_universal_time>
+   </jreiplinkcapabletimereference_list>
+   <jrel16linkcapabletimereference_list jrel16linkpreferedtimereference="coordinated_universal_time">
+      <jre_network_controller>false</jre_network_controller>
+      <round_trip>true</round_trip>
+      <fixed_delay>false</fixed_delay>
+      <event_strobe>false</event_strobe>
+      <coordinated_universal_time>true</coordinated_universal_time>
+   </jrel16linkcapabletimereference_list>
+   <ju_ppliactivity_timeout>60</ju_ppliactivity_timeout>
+   <localindicators_timeout>6</localindicators_timeout>
+   <mngt_retransmission_count>2</mngt_retransmission_count>
+   <netconnectmatrix_timeout>180</netconnectmatrix_timeout>
+   <nofilterforagivenindex_value>1</nofilterforagivenindex_value> 
+   <nointervallatencyreception_timeout>1000</nointervallatencyreception_timeout>
+   <query_timeout>10</query_timeout>
+   <rc_retransmission_number>2</rc_retransmission_number>
+   <rtt_alarm_timeout>40</rtt_alarm_timeout>
+   <rtt_timeout>20</rtt_timeout>
+   <secondarytn_maxcount>16</secondarytn_maxcount>
+   <secondarytnlist_timeout>180</secondarytnlist_timeout>
+   <secondarytn_check>false</secondarytn_check>
+   <t_rartt_init_value>2</t_rartt_init_value>
+   <t_retry>240</t_retry>
+   <time_accuracy>1</time_accuracy>
+   <dcl_deactivateaddressprocess>true</dcl_deactivateaddressprocess>
+   <is_rtt_control_response_report>true</is_rtt_control_response_report>
+   <startsocket_timeout>60</startsocket_timeout>
+   <disable_convert_j2_x_to_j2_0>false</disable_convert_j2_x_to_j2_0>
+   <jre_link_restart>true</jre_link_restart>
+   <jre_link_reconnection_time>29000</jre_link_reconnection_time>
+   <jre_routing_mode>routing_in_dlip</jre_routing_mode>
+   <mr_deletion>mr_deleted</mr_deletion>
+   <tl_length>false</tl_length>
+   <is_sender_id_checked>false</is_sender_id_checked>
+   <jre_disconnection_delay>45</jre_disconnection_delay>
+   <jre_ip_link_extrapolation_deactivated>false</jre_ip_link_extrapolation_deactivated>
+   <ip_is_syslog_recording_activated>false</ip_is_syslog_recording_activated>
+   <is_rcd_recording_activated>true</is_rcd_recording_activated>
+</jrep_parameters>

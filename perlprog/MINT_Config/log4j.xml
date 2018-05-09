@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" threshold="all" debug="false">
+
+	<!-- ================   -->
+	<!-- logger and appenders -->
+	<!-- ================   -->
+	<appender name="filelog" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="../log/JRE_Management.log"/>
+		<param name="MaxFileSize" value="1MB"/>
+        <param name="MaxBackupIndex" value="100"/>
+		<layout class="bo.logger.JreSimpleLayout"/>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="JRE_MESSAGE"/>
+			<param name="levelMax" value="ERROR"/>
+		</filter> 
+	</appender>
+	
+	<logger name="JreLogger" additivity="true">
+		<appender-ref ref="filelog"/>
+	</logger>
+
+	<!-- ================   -->
+	<!--  Limit categories      -->      
+	<!-- ================ -->
+	<category name="bo.logger">            
+		<priority value="JRE_MESSAGE" class="bo.logger.JreLevel" />
+		<appender-ref ref="filelog"/>            
+	</category>    
+ 
+</log4j:configuration>
+
+<!-- change the logger properties -->
+<!-- choose the layout
+ 2 layout are available: 
+	 bo.logger.CustomizeXMLLayout
+	 bo.logger.JreSimpleLayout
+	 
+these layout can be used above in value of the attribute "class" of the parameter "filter"
+Example of log file with xml layout
+	<JreLog>
+	<logger>JreLogger</logger>					//name of the class java of the logger
+	<timestamp>2007/01/11-09:40:55</timestamp>		//date of the message
+	<level>JRE_MESSAGE</level>				//level of the message (see below for further informations
+	<thread>main</thread>						//name of the thread where the message has been written
+	<message>[Information_Panel] 2 line</message>	//message written
+	</JreLog>
+
+Example of a log file with JreSimpleLayout
+	(JRE_MESSAGE)|2007/01/14-23:33:29|[Information_Panel]  < JrepName 2 >:< id2 >  Connection Started
+	      (level)    (delimiter)    (date)     (delimiter)                               (message)
+-->
+<!-- the parameter levelMin and levelMax must be change in order to choose what you want to log
+
+Ex: 	<param name="levelMin" value="JRE_MESSAGE"/>	write only JRE_MESSAGE log into logfile
+	<param name="levelMax" value="JRE_MESSAGE"/>
+	
+	<param name="levelMin" value="JRE_MESSAGE"/>	write  JRE_MESSAGE, INFO and ERROR log into logfile
+	<param name="levelMax" value="ERROR"/>
+	
+if you want to catch a range of log, mention the min and max value according to the following array
+	levelMin	OFF			no log generated
+			JRE_MESSAGE	this level displays JRE messages
+			INFO		this level displays messages concerning information about java methods
+			WARN		this level displays messages concerning warning detected in the code
+	levelMax	ERROR		this level displays messages concerning errors detected in the code
+-->
+	

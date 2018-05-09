@@ -1,0 +1,126 @@
+C:\L16_Aladdin\v2\Reference\Bin\ppli_land_track.ji
+00:00:00.000 0000004E 0E020600 0000 0000 0000 0000 0000 0000 0000 1708 0000 0000 0000 0000 0002 0000 0000 0000 0000 0005 0000 0000 0000 0000 000D 0000 0000 0000 0000 0015 0000 0000 0000 0000 0019 0000 0000 0000 0000
+J2.6 - Land (Ground) Track PPLI
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+Universal J Input Header
+0-000       HEADER VERSION                                                      0: 0
+0-000       R/C MESSAGE ID                                                      0: 0
+0-000       RELAY INDICATOR                                                     0: Message is not a relay
+0-000       RX MODE                                                             0: Message received on a PG
+0-000       NOT LAST J IN SEQUENCE                                              0: Message is the last one in sequence
+756-008     SPARE EIGHT BITS                                                    0: 0
+0-000       SOURCE TRACK NUMBER                                                 0: NO STATEMENT
+756-001     SPARE ONE BIT                                                       0: 0
+0-000       PARTICIPATION GROUP (PG)                                            0: NO STATEMENT
+756-007     SPARE SEVEN BITS                                                    0: 0
+0-000       NEEDLINE ID                                                         0: NO STATEMENT
+756-016     SPARE SIXTEEN BITS                                                  0: 0
+756-016     SPARE SIXTEEN BITS                                                  0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6I
+1550-001    WORD FORMAT                                                         0: INITIAL
+270-004     LABEL, J-SERIES                                                     2: 2
+271-005     SUBLABEL, J-SERIES                                                  6: 6
+800-001     MESSAGE LENGTH INDICATOR                                            5: 
+385-003     EXERCISE_INDICATOR                                                  0: NON-EXERCISE TRACK
+756-001     SPARE ONE BIT                                                       0: 0
+354-002     FORCE_TELL_INDICATOR                                                0: NO STATEMENT
+355-002     EMERGENCY_INDICATOR                                                 0: NO STATEMENT
+893-001     COMMAND AND CONTROL INDICATOR                                       0: NONC2 UNIT
+1604-001    SIMULATION_INDICATOR                                                0: REAL TRACK OR UNIT
+756-002     SPARE TWO BITS                                                      0: 0
+1571-002    ACTIVE RELAY INDICATOR_WIDE AREA NETWORK                            0: RELAYING FUNCTION INACTIVE
+274-001     RTT_REPLY_STATUS_INDICATOR                                          0: RTT REPLY FUNCTION NORMAL
+1613-001    NETWORK PARTICIPATION STATUS_INDICATOR                              0: NO STATEMENT
+279-001     TIME_QUALITY                                                        0: > 18080 NANOSECONDS
+283-001     GEODETIC_POSITION QUALITY                                           0: >18080 FT
+386-013     STRENGTH                                                            0: NO STATEMENT
+756-001     SPARE ONE BIT                                                       0: 0
+1612-001    ELEVATION_25FT                                                      0: 0
+756-002     SPARE TWO BITS                                                      0: 0
+725-003     MISSION_CORRELATOR_1                                                0: NO STATEMENT
+283-003     ELEVATION_QUALITY                                                   0: >18080 FT
+756-005     SPARE FIVE BITS                                                     0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6E0
+1550-001    WORD FORMAT                                                         2: EXTENSION
+281-015     LATITUDE_0.0013 MINUTE                                              0: 0
+282-015     LONGITUDE_0.0013 MINUTE                                             0: 0
+756-001     SPARE ONE BIT                                                       0: 0
+371-015     COURSE                                                              0: 0
+367-018     SPEED                                                               0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6C1
+1550-001    WORD FORMAT                                                         1: CONTINUATION
+1551-001    CONTINUATION_WORD_LABEL                                             1: 1
+1717-001    VOICE CALL SIGN_INDICATOR                                           0: DO NOT INTERPRET VOICE CALL SIGN
+756-001     SPARE ONE BIT                                                       0: 0
+264-001     VOICE_CALL_SIGN 1 OF 4                                              0: BLANK
+264-001     VOICE_CALL_SIGN 2 OF 4                                              0: BLANK
+264-001     VOICE_CALL_SIGN 3 OF 4                                              0: BLANK
+264-001     VOICE_CALL_SIGN 4 OF 4                                              0: BLANK
+1797-004    LAND_(GROUND)_PLATFORM                                              0: NO STATEMENT
+1798-004    LAND_PLATFORM_ACTIVITY (GROUND)                                     0: NO STATEMENT
+417-016     VOICE_FREQUENCY/CHANNEL                                             0: NO STATEMENT
+348-006     CONTROL_CHANNEL                                                     0: 0
+1571-003    ACTIVE RELAY INDICATOR_VOICE CHANNEL                                0: RELAYING FUNCTION INACTIVE
+1571-004    ACTIVE RELAY INDICATOR_CONTROL CHANNEL                              0: RELAYING FUNCTION INACTIVE
+898-001     VOICE_FREQ_CHANN_INDICATOR                                          0: PRIMARY VOICE FREQUENCY/CHANNEL
+756-001     SPARE ONE BIT                                                       0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6C3
+1550-001    WORD FORMAT                                                         1: CONTINUATION
+1551-001    CONTINUATION_WORD_LABEL                                             3: 3
+756-001     SPARE ONE BIT                                                       0: 0
+276-001     U_COORDINATE                                                        0: 0
+277-001     V_COORDINATE                                                        0: 0
+284-001     BETA_ANGLE                                                          0: 0
+278-001     RELATIVE_POSITION QUALITY                                           0: >18080 FEET
+285-001     RELATIVE_AZIMUTH QUALITY                                            0: >64 MILLIRADIANS
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6C5
+1550-001    WORD FORMAT                                                         1: CONTINUATION
+1551-001    CONTINUATION_WORD_LABEL                                             5: 5
+725-004     MISSION_2_CORRELATOR                                                0: NO STATEMENT
+725-005     MISSION_3_CORRELATOR                                                0: NO STATEMENT
+725-006     MISSION_4_CORRELATOR                                                0: NO STATEMENT
+725-007     MISSION_5_CORRELATOR                                                0: NO STATEMENT
+725-008     MISSION_6_CORRELATOR                                                0: NO STATEMENT
+725-009     MISSION_7_CORRELATOR                                                0: NO STATEMENT
+725-010     MISSION_8_CORRELATOR                                                0: NO STATEMENT
+756-007     SPARE SEVEN BITS                                                    0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J2.6C6
+1550-001    WORD FORMAT                                                         1: CONTINUATION
+1551-001    CONTINUATION_WORD_LABEL                                             6: 6
+826-001     TIME_TAG_TIME_OF VALIDITY                                           0: 0
+816-001     UTM_100,000_ROW_METER SQUARE                                        0: NO STATEMENT
+821-001     UNIVERSAL TRANSVERSE MERCATOR 100,000 COLUMN METER SQUARE           0: NO STATEMENT
+825-001     UTM GRID ROW ZONE                                                   0: NO STATEMENT
+756-001     SPARE ONE BIT                                                       0: 0
+820-001     UTM 10 METER NORTHING                                               0: 0
+756-002     SPARE TWO BITS                                                      0: 0
+819-001     UTM 10 METER EASTING                                                0: 0
+756-002     SPARE TWO BITS                                                      0: 0
+818-001     UTM_GRID_ZONE_COLUMN                                                0: NO STATEMENT
+756-010     SPARE TEN BITS                                                      0: 0
+
+

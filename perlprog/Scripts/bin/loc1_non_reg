@@ -1,0 +1,729 @@
+#===========================================================================
+#
+# Script to launch an automatic test of the LOC1 application
+# 
+#     J. GARCIA	    05/12/2001, Creation
+#     R. LOUBRIAT   10/01/2002, Adaptation for LOC1
+#
+#===========================================================================
+#
+# Things to do prior to execute that script:
+#
+#	1) Copy this script in the test directory (outside a clearcase view)
+#       2) go that directory ("cd <dir_test>")
+#       3) set the clearcase view to be use during test ("setview <test_view>")
+# 	4) Execute that script following the following syntaxe:
+#
+#              loc1_non_reg  -?		=> display the syntax of that script
+#
+#      	For each test executed this script creates a subdirectory "./<test_name>".
+#	The test is run in this directory and the results are stored there.
+#       The global test result is stored in the file "GLOBAL_RES".
+#
+#===========================================================================
+
+
+#==========
+# Variables 
+# =========
+
+# Location and version  of the C2 test driver
+# --------------------------------------------
+export C2_TD_DIR=/loc1_vob/c2_host_td
+export C2_TD_VER=v1
+export C2_TD_BIN=$C2_TD_DIR/binary/c2_host_test_driver
+
+# Location and version  of the OSIM test driver
+# ---------------------------------------------
+export OSIM_TD_DIR=/loc1_vob/osim_td
+export OSIM_TD_VER=v1
+export OSIM_TD_BIN=$OSIM_TD_DIR/binary/osim_test_driver
+
+# Location and version  of the MIDS test driver
+# ---------------------------------------------
+export MIDS_TD_DIR=/loc1_vob/mids_td
+export MIDS_TD_VER=v1
+export MIDS_TD_BIN=$MIDS_TD_DIR/binary/mids_test_driver
+
+# Location and version of the STD test files
+# ------------------------------------------
+export STD_DIR=/loc1_vob/scenarii
+export STD_VER=v1
+export STD_SCE_DIR=$STD_DIR
+
+# Location and version of the launcher:
+# -----------------------------------------
+export LAUNCHER_DIR=/loc1_vob/launcher
+export LAUNCHER_VER=v1
+export LAUNCHER_BIN=$LAUNCHER_DIR/binary/loc1_launcher
+
+# Location and version of the PARAM files:
+# ---------------------------------------
+export MPPARAM_DIR=/loc1_vob/link-t
+export MPPARAM_VER=v1
+export MPPARAM_FILE=$MPPARAM_DIR/conf/MP.Param
+export IPPARAM_DIR=/loc1_vob/link-t
+export IPPARAM_VER=v1
+export IPPARAM_FILE=$IPPARAM_DIR/conf/IP.Param
+
+# Location and version of the "bick" comparator tool:
+# ---------------------------------------------------
+export BICK_DIR=/loc1_vob/bick
+export BICK_VER=v1
+export BICK_BIN=$BICK_DIR/binary/bick
+export BICK_CONF=$BICK_DIR/conf/conf_bick.txt
+
+# Location of the LOC1 DLIP application:
+# -------------------------------------
+export LOC1_MAIN_BIN=~loc1int/dev/link-t_pg/loc1_main
+
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!!!!     D O   N O T   E D I T   B E L O W   T H I S   L I N E     !!!!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+LOGFILE="loc1_non_reg.log"
+VERBOSE="Off"
+
+#======================== Procedures called in this script ===============
+display_help()
+{
+echo ""
+echo "Syntaxe:"
+echo ""
+echo "	 loc1_non_reg                  => launch the program"
+echo "	 loc1_non_reg -v               => launch the program in verbose mode"
+echo "	 loc1_non_reg -?|-h|-help      => display this help"
+echo ""
+echo "-> This script must be run from a Solaris workstation."
+echo ""
+exit
+}
+
+# call echo_log to write both on screen and in file and to avoid writing "tee ..." on each line
+echo_log()
+{
+	echo $* | tee -a $LOGFILE
+}
+
+# change the value of a given parameter in a conf file
+change_conf_file()
+{
+	# $1 is the file
+	# $2 is the parameter name
+	# $3 is it's name
+
+	if [ $# -lt 3 ]
+	then
+		echo "usage : change_conf_file FileName ParamName NewParamValue"
+		exit
+	fi
+
+	FILE="$1"
+	PARAM="$2"
+	NEW_NAME="$3"
+	REPL="= $NEW_NAME"
+	cat $FILE | awk  -F= "  
+	/$PARAM/ {print \$1 LINE; next;}
+	/.*/   {print;}" LINE="$REPL" > change_conf_file.tmp
+	
+	mv -f change_conf_file.tmp $FILE			
+}
+
+# do a ln -sf which works on Solaris
+ln_sf()
+{
+	if [ $# -ne 2 ]
+	then
+		echo "usage : ln_sf source target"
+		echo "\$1 : <$1>, \$2 : <$2>"
+		exit
+	fi
+	
+	# $1 is the source file
+	# $2 is the target file name ou directory name
+
+	if [ -f $2 ]
+	then
+		rm -f $2
+	elif [ -d $2 ]
+	then
+		if [ -f ${2%/}/${1##*/} ]
+		then
+			rm -f ${2%/}/${1##*/}
+		fi
+	fi
+
+	ln -s $1 $2
+}
+
+# write a counter on screen from given number to zero
+function count
+{
+	typeset -i COUNTER=$1
+	while [ $COUNTER -gt 0 ]
+	do
+		/usr/bin/echo "\r${COUNTER}s      \c"
+		sleep 1
+		COUNTER=$COUNTER-1
+	done
+	/usr/bin/echo "\r                    "
+}
+
+function getversions
+{
+
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _getversions CSC [branch]"
+		return
+	fi
+
+
+	ENTITY="$1"
+	BRANCH="$2"
+	
+	if [ -z "$BRANCH" ]
+	then
+		BRANCH="_"
+	else
+		BRANCH=".${BRANCH}_"
+	fi
+
+	for V in $(cleartool lsvt -a $ENTITY | sed 's/.*\///' | sort -nr)
+	do
+		echo $V
+	done | grep -v "@@" | grep "${ENTITY##*/}$BRANCH" | sed "s/[(),]//g"
+}
+
+
+function setversion
+{
+	if [ $# -lt 2 ]
+	then
+		echo "usage : _setversion [-f] CSC Version"
+		return
+	fi
+
+	TEMPFILE="/tmp/setversion.$$"
+	FORCE="False"
+	if [ "$1" = "-f" ]
+	then
+		FORCE="True"
+		shift
+	fi
+	CSCNAME=${1%%/}
+	VERSION=${CSCNAME##*/}_$2
+	CSCNAME=${CSCNAME}/
+
+	if [ ! -d $CSCNAME ]
+	then
+		echo "Directory $CSCNAME does not exist !"
+		return
+	fi
+
+	getversions $CSCNAME | grep $VERSION >/dev/null 2>&1
+	if [ $? -ne 0 ]
+	then
+		echo "This label does not exist for this CSC"
+		return
+	fi
+
+	cleartool catcs | grep $CSCNAME >/dev/null 2>&1
+	if [ $? = 0 ]
+	then
+		if [ "$FORCE" = "True" ] 
+		then
+			/usr/bin/echo 'element * CHECKEDOUT' > $TEMPFILE
+			/usr/bin/echo "element ${CSCNAME}... \t $VERSION" >> $TEMPFILE
+			cleartool catcs | grep -v "$CSCNAME" | fgrep -v 'element * CHECKEDOUT' >> $TEMPFILE
+			cat $TEMPFILE
+			cleartool setcs $TEMPFILE
+			rm $TEMPFILE
+		else
+			echo "A version already exist for $CSCNAME"			
+		fi
+	else
+		/usr/bin/echo 'element * CHECKEDOUT' > $TEMPFILE
+		/usr/bin/echo "element ${CSCNAME}... \t $VERSION" >> $TEMPFILE
+		cleartool catcs | fgrep -v 'element * CHECKEDOUT' >> $TEMPFILE
+		cat $TEMPFILE
+		cleartool setcs $TEMPFILE
+		rm $TEMPFILE
+	fi	
+	
+}
+
+
+
+# note :
+# there is another procedure below, declared in a loop (that's why it's not here)
+
+#==========================================================================
+
+
+
+#==============================================
+# Display help if asked and checking parameters
+# =============================================
+if [ "$1" = "-?" ] || [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ ! `uname` = "SunOS" ]
+then
+	display_help
+elif [ "$1" = "-v" ]
+then
+	VERBOSE="On"
+elif [ "$1" != "" ]
+then
+	echo "Error : [$1] is not a valid argument"
+	display_help
+fi
+
+
+#=============================
+# Checks before executing test
+#=============================
+
+# Check if a clearcase view has be set:
+# ------------------------------------
+/usr/bin/echo "Checking clearcase view ... \c"
+export v=`cleartool pwv -short`
+if [ "$v" = "** NONE **" ] 
+then
+   echo "[FAIL]"
+   echo ""
+   echo "No clearcase view has been set (setview <test_view>)"
+   echo " "
+   exit
+else
+   echo "[OK]"
+fi
+
+STATUS="OK"
+LOG=""
+/usr/bin/echo "Checking needed files ..... \c"
+
+# Check if C2 test driver exists:
+# -------------------------------
+setversion -f $C2_TD_DIR $C2_TD_VER >/dev/null 2>&1
+if [ ! -f $C2_TD_BIN ]
+then
+	LOG=$LOG"File [$C2_TD_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if OSIM test driver exists:
+# ---------------------------------
+setversion -f $OSIM_TD_DIR $OSIM_TD_VER >/dev/null 2>&1
+if [ ! -f $OSIM_TD_BIN ]
+then
+	LOG=$LOG"File [$OSIM_TD_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if MIDS test driver exists: 
+# --------------------------------
+setversion -f $MIDS_TD_DIR $MIDS_TD_VER >/dev/null 2>&1
+if [ ! -f $MIDS_TD_BIN ]
+then
+	LOG=$LOG"File [$MIDS_TD_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if STD tests exist: 
+# -------------------------
+setversion -f $STD_DIR $STD_VER >/dev/null 2>&1
+if [ ! -d $STD_SCE_DIR ]
+then
+	LOG=$LOG"Directory [$STD_SCE_DIR] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if the launcher exists:
+# ----------------------------
+setversion -f $LAUNCHER_DIR $LAUNCHER_VER >/dev/null 2>&1
+if [ ! -f $LAUNCHER_BIN ]
+then
+	LOG=$LOG"File [$LAUNCHER_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if PARAM files exists:
+# ---------------------------
+setversion -f $MPPARAM_DIR $MPPARAM_VER >/dev/null 2>&1
+if [ ! -f $MPPARAM_FILE ]
+then
+	LOG=$LOG"File [$MPPARAM_FILE] not found.\n"
+	STATUS="FAIL"
+fi
+setversion -f $IPPARAM_DIR $IPPARAM_VER >/dev/null 2>&1
+if [ ! -f $IPPARAM_FILE ]
+then
+	LOG=$LOG"File [$IPPARAM_FILE] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Check if bick tool and config files exist:
+# ------------------------------------------
+setversion -f $BICK_DIR $BICK_VER >/dev/null 2>&1
+if [ ! -f $BICK_BIN ]
+then
+	LOG=$LOG"File [$BICK_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+for i in $BICK_CONF
+do
+	if [ ! -f $i ]
+	then
+		LOG=$LOG"File [$i] not found.\n"
+		STATUS="FAIL"
+	fi
+done
+
+# Check if loc1_main exists:
+# -------------------------
+if [ ! -f $LOC1_MAIN_BIN ]
+then
+	LOG=$LOG"File [$LOC1_MAIN_BIN] not found.\n"
+	STATUS="FAIL"
+fi
+
+# Obtenir la liste des tests STD LOC1 existants:
+# ---------------------------------------------
+export TEST_LIST=`ls $STD_SCE_DIR 2>/dev/null`
+if [ -z "$TEST_LIST" ]
+then
+	LOG=$LOG"No scenario has been found in directory [$STD_SCE_DIR].\n"
+	STATUS="FAIL"
+fi
+
+if [ "$STATUS" = "FAIL" ]
+then
+	echo "[FAIL]"
+	echo ""
+	/usr/bin/echo "$LOG"
+	echo ""
+	exit
+else
+	echo "[OK]"
+fi
+
+sleep 1
+
+# ==========================================
+# retrieve the names of the tests to pass
+# (asking it to the user)
+# ==========================================
+typeset -i TOTAL=3
+for FILE in $TEST_LIST
+do
+	TOTAL=$TOTAL+1
+	FILE[$TOTAL]=$FILE
+	STATE[$TOTAL]="_"
+done
+
+echo $TOTAL
+
+LISTE=""
+typeset -i NB
+
+update_liste()
+{
+	NB=4
+	LISTE=""
+	LISTE="$LISTE Done"
+	LISTE="$LISTE All"
+	LISTE="$LISTE None"
+	while [ $NB -le $TOTAL ]
+	do
+		LISTE="$LISTE [${STATE[$NB]}]${FILE[$NB]}"
+		NB=$NB+1
+	done
+}
+
+update_liste
+
+REP="GO_ON"
+while [ "$REP" = "GO_ON" ]
+do
+	clear
+	echo "Choose the scenarii you want to run :"
+	echo ""
+	select FILE in $LISTE
+	do
+		if [ ! "$FILE" = "" ]
+		then
+			if [ "$REPLY" = "1" ]
+			then
+				REP="STOP"
+			elif [ "$REPLY" = "2" ]
+			then
+				NB=4
+				while [ $NB -le $TOTAL ]
+				do
+					STATE[$NB]="X"
+					NB=$NB+1
+				done
+			elif [ "$REPLY" = "3" ]
+			then
+				NB=4
+				while [ $NB -le $TOTAL ]
+				do
+					STATE[$NB]="_"
+					NB=$NB+1
+				done
+			else
+				if [ "${STATE[$REPLY]}" = "_" ]
+				then
+					STATE[$REPLY]="X"
+				else
+					STATE[$REPLY]="_"
+				fi
+			fi
+		fi
+		break
+	done
+
+	update_liste
+	if [ "$REP" = "STOP" ]
+	then
+		echo "Are you sure (y/n) ? "
+		read REP
+		if [ "$REP" = "y" ]
+		then
+			REP="STOP"
+		else
+			REP="GO_ON"
+		fi
+	fi
+done
+
+TEST_LIST=""
+NB=4
+while [ $NB -le $TOTAL ]
+do
+	if [ "${STATE[$NB]}" = "X" ]
+	then
+		TEST_LIST="$TEST_LIST ${FILE[$NB]}"
+	fi
+	NB=$NB+1
+done
+
+
+# ===============================================
+# ============  LOOP TEST EXECUTION =============
+# ===============================================
+
+if [ -f $LOGFILE ]
+then
+	mv -f $LOGFILE ${LOGFILE}.old
+fi
+touch $LOGFILE
+
+echo_log "          =============================================="
+echo_log "          Non regression of `date`"
+echo_log "          =============================================="
+echo_log "  "
+echo_log "  "
+echo_log "List of scenario to be run:"
+echo_log "--------------------------"
+for TEST in $TEST_LIST
+do
+	echo_log "   $TEST"
+done
+echo_log "  "
+echo_log "  "
+
+FIRST_TEST="YES"
+# =============================
+# Execute each test one by one:
+# =============================
+for TEST in $TEST_LIST
+do
+	#              Extract test name
+	#             -----------------------
+	
+	#             Create test directory if does not exists
+
+	if [ ! -d $TEST ]
+	then
+		mkdir $TEST
+	fi
+
+	cd $TEST
+	export ENV_TEST_OK="OK" 
+
+	echo_log "===========> Process of test [$TEST]:"
+
+	#function definition, the echo commands below should be simpler
+	echo "" > GLOBAL_RESULT.$TEST
+	echo_result()
+	{
+		echo $*
+		echo $* >> GLOBAL_RESULT.$TEST
+	}
+
+	# Copy by link the necessary files to run the test:
+	# -------------------------------------------------
+	
+	# Check if those exit before:
+	for i in $TEST.conf $TEST.fom $TEST.xhd $TEST.dem_apu loc1_main.trc c2_host_test_driver.trc mids_test_driver.trc osim_test_driver.trc
+	do
+		if [ ! -f $STD_SCE_DIR/$TEST/Input/$i ]
+		then
+			echo_log "File [$STD_SCE_DIR/$TEST/Input/$i ] not found"
+			export ENV_TEST_OK="KO"
+		fi
+	done
+
+	for i in $TEST.fim $TEST.rep_ind_apu $TEST.xdh c2_host_test_driver.log loc1_main.log mids_test_driver.log osim_test_driver.log
+	do
+		if [ ! -f $STD_SCE_DIR/$TEST/Output/$i ]
+		then
+			echo_log "File [$STD_SCE_DIR/$TEST/Output/$i ] not found"
+#			export ENV_TEST_OK="KO"
+		fi
+	done
+
+	if [ "$ENV_TEST_OK" = "OK" ]
+	then 
+		cp -f $STD_SCE_DIR/$TEST/Input/$TEST.conf .
+		LOCAL_MACHINE=`uname -n`
+		change_conf_file $TEST.conf MIDS_HOST $LOCAL_MACHINE
+		change_conf_file $TEST.conf Host_Address $LOCAL_MACHINE
+		change_conf_file $TEST.conf LinkT_Address $LOCAL_MACHINE
+		change_conf_file $TEST.conf Network_Broadcast_Address "192.168.0.255"
+		ln_sf $STD_SCE_DIR/$TEST/Input/$TEST.fom .
+		ln_sf $STD_SCE_DIR/$TEST/Input/$TEST.xhd .
+		ln_sf $STD_SCE_DIR/$TEST/Input/$TEST.dem_apu .
+		ln_sf $STD_SCE_DIR/$TEST/Input/loc1_main.trc .
+		ln_sf $STD_SCE_DIR/$TEST/Input/c2_host_test_driver.trc .
+		ln_sf $STD_SCE_DIR/$TEST/Input/mids_test_driver.trc .
+		ln_sf $STD_SCE_DIR/$TEST/Input/osim_test_driver.trc .
+
+
+		# Copy by link all tools (test drivers, bick ...):
+		# note : ln -sf don't work on solaris, must do rm -f; ln -s
+		# -----------------------------------------------
+		ln_sf $C2_TD_BIN .
+		ln_sf $OSIM_TD_BIN .
+		ln_sf $MIDS_TD_BIN .
+		ln_sf $BICK_BIN bick
+		ln_sf $BICK_CONF .
+		ln_sf $MPPARAM_FILE .
+		ln_sf $IPPARAM_FILE .
+		ln_sf $LAUNCHER_BIN .
+		ln_sf $LOC1_MAIN_BIN .
+
+
+		# Start the test:
+		echo_result "--------------------------------------------------------------"
+		echo_result "            TEST:  $TEST"
+		echo_result "--------------------------------------------------------------"
+		echo_result "Test environment:"
+		echo_result "  C2 test driver: $C2_TD_BIN $C2_TD_VER"
+		echo_result "  OSIM test driver: $OSIM_TD_BIN $OSIM_TD_VER"
+		echo_result "  MIDS test driver: $MIDS_TD_BIN $MIDS_TD_VER"
+		echo_result "  BICK: $BICK_BIN $BICK_VER"
+		echo_result "  STD scenario: $STD_SCE_DIR/$TEST $STD_VER"
+		echo_result "  LAUNCHER: $LAUNCHER_BIN $LAUNCHER_VER"
+		echo_result "  MPPARAM File: $MPPARAM_FILE $MPPARAM_VER"
+		echo_result "  IPPARAM File: $IPPARAM_FILE $IPPARAM_VER"
+		echo_result "  LOC1_MAIN: $LOC1_MAIN_BIN `$LOC1_MAIN_BIN -v`"
+		echo_result ""
+		echo_result "--------------------------------------------------------------"
+		echo_result "Starting test [$TEST]"
+		echo_result "Current date is `date '+%Hh %Mmin %Ss, %A %d %B %Y'`"
+		SCENARIOTIME=`grep SCENARIO_TIME $TEST.conf | cut -f2 -d '=' | sed 's/ //g' | cut -f 1 -d "."`
+		echo_result "Estimated duration : ${SCENARIOTIME}s"
+		echo_result "--------------------------------------------------------------"
+		echo_result "" 
+
+
+		#     Execute test:
+		#     ------------
+		if [ ! "$FIRST_TEST" = "YES" ]
+		then
+			echo "Waiting for sockets to free up (5 minutes)."
+			echo "Sorry for that, it's Solaris fault."
+			echo ""
+			sleep 300
+		else
+			FIRST_TEST="NO"
+		fi
+
+		echo_result "Test in progress ..."
+		if [ "$VERBOSE" = "Off" ]
+		then
+			count $SCENARIOTIME &
+			PIDCOUNT=$!
+
+			loc1_launcher $TEST.conf >/dev/null
+			kill $PIDCOUNT >/dev/null 2>&1
+		else
+			loc1_launcher $TEST.conf
+		fi
+	
+		echo_result "Test is ended"
+		echo_result "checking FIM results"
+		bick conf_bick.txt $STD_SCE_DIR/$TEST/Output/$TEST.fim $TEST.fim >check_fim 
+	 	echo_result "checking XDH results"
+		bick conf_bick.txt $STD_SCE_DIR/$TEST/Output/$TEST.xdh $TEST.xdh >check_xdh 
+		echo_result "checking REP_IND_APU results"
+		bick conf_bick.txt $STD_SCE_DIR/$TEST/Output/$TEST.rep_ind_apu $TEST.rep_ind_apu >check_ind_apu
+	
+		echo_result "" 
+		echo_result "--------------------------------------------------------------"
+		echo_result "                     TEST RESULTS"
+		echo_result "--------------------------------------------------------------"
+		echo_result "=========== Result of FIM checking =========="
+		grep "message(s)" check_fim  | tee -a GLOBAL_RESULT.$TEST
+		echo_result "" 
+		echo_result "=========== Result of XDH checking =========="
+		grep "message(s)" check_xdh  | tee -a GLOBAL_RESULT.$TEST
+		echo_result "" 
+		echo_result "=========== Result of IND_APU checking =========="
+		grep "message(s)" check_ind_apu  | tee -a GLOBAL_RESULT.$TEST
+		echo_result "" 
+		echo_result "" 
+		echo_result "=========== Result of LOC1 log file checking =========="
+		echo_result "--> List of states reached by DLIP:"
+		grep "SWITCH_TO_STATE" loc1_main.log  | tee -a GLOBAL_RESULT.$TEST
+		echo_result "" 
+		echo_result "" 
+		echo_result "--> List of errors encountered:"
+		grep "\*\*" loc1_main.log  | tee -a GLOBAL_RESULT.$TEST
+		echo_result "" 
+		echo_result "" 
+		echo_result "--------------------------------------------------------------"
+		echo_result " Global test result: `pwd`/GLOBAL_RESULT.$TEST" 
+		echo_result " For more details see files:" 
+		echo_result " 	`pwd`/check.fim" 
+		echo_result " 	`pwd`/check.xdh" 
+		echo_result " 	`pwd`/check.ind_apu" 
+		echo_result " 	`pwd`/loc1_main.log" 
+		echo_result "--------------------------------------------------------------"
+		echo_result "Test end at `date`" 
+		echo_result "--------------------------------------------------------------"
+	
+		echo_log "Test finished, see result in file ./$TEST/GLOBAL_RESULT.$TEST"
+		echo_log ""
+		echo_log ""
+
+	else
+		echo_log "Test not run because of errors listed above ..."
+		echo_log ""
+		echo_log ""
+	fi
+
+	cd ..
+done
+
+echo_log "			===== End of Non Regression Test ===="
+
+# ===========END OF LOOP =======================
+
+################ End of script ##################################################
+

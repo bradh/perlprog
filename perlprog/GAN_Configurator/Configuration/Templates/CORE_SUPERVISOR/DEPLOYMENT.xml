@@ -1,0 +1,8 @@
+<deployment>
+
+  <Remote_Syslog_Port>%P31%</Remote_Syslog_Port>
+  <TcpIp_Server_Port>%P32%</TcpIp_Server_Port>
+  <TcpIp_Server_Visu_Adress>%I07%</TcpIp_Server_Visu_Adress>
+  <KeepAliveMessageFrequency>%S004%</KeepAliveMessageFrequency> <!--Keep alive message sent to HMI server every 5 seconds -->
+  
+</deployment>

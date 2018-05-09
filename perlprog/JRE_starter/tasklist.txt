@@ -1,0 +1,116 @@
+Nom de l'image              PID  Nom de la sessio Numéro d Utilisation  État            Nom d'utilisateur                                  Temps proces Tit
+re de la fenêtre 
+========================= ====== ================ ======== ============ =============== ================================================== ============ ===
+=====================================================================
+System Idle Process            0                         0        28 Ko En service      N/D                                                     9:49:36 N/D
+
+System                         4                         0       268 Ko En service      N/D                                                     0:00:43 N/D
+
+smss.exe                     604                         0       432 Ko En service      N/D                                                     0:00:00 N/D
+
+csrss.exe                    828                         0     2 576 Ko En service      N/D                                                     0:00:14 N/D
+
+winlogon.exe                1124                         0     4 176 Ko En service      N/D                                                     0:00:01 N/D
+
+services.exe                1176                         0     7 520 Ko En service      N/D                                                     0:00:34 N/D
+
+lsass.exe                   1204                         0     1 876 Ko En service      N/D                                                     0:00:06 N/D
+
+nvsvc32.exe                 1404                         0     5 788 Ko En service      N/D                                                     0:00:11 NVS
+VCPMMWindowClass
+svchost.exe                 1456                         0     3 508 Ko En service      N/D                                                     0:00:00 N/D
+
+svchost.exe                 1524                         0     4 388 Ko En service      N/D                                                     0:00:00 N/D
+
+svchost.exe                 1628                         0    24 656 Ko En service      N/D                                                     0:00:11 N/D
+
+svchost.exe                 1780                         0     3 092 Ko En service      N/D                                                     0:00:00 N/D
+
+stacsv.exe                  1852                         0     3 804 Ko En service      N/D                                                     0:00:01 N/D
+
+explorer.exe                1928                         0    15 084 Ko En service      THALES-A1429F92\MINT                                    0:00:17 N/D
+
+accelerometerST.exe          456                         0     4 336 Ko En service      THALES-A1429F92\MINT                                    0:00:00 HP
+3D DriveGuard Monitor
+nusb3mon.exe                 484                         0     5 176 Ko En service      THALES-A1429F92\MINT                                    0:00:01 USB
+ 3.0 Monitor
+rundll32.exe                 520                         0     7 388 Ko En service      THALES-A1429F92\MINT                                    0:00:00 Med
+iaCenter
+AESTFltr.exe                 548                         0     3 696 Ko En service      THALES-A1429F92\MINT                                    0:00:00 AES
+TFilters
+ooditray.exe                 556                         0     7 788 Ko En service      THALES-A1429F92\MINT                                    0:00:00 N/D
+
+rundll32.exe                 564                         0     8 476 Ko En service      THALES-A1429F92\MINT                                    0:00:02 Max
+imiser sur l'affichage actuel
+PccNTMon.exe                 592                         0     8 864 Ko En service      THALES-A1429F92\MINT                                    0:00:00 N/D
+
+jusched.exe                  632                         0     5 016 Ko En service      THALES-A1429F92\MINT                                    0:00:00 Ole
+MainThreadWndName
+ctfmon.exe                   648                         0     3 364 Ko En service      THALES-A1429F92\MINT                                    0:00:00 N/D
+
+GeTTime.exe                  688                         0     9 936 Ko En service      THALES-A1429F92\MINT                                    0:00:03 Tim
+e Utility Main Clock Window, Powered by Symmetricom Technology
+jqs.exe                     1596                         0     1 420 Ko En service      N/D                                                     0:00:17 N/D
+
+LMS.exe                     1740                         0     5 420 Ko En service      N/D                                                     0:00:02 N/D
+
+mdm.exe                      792                         0     2 564 Ko En service      N/D                                                     0:00:00 N/D
+
+NTRtScan.exe                 448                         0    21 300 Ko En service      N/D                                                     0:00:09 N/D
+
+RARPService.exe             1964                         0     1 324 Ko En service      N/D                                                     0:00:00 N/D
+
+svchost.exe                  904                         0     4 796 Ko En service      N/D                                                     0:00:01 N/D
+
+UNS.exe                      788                         0     8 444 Ko En service      N/D                                                     0:00:04 N/D
+
+bootps.exe                  1044                         0     2 564 Ko En service      N/D                                                     0:00:00 N/D
+
+dmadmin.exe                 1088                         0     3 744 Ko En service      N/D                                                     0:00:00 N/D
+
+TmListen.exe                1152                         0    13 092 Ko En service      N/D                                                     0:00:01 N/D
+
+oodiag.exe                  2228                         0     7 144 Ko En service      N/D                                                     0:00:00 N/D
+
+wmiapsrv.exe                2968                         0     4 680 Ko En service      N/D                                                     0:00:01 N/D
+
+TMBMSRV.exe                 3020                         0    11 528 Ko En service      N/D                                                     0:00:38 N/D
+
+alg.exe                     3168                         0     3 644 Ko En service      N/D                                                     0:00:00 N/D
+
+CNTAoSMgr.exe               3628                         0     2 624 Ko En service      N/D                                                     0:00:00 N/D
+
+RARP.exe                    2104                         0     1 888 Ko En service      N/D                                                     0:00:00 N/D
+
+perl.exe                    2508                         0    11 368 Ko En service      THALES-A1429F92\MINT                                    0:00:04 THA
+LES : CWIX 2012 Starter
+notepad++.exe               3944                         0     2 992 Ko En service      THALES-A1429F92\MINT                                    0:00:04 C:\
+Program Files\TCF\SimuL16\DLTE_S16\dlte_s16_SimuL16.xml - Notepad++
+dlte_s16.exe                3436                         0    20 148 Ko En service      THALES-A1429F92\MINT                                    0:00:01 dlt
+e_s16 DLIP
+javaw.exe                   1636                         0    16 784 Ko En service      THALES-A1429F92\MINT                                    0:00:58 Con
+sole de Traces du DLTE-S16 -Version 1.9.0-DLTE-S16 DLIP
+dlte_s16.exe                3164                         0     1 924 Ko En service      THALES-A1429F92\MINT                                    0:00:00 DLT
+E SIMU
+Interop_L16.exe              952                         0   103 736 Ko En service      THALES-A1429F92\MINT                                    0:01:45 Sim
+uL16 - [CWIX_2012_base.scn]
+cmd.exe                     2404                         0     1 472 Ko En service      THALES-A1429F92\MINT                                    0:00:00 DLI
+PCOM.bat
+java.exe                    2444                         0    19 224 Ko En service      THALES-A1429F92\MINT                                    0:54:20 DLI
+P Communication Manager
+DLVM.exe                    2368                         0     3 752 Ko En service      THALES-A1429F92\MINT                                    0:00:13 Spy
+-Links - Visu - [View 1]
+DataServerOnLine.exe        3232                         0     7 088 Ko En service      THALES-A1429F92\MINT                                    0:00:00 Dat
+aServerOnLine V2.3
+DLEM.exe                    2904                         0   258 056 Ko En service      THALES-A1429F92\MINT                                    0:00:11 Spy
+-Links Messages
+javaw.exe                    644                         0    23 132 Ko En service      THALES-A1429F92\MINT                                    0:00:25 JRE
+ Management
+cmd.exe                      800                         0     2 764 Ko En service      THALES-A1429F92\MINT                                    0:00:00 Inv
+ite de commandes - tasklist /V
+tasklist.exe                3192                         0     5 628 Ko En service      THALES-A1429F92\MINT                                    0:00:00 Ole
+MainThreadWndName
+wmiprvse.exe                1168                         0     5 912 Ko En service      N/D                                                     0:00:00 N/D
+
+
+C:\Documents and Settings\MINT>

@@ -1,0 +1,3170 @@
+Config file = TCPDump.cfg
+192.168.100.90 eq 192.168.56.90 && 10008 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00e6 
+Msg Client : 49361c00e600 
+Msg Client : 49361c00e60009 
+Msg Client : 49361c00e60009cd 
+Msg Client : 49361c00e60009cd81 
+Msg Client : 49361c00e60009cd81cd 
+Msg Client : 49361c00e60009cd81cd0a 
+Msg Client : 49361c00e60009cd81cd0a02 
+Msg Client : 49361c00e60009cd81cd0a0200 
+Msg Client : 49361c00e60009cd81cd0a020000 
+Msg Client : 49361c00e60009cd81cd0a02000002 
+Msg Client : 49361c00e60009cd81cd0a0200000220 
+Msg Client : 49361c00e60009cd81cd0a020000022004 
+Msg Client : 49361c00e60009cd81cd0a02000002200400 
+Msg Client : 49361c00e60009cd81cd0a0200000220040001 
+Msg Client : 49361c00e60009cd81cd0a020000022004000100 
+Msg Client : 49361c00e60009cd81cd0a02000002200400010000 
+Msg Client : 49361c00e60009cd81cd0a0200000220040001000000 
+Msg Client : 49361c00e60009cd81cd0a020000022004000100000020 
+Msg Client : 49361c00e60009cd81cd0a02000002200400010000002080 
+Msg Client : 49361c00e60009cd81cd0a0200000220040001000000208007 
+Msg Client : 49361c00e60009cd81cd0a020000022004000100000020800700 
+Msg Client : 49361c00e60009cd81cd0a0200000220040001000000208007007f 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00e7 
+Msg Client : 49361c00e700 
+Msg Client : 49361c00e70009 
+Msg Client : 49361c00e70009cd 
+Msg Client : 49361c00e70009cd81 
+Msg Client : 49361c00e70009cd81cd 
+Msg Client : 49361c00e70009cd81cd0a 
+Msg Client : 49361c00e70009cd81cd0a02 
+Msg Client : 49361c00e70009cd81cd0a0200 
+Msg Client : 49361c00e70009cd81cd0a020000 
+Msg Client : 49361c00e70009cd81cd0a02000000 
+Msg Client : 49361c00e70009cd81cd0a0200000020 
+Msg Client : 49361c00e70009cd81cd0a020000002004 
+Msg Client : 49361c00e70009cd81cd0a02000000200401 
+Msg Client : 49361c00e70009cd81cd0a0200000020040101 
+Msg Client : 49361c00e70009cd81cd0a020000002004010100 
+Msg Client : 49361c00e70009cd81cd0a02000000200401010000 
+Msg Client : 49361c00e70009cd81cd0a0200000020040101000000 
+Msg Client : 49361c00e70009cd81cd0a020000002004010100000020 
+Msg Client : 49361c00e70009cd81cd0a02000000200401010000002080 
+Msg Client : 49361c00e70009cd81cd0a0200000020040101000000208007 
+Msg Client : 49361c00e70009cd81cd0a020000002004010100000020800700 
+Msg Client : 49361c00e70009cd81cd0a0200000020040101000000208007007f 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00e8 
+Msg Client : 49361c00e800 
+Msg Client : 49361c00e80009 
+Msg Client : 49361c00e80009cd 
+Msg Client : 49361c00e80009cd81 
+Msg Client : 49361c00e80009cd81cd 
+Msg Client : 49361c00e80009cd81cd0a 
+Msg Client : 49361c00e80009cd81cd0a02 
+Msg Client : 49361c00e80009cd81cd0a0200 
+Msg Client : 49361c00e80009cd81cd0a020000 
+Msg Client : 49361c00e80009cd81cd0a02000000 
+Msg Client : 49361c00e80009cd81cd0a0200000020 
+Msg Client : 49361c00e80009cd81cd0a020000002004 
+Msg Client : 49361c00e80009cd81cd0a02000000200402 
+Msg Client : 49361c00e80009cd81cd0a0200000020040208 
+Msg Client : 49361c00e80009cd81cd0a020000002004020802 
+Msg Client : 49361c00e80009cd81cd0a02000000200402080200 
+Msg Client : 49361c00e80009cd81cd0a0200000020040208020000 
+Msg Client : 49361c00e80009cd81cd0a020000002004020802000000 
+Msg Client : 49361c00e80009cd81cd0a02000000200402080200000000 
+Msg Client : 49361c00e80009cd81cd0a0200000020040208020000000080 
+Msg Client : 49361c00e80009cd81cd0a020000002004020802000000008000 
+Msg Client : 49361c00e80009cd81cd0a02000000200402080200000000800063 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00e9 
+Msg Client : 49361c00e900 
+Msg Client : 49361c00e90009 
+Msg Client : 49361c00e90009cd 
+Msg Client : 49361c00e90009cd81 
+Msg Client : 49361c00e90009cd81cd 
+Msg Client : 49361c00e90009cd81cd0a 
+Msg Client : 49361c00e90009cd81cd0a02 
+Msg Client : 49361c00e90009cd81cd0a0200 
+Msg Client : 49361c00e90009cd81cd0a020000 
+Msg Client : 49361c00e90009cd81cd0a02000000 
+Msg Client : 49361c00e90009cd81cd0a0200000020 
+Msg Client : 49361c00e90009cd81cd0a020000002004 
+Msg Client : 49361c00e90009cd81cd0a02000000200403 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fc 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd7 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd700 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd70000 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd7000080 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd70000801d 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd70000801d68 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd70000801d6800 
+Msg Client : 49361c00e90009cd81cd0a02000000200403fcd70000801d6800b3 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400ea 
+Msg Client : 49361400ea00 
+Msg Client : 49361400ea0009 
+Msg Client : 49361400ea0009cd 
+Msg Client : 49361400ea0009cd81 
+Msg Client : 49361400ea0009cd81cd 
+Msg Client : 49361400ea0009cd81cd06 
+Msg Client : 49361400ea0009cd81cd0602 
+Msg Client : 49361400ea0009cd81cd060200 
+Msg Client : 49361400ea0009cd81cd06020000 
+Msg Client : 49361400ea0009cd81cd0602000003 
+Msg Client : 49361400ea0009cd81cd060200000320 
+Msg Client : 49361400ea0009cd81cd06020000032000 
+Msg Client : 49361400ea0009cd81cd0602000003200004 
+Msg Client : 49361400ea0009cd81cd0602000003200004d0 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400eb 
+Msg Client : 49361400eb00 
+Msg Client : 49361400eb0009 
+Msg Client : 49361400eb0009cd 
+Msg Client : 49361400eb0009cd81 
+Msg Client : 49361400eb0009cd81cd 
+Msg Client : 49361400eb0009cd81cd06 
+Msg Client : 49361400eb0009cd81cd0602 
+Msg Client : 49361400eb0009cd81cd060200 
+Msg Client : 49361400eb0009cd81cd06020000 
+Msg Client : 49361400eb0009cd81cd0602000001 
+Msg Client : 49361400eb0009cd81cd06020000011d 
+Msg Client : 49361400eb0009cd81cd06020000011d00 
+Msg Client : 49361400eb0009cd81cd06020000011d0000 
+Msg Client : 49361400eb0009cd81cd06020000011d0000c8 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400ec 
+Msg Client : 49361400ec00 
+Msg Client : 49361400ec0009 
+Msg Client : 49361400ec0009cd 
+Msg Client : 49361400ec0009cd81 
+Msg Client : 49361400ec0009cd81cd 
+Msg Client : 49361400ec0009cd81cd06 
+Msg Client : 49361400ec0009cd81cd0602 
+Msg Client : 49361400ec0009cd81cd060200 
+Msg Client : 49361400ec0009cd81cd06020000 
+Msg Client : 49361400ec0009cd81cd0602000001 
+Msg Client : 49361400ec0009cd81cd060200000118 
+Msg Client : 49361400ec0009cd81cd06020000011800 
+Msg Client : 49361400ec0009cd81cd0602000001180000 
+Msg Client : 49361400ec0009cd81cd0602000001180000c4 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b1 
+Msg Client : 49361c00b101 
+Msg Client : 49361c00b10105 
+Msg Client : 49361c00b10105cd 
+Msg Client : 49361c00b10105cd81 
+Msg Client : 49361c00b10105cd81cd 
+Msg Client : 49361c00b10105cd81cd0a 
+Msg Client : 49361c00b10105cd81cd0a02 
+Msg Client : 49361c00b10105cd81cd0a0200 
+Msg Client : 49361c00b10105cd81cd0a020000 
+Msg Client : 49361c00b10105cd81cd0a02000002 
+Msg Client : 49361c00b10105cd81cd0a020000021d 
+Msg Client : 49361c00b10105cd81cd0a020000021d04 
+Msg Client : 49361c00b10105cd81cd0a020000021d0400 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb00 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb009d 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb009d7f 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb009d7ff8 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb009d7ff800 
+Msg Client : 49361c00b10105cd81cd0a020000021d040001e9fb009d7ff80095 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b2 
+Msg Client : 49361c00b201 
+Msg Client : 49361c00b20105 
+Msg Client : 49361c00b20105cd 
+Msg Client : 49361c00b20105cd81 
+Msg Client : 49361c00b20105cd81cd 
+Msg Client : 49361c00b20105cd81cd0a 
+Msg Client : 49361c00b20105cd81cd0a02 
+Msg Client : 49361c00b20105cd81cd0a0200 
+Msg Client : 49361c00b20105cd81cd0a020000 
+Msg Client : 49361c00b20105cd81cd0a02000000 
+Msg Client : 49361c00b20105cd81cd0a020000001d 
+Msg Client : 49361c00b20105cd81cd0a020000001d04 
+Msg Client : 49361c00b20105cd81cd0a020000001d0401 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb00 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb009d 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb009d7f 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb009d7ff8 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb009d7ff800 
+Msg Client : 49361c00b20105cd81cd0a020000001d040101e9fb009d7ff80095 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b3 
+Msg Client : 49361c00b301 
+Msg Client : 49361c00b30105 
+Msg Client : 49361c00b30105cd 
+Msg Client : 49361c00b30105cd81 
+Msg Client : 49361c00b30105cd81cd 
+Msg Client : 49361c00b30105cd81cd0a 
+Msg Client : 49361c00b30105cd81cd0a02 
+Msg Client : 49361c00b30105cd81cd0a0200 
+Msg Client : 49361c00b30105cd81cd0a020000 
+Msg Client : 49361c00b30105cd81cd0a02000000 
+Msg Client : 49361c00b30105cd81cd0a020000001d 
+Msg Client : 49361c00b30105cd81cd0a020000001d04 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc21 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00d5 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00d520 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00d52068 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00d5206800 
+Msg Client : 49361c00b30105cd81cd0a020000001d0402fc210c00d520680024 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b4 
+Msg Client : 49361c00b401 
+Msg Client : 49361c00b40105 
+Msg Client : 49361c00b40105cd 
+Msg Client : 49361c00b40105cd81 
+Msg Client : 49361c00b40105cd81cd 
+Msg Client : 49361c00b40105cd81cd0a 
+Msg Client : 49361c00b40105cd81cd0a02 
+Msg Client : 49361c00b40105cd81cd0a0200 
+Msg Client : 49361c00b40105cd81cd0a020000 
+Msg Client : 49361c00b40105cd81cd0a02000000 
+Msg Client : 49361c00b40105cd81cd0a020000001d 
+Msg Client : 49361c00b40105cd81cd0a020000001d04 
+Msg Client : 49361c00b40105cd81cd0a020000001d0403 
+Msg Client : 49361c00b40105cd81cd0a020000001d040339 
+Msg Client : 49361c00b40105cd81cd0a020000001d04033900 
+Msg Client : 49361c00b40105cd81cd0a020000001d0403390080 
+Msg Client : 49361c00b40105cd81cd0a020000001d040339008000 
+Msg Client : 49361c00b40105cd81cd0a020000001d04033900800012 
+Msg Client : 49361c00b40105cd81cd0a020000001d0403390080001200 
+Msg Client : 49361c00b40105cd81cd0a020000001d040339008000120000 
+Msg Client : 49361c00b40105cd81cd0a020000001d04033900800012000000 
+Msg Client : 49361c00b40105cd81cd0a020000001d040339008000120000006b 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400b5 
+Msg Client : 49361400b501 
+Msg Client : 49361400b50105 
+Msg Client : 49361400b50105cd 
+Msg Client : 49361400b50105cd81 
+Msg Client : 49361400b50105cd81cd 
+Msg Client : 49361400b50105cd81cd06 
+Msg Client : 49361400b50105cd81cd0602 
+Msg Client : 49361400b50105cd81cd060200 
+Msg Client : 49361400b50105cd81cd06020000 
+Msg Client : 49361400b50105cd81cd0602000003 
+Msg Client : 49361400b50105cd81cd06020000031d 
+Msg Client : 49361400b50105cd81cd06020000031d00 
+Msg Client : 49361400b50105cd81cd06020000031d0004 
+Msg Client : 49361400b50105cd81cd06020000031d000495 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400ed 
+Msg Client : 49361400ed00 
+Msg Client : 49361400ed0009 
+Msg Client : 49361400ed0009cd 
+Msg Client : 49361400ed0009cd81 
+Msg Client : 49361400ed0009cd81cd 
+Msg Client : 49361400ed0009cd81cd06 
+Msg Client : 49361400ed0009cd81cd0602 
+Msg Client : 49361400ed0009cd81cd060200 
+Msg Client : 49361400ed0009cd81cd06020000 
+Msg Client : 49361400ed0009cd81cd0602000001 
+Msg Client : 49361400ed0009cd81cd060200000110 
+Msg Client : 49361400ed0009cd81cd06020000011000 
+Msg Client : 49361400ed0009cd81cd0602000001100000 
+Msg Client : 49361400ed0009cd81cd0602000001100000bd 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400f0 
+Msg Client : 49361400f000 
+Msg Client : 49361400f00009 
+Msg Client : 49361400f00009cd 
+Msg Client : 49361400f00009cd81 
+Msg Client : 49361400f00009cd81cd 
+Msg Client : 49361400f00009cd81cd06 
+Msg Client : 49361400f00009cd81cd0602 
+Msg Client : 49361400f00009cd81cd060200 
+Msg Client : 49361400f00009cd81cd06020000 
+Msg Client : 49361400f00009cd81cd0602000001 
+Msg Client : 49361400f00009cd81cd060200000108 
+Msg Client : 49361400f00009cd81cd06020000010800 
+Msg Client : 49361400f00009cd81cd0602000001080000 
+Msg Client : 49361400f00009cd81cd0602000001080000b8 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+extract_SIMPLE_Msg
+ TCP DATA server : 49361400000001cd81cd06020000020800000000
+49, 0, 40
+ etatlecture = 1
+36, 1, 40
+passage a l'etat 2
+4936
+14, 2, 40
+passage a l'etat 4 
+493614
+SIMPLE_length_9 = 20 
+00, 3, 40
+etat 4 20
+Msg  Server : 49361400 
+00, 4, 40
+etat 4 20
+Msg  Server : 4936140000 
+00, 5, 40
+etat 4 20
+Msg  Server : 493614000000 
+01, 6, 40
+etat 4 20
+Msg  Server : 49361400000001 
+cd, 7, 40
+etat 4 20
+Msg  Server : 49361400000001cd 
+81, 8, 40
+etat 4 20
+Msg  Server : 49361400000001cd81 
+cd, 9, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd 
+06, 10, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd06 
+02, 11, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd0602 
+00, 12, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd060200 
+00, 13, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd06020000 
+02, 14, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd0602000002 
+08, 15, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd060200000208 
+00, 16, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd06020000020800 
+00, 17, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd0602000002080000 
+00, 18, 40
+etat 4 20
+Msg  Server : 49361400000001cd81cd060200000208000000 
+00, 19, 40
+etat 4 20
+Msg server : 53322.206, 49361400000001CD81CD06020000020800000000 
+49 36 14 00 00 00 01 CD 81 CD 06 02 00 00 02 08 00 00 00 00 
+Sync : 4936
+Length = 20
+Seq_number = 0
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 14 00 00 00 01 CD 81 CD 06 02 00 00 02 08 00 00 00 00 
+num : 19
+Sync : 4936
+Length = 20
+Seq_number = 0
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 2
+	PU Number = 8
+	Word_Count = 0
+	Sequence Number = 00
+toto 0
+Msg_Data : 
+MI server : 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00010001cd81cd0a0200000008040101000000080000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+01, 4, 56
+etat 4 28
+Msg  Server : 49361c0001 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000100 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00010001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00010001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a020000000804 
+01, 17, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02000000080401 
+01, 18, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a0200000008040101 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a020000000804010100 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02000000080401010000 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a0200000008040101000000 
+08, 22, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a020000000804010100000008 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02000000080401010000000800 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a0200000008040101000000080000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a020000000804010100000008000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00010001cd81cd0a02000000080401010000000800000000 
+00, 27, 56
+etat 4 28
+Msg server : 53322.206, 49361C00010001CD81CD0A0200000008040101000000080000000000 
+49 36 1C 00 01 00 01 CD 81 CD 0A 02 00 00 00 08 04 01 01 00 00 00 08 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 1
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 01 00 01 CD 81 CD 0A 02 00 00 00 08 04 01 01 00 00 00 08 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 1
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 01
+toto 2
+Msg_Data : 000008 000000 
+MI server : 000008 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00020001cd81cd0a0200000008040201000000080000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+02, 4, 56
+etat 4 28
+Msg  Server : 49361c0002 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000200 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00020001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00020001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a020000000804 
+02, 17, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02000000080402 
+01, 18, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a0200000008040201 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a020000000804020100 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02000000080402010000 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a0200000008040201000000 
+08, 22, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a020000000804020100000008 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02000000080402010000000800 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a0200000008040201000000080000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a020000000804020100000008000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00020001cd81cd0a02000000080402010000000800000000 
+00, 27, 56
+etat 4 28
+Msg server : 53322.206, 49361C00020001CD81CD0A0200000008040201000000080000000000 
+49 36 1C 00 02 00 01 CD 81 CD 0A 02 00 00 00 08 04 02 01 00 00 00 08 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 2
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 02 00 01 CD 81 CD 0A 02 00 00 00 08 04 02 01 00 00 00 08 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 2
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 02
+toto 2
+Msg_Data : 000008 000000 
+MI server : 000008 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00030001cd81cd0a020000000804038800000000008a000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+03, 4, 56
+etat 4 28
+Msg  Server : 49361c0003 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000300 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00030001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00030001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804 
+03, 17, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a02000000080403 
+88, 18, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a0200000008040388 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804038800 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a02000000080403880000 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a0200000008040388000000 
+00, 22, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804038800000000 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a02000000080403880000000000 
+8a, 24, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804038800000000008a 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804038800000000008a00 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00030001cd81cd0a020000000804038800000000008a0000 
+00, 27, 56
+etat 4 28
+Msg server : 53322.206, 49361C00030001CD81CD0A020000000804038800000000008A000000 
+49 36 1C 00 03 00 01 CD 81 CD 0A 02 00 00 00 08 04 03 88 00 00 00 00 00 8A 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 3
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 03 00 01 CD 81 CD 0A 02 00 00 00 08 04 03 88 00 00 00 00 00 8A 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 3
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 03
+toto 2
+Msg_Data : 000000 8A0000 
+MI server : 000000 8A0000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00040001cd81cd0a02000000080404fc0500001a2568000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+04, 4, 56
+etat 4 28
+Msg  Server : 49361c0004 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000400 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00040001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00040001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a020000000804 
+04, 17, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404 
+fc, 18, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc 
+05, 19, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc05 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc050000 
+1a, 22, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500001a 
+25, 23, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500001a25 
+68, 24, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500001a2568 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500001a256800 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00040001cd81cd0a02000000080404fc0500001a25680000 
+00, 27, 56
+etat 4 28
+Msg server : 53322.218, 49361C00040001CD81CD0A02000000080404FC0500001A2568000000 
+49 36 1C 00 04 00 01 CD 81 CD 0A 02 00 00 00 08 04 04 FC 05 00 00 1A 25 68 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 4
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 04 00 01 CD 81 CD 0A 02 00 00 00 08 04 04 FC 05 00 00 1A 25 68 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 4
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 04
+toto 2
+Msg_Data : 00051A 682500 
+MI server : 00051A 682500 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00050001cd81cd0a0200000008040539008000000000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+05, 4, 56
+etat 4 28
+Msg  Server : 49361c0005 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000500 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00050001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00050001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a020000000804 
+05, 17, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02000000080405 
+39, 18, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a0200000008040539 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a020000000804053900 
+80, 20, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02000000080405390080 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a0200000008040539008000 
+00, 22, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a020000000804053900800000 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02000000080405390080000000 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a0200000008040539008000000000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a020000000804053900800000000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00050001cd81cd0a02000000080405390080000000000000 
+00, 27, 56
+etat 4 28
+Msg server : 53322.231, 49361C00050001CD81CD0A0200000008040539008000000000000000 
+49 36 1C 00 05 00 01 CD 81 CD 0A 02 00 00 00 08 04 05 39 00 80 00 00 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 5
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 05 00 01 CD 81 CD 0A 02 00 00 00 08 04 05 39 00 80 00 00 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 5
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 05
+toto 2
+Msg_Data : 800000 000000 
+MI server : 800000 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361400060001cd81cd06020000030800060000
+49, 0, 40
+ etatlecture = 1
+36, 1, 40
+passage a l'etat 2
+4936
+14, 2, 40
+passage a l'etat 4 
+493614
+SIMPLE_length_9 = 20 
+00, 3, 40
+etat 4 20
+Msg  Server : 49361400 
+06, 4, 40
+etat 4 20
+Msg  Server : 4936140006 
+00, 5, 40
+etat 4 20
+Msg  Server : 493614000600 
+01, 6, 40
+etat 4 20
+Msg  Server : 49361400060001 
+cd, 7, 40
+etat 4 20
+Msg  Server : 49361400060001cd 
+81, 8, 40
+etat 4 20
+Msg  Server : 49361400060001cd81 
+cd, 9, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd 
+06, 10, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd06 
+02, 11, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd0602 
+00, 12, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd060200 
+00, 13, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd06020000 
+03, 14, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd0602000003 
+08, 15, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd060200000308 
+00, 16, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd06020000030800 
+06, 17, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd0602000003080006 
+00, 18, 40
+etat 4 20
+Msg  Server : 49361400060001cd81cd060200000308000600 
+00, 19, 40
+etat 4 20
+Msg server : 53322.231, 49361400060001CD81CD06020000030800060000 
+49 36 14 00 06 00 01 CD 81 CD 06 02 00 00 03 08 00 06 00 00 
+Sync : 4936
+Length = 20
+Seq_number = 6
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 14 00 06 00 01 CD 81 CD 06 02 00 00 03 08 00 06 00 00 
+num : 19
+Sync : 4936
+Length = 20
+Seq_number = 6
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 3
+	PU Number = 8
+	Word_Count = 0
+	Sequence Number = 06
+toto 0
+Msg_Data : 
+MI server : 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00f1 
+Msg Client : 49361c00f100 
+Msg Client : 49361c00f10009 
+Msg Client : 49361c00f10009cd 
+Msg Client : 49361c00f10009cd81 
+Msg Client : 49361c00f10009cd81cd 
+Msg Client : 49361c00f10009cd81cd0a 
+Msg Client : 49361c00f10009cd81cd0a02 
+Msg Client : 49361c00f10009cd81cd0a0200 
+Msg Client : 49361c00f10009cd81cd0a020000 
+Msg Client : 49361c00f10009cd81cd0a02000002 
+Msg Client : 49361c00f10009cd81cd0a0200000220 
+Msg Client : 49361c00f10009cd81cd0a020000022004 
+Msg Client : 49361c00f10009cd81cd0a02000002200400 
+Msg Client : 49361c00f10009cd81cd0a0200000220040001 
+Msg Client : 49361c00f10009cd81cd0a020000022004000100 
+Msg Client : 49361c00f10009cd81cd0a02000002200400010000 
+Msg Client : 49361c00f10009cd81cd0a0200000220040001000000 
+Msg Client : 49361c00f10009cd81cd0a020000022004000100000020 
+Msg Client : 49361c00f10009cd81cd0a02000002200400010000002080 
+Msg Client : 49361c00f10009cd81cd0a0200000220040001000000208007 
+Msg Client : 49361c00f10009cd81cd0a020000022004000100000020800700 
+Msg Client : 49361c00f10009cd81cd0a0200000220040001000000208007008a 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00f2 
+Msg Client : 49361c00f200 
+Msg Client : 49361c00f20009 
+Msg Client : 49361c00f20009cd 
+Msg Client : 49361c00f20009cd81 
+Msg Client : 49361c00f20009cd81cd 
+Msg Client : 49361c00f20009cd81cd0a 
+Msg Client : 49361c00f20009cd81cd0a02 
+Msg Client : 49361c00f20009cd81cd0a0200 
+Msg Client : 49361c00f20009cd81cd0a020000 
+Msg Client : 49361c00f20009cd81cd0a02000000 
+Msg Client : 49361c00f20009cd81cd0a0200000020 
+Msg Client : 49361c00f20009cd81cd0a020000002004 
+Msg Client : 49361c00f20009cd81cd0a02000000200401 
+Msg Client : 49361c00f20009cd81cd0a0200000020040101 
+Msg Client : 49361c00f20009cd81cd0a020000002004010100 
+Msg Client : 49361c00f20009cd81cd0a02000000200401010000 
+Msg Client : 49361c00f20009cd81cd0a0200000020040101000000 
+Msg Client : 49361c00f20009cd81cd0a020000002004010100000020 
+Msg Client : 49361c00f20009cd81cd0a02000000200401010000002080 
+Msg Client : 49361c00f20009cd81cd0a0200000020040101000000208007 
+Msg Client : 49361c00f20009cd81cd0a020000002004010100000020800700 
+Msg Client : 49361c00f20009cd81cd0a0200000020040101000000208007008a 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00f3 
+Msg Client : 49361c00f300 
+Msg Client : 49361c00f30009 
+Msg Client : 49361c00f30009cd 
+Msg Client : 49361c00f30009cd81 
+Msg Client : 49361c00f30009cd81cd 
+Msg Client : 49361c00f30009cd81cd0a 
+Msg Client : 49361c00f30009cd81cd0a02 
+Msg Client : 49361c00f30009cd81cd0a0200 
+Msg Client : 49361c00f30009cd81cd0a020000 
+Msg Client : 49361c00f30009cd81cd0a02000000 
+Msg Client : 49361c00f30009cd81cd0a0200000020 
+Msg Client : 49361c00f30009cd81cd0a020000002004 
+Msg Client : 49361c00f30009cd81cd0a02000000200402 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fc 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb00 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb0000 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb000080 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb00008026 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb0000802668 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb000080266800 
+Msg Client : 49361c00f30009cd81cd0a02000000200402fcdb000080266800c9 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400f4 
+Msg Client : 49361400f400 
+Msg Client : 49361400f40009 
+Msg Client : 49361400f40009cd 
+Msg Client : 49361400f40009cd81 
+Msg Client : 49361400f40009cd81cd 
+Msg Client : 49361400f40009cd81cd06 
+Msg Client : 49361400f40009cd81cd0602 
+Msg Client : 49361400f40009cd81cd060200 
+Msg Client : 49361400f40009cd81cd06020000 
+Msg Client : 49361400f40009cd81cd0602000003 
+Msg Client : 49361400f40009cd81cd060200000320 
+Msg Client : 49361400f40009cd81cd06020000032000 
+Msg Client : 49361400f40009cd81cd0602000003200003 
+Msg Client : 49361400f40009cd81cd0602000003200003d9 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400f5 
+Msg Client : 49361400f500 
+Msg Client : 49361400f50009 
+Msg Client : 49361400f50009cd 
+Msg Client : 49361400f50009cd81 
+Msg Client : 49361400f50009cd81cd 
+Msg Client : 49361400f50009cd81cd06 
+Msg Client : 49361400f50009cd81cd0602 
+Msg Client : 49361400f50009cd81cd060200 
+Msg Client : 49361400f50009cd81cd06020000 
+Msg Client : 49361400f50009cd81cd0602000001 
+Msg Client : 49361400f50009cd81cd06020000011d 
+Msg Client : 49361400f50009cd81cd06020000011d00 
+Msg Client : 49361400f50009cd81cd06020000011d0000 
+Msg Client : 49361400f50009cd81cd06020000011d0000d2 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49368c00 
+Msg Client : 49368c00f6 
+Msg Client : 49368c00f600 
+Msg Client : 49368c00f60009 
+Msg Client : 49368c00f6000906 
+Msg Client : 49368c00f600090681 
+Msg Client : 49368c00f60009068106 
+Msg Client : 49368c00f6000906810642 
+Msg Client : 49368c00f60009068106423d 
+Msg Client : 49368c00f60009068106423d00 
+Msg Client : 49368c00f60009068106423d0000 
+Msg Client : 49368c00f60009068106423d000003 
+Msg Client : 49368c00f60009068106423d0000033e 
+Msg Client : 49368c00f60009068106423d0000033e09 
+Msg Client : 49368c00f60009068106423d0000033e0903 
+Msg Client : 49368c00f60009068106423d0000033e090352 
+Msg Client : 49368c00f60009068106423d0000033e09035254 
+Msg Client : 49368c00f60009068106423d0000033e0903525454 
+Msg Client : 49368c00f60009068106423d0000033e090352545420 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020202020 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020202020202000 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020202020200000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020202020202000000000 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020202020200000000001 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020202020202000000000010000 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020202020200000000001000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000 
+Msg Client : 49368c00f60009068106423d0000033e0903525454202020202020204101202020202020202000000000010000000000 
+Msg Client : 49368c00f60009068106423d0000033e090352545420202020202020410120202020202020200000000001000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f6 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f60000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f6000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f60000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f6000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f60000000000000053 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f6000000000000005374 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f60000000000000053746174 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f6000000000000005374617475 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f60000000000000053746174757343 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020202020202000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020202020200000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020202020202000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020202020200000000001 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020202020202000000000010000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020202020200000000001000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e664206202020202020202000000000010000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e66420620202020202020200000000001000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f6 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f600 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f6000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f600000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f6000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f600000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f6000000000000005469 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d65 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d655379 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020202020202000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020202020200000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020202020202000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020202020200000000001 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020202020202000000000010000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020202020200000000001000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e6368724307202020202020202000000000010000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e636872430720202020202020200000000001000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f6 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f600 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f60000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f6000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f600000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f60000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f6000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f600000000000000 
+Msg Client : 49368c00f60009068106423d0000033e09035254542020202020202041012020202020202020000000000100000000000000f600000000000000537461747573436f6e6642062020202020202020000000000100000000000000f60000000000000054696d6553796e63687243072020202020202020000000000100000000000000f60000000000000006 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361a00 
+Msg Client : 49361a00f7 
+Msg Client : 49361a00f700 
+Msg Client : 49361a00f70009 
+Msg Client : 49361a00f7000907 
+Msg Client : 49361a00f700090781 
+Msg Client : 49361a00f70009078107 
+Msg Client : 49361a00f7000907810709 
+Msg Client : 49361a00f700090781070941 
+Msg Client : 49361a00f70009078107094100 
+Msg Client : 49361a00f7000907810709410000 
+Msg Client : 49361a00f700090781070941000009 
+Msg Client : 49361a00f70009078107094100000900 
+Msg Client : 49361a00f700090781070941000009006b 
+Msg Client : 49361a00f700090781070941000009006bba 
+Msg Client : 49361a00f700090781070941000009006bba2d 
+Msg Client : 49361a00f700090781070941000009006bba2d03 
+Msg Client : 49361a00f700090781070941000009006bba2d0300 
+Msg Client : 49361a00f700090781070941000009006bba2d030000 
+Msg Client : 49361a00f700090781070941000009006bba2d03000000 
+Msg Client : 49361a00f700090781070941000009006bba2d0300000000 
+Msg Client : 49361a00f700090781070941000009006bba2d0300000000d0 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49364e00 
+Msg Client : 49364e00f8 
+Msg Client : 49364e00f800 
+Msg Client : 49364e00f80009 
+Msg Client : 49364e00f8000906 
+Msg Client : 49364e00f800090681 
+Msg Client : 49364e00f80009068106 
+Msg Client : 49364e00f8000906810623 
+Msg Client : 49364e00f80009068106233d 
+Msg Client : 49364e00f80009068106233d00 
+Msg Client : 49364e00f80009068106233d0000 
+Msg Client : 49364e00f80009068106233d000001 
+Msg Client : 49364e00f80009068106233d0000011f 
+Msg Client : 49364e00f80009068106233d0000011f20 
+Msg Client : 49364e00f80009068106233d0000011f2020 
+Msg Client : 49364e00f80009068106233d0000011f202020 
+Msg Client : 49364e00f80009068106233d0000011f20202020 
+Msg Client : 49364e00f80009068106233d0000011f2020202020 
+Msg Client : 49364e00f80009068106233d0000011f202020202020 
+Msg Client : 49364e00f80009068106233d0000011f20202020202020 
+Msg Client : 49364e00f80009068106233d0000011f2020202020202020 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020 
+Msg Client : 49364e00f80009068106233d0000011f20202020202020202020 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e093030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e09303000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e00f80009068106233d0000011f202020202020202020200e0930300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000092 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400fa 
+Msg Client : 49361400fa00 
+Msg Client : 49361400fa0009 
+Msg Client : 49361400fa0009cd 
+Msg Client : 49361400fa0009cd81 
+Msg Client : 49361400fa0009cd81cd 
+Msg Client : 49361400fa0009cd81cd06 
+Msg Client : 49361400fa0009cd81cd0602 
+Msg Client : 49361400fa0009cd81cd060200 
+Msg Client : 49361400fa0009cd81cd06020000 
+Msg Client : 49361400fa0009cd81cd0602000001 
+Msg Client : 49361400fa0009cd81cd060200000118 
+Msg Client : 49361400fa0009cd81cd06020000011800 
+Msg Client : 49361400fa0009cd81cd0602000001180000 
+Msg Client : 49361400fa0009cd81cd0602000001180000d2 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b8 
+Msg Client : 49361c00b801 
+Msg Client : 49361c00b80105 
+Msg Client : 49361c00b80105cd 
+Msg Client : 49361c00b80105cd81 
+Msg Client : 49361c00b80105cd81cd 
+Msg Client : 49361c00b80105cd81cd0a 
+Msg Client : 49361c00b80105cd81cd0a02 
+Msg Client : 49361c00b80105cd81cd0a0200 
+Msg Client : 49361c00b80105cd81cd0a020000 
+Msg Client : 49361c00b80105cd81cd0a02000002 
+Msg Client : 49361c00b80105cd81cd0a020000021d 
+Msg Client : 49361c00b80105cd81cd0a020000021d04 
+Msg Client : 49361c00b80105cd81cd0a020000021d0400 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb00 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb009d 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb009d7f 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb009d7ff8 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb009d7ff800 
+Msg Client : 49361c00b80105cd81cd0a020000021d040081e7fb009d7ff8001a 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00b9 
+Msg Client : 49361c00b901 
+Msg Client : 49361c00b90105 
+Msg Client : 49361c00b90105cd 
+Msg Client : 49361c00b90105cd81 
+Msg Client : 49361c00b90105cd81cd 
+Msg Client : 49361c00b90105cd81cd0a 
+Msg Client : 49361c00b90105cd81cd0a02 
+Msg Client : 49361c00b90105cd81cd0a0200 
+Msg Client : 49361c00b90105cd81cd0a020000 
+Msg Client : 49361c00b90105cd81cd0a02000000 
+Msg Client : 49361c00b90105cd81cd0a020000001d 
+Msg Client : 49361c00b90105cd81cd0a020000001d04 
+Msg Client : 49361c00b90105cd81cd0a020000001d0401 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb00 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb009d 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb009d7f 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb009d7ff8 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb009d7ff800 
+Msg Client : 49361c00b90105cd81cd0a020000001d040181e7fb009d7ff8001a 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00ba 
+Msg Client : 49361c00ba01 
+Msg Client : 49361c00ba0105 
+Msg Client : 49361c00ba0105cd 
+Msg Client : 49361c00ba0105cd81 
+Msg Client : 49361c00ba0105cd81cd 
+Msg Client : 49361c00ba0105cd81cd0a 
+Msg Client : 49361c00ba0105cd81cd0a02 
+Msg Client : 49361c00ba0105cd81cd0a0200 
+Msg Client : 49361c00ba0105cd81cd0a020000 
+Msg Client : 49361c00ba0105cd81cd0a02000000 
+Msg Client : 49361c00ba0105cd81cd0a020000001d 
+Msg Client : 49361c00ba0105cd81cd0a020000001d04 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d8 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d84100 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d8410000 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841000000 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841000000f3 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841000000f368 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841000000f36800 
+Msg Client : 49361c00ba0105cd81cd0a020000001d0402d841000000f3680019 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00bb 
+Msg Client : 49361c00bb01 
+Msg Client : 49361c00bb0105 
+Msg Client : 49361c00bb0105cd 
+Msg Client : 49361c00bb0105cd81 
+Msg Client : 49361c00bb0105cd81cd 
+Msg Client : 49361c00bb0105cd81cd0a 
+Msg Client : 49361c00bb0105cd81cd0a02 
+Msg Client : 49361c00bb0105cd81cd0a0200 
+Msg Client : 49361c00bb0105cd81cd0a020000 
+Msg Client : 49361c00bb0105cd81cd0a02000000 
+Msg Client : 49361c00bb0105cd81cd0a020000001d 
+Msg Client : 49361c00bb0105cd81cd0a020000001d04 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc25 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c00 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c0095 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c009529 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c00952968 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c0095296800 
+Msg Client : 49361c00bb0105cd81cd0a020000001d0403fc250c0095296800fa 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00bc 
+Msg Client : 49361c00bc01 
+Msg Client : 49361c00bc0105 
+Msg Client : 49361c00bc0105cd 
+Msg Client : 49361c00bc0105cd81 
+Msg Client : 49361c00bc0105cd81cd 
+Msg Client : 49361c00bc0105cd81cd0a 
+Msg Client : 49361c00bc0105cd81cd0a02 
+Msg Client : 49361c00bc0105cd81cd0a0200 
+Msg Client : 49361c00bc0105cd81cd0a020000 
+Msg Client : 49361c00bc0105cd81cd0a02000000 
+Msg Client : 49361c00bc0105cd81cd0a020000001d 
+Msg Client : 49361c00bc0105cd81cd0a020000001d04 
+Msg Client : 49361c00bc0105cd81cd0a020000001d0404 
+Msg Client : 49361c00bc0105cd81cd0a020000001d040439 
+Msg Client : 49361c00bc0105cd81cd0a020000001d04043900 
+Msg Client : 49361c00bc0105cd81cd0a020000001d0404390080 
+Msg Client : 49361c00bc0105cd81cd0a020000001d040439008000 
+Msg Client : 49361c00bc0105cd81cd0a020000001d04043900800012 
+Msg Client : 49361c00bc0105cd81cd0a020000001d0404390080001200 
+Msg Client : 49361c00bc0105cd81cd0a020000001d040439008000120000 
+Msg Client : 49361c00bc0105cd81cd0a020000001d04043900800012000000 
+Msg Client : 49361c00bc0105cd81cd0a020000001d0404390080001200000074 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400bd 
+Msg Client : 49361400bd01 
+Msg Client : 49361400bd0105 
+Msg Client : 49361400bd0105cd 
+Msg Client : 49361400bd0105cd81 
+Msg Client : 49361400bd0105cd81cd 
+Msg Client : 49361400bd0105cd81cd06 
+Msg Client : 49361400bd0105cd81cd0602 
+Msg Client : 49361400bd0105cd81cd060200 
+Msg Client : 49361400bd0105cd81cd06020000 
+Msg Client : 49361400bd0105cd81cd0602000003 
+Msg Client : 49361400bd0105cd81cd06020000031d 
+Msg Client : 49361400bd0105cd81cd06020000031d00 
+Msg Client : 49361400bd0105cd81cd06020000031d0005 
+Msg Client : 49361400bd0105cd81cd06020000031d00059e 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49364e00 
+Msg Client : 49364e001f 
+Msg Client : 49364e001f00 
+Msg Client : 49364e001f0001 
+Msg Client : 49364e001f000106 
+Msg Client : 49364e001f00010681 
+Msg Client : 49364e001f0001068106 
+Msg Client : 49364e001f000106810623 
+Msg Client : 49364e001f0001068106233d 
+Msg Client : 49364e001f0001068106233d00 
+Msg Client : 49364e001f0001068106233d0000 
+Msg Client : 49364e001f0001068106233d000001 
+Msg Client : 49364e001f0001068106233d0000011f 
+Msg Client : 49364e001f0001068106233d0000011f53 
+Msg Client : 49364e001f0001068106233d0000011f534e 
+Msg Client : 49364e001f0001068106233d0000011f534e52 
+Msg Client : 49364e001f0001068106233d0000011f534e5220 
+Msg Client : 49364e001f0001068106233d0000011f534e522020 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020 
+Msg Client : 49364e001f0001068106233d0000011f534e5220202020 
+Msg Client : 49364e001f0001068106233d0000011f534e522020202020 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020 
+Msg Client : 49364e001f0001068106233d0000011f534e5220202020202020 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e0133300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e01333000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Msg Client : 49364e001f0001068106233d0000011f534e52202020202020200e013330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003f 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+extract_SIMPLE_Msg
+ TCP DATA server : 49361600070001010901073f0000010083c92d030000
+49, 0, 44
+ etatlecture = 1
+36, 1, 44
+passage a l'etat 2
+4936
+16, 2, 44
+passage a l'etat 4 
+493616
+SIMPLE_length_9 = 22 
+00, 3, 44
+etat 4 22
+Msg  Server : 49361600 
+07, 4, 44
+etat 4 22
+Msg  Server : 4936160007 
+00, 5, 44
+etat 4 22
+Msg  Server : 493616000700 
+01, 6, 44
+etat 4 22
+Msg  Server : 49361600070001 
+01, 7, 44
+etat 4 22
+Msg  Server : 4936160007000101 
+09, 8, 44
+etat 4 22
+Msg  Server : 493616000700010109 
+01, 9, 44
+etat 4 22
+Msg  Server : 49361600070001010901 
+07, 10, 44
+etat 4 22
+Msg  Server : 4936160007000101090107 
+3f, 11, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f 
+00, 12, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f00 
+00, 13, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000 
+01, 14, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f000001 
+00, 15, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f00000100 
+83, 16, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000010083 
+c9, 17, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000010083c9 
+2d, 18, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000010083c92d 
+03, 19, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000010083c92d03 
+00, 20, 44
+etat 4 22
+Msg  Server : 49361600070001010901073f0000010083c92d0300 
+00, 21, 44
+etat 4 22
+Msg server : 53332.355, 49361600070001010901073F0000010083C92D030000 
+49 36 16 00 07 00 01 01 09 01 07 3F 00 00 01 00 83 C9 2D 03 00 00 
+Sync : 4936
+Length = 22
+Seq_number = 7
+Source node = 1
+Source subnode = 1
+Dest node = 9
+Dest_sub_node = 1
+Packet size = 7
+Packet type = 63
+Transmit time = 0
+packet Type server = 63
+msg server SIMPLE technique
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400fc 
+Msg Client : 49361400fc00 
+Msg Client : 49361400fc0009 
+Msg Client : 49361400fc0009cd 
+Msg Client : 49361400fc0009cd81 
+Msg Client : 49361400fc0009cd81cd 
+Msg Client : 49361400fc0009cd81cd06 
+Msg Client : 49361400fc0009cd81cd0602 
+Msg Client : 49361400fc0009cd81cd060200 
+Msg Client : 49361400fc0009cd81cd06020000 
+Msg Client : 49361400fc0009cd81cd0602000001 
+Msg Client : 49361400fc0009cd81cd060200000110 
+Msg Client : 49361400fc0009cd81cd06020000011000 
+Msg Client : 49361400fc0009cd81cd0602000001100000 
+Msg Client : 49361400fc0009cd81cd0602000001100000cc 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 49361400fd 
+Msg Client : 49361400fd00 
+Msg Client : 49361400fd0009 
+Msg Client : 49361400fd0009cd 
+Msg Client : 49361400fd0009cd81 
+Msg Client : 49361400fd0009cd81cd 
+Msg Client : 49361400fd0009cd81cd06 
+Msg Client : 49361400fd0009cd81cd0602 
+Msg Client : 49361400fd0009cd81cd060200 
+Msg Client : 49361400fd0009cd81cd06020000 
+Msg Client : 49361400fd0009cd81cd0602000001 
+Msg Client : 49361400fd0009cd81cd060200000108 
+Msg Client : 49361400fd0009cd81cd06020000010800 
+Msg Client : 49361400fd0009cd81cd0602000001080000 
+Msg Client : 49361400fd0009cd81cd0602000001080000c5 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+extract_SIMPLE_Msg
+ TCP DATA server : 49361400080001cd81cd06020000020800060000
+49, 0, 40
+ etatlecture = 1
+36, 1, 40
+passage a l'etat 2
+4936
+14, 2, 40
+passage a l'etat 4 
+493614
+SIMPLE_length_9 = 20 
+00, 3, 40
+etat 4 20
+Msg  Server : 49361400 
+08, 4, 40
+etat 4 20
+Msg  Server : 4936140008 
+00, 5, 40
+etat 4 20
+Msg  Server : 493614000800 
+01, 6, 40
+etat 4 20
+Msg  Server : 49361400080001 
+cd, 7, 40
+etat 4 20
+Msg  Server : 49361400080001cd 
+81, 8, 40
+etat 4 20
+Msg  Server : 49361400080001cd81 
+cd, 9, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd 
+06, 10, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd06 
+02, 11, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd0602 
+00, 12, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd060200 
+00, 13, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd06020000 
+02, 14, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd0602000002 
+08, 15, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd060200000208 
+00, 16, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd06020000020800 
+06, 17, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd0602000002080006 
+00, 18, 40
+etat 4 20
+Msg  Server : 49361400080001cd81cd060200000208000600 
+00, 19, 40
+etat 4 20
+Msg server : 53339.689, 49361400080001CD81CD06020000020800060000 
+49 36 14 00 08 00 01 CD 81 CD 06 02 00 00 02 08 00 06 00 00 
+Sync : 4936
+Length = 20
+Seq_number = 8
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 14 00 08 00 01 CD 81 CD 06 02 00 00 02 08 00 06 00 00 
+num : 19
+Sync : 4936
+Length = 20
+Seq_number = 8
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 2
+	PU Number = 8
+	Word_Count = 0
+	Sequence Number = 06
+toto 0
+Msg_Data : 
+MI server : 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c00090001cd81cd0a0200000008040701000000080000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+09, 4, 56
+etat 4 28
+Msg  Server : 49361c0009 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000900 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c00090001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c00090001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a020000000804 
+07, 17, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02000000080407 
+01, 18, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a0200000008040701 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a020000000804070100 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02000000080407010000 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a0200000008040701000000 
+08, 22, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a020000000804070100000008 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02000000080407010000000800 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a0200000008040701000000080000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a020000000804070100000008000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c00090001cd81cd0a02000000080407010000000800000000 
+00, 27, 56
+etat 4 28
+Msg server : 53339.689, 49361C00090001CD81CD0A0200000008040701000000080000000000 
+49 36 1C 00 09 00 01 CD 81 CD 0A 02 00 00 00 08 04 07 01 00 00 00 08 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 9
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 09 00 01 CD 81 CD 0A 02 00 00 00 08 04 07 01 00 00 00 08 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 9
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 07
+toto 2
+Msg_Data : 000008 000000 
+MI server : 000008 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c000a0001cd81cd0a0200000008040801000000080000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+0a, 4, 56
+etat 4 28
+Msg  Server : 49361c000a 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000a00 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c000a0001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a020000000804 
+08, 17, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02000000080408 
+01, 18, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a0200000008040801 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a020000000804080100 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02000000080408010000 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a0200000008040801000000 
+08, 22, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a020000000804080100000008 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02000000080408010000000800 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a0200000008040801000000080000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a020000000804080100000008000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c000a0001cd81cd0a02000000080408010000000800000000 
+00, 27, 56
+etat 4 28
+Msg server : 53339.689, 49361C000A0001CD81CD0A0200000008040801000000080000000000 
+49 36 1C 00 0A 00 01 CD 81 CD 0A 02 00 00 00 08 04 08 01 00 00 00 08 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 10
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 0A 00 01 CD 81 CD 0A 02 00 00 00 08 04 08 01 00 00 00 08 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 10
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 08
+toto 2
+Msg_Data : 000008 000000 
+MI server : 000008 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c000b0001cd81cd0a02000000080409fc090000d72d68000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+0b, 4, 56
+etat 4 28
+Msg  Server : 49361c000b 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000b00 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c000b0001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a020000000804 
+09, 17, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409 
+fc, 18, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc 
+09, 19, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc09 
+00, 20, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc0900 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000 
+d7, 22, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000d7 
+2d, 23, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000d72d 
+68, 24, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000d72d68 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000d72d6800 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c000b0001cd81cd0a02000000080409fc090000d72d680000 
+00, 27, 56
+etat 4 28
+Msg server : 53339.689, 49361C000B0001CD81CD0A02000000080409FC090000D72D68000000 
+49 36 1C 00 0B 00 01 CD 81 CD 0A 02 00 00 00 08 04 09 FC 09 00 00 D7 2D 68 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 11
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 0B 00 01 CD 81 CD 0A 02 00 00 00 08 04 09 FC 09 00 00 D7 2D 68 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 11
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 09
+toto 2
+Msg_Data : 0009D7 682D00 
+MI server : 0009D7 682D00 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 49361c000c0001cd81cd0a0200000008040a39008000000000000000
+49, 0, 56
+ etatlecture = 1
+36, 1, 56
+passage a l'etat 2
+4936
+1c, 2, 56
+passage a l'etat 4 
+49361c
+SIMPLE_length_9 = 28 
+00, 3, 56
+etat 4 28
+Msg  Server : 49361c00 
+0c, 4, 56
+etat 4 28
+Msg  Server : 49361c000c 
+00, 5, 56
+etat 4 28
+Msg  Server : 49361c000c00 
+01, 6, 56
+etat 4 28
+Msg  Server : 49361c000c0001 
+cd, 7, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd 
+81, 8, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81 
+cd, 9, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd 
+0a, 10, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a 
+02, 11, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a02 
+00, 12, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200 
+00, 13, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a020000 
+00, 14, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a02000000 
+08, 15, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008 
+04, 16, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a020000000804 
+0a, 17, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a 
+39, 18, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a39 
+00, 19, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a3900 
+80, 20, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a390080 
+00, 21, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a39008000 
+00, 22, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a3900800000 
+00, 23, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a390080000000 
+00, 24, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a39008000000000 
+00, 25, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a3900800000000000 
+00, 26, 56
+etat 4 28
+Msg  Server : 49361c000c0001cd81cd0a0200000008040a390080000000000000 
+00, 27, 56
+etat 4 28
+Msg server : 53339.707, 49361C000C0001CD81CD0A0200000008040A39008000000000000000 
+49 36 1C 00 0C 00 01 CD 81 CD 0A 02 00 00 00 08 04 0A 39 00 80 00 00 00 00 00 00 00 
+Sync : 4936
+Length = 28
+Seq_number = 12
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 1C 00 0C 00 01 CD 81 CD 0A 02 00 00 00 08 04 0A 39 00 80 00 00 00 00 00 00 00 
+num : 27
+Sync : 4936
+Length = 28
+Seq_number = 12
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 10
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 0
+	PU Number = 8
+	Word_Count = 4
+	Sequence Number = 0A
+toto 2
+Msg_Data : 800000 000000 
+MI server : 800000 000000 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+extract_SIMPLE_Msg
+ TCP DATA server : 493614000d0001cd81cd060200000308000b0000
+49, 0, 40
+ etatlecture = 1
+36, 1, 40
+passage a l'etat 2
+4936
+14, 2, 40
+passage a l'etat 4 
+493614
+SIMPLE_length_9 = 20 
+00, 3, 40
+etat 4 20
+Msg  Server : 49361400 
+0d, 4, 40
+etat 4 20
+Msg  Server : 493614000d 
+00, 5, 40
+etat 4 20
+Msg  Server : 493614000d00 
+01, 6, 40
+etat 4 20
+Msg  Server : 493614000d0001 
+cd, 7, 40
+etat 4 20
+Msg  Server : 493614000d0001cd 
+81, 8, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81 
+cd, 9, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd 
+06, 10, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd06 
+02, 11, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd0602 
+00, 12, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd060200 
+00, 13, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd06020000 
+03, 14, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd0602000003 
+08, 15, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd060200000308 
+00, 16, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd06020000030800 
+0b, 17, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd060200000308000b 
+00, 18, 40
+etat 4 20
+Msg  Server : 493614000d0001cd81cd060200000308000b00 
+00, 19, 40
+etat 4 20
+Msg server : 53339.707, 493614000D0001CD81CD060200000308000B0000 
+49 36 14 00 0D 00 01 CD 81 CD 06 02 00 00 03 08 00 0B 00 00 
+Sync : 4936
+Length = 20
+Seq_number = 13
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+packet Type server = 2
+49 36 14 00 0D 00 01 CD 81 CD 06 02 00 00 03 08 00 0B 00 00 
+num : 19
+Sync : 4936
+Length = 20
+Seq_number = 13
+Source node = 1
+Source subnode = 205
+Dest node = 129
+Dest_sub_node = 205
+Packet size = 6
+Packet type = 2
+Transmit time = 0
+	Msg_sub_type = 3
+	PU Number = 8
+	Word_Count = 0
+	Sequence Number = 0B
+toto 0
+Msg_Data : 
+MI server : 
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601
+192.168.100.21 eq 192.168.56.90 && 55933 eq 36601
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00fe 
+Msg Client : 49361c00fe00 
+Msg Client : 49361c00fe0009 
+Msg Client : 49361c00fe0009cd 
+Msg Client : 49361c00fe0009cd81 
+Msg Client : 49361c00fe0009cd81cd 
+Msg Client : 49361c00fe0009cd81cd0a 
+Msg Client : 49361c00fe0009cd81cd0a02 
+Msg Client : 49361c00fe0009cd81cd0a0200 
+Msg Client : 49361c00fe0009cd81cd0a020000 
+Msg Client : 49361c00fe0009cd81cd0a02000002 
+Msg Client : 49361c00fe0009cd81cd0a0200000220 
+Msg Client : 49361c00fe0009cd81cd0a020000022004 
+Msg Client : 49361c00fe0009cd81cd0a02000002200400 
+Msg Client : 49361c00fe0009cd81cd0a0200000220040001 
+Msg Client : 49361c00fe0009cd81cd0a020000022004000100 
+Msg Client : 49361c00fe0009cd81cd0a02000002200400010000 
+Msg Client : 49361c00fe0009cd81cd0a0200000220040001000000 
+Msg Client : 49361c00fe0009cd81cd0a020000022004000100000020 
+Msg Client : 49361c00fe0009cd81cd0a02000002200400010000002080 
+Msg Client : 49361c00fe0009cd81cd0a0200000220040001000000208007 
+Msg Client : 49361c00fe0009cd81cd0a020000022004000100000020800700 
+Msg Client : 49361c00fe0009cd81cd0a02000002200400010000002080070097 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c00ff 
+Msg Client : 49361c00ff00 
+Msg Client : 49361c00ff0009 
+Msg Client : 49361c00ff0009cd 
+Msg Client : 49361c00ff0009cd81 
+Msg Client : 49361c00ff0009cd81cd 
+Msg Client : 49361c00ff0009cd81cd0a 
+Msg Client : 49361c00ff0009cd81cd0a02 
+Msg Client : 49361c00ff0009cd81cd0a0200 
+Msg Client : 49361c00ff0009cd81cd0a020000 
+Msg Client : 49361c00ff0009cd81cd0a02000000 
+Msg Client : 49361c00ff0009cd81cd0a0200000020 
+Msg Client : 49361c00ff0009cd81cd0a020000002004 
+Msg Client : 49361c00ff0009cd81cd0a02000000200401 
+Msg Client : 49361c00ff0009cd81cd0a0200000020040101 
+Msg Client : 49361c00ff0009cd81cd0a020000002004010100 
+Msg Client : 49361c00ff0009cd81cd0a02000000200401010000 
+Msg Client : 49361c00ff0009cd81cd0a0200000020040101000000 
+Msg Client : 49361c00ff0009cd81cd0a020000002004010100000020 
+Msg Client : 49361c00ff0009cd81cd0a02000000200401010000002080 
+Msg Client : 49361c00ff0009cd81cd0a0200000020040101000000208007 
+Msg Client : 49361c00ff0009cd81cd0a020000002004010100000020800700 
+Msg Client : 49361c00ff0009cd81cd0a02000000200401010000002080070097 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361c00 
+Msg Client : 49361c0000 
+Msg Client : 49361c000001 
+Msg Client : 49361c00000109 
+Msg Client : 49361c00000109cd 
+Msg Client : 49361c00000109cd81 
+Msg Client : 49361c00000109cd81cd 
+Msg Client : 49361c00000109cd81cd0a 
+Msg Client : 49361c00000109cd81cd0a02 
+Msg Client : 49361c00000109cd81cd0a0200 
+Msg Client : 49361c00000109cd81cd0a020000 
+Msg Client : 49361c00000109cd81cd0a02000000 
+Msg Client : 49361c00000109cd81cd0a0200000020 
+Msg Client : 49361c00000109cd81cd0a020000002004 
+Msg Client : 49361c00000109cd81cd0a02000000200402 
+Msg Client : 49361c00000109cd81cd0a02000000200402fc 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf00 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf0000 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf000080 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf0000802f 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf0000802f68 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf0000802f6800 
+Msg Client : 49361c00000109cd81cd0a02000000200402fcdf0000802f6800e4 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 4936140001 
+Msg Client : 493614000101 
+Msg Client : 49361400010109 
+Msg Client : 49361400010109cd 
+Msg Client : 49361400010109cd81 
+Msg Client : 49361400010109cd81cd 
+Msg Client : 49361400010109cd81cd06 
+Msg Client : 49361400010109cd81cd0602 
+Msg Client : 49361400010109cd81cd060200 
+Msg Client : 49361400010109cd81cd06020000 
+Msg Client : 49361400010109cd81cd0602000003 
+Msg Client : 49361400010109cd81cd060200000320 
+Msg Client : 49361400010109cd81cd06020000032000 
+Msg Client : 49361400010109cd81cd0602000003200003 
+Msg Client : 49361400010109cd81cd0602000003200003e7 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+192.168.56.90 eq 192.168.56.90 && 36601 eq 36601
+extract_SIMPLE_Msg
+Msg Client : 49361400 
+Msg Client : 4936140003 
+Msg Client : 493614000301 
+Msg Client : 49361400030109 
+Msg Client : 49361400030109cd 
+Msg Client : 49361400030109cd81 
+Msg Client : 49361400030109cd81cd 
+Msg Client : 49361400030109cd81cd06 
+Msg Client : 49361400030109cd81cd0602 
+Msg Client : 49361400030109cd81cd060200 
+Msg Client : 49361400030109cd81cd06020000 
+Msg Client : 49361400030109cd81cd0602000001 
+Msg Client : 49361400030109cd81cd06020000011d 
+Msg Client : 49361400030109cd81cd06020000011d00 
+Msg Client : 49361400030109cd81cd06020000011d0000 
+Msg Client : 49361400030109cd81cd06020000011d0000e1 
+
+Sync : 
+Length = 0
+Seq_number = 0
+Source node = 0
+Source subnode = 0
+Dest node = 0
+Dest_sub_node = 0
+Packet size = 0
+Packet type = 0
+Transmit time = 0
+msg client SIMPLE technique
+Msg Client :  
+extract_SIMPLE_Msg
+ TCP DATA server : 493616000e0001010901073f000001004efc2d030000
+49, 0, 44
+ etatlecture = 1
+36, 1, 44
+passage a l'etat 2
+4936
+16, 2, 44
+passage a l'etat 4 
+493616
+SIMPLE_length_9 = 22 
+00, 3, 44
+etat 4 22
+Msg  Server : 49361600 
+0e, 4, 44
+etat 4 22
+Msg  Server : 493616000e 
+00, 5, 44
+etat 4 22
+Msg  Server : 493616000e00 
+01, 6, 44
+etat 4 22
+Msg  Server : 493616000e0001 
+01, 7, 44
+etat 4 22
+Msg  Server : 493616000e000101 
+09, 8, 44
+etat 4 22
+Msg  Server : 493616000e00010109 
+01, 9, 44
+etat 4 22
+Msg  Server : 493616000e0001010901 
+07, 10, 44
+etat 4 22
+Msg  Server : 493616000e000101090107 
+3f, 11, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f 
+00, 12, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f00 
+00, 13, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f0000 
+01, 14, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001 
+00, 15, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f00000100 
+4e, 16, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001004e 
+fc, 17, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001004efc 
+2d, 18, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001004efc2d 
+03, 19, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001004efc2d03 
+00, 20, 44
+etat 4 22
+Msg  Server : 493616000e0001010901073f000001004efc2d0300 
+00, 21, 44
+etat 4 22
+Msg server : 53345.358, 493616000E0001010901073F000001004EFC2D030000 
+49 36 16 00 0E 00 01 01 09 01 07 3F 00 00 01 00 4E FC 2D 03 00 00 
+Sync : 4936
+Length = 22
+Seq_number = 14
+Source node = 1
+Source subnode = 1
+Dest node = 9
+Dest_sub_node = 1
+Packet size = 7
+Packet type = 63
+Transmit time = 0
+packet Type server = 63
+msg server SIMPLE technique
+Msg  Server :  
+172.19.27.241 eq 192.168.56.90 && 38000 eq 36601

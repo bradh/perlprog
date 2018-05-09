@@ -1,0 +1,18 @@
+Host_Header_Revision      = V1
+use_channel_4             = true
+Session_ID                = 0
+Connection_Number         = 1
+socket_type_1             = TCP_CLIENT
+Host_Name_1               = NC23_Host
+Host_Logical_ID_1         = 100
+Host_Connection_Type_1    = TCP_CLIENT
+Local_Port_1              = 18200
+Input_File_1              = t_nonc2_surv_filt.xhd
+Output_File_1             = t_nonc2_surv_filt.xdh
+Network_Broadcast_Address = 200.1.18.2
+Channel4_Hosts_Port       = 14000
+Channel4_DLIP_Port        = 15000
+Host_Address              = 200.1.18.1
+Write_TX_And_RX           = On
+
+

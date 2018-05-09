@@ -1,0 +1,35 @@
+#!/bin/bash
+ESPACE_REFERENCE=/h7_usr/sil2_usr/ganivq/Espace_de_reference
+DIR_APPLICABLE=/h7_usr/sil2_usr/ganivq/Configuration/Applicables
+DIR_CONFIGURATION=/h7_usr/sil2_usr/ganivq/Configuration
+ERROR=0
+
+# on cree les listes de fichiers de conf à deployer
+echo "COMMANDER"
+echo "tdl_router_main.cfg tdl_router_main.cfg" > $DIR_CONFIGURATION/COMMANDER.cfg
+echo "L16.Param L16.Param" >> $DIR_CONFIGURATION/COMMANDER.cfg
+echo "midsRegistration.xml midsRegistration.xml" >> $DIR_CONFIGURATION/COMMANDER.cfg
+
+echo "CORE_MANAGER"
+echo "DEPLOYMENT.xml CONFIGURATION/DEPLOYMENT/DEPLOYMENT.xml" > $DIR_CONFIGURATION/CORE_MANAGER.cfg
+
+echo "CORE_SUPERVISION"
+echo "DEPLOYMENT.xml CONFIGURATION/DEPLOYMENT/DEPLOYMENT.xml" > $DIR_CONFIGURATION/CORE_SUPERVISOR.cfg
+echo "FACTORY.xml CONFIGURATION/FACTORY/FACTORY.xml" >> $DIR_CONFIGURATION/CORE_SUPERVISOR.cfg
+
+cd $DIR_APPLICABLE
+echo "ESPACE_REFERENCE = $ESPACE_REFERENCE"
+
+
+for i  in `ls -d *`
+do
+echo "DIR = $DIR_APPLICABLE/$i"
+cd $DIR_APPLICABLE/$i
+	while read f; 
+	do 
+		FILE_CONF=`echo $f | awk '{print $1}'`
+		DIR_FILE_CONF=`echo $f | awk '{print $2}'`
+		cp $FILE_CONF $ESPACE_REFERENCE/$i/$DIR_FILE_CONF
+	done < $DIR_CONFIGURATION/$i.cfg
+done
+rm -f $DIR_CONFIGURATION/COMMANDER.cfg $DIR_CONFIGURATION/CORE_MANAGER.cfg $DIR_CONFIGURATION/CORE_SUPERVISOR.cfg 

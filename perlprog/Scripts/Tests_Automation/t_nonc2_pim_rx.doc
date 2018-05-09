@@ -1,0 +1,3792 @@
+<HTML xmlns:ms="urn:schemas-microsoft-com:xslt" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="http://alladin/namespace">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1; charset=UTF-16">
+<TITLE>STD_T_NONC2_PIM_RX</TITLE>
+</HEAD>
+<H1 align="center">STD_T_NONC2_PIM_RX</H1>
+<body><br><br><br><table border="1.0" rules="all" cellpadding="0" cellspacing="0">
+<tr>
+<td width="1000"><b><u>Titre du test</u> : </b>STD_T_NONC2_PIM_RX</td>
+</tr>
+<tr>
+<td><b><u>Nombre d'interfaces</u> : </b>2</td>
+</tr>
+</table><br><br><br><br><br><table border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col width="150">
+<col width="250">
+<col width="0">
+<col width="250">
+<col width="260" align="center">
+<col width="230" align="center">
+<col width="80" align="center">
+</colgroup>
+<tr align="center">
+<td align="left">Step</td>
+<td align="left">HOST</td>
+<td align="right">DLIP</td>
+<td align="right">LDT</td>
+<td align="center">Commentaires</td>
+<td align="center">Exigences</td>
+<td align="center">Result</td>
+</tr>
+<tr>
+<td colspan="7">
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td width="150" valign="top">
+      Step 1</td>
+<td colspan="2">
+<table border="1" rules="cols" frame="void" width="520" cellpadding="0" cellspacing="0">
+<tr>
+<td width="50%">
+<font size="2">00:00:15.000 
+  THD441 CONNECTION REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:15.000 
+  THD441 CONNECTION REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:16.000 
+  THD400 APP INIT REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:16.000 
+  THD400 APP INIT REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:00:19.468 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:20.000 
+  THD070 OPEN RESOURCE REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:00:20.000 
+  THD070 OPEN RESOURCE REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:05.988 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:07.473 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:17.984 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:19.465 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:29.973 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:31.463 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:41.965 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:43.490 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:53.958 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:01:55.484 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:05.994 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:07.476 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:17.983 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:19.468 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:23.000 
+  THD072 INIT LINK REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:23.000 
+  THD072 INIT LINK REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:24.737 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:25.000 
+  THD093 LINK CONTROL REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:25.000 
+  THD093 LINK CONTROL REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:28.000 
+  THD072 INIT LINK REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:28.000 
+  THD072 INIT LINK REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:29.973 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:30.000 
+  THD093 LINK CONTROL REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:02:30.000 
+  THD093 LINK CONTROL REQ</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:31.462 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH104 LAND POINT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 104<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 2<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = PPLI<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>TIME TAG DATA = 1112491582 ms<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>SPARE 13 = Spare<br>INDICATORS = RECORD<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>SPARE 14 = Spare<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>SPARE 15 = Spare<br>LATITUDE = NO STATEMENT<br>LONGITUDE = NO STATEMENT<br>POSITION QUALITY = 0<br>ELEVATION = 0 Feet<br>ELEVATION QUALITY = 0<br>IDENTITY = FRIEND<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>SPARE 16 = Spare<br>PLATFORM = NO STATEMENT<br>PLATFORM ACTIVITY = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = INDICATOR ON<br>SPARE 17 = Spare<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = NO STATEMENT<br>MODE II CODE = NO STATEMENT<br>MODE III CODE = NO STATEMENT<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = N1 UNIT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>IFF CONFLICT AMPLIFYING = RECORD<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>SPARE 18 = Spare<br>RESERVE 8BITS = 0<br>PERIODIC REPORT INDICATOR = NO STATEMENT<br>RESPONSE INDICATOR = NO STATEMENT<br>SPARE 19 = Spare<br>TRACKING IDENTIFIER = NO STATEMENT<br>TIME FUNCTION = NO STATEMENT<br>UTM DATA VALIDITY INDICATOR = NO STATEMENT<br>SPARE 20 = Spare<br>TIME TAG UTM TIME OF VALIDITY = 0<br>UTM GRID ROW ZONE = NO STATEMENT<br>UTM GRID ZONE COLUMN = NO STATEMENT<br>UTM 100 000 ROW METER SQUARE = NO STATEMENT<br>UTM 100 000 COLUMN METER SQUARE = NO STATEMENT<br>UTM 10 METER NORTHING = 0 meters<br>UTM 10 METER EASTING = 0 meters<br>AREA DATA VALIDITY INDICATOR = NO STATEMENT<br>SPARE 21 = Spare<br>AREA MINOR 3 AXIS = NO STATEMENT<br>AREA MAJOR 3 AXIS = NO STATEMENT<br>AXIS ORIENTATION = NO STATEMENT<br>ROUTE NUMBER = NO STATEMENT<br>STRENGTH TOTAL NUMBER OF VEHICLE = NO STATEMENT<br>STRENGTH PERCENT OF TRACKED = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH116 LAND IU DATA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 116<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 2<br>TRACK NUMBER ORIGINATOR = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>IU TRACK NUMBER = 17<br>PPLI ATTRIBUTION = RECORD<br>COMMAND AND CONTROL INDICATOR = INDICATOR ON<br>SPARE 64 = Spare<br>NETWORK PARTICIPATION STATUS INDICATOR = ACTIVE NON SPECIFIC<br>RTT REPLY STATUS INDICATOR = INDICATOR ON<br>ACTIVE RELAY INDICATOR WIDE AREA NETWORK = NO STATEMENT<br>SPARE 65 = Spare<br>TIME QUALITY = 15<br>LINK 4 ADDRESS INDICATOR = NO STATEMENT<br>SPARE 66 = Spare<br>LINK 4 ADDRESS = 0<br>VOICE FREQ CHANN INDICATOR = PRIMARY VOICE FREQUENCY CHANNEL<br>SPARE 67 = Spare<br>VOICE FREQUENCY CHANNEL = NO STATEMENT<br>CONTROL CHANNEL = NO STATEMENT<br>ACTIVE RELAY INDICATOR CONTROL CHANNEL = NO STATEMENT<br>ACTIVE RELAY INDICATOR VOICE CHANNEL = NO STATEMENT<br>SPARE 68 = Spare<br>VOICE CALL SIGN INDICATOR = NO STATEMENT<br>SPARE 69 = Spare<br>VOICE CALL SIGN =  <br>U COORDINATE = 1023.998046875 dm<br>V COORDINATE = 1023.998046875 dm<br>RELATIVE POSITION QUALITY = 0<br>BETA ANGLE = NO STATEMENT<br>RELATIVE AZIMUTH QUALITY = 0<br>RESERVE 32BITS = 0<br>DISPLACED POSITION INDICATOR = NO STATEMENT<br>SPARE 70 = Spare<br>ANTENNA LATITUDE = NO STATEMENT<br>ANTENNA LONGITUDE = NO STATEMENT<br>MISSION 1 CORRELATOR = NO STATEMENT<br>MISSION 2 CORRELATOR = NO STATEMENT<br>MISSION 3 CORRELATOR = NO STATEMENT<br>MISSION 4 CORRELATOR = NO STATEMENT<br>MISSION 5 CORRELATOR = NO STATEMENT<br>MISSION 6 CORRELATOR = NO STATEMENT<br>MISSION 7 CORRELATOR = NO STATEMENT<br>MISSION 8 CORRELATOR = NO STATEMENT<br>MISSION 1 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 2 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 3 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 4 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 5 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 6 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 7 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 8 CORRELATOR VALIDITY = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:37.121 
+  J2.2
+       I
+      /E0/C1/C2/C3- Air PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH101 AIR TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 101<br>VERSION NUMBER = 3<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = PPLI<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>INDICATORS = RECORD<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>SPARE 1 = Spare<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>SPARE 2 = Spare<br>TRACK QUALITY = 15<br>POSITION QUALITY = 15<br>ALTITUDE SOURCE = NO STATEMENT ESTIMATED<br>ALTITUDE QUALITY = 0<br>IDENTITY = FRIEND<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 14<br>PLATFORM ACTIVITY = 7<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = INDICATOR ON<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 33<br>MODE II CODE = 3764<br>MODE III CODE = 3720<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = SOURCE ALL IFF DATA FROM PPLI<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>IFF CONFLICT AMPLIFYING = RECORD<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>SPARE 5 = Spare<br>RESERVE 32BITS = 0<br>VARIANCE XX = NO STATEMENT<br>VARIANCE YY = NO STATEMENT<br>VARIANCE ZZ = NO STATEMENT<br>VARIANCE XY = NO STATEMENT<br>VARIANCE XZ = NO STATEMENT<br>VARIANCE YZ = NO STATEMENT<br>DIVE ANGLE = NO STATEMENT<br>VARIANCE DATA INDICATOR = NO STATEMENT<br>KINEMATICS TIME STAMP INDICATOR = NO STATEMENT<br>DIVE ANGLE INDICATOR = NO STATEMENT<br>SECOND = NO STATEMENT<br>HUNDRETHS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH113 AIR TRACK IU DATA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 113<br>VERSION NUMBER = 4<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>IU TRACK NUMBER = 17<br>COMMAND AND CONTROL INDICATOR = INDICATOR ON<br>NETWORK PARTICIPATION STATUS INDICATOR = ACTIVE NON SPECIFIC<br>RTT REPLY STATUS INDICATOR = INDICATOR ON<br>ACTIVE RELAY INDICATOR WIDE AREA NETWORK = NO STATEMENT<br>TIME QUALITY = 15<br>BAILOUT INDICATOR = NO STATEMENT<br>FLIGHT LEADER INDICATOR = NO STATEMENT<br>AIRBORNE INDICATOR = NO STATEMENT<br>LINK 4 ADDRESS INDICATOR = NO STATEMENT<br>LINK 4 ADDRESS = 0<br>VOICE FREQ CHANN INDICATOR = PRIMARY VOICE FREQUENCY CHANNEL<br>VOICE FREQUENCY CHANNEL = 1<br>CONTROL CHANNEL = 124<br>ACTIVE RELAY INDICATOR CONTROL CHANNEL = NO STATEMENT<br>ACTIVE RELAY INDICATOR VOICE CHANNEL = NO STATEMENT<br>VOICE CALL SIGN INDICATOR = INDICATOR ON<br>VOICE CALL SIGN = F<br>RELATIVE POSITION QUALITY = 1<br>RELATIVE AZIMUTH QUALITY = 0<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>NONC2 JU TO NONC2 JU NPG STATUS = ACTIVE<br>NET NUMBER NONC2 TO NONC2 = NO STATEMENT<br>MISSION COMMANDER INDICATOR = NO STATEMENT<br>COMMUNICATION DATA B INDICATOR = NO STATEMENT<br>NET NUMBER NONC2 TO NONC2 B = NO STATEMENT<br>NONC2 JU TO NONC2 JU NPG STATUS B = ACTIVE<br>WINGMAN IDENTIFICATION DATA INDICATOR = NO STATEMENT<br>WINGMAN IDENTIFICATION LETTER NUMBER = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:38.996 
+  J2.5 
+       I
+      /E0/C1/C3/C4- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH104 LAND POINT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 104<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 18<br>TRACK TYPE = PPLI<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 18<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>SPARE 13 = Spare<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>PASSIVE ACTIVE INDICATOR = INDICATOR ON<br>POSITION QUALITY = 15<br>ELEVATION QUALITY = 0<br>IDENTITY = PENDING<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = NO STATEMENT<br>PLATFORM ACTIVITY = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = NO STATEMENT<br>MODE II CODE = NO STATEMENT<br>MODE III CODE = NO STATEMENT<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>PERIODIC REPORT INDICATOR = NO STATEMENT<br>RESPONSE INDICATOR = NO STATEMENT<br>TRACKING IDENTIFIER = NO STATEMENT<br>TIME FUNCTION = NO STATEMENT<br>UTM DATA VALIDITY INDICATOR = NO STATEMENT<br>TIME TAG UTM TIME OF VALIDITY = 0<br>AREA DATA VALIDITY INDICATOR = NO STATEMENT<br>ROUTE NUMBER = NO STATEMENT<br>STRENGTH TOTAL NUMBER OF VEHICLE = NO STATEMENT<br>STRENGTH PERCENT OF TRACKED = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH116 LAND IU DATA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 116<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 18<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>IU TRACK NUMBER = 18<br>COMMAND AND CONTROL INDICATOR = INDICATOR ON<br>NETWORK PARTICIPATION STATUS INDICATOR = ACTIVE NON SPECIFIC<br>RTT REPLY STATUS INDICATOR = INDICATOR ON<br>ACTIVE RELAY INDICATOR WIDE AREA NETWORK = NO STATEMENT<br>TIME QUALITY = 0<br>LINK 4 ADDRESS INDICATOR = NO STATEMENT<br>LINK 4 ADDRESS = 0<br>VOICE FREQ CHANN INDICATOR = PRIMARY VOICE FREQUENCY CHANNEL<br>VOICE FREQUENCY CHANNEL = 1<br>CONTROL CHANNEL = 124<br>ACTIVE RELAY INDICATOR CONTROL CHANNEL = NO STATEMENT<br>ACTIVE RELAY INDICATOR VOICE CHANNEL = NO STATEMENT<br>VOICE CALL SIGN INDICATOR = INDICATOR ON<br>VOICE CALL SIGN = F<br>RELATIVE POSITION QUALITY = 1<br>RESERVE 32BITS = 0<br>DISPLACED POSITION INDICATOR = INDICATOR ON<br>SPARE 70 = Spare<br>MISSION 1 CORRELATOR = NO STATEMENT<br>MISSION 2 CORRELATOR = NO STATEMENT<br>MISSION 3 CORRELATOR = NO STATEMENT<br>MISSION 4 CORRELATOR = NO STATEMENT<br>MISSION 5 CORRELATOR = NO STATEMENT<br>MISSION 6 CORRELATOR = NO STATEMENT<br>MISSION 7 CORRELATOR = NO STATEMENT<br>MISSION 8 CORRELATOR = NO STATEMENT<br>MISSION 1 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 2 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 3 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 4 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 5 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 6 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 7 CORRELATOR VALIDITY = NO STATEMENT<br>MISSION 8 CORRELATOR VALIDITY = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:40.870 
+  
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:41.964 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH101 AIR TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 101<br>VERSION NUMBER = 3<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = INDICATOR ON<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>TRACK QUALITY = 6<br>POSITION QUALITY = 6<br>ALTITUDE SOURCE = SENSOR<br>ALTITUDE QUALITY = 0<br>IDENTITY = HOSTILE<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 2<br>PLATFORM ACTIVITY = 5<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 73<br>MODE II CODE = 585<br>MODE III CODE = 1170<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>IFF CONFLICT AMPLIFYING = RECORD<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>SPARE 5 = Spare<br>RESERVE 32BITS = 0<br>VARIANCE DATA INDICATOR = INDICATOR ON<br>KINEMATICS TIME STAMP INDICATOR = INDICATOR ON<br>DIVE ANGLE INDICATOR = INDICATOR ON<br>SECOND = 10<br>HUNDRETHS = 50 s<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:43.490 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:50.987 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH101 AIR TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 101<br>VERSION NUMBER = 3<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>TRACK QUALITY = 6<br>POSITION QUALITY = 6<br>ALTITUDE SOURCE = SENSOR<br>ALTITUDE QUALITY = 0<br>IDENTITY = ASSUMED FRIEND<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 1<br>PLATFORM ACTIVITY = 7<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 73<br>MODE II CODE = 585<br>MODE III CODE = 1170<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>IFF CONFLICT AMPLIFYING = RECORD<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>SPARE 5 = Spare<br>RESERVE 32BITS = 0<br>VARIANCE DATA INDICATOR = NO STATEMENT<br>KINEMATICS TIME STAMP INDICATOR = NO STATEMENT<br>DIVE ANGLE INDICATOR = NO STATEMENT<br>SECOND = NO STATEMENT<br>HUNDRETHS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:52.862 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:53.957 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH101 AIR TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 101<br>VERSION NUMBER = 3<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = INDICATOR ON<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>TRACK QUALITY = 6<br>POSITION QUALITY = 6<br>ALTITUDE SOURCE = SENSOR<br>ALTITUDE QUALITY = 0<br>IDENTITY = HOSTILE<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 2<br>PLATFORM ACTIVITY = 5<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 73<br>MODE II CODE = 585<br>MODE III CODE = 1170<br>MODE IV INDICATOR = NOT INTERROGATED NO STATEMENT<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>VARIANCE DATA INDICATOR = NO STATEMENT<br>KINEMATICS TIME STAMP INDICATOR = NO STATEMENT<br>DIVE ANGLE INDICATOR = NO STATEMENT<br>SECOND = NO STATEMENT<br>HUNDRETHS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:55.483 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:02:55.870 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:02.981 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:04.854 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:05.994 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:05.998 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH105 LAND TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 105<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 518<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>EMERGENCY INDICATOR = INDICATOR ON<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>TRACK QUALITY = 15<br>POSITION QUALITY = 15<br>ELEVATION = 25 Feet<br>ELEVATION QUALITY = 0<br>IDENTITY = FRIEND<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 1<br>PLATFORM ACTIVITY = 16<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 73<br>MODE II CODE = 585<br>MODE III CODE = 1170<br>MODE IV INDICATOR = INTERROGATED NO RESPONSE<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>LAND TRACK STRENGTH = RECORD<br>STRENGTH = NO STATEMENT<br>STRENGTH TOTAL NUMBER OF VEHICLE = N3 VEHICLES<br>STRENGTH PERCENT OF TRACKED = MORE THAN 80 PERCENT OF TRACKED VEHICLES<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>PERIODIC REPORT INDICATOR = NO STATEMENT<br>RESPONSE INDICATOR = NO STATEMENT<br>TRACKING IDENTIFIER = NO STATEMENT<br>TIME FUNCTION = NO STATEMENT<br>UTM DATA VALIDITY INDICATOR = NO STATEMENT<br>AREA DATA VALIDITY INDICATOR = INDICATOR ON<br>ROUTE NUMBER = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:07.476 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:15.010 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:16.104 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:16.886 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH104 LAND POINT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 104<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 520<br>EFFECTIVE TIME = NO STATEMENT<br>SOURCE INDICATOR = NO STATEMENT<br>EMERGENCY INDICATOR = INDICATOR ON<br>FORCE TELL INDICATOR = INDICATOR ON<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = INDICATOR ON<br>SPECIAL PROCESSING INDICATOR = INDICATOR ON<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>POSITION QUALITY = 0<br>ELEVATION QUALITY = 0<br>IDENTITY = FRIEND<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 7<br>PLATFORM ACTIVITY = 4<br>SPECIFIC TYPE = NO STATEMENT<br>PPLI TRACK NUMBER AND IDENTITY INDICATOR = NO STATEMENT<br>IDENTITY CONFIDENCE = NO STATEMENT<br>MODE I CODE = OCTAL 73<br>MODE II CODE = 585<br>MODE III CODE = 1170<br>MODE IV INDICATOR = INTERROGATED NO RESPONSE<br>PPLI IFF SIF INDICATOR = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>L11 UNIT DATA = RECORD<br>SITE = NO STATEMENT<br>UNIT = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br>MODE I CODE APPLICABILITY = NO STATEMENT<br>MODE II CODE APPLICABILITY = NO STATEMENT<br>MODE III CODE APPLICABILITY = NO STATEMENT<br>MODE IV IND APPLICABILITY = NO STATEMENT<br>RESERVE 8BITS = 0<br>PERIODIC REPORT INDICATOR = NO STATEMENT<br>RESPONSE INDICATOR = NO STATEMENT<br>TRACKING IDENTIFIER = NO STATEMENT<br>TIME FUNCTION = NO STATEMENT<br>UTM DATA VALIDITY INDICATOR = NO STATEMENT<br>AREA DATA VALIDITY INDICATOR = INDICATOR ON<br>ROUTE NUMBER = NO STATEMENT<br>STRENGTH TOTAL NUMBER OF VEHICLE = N41 THROUGH 50 VEHICLES<br>STRENGTH PERCENT OF TRACKED = MORE THAN 80 PERCENT OF TRACKED VEHICLES<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:17.980 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:19.468 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:25.869 
+  J3.0 
+       I
+      /E0/C1/C2- Reference Point (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:27.002 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH107 REFERENCE POINT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 107<br>VERSION NUMBER = 2<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 522<br>TIME FUNCTION = OP TIME<br>EFFECTIVE TIME = 36900000 ms<br>FORCE TELL INDICATOR = INDICATOR ON<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>REF POINT SPECIFIC DATA = RECORD<br>POINT TYPE = REFERENCE POINT GENERAL<br>POINT AMP = 1<br>ESTIMATED YIELD = NO STATEMENT<br>TYPE OF BURST = NO STATEMENT<br>SLAVED TYPE INDICATOR = SLAVED TRUE<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 518<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>CATEGORY AMPLIFICATION = 32<br>AMPLIFICATION CONFIDENCE = NO STATEMENT<br>AREA DATA INDICATOR = NO STATEMENT<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>CONNECT DISCONNECT INDICATOR = INVALID DATA<br>PRIORITY = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:28.877 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:29.972 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:31.461 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:35.991 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH106 EW PRODUCT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 106<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 524<br>EFFECTIVE TIME = NO STATEMENT<br>EMERGENCY INDICATOR = NO STATEMENT<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>TRACK QUALITY = 0<br>BEARING ORIGIN = NO STATEMENT<br>SPARE 32 = Spare<br>BEARING ACCURACY = 5<br>PASSIVE ACTIVE INDICATOR = NO STATEMENT<br>DELTA TIME = NO STATEMENT<br>IDENTITY = UNKNOWN<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY DIFFERENCE INDICATOR = NO STATEMENT<br>PLATFORM = 2<br>SPECIFIC TYPE = 5<br>IDENTITY CONFIDENCE = NO STATEMENT<br>PLATFORM EVALUATION CONFIDENCE = NO STATEMENT<br>ENVIRONMENT CATEGORY = AIR<br>FIX OR BEARING DESCRIPTOR = BEARING ESM<br>EMITTER NUMBER INDICATOR = DO NOT INTERPRET EMITTER NUMBER FIELD<br>EMITTER NUMBER = 0<br>EMITTER CONFIDENCE = NO STATEMENT<br>WARTIME RESERVE MODE INDICATOR = NO STATEMENT<br>FREQ RANGE INDICATOR = FREQUENCY RANGE<br>FREQUENCY 1 = 100000 Hz<br>FREQUENCY MULTIPLIER 1 = 2 of ten<br>FREQUENCY 2 = 100000 Hz<br>FREQUENCY MULTIPLIER 2 = 3 of ten<br>MODE NUMBER = 62<br>STRENGTH = NO STATEMENT<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>CONFLICT INDICATOR = NO STATEMENT<br>CONFLICT REASON AMPLIFICATION = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:38.995 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:41.260 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:41.964 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:43.489 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:46.104 
+  J3.0 
+       I
+      /E0/C1- Reference Point (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH117 REFERENCE LINE AREA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 117<br>VERSION NUMBER = 5<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 526<br>TIME FUNCTION = OP TIME<br>EFFECTIVE TIME = 36900000 ms<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>REF POINT SPECIFIC DATA = RECORD<br>POINT TYPE = LINE<br>POINT AMP = 4<br>ESTIMATED YIELD = NO STATEMENT<br>TYPE OF BURST = NO STATEMENT<br>POINT LINE AREA DESCRIPTOR = LINE<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = 3<br>SLAVED TYPE INDICATOR = NOT SLAVED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>SECOND TRACK NUMBER = NO STATEMENT<br>THIRD TRACK NUMBER = NO STATEMENT<br>FOURTH TRACK NUMBER = NO STATEMENT<br>FIFTH TRACK NUMBER = NO STATEMENT<br>PRIORITY = NO STATEMENT<br>DEACTIVATION TIME = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>CATEGORY AMPLIFICATION = 32<br>AMPLIFICATION CONFIDENCE = NO STATEMENT<br>AREA DATA INDICATOR = NO STATEMENT<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>CONNECT DISCONNECT INDICATOR = INVALID DATA<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:50.987 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:52.861 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:53.957 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:53.994 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:55.483 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:03:55.869 
+  J3.0 
+       I
+      /E0/C5- Reference Point (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH117 REFERENCE LINE AREA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 117<br>VERSION NUMBER = 5<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 528<br>TIME FUNCTION = OP TIME<br>EFFECTIVE TIME = 36900000 ms<br>FORCE TELL INDICATOR = INDICATOR ON<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>REF POINT SPECIFIC DATA = RECORD<br>POINT TYPE = HAZARD<br>POINT AMP = 3<br>ESTIMATED YIELD = NO STATEMENT<br>TYPE OF BURST = NO STATEMENT<br>POINT LINE AREA DESCRIPTOR = AREA<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = NO STATEMENT<br>SLAVED TYPE INDICATOR = NOT SLAVED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>SECOND TRACK NUMBER = NO STATEMENT<br>THIRD TRACK NUMBER = NO STATEMENT<br>FOURTH TRACK NUMBER = NO STATEMENT<br>FIFTH TRACK NUMBER = NO STATEMENT<br>PRIORITY = 7<br>DEACTIVATION TIME = NO STATEMENT<br>ENVIRONMENT CATEGORY = SPACE<br>CATEGORY AMPLIFICATION = NO STATEMENT<br>AMPLIFICATION CONFIDENCE = NO STATEMENT<br>AREA DATA INDICATOR = NO STATEMENT<br>SPARE 72 = Spare<br>SQUARE CIRCLE SWITCH = CIRCULAR ELIPTICAL<br>AXIS ORIENTATION = +10° 0' 0.000" Degrees<br>AREA MAJOR AXIS 4 = 71 dm<br>AREA MINOR AXIS 4 = 71 dm<br>CONNECT DISCONNECT INDICATOR = CONNECT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:00.713 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:02.979 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:04.854 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:05.986 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:05.989 
+  J3.0 
+       I
+      /E0/C1- Reference Point (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:07.475 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:07.861 
+  J3.0 
+       I
+      /E0/C1- Reference Point (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH117 REFERENCE LINE AREA</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 117<br>VERSION NUMBER = 5<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 530<br>TIME FUNCTION = OP TIME<br>EFFECTIVE TIME = 36900000 ms<br>FORCE TELL INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>SIMULATION INDICATOR = NO STATEMENT<br>SPECIAL PROCESSING INDICATOR = NO STATEMENT<br>REF POINT SPECIFIC DATA = RECORD<br>POINT TYPE = AREA GENERAL<br>POINT AMP = 1<br>ESTIMATED YIELD = NO STATEMENT<br>TYPE OF BURST = NO STATEMENT<br>POINT LINE AREA DESCRIPTOR = AREA<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = 4<br>SLAVED TYPE INDICATOR = NOT SLAVED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>SECOND TRACK NUMBER = 532<br>THIRD TRACK NUMBER = NO STATEMENT<br>FOURTH TRACK NUMBER = NO STATEMENT<br>FIFTH TRACK NUMBER = NO STATEMENT<br>PRIORITY = NO STATEMENT<br>DEACTIVATION TIME = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>CATEGORY AMPLIFICATION = 32<br>AMPLIFICATION CONFIDENCE = NO STATEMENT<br>AREA DATA INDICATOR = NO STATEMENT<br>SQUARE CIRCLE SWITCH = NO STATEMENT<br>CONNECT DISCONNECT INDICATOR = INVALID DATA<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:15.009 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:16.104 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:16.885 
+  
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:16.888 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH121 DROP TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 121<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 520<br>DROP REASON = DATA LINK DROP<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:17.979 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH121 DROP TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 121<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 522<br>DROP REASON = DATA LINK DROP<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:19.111 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:19.467 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:19.854 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH121 DROP TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 121<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 526<br>DROP REASON = DATA LINK DROP<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:20.991 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH121 DROP TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 121<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 530<br>DROP REASON = DATA LINK DROP<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH121 DROP TRACK</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 121<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 528<br>DROP REASON = DATA LINK DROP<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:23.994 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:25.868 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:27.001 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH126 EMERGENCY STATUS UPDATE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 126<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>ALERT STATUS = INDICATOR ON<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:28.876 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:29.972 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:31.460 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:35.991 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH126 EMERGENCY STATUS UPDATE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 126<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>ALERT STATUS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:38.994 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:40.868 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:41.963 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:43.488 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:46.103 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH127 FORCE TELL STATUS UPDATE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 127<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>ALERT STATUS = INDICATOR ON<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:50.991 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:52.860 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:53.957 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:55.482 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:04:55.868 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH127 FORCE TELL STATUS UPDATE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 127<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>ALERT STATUS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:02.981 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:04.853 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:05.986 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:05.989 
+  J7.0 
+       I
+      /E0- Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH129 STRENGTH DIFFERENCE ALERT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 129<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 518<br>DIFFERENCE OF STRENGTH = RECORD<br>LOCAL STRENGTH = NO STATEMENT<br>REMOTE STRENGTH = N6 UNITS<br>STRENGTH TOTAL NUMBER OF VEHICLE = N101 THROUGH 200 VEHICLES<br>STRENGTH PERCENT OF TRACKED = MORE THAN 80 PERCENT OF TRACKED VEHICLES<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:07.474 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:12.001 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:15.009 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:16.103 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:17.236 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH130 EXERCISE STATUS ORDER</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 130<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:17.978 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:19.466 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:25.868 
+  J12.7 
+       I
+      /E0/E1/ - Target Bearing (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:27.001 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH218 TARGET BEARING</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 218<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 66 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>INDEX NUMBER = 10<br>FUSION TYPE = SENSOR FUSION<br>MERGED MEASUREMENT INDICATOR = NO STATEMENT<br>END TARGET REPORT CYCLE = NO STATEMENT<br>SENSOR TYPE = PASSIVE RADAR<br>JAMMER TYPE = ANGLE DECEPTION<br>HEADER OF BLOCK 2 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH218 BLOCK 2<br>DATA BLOCK LENGTH = 22 byte<br>BEARING UNCERTAINTY = LESS THAN OR EQUAL TO 0 PT 10 DEGREES<br>FREQUENCY INTERCEPT = NO STATEMENT<br>FREQUENCY EXPONENT = 0<br>CORRELATION INDICATOR = C2 DERIVED CORRELATION<br>HEADER OF BLOCK 3 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH218 BLOCK 3<br>DATA BLOCK LENGTH = 20 byte<br>TIME INDICATOR = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>EMITTER PRF = NO STATEMENT<br>EMITTER STATUS = MISSILE LAUNCH<br>STATUS INFORMATION DISCRETE = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>IDENTITY = PENDING<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:28.876 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:29.970 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:31.460 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:35.986 
+  J12.7 
+       I
+      / - Target Bearing (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:36.728 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH218 TARGET BEARING</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 218<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 55 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>INDEX NUMBER = 11<br>FUSION TYPE = SENSOR FUSION<br>MERGED MEASUREMENT INDICATOR = NO STATEMENT<br>END TARGET REPORT CYCLE = NO STATEMENT<br>SENSOR TYPE = PASSIVE RADAR<br>JAMMER TYPE = ANGLE DECEPTION<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH218 BLOCK 4<br>DATA BLOCK LENGTH = 14 byte<br>RANGE 1 = 0 foot<br>RANGE UNCERTAINTY = LESS THAN OR EQUAL TO 60 FT<br>RANGE RATE UNCERTAINTY = NO STATEMENT<br>HEADER OF BLOCK 5 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH218 BLOCK 5<br>DATA BLOCK LENGTH = 17 byte<br>PROBABILITY OF OWN FORCES = 0<br>PROBABILITY OF ENEMY FORCES = 0<br>ENVIRONMENT CATEGORY = AIR<br>SPECIFIC AMBIGUOUS TYPE 1 = 37<br>SPECIFIC AMBIGUOUS TYPE 2 = NO STATEMENT<br>AMBIGUOUS TYPE 1 PROBABILITY = 0<br>AMBIGUOUS TYPE 2 PROBABILITY = 0<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:38.993 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:40.868 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:41.962 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:43.488 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:46.103 
+  J13.5 
+       I
+      /C1 - Land (Ground) Platform and System Status (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH213 LAND PLATFORM STATUS</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 213<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 18<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 18<br>TIME FUNCTION 1 = NO STATEMENT<br>EFFECTIVE TIME 1 = NO STATEMENT<br>TIME FUNCTION 2 = NO STATEMENT<br>EFFECTIVE TIME 2 = NO STATEMENT<br>OPERATIONAL CAPABILITY = FULLY OPERATIONAL<br>SITE TYPE = ADCP<br>HOT INVENTORY = 125<br>SAM MODE STATE = NO STATEMENT<br>PERIMETER ENGAGEMENT STATUS = OFF<br>COLD INVENTORY = 126<br>OPERATIONAL IMPAIRMENT = TDS FAILURE<br>NATO LINK 1 STATUS = NO STATEMENT<br>LINK 14 STATUS = NO STATEMENT<br>LINK 11 STATUS = NO STATEMENT<br>LINK 11B STATUS = NO STATEMENT<br>LINK 16 STATUS = NO STATEMENT<br>ATDL 1 STATUS = NO STATEMENT<br>IJMS STATUS = NO STATEMENT<br>COMMUNICATIONS IMPAIRMENT = NO STATEMENT<br>CONTROL POSITIONS = NO STATEMENT<br>PRIMARY RADAR SURVEILLANCE STATUS = NO STATEMENT<br>SECONDARY RADAR SURVEILLANCE STATUS = NO STATEMENT<br>TERTIARY RADAR SURVEILLANCE STATUS = NO STATEMENT<br>ACQUISITION RADAR STATUS = NO STATEMENT<br>ILLUMINATING RADAR STATUS = NO STATEMENT<br>MODE IV INTERROGATOR STATUS = NO STATEMENT<br>IFF SIF INTERROGATOR STATUS = NO STATEMENT<br>ESM FREQ BAND A = NO STATEMENT<br>ESM FREQ BAND B = NO STATEMENT<br>ESM FREQ BAND C = NO STATEMENT<br>ESM FREQ BAND D = NO STATEMENT<br>ESM FREQ BAND E = NO STATEMENT<br>ESM FREQ BAND F = NO STATEMENT<br>ESM FREQ BAND G = NO STATEMENT<br>ESM FREQ BAND H = NO STATEMENT<br>ESM FREQ BAND I = NO STATEMENT<br>ESM FREQ BAND J = NO STATEMENT<br>ESM FREQ BAND K = NO STATEMENT<br>ESM FREQ BAND L = NO STATEMENT<br>ESM FREQ BAND M = NO STATEMENT<br>HF DIRECTION FINDER = NO STATEMENT<br>VHF DIRECTION FINDER = NO STATEMENT<br>UHF DIRECTION FINDER = NO STATEMENT<br>ECM FREQ BAND A = NO STATEMENT<br>ECM FREQ BAND B = NO STATEMENT<br>ECM FREQ BAND C = NO STATEMENT<br>ECM FREQ BAND D = NO STATEMENT<br>ECM FREQ BAND E = NO STATEMENT<br>ECM FREQ BAND F = NO STATEMENT<br>ECM FREQ BAND G = NO STATEMENT<br>ECM FREQ BAND H = NO STATEMENT<br>ECM FREQ BAND I = NO STATEMENT<br>ECM FREQ BAND J = NO STATEMENT<br>ECM FREQ BAND K = NO STATEMENT<br>ECM FREQ BAND L = NO STATEMENT<br>ECM FREQ BAND M = NO STATEMENT<br>DECOY CHAFF = NO STATEMENT<br>DECOY IR = NO STATEMENT<br>RESERVE 8BITS = 64<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:50.985 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:52.860 
+  
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:53.957 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:55.481 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:05:55.868 
+  J7.1
+       I
+      - Data Update Request (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH132 DATA REQUEST</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 132<br>VERSION NUMBER = 2<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>DATA REQUEST ACTION = REQUEST BY REQUEST INDICATOR<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INTELLIGENCE DATA REQUEST INDICATOR = NO STATEMENT<br>ECM DATA REQUEST INDICATOR = NO STATEMENT<br>ESM DATA REQUEST INDICATOR = NO STATEMENT<br>EW FIXES DATA REQUEST INDICATOR = NO STATEMENT<br>FILTER DATA REQUEST INDICATOR = INDICATOR ON<br>FILTER IDENTIFIER = NO STATEMENT<br>BALLISTIC MISSILE REQUEST INDICATOR = NO STATEMENT<br>COVARIANCE INDICATOR = NO COVARIANCE<br>NUMBER FREQUENCY OF UPDATE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:00.009 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:02.978 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:04.852 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:05.986 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:05.988 
+  J12.6 
+       I
+      /E0/C1 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH133 POINTER</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 133<br>VERSION NUMBER = 4<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>POINTER ACTION = NO STATEMENT<br>TARGET POINTER DATA INDICATOR = INDICATOR ON<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>POINTER STRING USEFUL LENGTH = NO STATEMENT<br>ORIGIN OF INDEX NUMBER = MESSAGE ORIGINATOR S INDEX NUMBER<br>L16 TRACK NUMBER REFERENCE = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>TARGET POSITION QUALITY = NO STATEMENT<br>CORRELATION INDICATOR = C2 DERIVED CORRELATION<br>EXERCISE INDICATOR = NO STATEMENT<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>MODE III IFF INTERROGATION = CORRECT<br>MODE IV INDICATOR = INTERROGATED VALID RESPONSE<br>STRENGTH = N2 UNITS<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:07.473 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:15.008 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:16.103 
+  J12.6 
+       I
+      /E0/C1 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:16.883 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH133 POINTER</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 133<br>VERSION NUMBER = 4<br>SESSION IDENTIFICATION = NO STATEMENT<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>POINTER ACTION = NO STATEMENT<br>TARGET POINTER DATA INDICATOR = INDICATOR ON<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = NO STATEMENT<br>IDENTITY = FRIEND<br>SPECIFIC TYPE = 5<br>POINTER STRING USEFUL LENGTH = NO STATEMENT<br>ORIGIN OF INDEX NUMBER = MESSAGE ORIGINATOR S INDEX NUMBER<br>L16 TRACK NUMBER REFERENCE = 514<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = NO STATEMENT<br>CORRELATION INDICATOR = C2 DERIVED CORRELATION<br>EXERCISE INDICATOR = NO STATEMENT<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>MODE III IFF INTERROGATION = CORRECT<br>MODE IV INDICATOR = INTERROGATED VALID RESPONSE<br>STRENGTH = N2 UNITS<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:17.978 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:19.467 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:25.867 
+  J7.6
+       I
+      /E0/C1/C3- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:27.000 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH171 DL FILTER MSG</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 171<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>FILTER IDENTIFIER = 1<br>ACTION FILTER MANAGEMENT = FILTER IMPLEMENTATION REQUEST<br>FILTER UNIT TYPE = INDIVIDUAL JU<br>GEOGRAPHIC AREA FILTERED = NO STATEMENT<br>POINT LINE AREA DESCRIPTOR = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = 1<br>ENV CAT UNKNOWN FILTER INDICATOR = NO STATEMENT<br>ENV CAT SPACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT AIR FILTER INDICATOR = NO STATEMENT<br>ENV CAT SURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT SUBSURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND POINT FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND TRACK FILTER INDICATOR = NO STATEMENT<br>SPARE ENV CAT FILTER INICATOR = NO STATEMENT<br>SPECIAL PROCESSING FILTER INDICATOR = NO STATEMENT<br>SIMULATION FILTER INDICATOR = NO STATEMENT<br>EXERCISE FILTER INDICATOR = NO STATEMENT<br>ELECTRONIC WARFARE FILTER INDICATOR = NO STATEMENT<br>REFERENCE POINT FILTER INDICATOR = NO STATEMENT<br>PENDING IDENTITY FILTER INDICATOR = NO STATEMENT<br>UNKNOWN IDENTITY FILTER INDICATOR = NO STATEMENT<br>ASSUMED FRIEND IDENTITY FILTER INDICATOR = NO STATEMENT<br>FRIEND IDENTITY FILTER INDICATOR = INDICATOR ON<br>NEUTRAL IDENTITY FILTER INDICATOR = NO STATEMENT<br>HOSTILE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SUSPECT IDENTITY FILTER INDICATOR = NO STATEMENT<br>SPARE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SLAVED INDICATOR = INDICATOR ON<br>HEADER OF BLOCK 2 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 2<br>DATA BLOCK LENGTH = 26 byte<br>SQUARE CIRCLE 1 SWITCH = SQUARE RECTANGULAR<br>SQUARE CIRCLE 2 SWITCH = NO STATEMENT<br>HEADER OF BLOCK 3 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 3<br>DATA BLOCK LENGTH = 14 byte<br>TRACK NUMBER RELATED = 17<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:28.875 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:29.970 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:31.460 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:35.985 
+  J7.6
+       I
+      - Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH171 DL FILTER MSG</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 171<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>FILTER IDENTIFIER = 1<br>ACTION FILTER MANAGEMENT = DELETE FILTER REQUEST REPORT<br>FILTER UNIT TYPE = INDIVIDUAL JU<br>GEOGRAPHIC AREA FILTERED = NO STATEMENT<br>POINT LINE AREA DESCRIPTOR = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = NO STATEMENT<br>ENV CAT UNKNOWN FILTER INDICATOR = NO STATEMENT<br>ENV CAT SPACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT AIR FILTER INDICATOR = NO STATEMENT<br>ENV CAT SURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT SUBSURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND POINT FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND TRACK FILTER INDICATOR = NO STATEMENT<br>SPARE ENV CAT FILTER INICATOR = NO STATEMENT<br>SPECIAL PROCESSING FILTER INDICATOR = NO STATEMENT<br>SIMULATION FILTER INDICATOR = NO STATEMENT<br>EXERCISE FILTER INDICATOR = NO STATEMENT<br>ELECTRONIC WARFARE FILTER INDICATOR = NO STATEMENT<br>REFERENCE POINT FILTER INDICATOR = NO STATEMENT<br>PENDING IDENTITY FILTER INDICATOR = NO STATEMENT<br>UNKNOWN IDENTITY FILTER INDICATOR = NO STATEMENT<br>ASSUMED FRIEND IDENTITY FILTER INDICATOR = NO STATEMENT<br>FRIEND IDENTITY FILTER INDICATOR = INDICATOR ON<br>NEUTRAL IDENTITY FILTER INDICATOR = NO STATEMENT<br>HOSTILE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SUSPECT IDENTITY FILTER INDICATOR = NO STATEMENT<br>SPARE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SLAVED INDICATOR = INDICATOR ON<br>HEADER OF BLOCK 5 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 5<br>DATA BLOCK LENGTH = 8 byte<br>ADH171 BLOCK 5 = RECORD<br>LINK TRACK NUMBER ADDRESSEE = 7<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:38.992 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:40.867 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:41.961 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:43.489 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:46.102 
+  J7.6
+       I
+      /E0/C2- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:46.883 
+  J7.6
+       I
+      /E0/C2- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:47.979 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:47.983 
+  J7.6
+       I
+      /E0/C2- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:49.109 
+  J7.6
+       I
+      /E0/C2- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:49.852 
+  J7.6
+       I
+      /E0/C2- Filter Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:50.985 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH171 DL FILTER MSG</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 171<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>FILTER IDENTIFIER = 2<br>ACTION FILTER MANAGEMENT = FILTER DESCRIPTION REPORT<br>FILTER UNIT TYPE = INDIVIDUAL JU<br>GEOGRAPHIC AREA FILTERED = INHIBIT TRACKS NORTHEAST OF LINE<br>POINT LINE AREA DESCRIPTOR = NO STATEMENT<br>NUMBER OF LINE AREA POINTS = 10<br>ENV CAT UNKNOWN FILTER INDICATOR = NO STATEMENT<br>ENV CAT SPACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT AIR FILTER INDICATOR = NO STATEMENT<br>ENV CAT SURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT SUBSURFACE FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND POINT FILTER INDICATOR = NO STATEMENT<br>ENV CAT LAND TRACK FILTER INDICATOR = NO STATEMENT<br>SPARE ENV CAT FILTER INICATOR = NO STATEMENT<br>SPECIAL PROCESSING FILTER INDICATOR = NO STATEMENT<br>SIMULATION FILTER INDICATOR = NO STATEMENT<br>EXERCISE FILTER INDICATOR = NO STATEMENT<br>ELECTRONIC WARFARE FILTER INDICATOR = NO STATEMENT<br>REFERENCE POINT FILTER INDICATOR = NO STATEMENT<br>PENDING IDENTITY FILTER INDICATOR = NO STATEMENT<br>UNKNOWN IDENTITY FILTER INDICATOR = NO STATEMENT<br>ASSUMED FRIEND IDENTITY FILTER INDICATOR = NO STATEMENT<br>FRIEND IDENTITY FILTER INDICATOR = INDICATOR ON<br>NEUTRAL IDENTITY FILTER INDICATOR = NO STATEMENT<br>HOSTILE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SUSPECT IDENTITY FILTER INDICATOR = NO STATEMENT<br>SPARE IDENTITY FILTER INDICATOR = NO STATEMENT<br>SLAVED INDICATOR = NO STATEMENT<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +42° 30' 0.015" Degrees<br>LONGITUDE = +15° 0' 0.612" Degrees<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +44° 59' 59.392" Degrees<br>LONGITUDE = +14° 59' 59.847" Degrees<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +44° 59' 59.392" Degrees<br>LONGITUDE = +14° 30' 0.723" Degrees<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +45° 0' 0.309" Degrees<br>LONGITUDE = +14° 0' 1.158" Degrees<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +45° 0' 0.309" Degrees<br>LONGITUDE = +12° 0' 0.905" Degrees<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH171 BLOCK 4<br>DATA BLOCK LENGTH = 12 byte<br>LATITUDE = +45° 0' 0.309" Degrees<br>LONGITUDE = +11° 30' 0.878" Degrees<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:53.250 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:53.954 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:55.480 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:56.259 
+  J12.6 
+       I
+      /E0/C1 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:56.263 
+  J12.6 
+       I
+      /C2/C3 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:56.264 
+  J12.6 
+       I
+      /C4/C5 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:06:56.609 
+  J12.6 
+       I
+      /C6/C7 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH118 TARGET</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 118<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 64 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = 12<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = INF OR EQ 4 4 DM2<br>HEADER OF BLOCK 2 = RECORD<br>DATA BLOCK IDENTIFICATION = AMPLIFIED DEF TARGET<br>DATA BLOCK LENGTH = 22 byte<br>TRACK NUMBER OBJECTIVE = 514<br>CORRELATION INDICATOR = NON C2 DERIVED CORRELATION<br>EXERCISE INDICATOR = INDICATOR ON<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>IDENTITY = FAKER<br>SPECIFIC TYPE = 25<br>HEADER OF BLOCK 3 = RECORD<br>DATA BLOCK IDENTIFICATION = COMP1 DEF TARGET<br>DATA BLOCK LENGTH = 7 byte<br>COMP1 DEF TARGET = RECORD<br>COMP1 DEF TARGET = RECORD<br>MODE III IFF INTERROGATION = NO RESPONSE<br>MODE IV INDICATOR = INTERROGATED VALID RESPONSE<br>STRENGTH = GREATER THAN 12 UNITS<br>HEADER OF BLOCK 7 = RECORD<br>DATA BLOCK IDENTIFICATION = ADD AMP DEF TARGET<br>DATA BLOCK LENGTH = 12 byte<br>STATUS INFORMATION DISCRETE = NEW SENSOR TARGET REPORT<br>ORIGIN OF INDEX NUMBER = MESSAGE RECEIVER S INDEX NUMBER<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>L16 TRACK NUMBER REFERENCE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH118 TARGET</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 118<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 66 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = 12<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = INF OR EQ 4 4 DM2<br>HEADER OF BLOCK 4 = RECORD<br>DATA BLOCK IDENTIFICATION = COMP2 3 DEF TARGET<br>DATA BLOCK LENGTH = 31 byte<br>FUSION TYPE = DATA FUSION<br>END TARGET REPORT CYCLE = NO STATEMENT<br>TIME INDICATOR = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>EMITTER PRF = NO STATEMENT<br>EMITTER STATUS = NO STATEMENT<br>JAMMER TYPE = NO STATEMENT<br>TRACK NUMBER INDEX ORIGINATOR = NO STATEMENT<br>INDEX NUMBER THIRD PARTY = NO STATEMENT<br>SENSOR TYPE = NO STATEMENT<br>SLANT RANGE POSITION UNCERTAINTY = 15<br>CROSS RANGE POSITION UNCERTAINTY = NO STATEMENT<br>VERTICAL POSITION UNCERTAINTY = NO STATEMENT<br>UNCERTAINTY ORIENTATION = 0<br>UNCERTAINTY TILT = 0<br>VELOCITY DOWN = 0<br>VELOCITY NORTH UNCERTAINTY = NO STATEMENT<br>VELOCITY EAST UNCERTAINTY = NO STATEMENT<br>VELOCITY DOWN UNCERTAINTY = NO STATEMENT<br>HEADER OF BLOCK 7 = RECORD<br>DATA BLOCK IDENTIFICATION = ADD AMP DEF TARGET<br>DATA BLOCK LENGTH = 12 byte<br>STATUS INFORMATION DISCRETE = NEW SENSOR TARGET REPORT<br>ORIGIN OF INDEX NUMBER = MESSAGE RECEIVER S INDEX NUMBER<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>L16 TRACK NUMBER REFERENCE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH118 TARGET</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 118<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 61 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = NO STATEMENT<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = INF OR EQ 4 4 DM2<br>HEADER OF BLOCK 5 = RECORD<br>DATA BLOCK IDENTIFICATION = COMP4 DEF TARGET<br>DATA BLOCK LENGTH = 16 byte<br>PROBABILITY OF OWN FORCES = NO STATEMENT<br>PROBABILITY OF ENEMY FORCES = NO STATEMENT<br>SPECIFIC AMBIGUOUS TYPE 1 = NO STATEMENT<br>SPECIFIC AMBIGUOUS TYPE 2 = 4095<br>AMBIGUOUS TYPE 1 PROBABILITY = NO STATEMENT<br>AMBIGUOUS TYPE 2 PROBABILITY = NO STATEMENT<br>HEADER OF BLOCK 8 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH118 BLOCK 8<br>DATA BLOCK LENGTH = 10 byte<br>FUTURE EVENT DESCRIPTOR = LAUNCH MISSILE<br>TIME OF EVENT MINUTE = NO STATEMENT<br>TIME OF EVENT SECOND = NO STATEMENT<br>TIME OF EVENT HUNDREDTHS = NO STATEMENT<br>EVENT DURATION SECOND = NO STATEMENT<br>EVENT DURATION HUNDREDTHS = NO STATEMENT<br>HEADER OF BLOCK 7 = RECORD<br>DATA BLOCK IDENTIFICATION = ADD AMP DEF TARGET<br>DATA BLOCK LENGTH = 12 byte<br>STATUS INFORMATION DISCRETE = NEW SENSOR TARGET REPORT<br>ORIGIN OF INDEX NUMBER = MESSAGE RECEIVER S INDEX NUMBER<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>L16 TRACK NUMBER REFERENCE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH118 TARGET</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 118<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 67 byte<br>LINK IDENTIFICATION = 1<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER = 12<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = INF OR EQ 4 4 DM2<br>HEADER OF BLOCK 9 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH118 BLOCK 9<br>DATA BLOCK LENGTH = 18 byte<br>SENSOR TYPE INDICATOR = LASER TRACKER CODE<br>SENSOR STATUS COMMAND INDICATOR = SENSOR STATUS<br>SENSOR CHANNEL CODE = NO STATEMENT<br>SENSOR CHANNEL SET = NO STATEMENT<br>FREQUENCY AGILITY INDICATOR = FIXED FREQUENCY MODE<br>PDI INDICATOR = MISSILE DATA LINK CHANNEL REPORTED<br>PDI MISSILE DATA LINK CHANNEL = NO STATEMENT<br>AIR GROUND WEAPON DATA LINK CHANNEL = NO STATEMENT<br>WEAPON ID = NO STATEMENT<br>RADAR PRF = NO STATEMENT<br>ARM THREAT NUMBER = NO STATEMENT<br>ARM TYPE = NO STATEMENT<br>HEADER OF BLOCK 6 = RECORD<br>DATA BLOCK IDENTIFICATION = ADH118 BLOCK 6<br>DATA BLOCK LENGTH = 14 byte<br>HEADER OF BLOCK 7 = RECORD<br>DATA BLOCK IDENTIFICATION = ADD AMP DEF TARGET<br>DATA BLOCK LENGTH = 12 byte<br>STATUS INFORMATION DISCRETE = NEW SENSOR TARGET REPORT<br>ORIGIN OF INDEX NUMBER = MESSAGE RECEIVER S INDEX NUMBER<br>WEAPON ENGAGEMENT STATUS = NO STATEMENT<br>WEAPON SYSTEM = NO STATEMENT<br>L16 TRACK NUMBER REFERENCE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:02.981 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:05.242 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:05.985 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:05.995 
+  J12.6 
+       I
+       - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH119 TARGET REMOVE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 119<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>DATA LENGTH = 11 byte<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>NUMBER OF INDEX NUMBER = 1<br>Array = RECORD<br>BLOCK 1 = RECORD<br>INDEX NUMBER = 12<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:07.472 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:12.704 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:15.007 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:15.906 
+  J28.2(0)
+       I
+      /(0)E0/(0)E0/(0)E0/(0)E0/(0)E0(0) - Text (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:16.882 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:17.977 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:19.465 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH119 TARGET REMOVE</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 119<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>DATA LENGTH = 11 byte<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>NUMBER OF INDEX NUMBER = 1<br>Array = RECORD<br>BLOCK 1 = RECORD<br>INDEX NUMBER = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:26.023 
+  J12.0 
+       I
+      /C1/C2 - Mission Assignment (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">J12.0 
+       I
+      /C1/C2 - Mission Assignment (FIM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE ID = 1<br>R/C MESSAGE ID = 5<br>TYPE = Link 16 Fixed Format<br>IJMS/LINK 16 SELECT = Transmit Link 16 Only<br>PACKING LIMIT = Packed-4 (P4)<br>LENGTH = 240 bits<br>PRIORITY = 5<br>STALENESS LIMIT = 1000 time slots<br>RECEIPT COMPLIANCE = R/C Response<br>REPROMULGATION RECURRENCE RATE = Use Default<br>REPROM COUNTER/ORIGINAL VALUE = Use Default<br>SPARE 545 = Spare<br>REPROMULGATION REQUEST = Use Defaults<br>EXTRAPOLATION REQUEST = Use Defaults<br>TRANSMIT METHOD = Transmission By Needline Requested<br>TARGET SORTING MESSAGE INDICATOR = The FIM does not contain any J12.6 message.<br>SLOT SELECTION WORD = The FIM does not contain any J12.6 message.<br>SOURCE TRACK NUMBER = NO STATEMENT<br>ADDRESSEE INDICATOR = The messages contained in the FIM are not addressed to the Terminal Primary STN<br>WORD FORMAT = INITIAL<br>LABEL, J-SERIES = 12<br>SUBLABEL, J-SERIES = 0<br>MESSAGE LENGTH INDICATOR = 2<br>TRACK NUMBER, ADDRESSEE = 17<br>MISSION ASSIGNMENT DISCRETE = ENGAGE<br>DISUSED = 0<br>DISUSED[7] = 0<br>TRACK NUMBER, OBJECTIVE = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>RECEIPT COMPLIANCE = WILCO (WILL COMPLY)<br>RECURRENCE RATE, RECEIPT/COMPLIANCE = NO STATEMENT<br>SPARE 546 = Spare<br>WORD FORMAT = CONTINUATION<br>CONTINUATION WORD LABEL = 1<br>STRENGTH = NO STATEMENT<br>SPARE 547 = Spare<br>ENVIRONMENT CATEGORY = AIR<br>ORIGIN OF NUMBER INDEX = MESSAGE ORIGINATOR'S INDEX NUMBER<br>INDEX NUMBER = NO STATEMENT<br>SPARE 548 = Spare<br>WORD FORMAT = CONTINUATION<br>CONTINUATION WORD LABEL = 2<br>SPARE 549 = Spare<br>METHODE OF FIRE = NO STATEMENT<br>IDENTITY = HOSTILE<br>EXERCISE INDICATOR = NON-EXERCISE TRACK<br>SPARE 60 = Spare<br>SPECIAL INTEREST INDICATOR = SPECIAL INTEREST<br>SPARE 550 = Spare<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:27.000 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH360 MISSION ASSIGNMENT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 360<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>HOST SEQUENCE NUMBER = NO STATEMENT<br>RECEIPT COMPLIANCE = ORIGINAL ORDER RESPONSE REQUIRED<br>MISSION ASSIGNMENT DISCRETE = ENGAGE<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>FORMAL ALERT = NO STATEMENT<br>COUNTER SURPRISE = NO STATEMENT<br>GROUND ATTACK MISSION INDICATOR = NO STATEMENT<br>SPARE 125 = Spare<br>COURSE = +60° 0' 0.006" Degrees<br>SPEED = Spare<br>ALTITUDE = 10000 Feet<br>EXERCISE INDICATOR = NO STATEMENT<br>IDENTITY = HOSTILE<br>SPECIAL INTEREST INDICATOR = INDICATOR ON<br>SPECIFIC TYPE = 63<br>ENVIRONMENT CATEGORY = AIR<br>STRENGTH = NO STATEMENT<br>ELEVATION = NO STATEMENT<br>POINT TYPE 1 = NO STATEMENT<br>POINT NUMBER = NO STATEMENT<br>TARGET TYPE = NO STATEMENT<br>TARGET DEFENSES = NO STATEMENT<br>NUMBER OF STORES = NO STATEMENT<br>TYPE OF STORES = NO STATEMENT<br>MODE OF DELIVERY = NO STATEMENT<br>TIME DISCRETE = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>TARGET RANGE = NO STATEMENT<br>TARGET BEARING = NO STATEMENT<br>DELTA ELEVATION = NO STATEMENT<br>BEACON CODE = 0 TBD<br>MISSION LASER TARGETING DATA = RECORD<br>LASER ILLUMINATOR CODE = 0<br>ELEVATION PRECISION = 0 feet<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER RELATED = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER THIRD PARTY = NO STATEMENT<br>METHOD OF FIRE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:07:27.471 
+  AHD190 RC RESPONSE</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:28.874 
+  
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:29.969 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:31.460 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:35.989 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:36.140 
+  J12.0 
+       I
+       - Mission Assignment (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">J12.0 
+       I
+       - Mission Assignment (FIM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE ID = 2<br>R/C MESSAGE ID = 6<br>TYPE = Link 16 Fixed Format<br>IJMS/LINK 16 SELECT = Transmit Link 16 Only<br>PACKING LIMIT = Packed-4 (P4)<br>LENGTH = 80 bits<br>PRIORITY = 5<br>STALENESS LIMIT = 1000 time slots<br>RECEIPT COMPLIANCE = R/C Response<br>REPROMULGATION RECURRENCE RATE = Use Default<br>REPROM COUNTER/ORIGINAL VALUE = Use Default<br>SPARE 545 = Spare<br>REPROMULGATION REQUEST = Use Defaults<br>EXTRAPOLATION REQUEST = Use Defaults<br>TRANSMIT METHOD = Transmission By Needline Requested<br>TARGET SORTING MESSAGE INDICATOR = The FIM does not contain any J12.6 message.<br>SLOT SELECTION WORD = The FIM does not contain any J12.6 message.<br>SOURCE TRACK NUMBER = NO STATEMENT<br>ADDRESSEE INDICATOR = The messages contained in the FIM are not addressed to the Terminal Primary STN<br>WORD FORMAT = INITIAL<br>LABEL, J-SERIES = 12<br>SUBLABEL, J-SERIES = 0<br>MESSAGE LENGTH INDICATOR = 0<br>TRACK NUMBER, ADDRESSEE = 17<br>MISSION ASSIGNMENT DISCRETE = WEAPONS FREE<br>DISUSED = 0<br>DISUSED[7] = 0<br>TRACK NUMBER, OBJECTIVE = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>RECEIPT COMPLIANCE = WILCO (WILL COMPLY)<br>RECURRENCE RATE, RECEIPT/COMPLIANCE = NO STATEMENT<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH360 MISSION ASSIGNMENT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 360<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>HOST SEQUENCE NUMBER = NO STATEMENT<br>RECEIPT COMPLIANCE = ORIGINAL ORDER RESPONSE REQUIRED<br>MISSION ASSIGNMENT DISCRETE = WEAPONS FREE<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>FORMAL ALERT = NO STATEMENT<br>COUNTER SURPRISE = NO STATEMENT<br>GROUND ATTACK MISSION INDICATOR = NO STATEMENT<br>SPARE 125 = Spare<br>EXERCISE INDICATOR = NO STATEMENT<br>SPARE 126 = Spare<br>IDENTITY = PENDING<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>SPARE 127 = Spare<br>SPECIFIC TYPE = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>POINT TYPE 1 = NO STATEMENT<br>POINT NUMBER = NO STATEMENT<br>TARGET TYPE = NO STATEMENT<br>TARGET DEFENSES = NO STATEMENT<br>NUMBER OF STORES = NO STATEMENT<br>TYPE OF STORES = NO STATEMENT<br>MODE OF DELIVERY = NO STATEMENT<br>TIME DISCRETE = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>TARGET RANGE = NO STATEMENT<br>TARGET BEARING = NO STATEMENT<br>DELTA ELEVATION = NO STATEMENT<br>BEACON CODE = 0 TBD<br>MISSION LASER TARGETING DATA = RECORD<br>LASER ILLUMINATOR CODE = 0<br>ELEVATION PRECISION = 0 feet<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER RELATED = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER THIRD PARTY = NO STATEMENT<br>METHOD OF FIRE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:07:37.589 
+  AHD190 RC RESPONSE</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:38.996 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:40.866 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:41.965 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:43.483 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:45.905 
+  J12.0 
+       I
+       - Mission Assignment (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">J12.0 
+       I
+       - Mission Assignment (FIM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE ID = 3<br>R/C MESSAGE ID = 7<br>TYPE = Link 16 Fixed Format<br>IJMS/LINK 16 SELECT = Transmit Link 16 Only<br>PACKING LIMIT = Packed-4 (P4)<br>LENGTH = 80 bits<br>PRIORITY = 5<br>STALENESS LIMIT = 1000 time slots<br>RECEIPT COMPLIANCE = R/C Response<br>REPROMULGATION RECURRENCE RATE = Use Default<br>REPROM COUNTER/ORIGINAL VALUE = Use Default<br>SPARE 545 = Spare<br>REPROMULGATION REQUEST = Use Defaults<br>EXTRAPOLATION REQUEST = Use Defaults<br>TRANSMIT METHOD = Transmission By Needline Requested<br>TARGET SORTING MESSAGE INDICATOR = The FIM does not contain any J12.6 message.<br>SLOT SELECTION WORD = The FIM does not contain any J12.6 message.<br>SOURCE TRACK NUMBER = NO STATEMENT<br>ADDRESSEE INDICATOR = The messages contained in the FIM are not addressed to the Terminal Primary STN<br>WORD FORMAT = INITIAL<br>LABEL, J-SERIES = 12<br>SUBLABEL, J-SERIES = 0<br>MESSAGE LENGTH INDICATOR = 0<br>TRACK NUMBER, ADDRESSEE = 17<br>MISSION ASSIGNMENT DISCRETE = WEAPONS TIGHT<br>DISUSED = 0<br>DISUSED[7] = 0<br>TRACK NUMBER, OBJECTIVE = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>RECEIPT COMPLIANCE = WILCO (WILL COMPLY)<br>RECURRENCE RATE, RECEIPT/COMPLIANCE = NO STATEMENT<br>SPARE 546 = Spare<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH360 MISSION ASSIGNMENT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 360<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>HOST SEQUENCE NUMBER = NO STATEMENT<br>RECEIPT COMPLIANCE = ORIGINAL ORDER RESPONSE REQUIRED<br>MISSION ASSIGNMENT DISCRETE = WEAPONS TIGHT<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>FORMAL ALERT = NO STATEMENT<br>COUNTER SURPRISE = NO STATEMENT<br>GROUND ATTACK MISSION INDICATOR = NO STATEMENT<br>EXERCISE INDICATOR = NO STATEMENT<br>IDENTITY = PENDING<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>ELEVATION = NO STATEMENT<br>POINT TYPE 1 = NO STATEMENT<br>POINT NUMBER = NO STATEMENT<br>TARGET TYPE = NO STATEMENT<br>TARGET DEFENSES = NO STATEMENT<br>NUMBER OF STORES = NO STATEMENT<br>TYPE OF STORES = NO STATEMENT<br>MODE OF DELIVERY = NO STATEMENT<br>TIME DISCRETE = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>BEACON CODE = 0 TBD<br>MISSION LASER TARGETING DATA = RECORD<br>LASER ILLUMINATOR CODE = 0<br>ELEVATION PRECISION = 0 feet<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER RELATED = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER THIRD PARTY = NO STATEMENT<br>METHOD OF FIRE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:07:47.338 
+  AHD190 RC RESPONSE</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:50.993 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:52.858 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:53.958 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:55.476 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:07:56.022 
+  J12.0 
+       I
+       - Mission Assignment (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">J12.0 
+       I
+       - Mission Assignment (FIM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE ID = 4<br>R/C MESSAGE ID = 8<br>TYPE = Link 16 Fixed Format<br>IJMS/LINK 16 SELECT = Transmit Link 16 Only<br>PACKING LIMIT = Packed-4 (P4)<br>LENGTH = 80 bits<br>PRIORITY = 5<br>STALENESS LIMIT = 1000 time slots<br>RECEIPT COMPLIANCE = R/C Response<br>REPROMULGATION RECURRENCE RATE = Use Default<br>REPROM COUNTER/ORIGINAL VALUE = Use Default<br>SPARE 545 = Spare<br>REPROMULGATION REQUEST = Use Defaults<br>EXTRAPOLATION REQUEST = Use Defaults<br>TRANSMIT METHOD = Transmission By Needline Requested<br>TARGET SORTING MESSAGE INDICATOR = The FIM does not contain any J12.6 message.<br>SLOT SELECTION WORD = The FIM does not contain any J12.6 message.<br>SOURCE TRACK NUMBER = NO STATEMENT<br>ADDRESSEE INDICATOR = The messages contained in the FIM are not addressed to the Terminal Primary STN<br>WORD FORMAT = INITIAL<br>LABEL, J-SERIES = 12<br>SUBLABEL, J-SERIES = 0<br>MESSAGE LENGTH INDICATOR = 0<br>TRACK NUMBER, ADDRESSEE = 17<br>MISSION ASSIGNMENT DISCRETE = BREAK ENGAGEMENT<br>DISUSED = 0<br>DISUSED[7] = 0<br>TRACK NUMBER, OBJECTIVE = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>RECEIPT COMPLIANCE = WILCO (WILL COMPLY)<br>RECURRENCE RATE, RECEIPT/COMPLIANCE = NO STATEMENT<br>SPARE 546 = Spare<br></font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH360 MISSION ASSIGNMENT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 360<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 5<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>HOST SEQUENCE NUMBER = NO STATEMENT<br>RECEIPT COMPLIANCE = ORIGINAL ORDER RESPONSE REQUIRED<br>MISSION ASSIGNMENT DISCRETE = BREAK ENGAGEMENT<br>TRACK TYPE = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>THREAT WARNING ENVIRONMENT = AIR<br>FORMAL ALERT = NO STATEMENT<br>COUNTER SURPRISE = NO STATEMENT<br>GROUND ATTACK MISSION INDICATOR = NO STATEMENT<br>SPARE 125 = Spare<br>EXERCISE INDICATOR = NO STATEMENT<br>IDENTITY = PENDING<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>ENVIRONMENT CATEGORY = NO STATEMENT<br>STRENGTH = NO STATEMENT<br>POINT TYPE 1 = NO STATEMENT<br>POINT NUMBER = NO STATEMENT<br>TARGET TYPE = NO STATEMENT<br>TARGET DEFENSES = NO STATEMENT<br>NUMBER OF STORES = NO STATEMENT<br>TYPE OF STORES = NO STATEMENT<br>MODE OF DELIVERY = NO STATEMENT<br>TIME DISCRETE = NO STATEMENT<br>EFFECTIVE TIME = NO STATEMENT<br>BEACON CODE = 0 TBD<br>MISSION LASER TARGETING DATA = RECORD<br>LASER ILLUMINATOR CODE = 0<br>ELEVATION PRECISION = 0 feet<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER RELATED = NO STATEMENT<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INDEX NUMBER THIRD PARTY = NO STATEMENT<br>METHOD OF FIRE = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">00:07:57.470 
+  AHD190 RC RESPONSE</font><br>	
+      <img src="
+	X:\Tests_Automation\rightarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:02.981 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:04.851 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:05.988 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:07.468 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:10.866 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:15.012 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:16.101 
+  J7.7
+       I
+      - Association (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:16.882 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH137 ASSOCIATION</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 137<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>ASSOCIATION ACTION = ASSOCIATE DATA<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 518<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 524<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:17.981 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:19.460 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:23.991 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:27.005 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:28.873 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:29.968 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:31.453 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:35.983 
+  J7.7
+       I
+      - Association (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH137 ASSOCIATION</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 137<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>ASSOCIATION ACTION = TERMINATE ASSOCIATION<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 518<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 524<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:38.991 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:41.257 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:41.961 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:43.482 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:48.718 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:50.983 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:52.858 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:53.952 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:55.477 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:55.866 
+  J10.2 
+       I
+       - Engagement Status (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH142 WEAPON ENGAGEMENT STATUS</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 142<br>VERSION NUMBER = 2<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>WEAPON ENGAGEMENT = RECORD<br>WEAPON SYSTEM = NO STATEMENT<br>WEAPON ENGAGEMENT STATUS = HEADS UP<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INTERCEPT TIME FUNCTION = NO STATEMENT<br>MINUTE = NO STATEMENT<br>SECOND TENTHS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:08:58.873 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:02.981 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:04.850 
+  
+       I
+      </font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:05.983 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:05.988 
+  J10.2 
+       I
+      /C1 - Engagement Status (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH142 WEAPON ENGAGEMENT STATUS</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 142<br>VERSION NUMBER = 2<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>WEAPON ENGAGEMENT = RECORD<br>WEAPON SYSTEM = NO STATEMENT<br>WEAPON ENGAGEMENT STATUS = ENGAGEMENT BROKEN<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 512<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = NO STATEMENT<br>INTERCEPT TIME FUNCTION = NO STATEMENT<br>MINUTE = NO STATEMENT<br>SECOND TENTHS = NO STATEMENT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:07.467 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:12.003 
+  J3.7 
+       I
+      /C1/C2/C3/C4/C5- Electronic Warfare Product Information (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:15.010 
+  J3.2 
+       I
+      /E0/C1- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:16.101 
+  J12.5 
+       I
+      /E0/E1 - Target/Track Correlation (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:16.881 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH200 FREE TEXT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 200<br>VERSION NUMBER = 1<br>SESSION IDENTIFICATION = NO STATEMENT<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>USEFUL LENGTH = 114<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH168 TRACK TARGET CORRELATION</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 168<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>IDENTITY EVALUATED = UNKNOWN<br>STRENGTH EVALUATED = GREATER THAN 12 UNITS<br>IDENTITY STRENGTH INDICATOR = DO NOT INTERPRET EVALUATED ID AND STRENGTH<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 17<br>INDEX NUMBER A = 1<br>CORRELATION INDICATOR A = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 530<br>INDEX NUMBER B = 2<br>CORRELATION INDICATOR B = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 532<br>INDEX NUMBER C = 3<br>CORRELATION INDICATOR C = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 535<br>INDEX NUMBER D = 4<br>CORRELATION INDICATOR D = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 536<br>INDEX NUMBER E = 5<br>CORRELATION INDICATOR E = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 539<br>INDEX NUMBER F = 6<br>CORRELATION INDICATOR F = CORRELATED<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 540<br>INDEX NUMBER G = 7<br>CORRELATION INDICATOR G = CORRELATED<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:17.977 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:19.459 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:26.256 
+  J12.6 
+       I
+      /E0/C1 - Target Sorting (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:27.003 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH133 POINTER</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 133<br>VERSION NUMBER = 4<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>POINTER ACTION = NO STATEMENT<br>TARGET POINTER DATA INDICATOR = INDICATOR ON<br>LINK TRACK NUMBER = 512<br>INDEX NUMBER = 12<br>IDENTITY = FRIEND<br>SPECIFIC TYPE = 5<br>POINTER STRING USEFUL LENGTH = NO STATEMENT<br>ORIGIN OF INDEX NUMBER = MESSAGE ORIGINATOR S INDEX NUMBER<br>L16 TRACK NUMBER REFERENCE = 514<br>ENVIRONMENT CATEGORY = AIR<br>TARGET POSITION QUALITY = INF OR EQ 4 4 DM2<br>CORRELATION INDICATOR = C2 DERIVED CORRELATION<br>EXERCISE INDICATOR = NO STATEMENT<br>SPECIAL INTEREST INDICATOR = NO STATEMENT<br>WEAPON ENGAGEMENT STATUS = WEAPON ASSIGNED<br>WEAPON SYSTEM = SURFACE TO AIR MISSILE<br>MODE III IFF INTERROGATION = CORRECT<br>MODE IV INDICATOR = INTERROGATED VALID RESPONSE<br>STRENGTH = GREATER THAN 12 UNITS<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:28.873 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:29.967 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:31.452 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:35.982 
+  J7.0 
+       I
+      - Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH222 DIFFERENCE REPORT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 222<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>IDENTITY = FRIEND<br>PLATFORM = 47<br>PLATFORM ACTIVITY = 74<br>SPECIAL INTEREST INDICATOR = INDICATOR ON<br>ENVIRONMENT CATEGORY = AIR<br>EXERCISE INDICATOR = NO STATEMENT<br>SPECIFIC TYPE = NO STATEMENT<br>CONTROLLING UNIT INDICATOR = NO STATEMENT<br>DIFFERENCE REPORT MESSAGE = DIFFERENCE REPORT<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:38.990 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:40.865 
+  J3.2 
+       I
+      /E0- Air Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:41.961 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:43.482 
+  J2.5 
+       I
+      /E0- Land (Ground) Point PPLI (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:46.102 
+  J7.0 
+       I
+      /E0/C1- Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:46.105 
+  J7.0 
+       I
+      /E0/C1- Track Management (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"> </td>
+<td width="50%"><br><font size="2">00:09:46.881 
+  J3.5 
+       I
+      /E0/C1/C2/C3- Land (Ground) Point/Track (FOM01)</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">
+</font>
+</td>
+</tr>
+<tr>
+<td width="50%"><br><font size="2">ADH222 DIFFERENCE REPORT</font><br>	
+      <img src="
+	X:\Tests_Automation\leftarrow.bmp
+	  " border="0"/>
+	<br><font size="1">MESSAGE IDENTIFICATION = 222<br>VERSION NUMBER = NO STATEMENT<br>SESSION IDENTIFICATION = NO STATEMENT<br>MESSAGE PRIORITY = 10<br>LINK IDENTIFICATION = 1<br>TRACK NUMBER ORIGINATOR = 17<br>TRACK TYPE = TRACK<br>SYSTEM TRACK NUMBER = NO STATEMENT<br>LINK TRACK NUMBER = 514<br>IDENTITY = FRIEND<br>PLATFORM = 7<br>PLATFORM ACTIVITY = 3<br>SPECIAL INTEREST INDICATOR = INDICATOR ON<br>ENVIRONMENT CATEGORY = SPACE<br>EXERCISE INDICATOR = NO STATEMENT<br>SPECIFIC TYPE = 794<br>CONTROLLING UNIT INDICATOR = NO STATEMENT<br>DIFFERENCE REPORT MESSAGE = CHANGE DATA ORDER<br></font>
+</td>
+<td width="50%"> </td>
+</tr>
+</table>
+</td>
+<td width="260" valign="top">
+<font size="2">
+	       
+     </font>
+</td>
+<td width="230" valign="top">
+<font size="1">
+       
+     </font>
+</td>
+<td width="80" valign="top">
+<font size="2">
+     
+  </font>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</HTML>

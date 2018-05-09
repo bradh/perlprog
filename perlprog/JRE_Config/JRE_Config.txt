@@ -1,0 +1,81 @@
+$VAR1 = {
+          'config_jrep' => {
+                           'jrep_sender_id' => '1000',
+                           'startup_mode' => 'STANDALONE',
+                           'jrep_ip_link' => {
+                                             'ip_cnx_type' => 'CLIENT',
+                                             'local_ip_port' => '50093',
+                                             'local_ip_address' => '192.168.0.54',
+                                             'link_designator' => '300',
+                                             'remote_ip_port' => '50093',
+                                             'sender_id' => '03000',link_designator
+                                             'remote_ip_address' => '192.168.0.52',
+                                             'ip_protocol' => 'TCP'
+                                           },
+                           'jrep_dlip_link' => {
+                                               '' => '104'
+                                             },
+                           'secondary_tn_list' => {
+                                                  'track_number' => [
+                                                                    '00022',
+                                                                    '00023'
+                                                                  ]
+                                                },
+                           'jrep_designator' => 'JREP BMD'
+                         },
+          'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance'
+        };
+$VAR1 = {
+          'query_timeout' => '10',
+          'ju_ppliactivity_timeout' => '60',
+          'rc_retransmission_number' => '2',
+          'connectfeedback_timeout' => '60',
+          'j2_0_stanag_edition' => 'ML256',
+          'info_timeout' => '30',
+          'cmd_timeout' => '240',
+          'jrep_designator' => 'JREP BMD',
+          'secondarytn_maxcount' => '16',
+          't_rartt_init_value' => '2',
+          'localindicators_timeout' => '6',
+          'jrel16linkcapabletimereference_list' => {
+                                                   'coordinated_universal_time' => 'true',
+                                                   'fixed_delay' => 'false',
+                                                   'event_strobe' => 'false',
+                                                   'jrel16linkpreferedtimereference' => 'coordinated_universal_time',
+                                                   'round_trip' => 'true',
+                                                   'jre_network_controller' => 'false'
+                                                 },
+          'nointervallatencyreception_timeout' => '1000',
+          'internalstateinfoset_timeout' => '60',
+          'directcnxlist_timeout' => '180',
+          'netconnectmatrix_timeout' => '180',
+          'ctr_maxconflict' => '6',
+          'time_accuracy' => '1',
+          'rtt_alarm_timeout' => '40',
+          'nofilterforagivenindex_value' => '1',
+          'jreiplinkcapabletimereference_list' => {
+                                                  'coordinated_universal_time' => 'true',
+                                                  'fixed_delay' => 'false',
+                                                  'event_strobe' => 'false',
+                                                  'round_trip' => 'true',
+                                                  'jre_network_controller' => 'false',
+                                                  'jreiplinkpreferedtimereference' => 'round_trip'
+                                                },
+          'internalstateinfosettodlip_timeout' => '300',
+          't_retry' => '240',
+          'ctr_maxquery' => '3',
+          'mngt_retransmission_count' => '2',
+          'ctr_maxinfo' => '4',
+          'rtt_timeout' => '20',
+          'clientcnx_timeout' => '2',
+          'fail_timeout' => '1500',
+          'startsocket_timeout' => '60',
+          'jrep_dlip_link' => {
+                              'remote_ip_address' => 'localhost',
+                              'local_ip_port' => '50100',
+                              'local_ip_address' => 'localhost',
+                              'remote_ip_port' => '4526'
+                            },
+          'secondarytnlist_timeout' => '180',
+          'dcl_deactivateaddressprocess' => 'true'
+        };

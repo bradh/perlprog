@@ -1,0 +1,364 @@
+hemis = N
+degré = 524287
+degre = 010 : minute = 59 : seconde = 59.000
+lat 524287: long 16019
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+
+mot = 0000000000000000090C
+firstBit = 19, 37, C0 toto
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set lat
+old E0 : 00000000000000000002 524287
+
+mot = 00000000000000000002
+firstBit = 4, 24, 7FFFF toto
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 524287
+ 0, 7FFFF
+masque = 7FFFF
+chaine à remplacer = 07FFFF
+nouveau mot = 000000000000007FFFF2
+new lat E0 : 000000000000007FFFF2
+set long
+old E0 : 000000000000007FFFF2 16019
+
+mot = 000000000000007FFFF2
+firstBit = 27, 48, 3E93 toto
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 128152
+ 0, 1F498
+masque = 1F498
+chaine à remplacer = 001F498
+nouveau mot = 0000000001F4987FFFF2
+new long E0 : 0000000001F4987FFFF2
+set TQ
+
+mot = 0000000000000600090C
+firstBit = 58, 61, C toto
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DEPLOYMENT_PARAMETERS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Interfaces parameters -->
+	<INTERFACE_CONFIGURATION NAME="%M001%"  
+	IP="%I03%" 
+	PORT="%P33%"/>
+	<INTERFACE_CONFIGURATION NAME="%M002%"  
+	IP="%I08%" 
+	PORT="%P34%"/>
+	<!--  DLIP => port listen = PORT +1 :: PORT Sender => PORT  -->
+	<!-- Links -->
+	<LINK_CONFIGURATION ID="%M003%"
+	TYPE="%M004%" 
+	NAME="%M005%" />
+	
+	<!-- Resources -->
+	
+	<RESOURCE_CONFIGURATION ID="%M006%"  
+	NAME="%M007%"  
+	TYPE="%M008%"  
+	IP="%I03%" 
+	PORT="%P01%">
+	<PLAT_PARAM URL="%M009%" /> 
+	</RESOURCE_CONFIGURATION>
+	
+		
+
+</DEPLOYMENT_PARAMETERS>

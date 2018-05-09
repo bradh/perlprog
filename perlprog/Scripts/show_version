@@ -1,0 +1,32 @@
+#!/usr/bin/perl -w
+
+
+#use Getopt::Std;
+
+#getopts("hc:v:t:s:");
+
+
+my $REP_EXE = "/data/users/loc1int/DLIP/test/test_tu/exe";
+#my $REP_SCRIPT = "/data/users/loc1int/DLIP/test/utils/scripts";
+#my $REP_CIBLE;
+#my $CAT = 1;
+my $VERSION_DLIP;
+my $NOM_TEST;
+my $TIME = 600;
+my @PROCESS = (`ls $REP_EXE`);
+print "Liste des versions des exe positionnés :\n\n";
+for $PROCESS (@PROCESS){
+  chomp $PROCESS;
+  my $VERSION = `ls -al $REP_EXE/$PROCESS/$PROCESS`;
+  if ($VERSION =~ /->\s\/(.*?)\/$PROCESS$/){
+    my @VERSION = split("/", $1);
+    #reverse @VERSION;
+    #pop @version;
+    $VERSION = pop @VERSION;
+    print "$PROCESS version\t=\t$VERSION\n\n";
+  }
+}
+
+
+exit 0;
+

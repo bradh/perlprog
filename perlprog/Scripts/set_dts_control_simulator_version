@@ -1,0 +1,83 @@
+#!/usr/bin/perl
+
+###################################################################################
+# Création d'un lien de la version choisie dans le répertoire d'excution
+# Les liens sont tirés avec tous les fichiers présents dans le repertoire version
+# -h permet d'afficher la liste des versions disponibles
+# -v version permet de séléctionner la version choisie et de copier les fichiers
+# de configuration associés
+#
+# S. Mouchot 04/07/03 
+##################################################################################
+
+use Getopt::Std;
+
+getopts("hv:");
+
+my $NOM_PROCESS = "dts_control_simulator";
+my $REP_VERSIONS = "/data/users/loc1int/DLIP/test/utils/dts_control_simulator";
+my $REP_CIBLE = "/data/users/loc1int/DLIP/test/test_tu/exe";
+
+if ($opt_h) { 
+	print "set_dts_control_simulator_version [-h] [-v nom_version ] \n";
+	print "Liste des versions disponibles : \n";
+	$VERSIONS = `ls $REP_VERSIONS`;
+	print "$VERSIONS\n";
+	exit 0;
+}
+if ($opt_v) { 
+  my $NOM_VERSION = $opt_v;
+  if ( ! -d "$REP_CIBLE/$NOM_PROCESS") {
+    system("mkdir $REP_CIBLE/$NOM_PROCESS");
+    print "Création du répertoire $REP_CIBLE/$NOM_PROCESS\n";
+  }
+  else {
+    system("rm $REP_CIBLE/$NOM_PROCESS/*");
+    print "Suppression des fichiers de $REP_CIBLE/$NOM_PROCESS\n";
+  }
+  for my $FILE  (`ls $REP_VERSIONS/$NOM_VERSION`) {
+	chomp($FILE);
+	if( $FILE eq $NOM_PROCESS) {
+		print "traitement $FILE\n";
+	
+	
+		if ( -l "$REP_CIBLE/$NOM_PROCESS/$FILE" || -f "$REP_CIBLE/$NOM_PROCESS/$FILE" ) {
+			print "Suppression de $FILE\n";
+			system("rm $REP_CIBLE/$NOM_PROCESS/$FILE");
+		}
+		else {
+			print "Le fichier $FILE n'existe pas \n";
+		}
+
+		if (! -l "$REP_CIBLE/$NOM_PROCESS/$FILE" && ! -f  "$REP_CIBLE/$NOM_PROCESS/$FILE" ) {
+		  
+		    
+			system("ln -s $REP_VERSIONS/$NOM_VERSION/$FILE $REP_CIBLE/$NOM_PROCESS");
+			print "creation du lien vers $REP_CIBLE/$NOM_PROCESS\n";
+		}
+		else {
+			print "impossible de faire le lien vers $REP_CIBLE/$NOM_PROCESS/$FILE\n";
+		}
+	}
+	else {
+		print "traitement $FILE\n";
+	
+	
+		if ( -l "$REP_CIBLE/$NOM_PROCESS/$FILE" || -f "$REP_CIBLE/$NOM_PROCESS/$FILE" ) {
+			print "Suppression de $FILE\n";
+			system("rm $REP_CIBLE/$NOM_PROCESS/$FILE");
+		}
+		else {
+			print "Le fichier $FILE n'existe pas \n";
+		}
+		if( ! -l "$REP_CIBLE/$NOM_PROCESS/$FILE" && ! -f "$REP_CIBLE/$NOM_PROCESS/$FILE") {
+			system("cp $REP_VERSIONS/$NOM_VERSION/$FILE $REP_CIBLE/$NOM_PROCESS");
+			print "Copie de $FILE vers $REP_CIBLE/$NOM_PROCESS\n";
+		}
+		else {
+			print "impossible de faire de copier $FILE vers $REP_CIBLE/$NOM_PROCESS/$FILE\n";
+		 }
+	}
+      }
+}	  
+exit 0;

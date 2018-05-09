@@ -1,0 +1,67 @@
+#!/usr/bin/perl -w
+# conversion des fichier .xhd au format unix dans tous les environnements de test
+# ce script est lancé par start_non_reg de façon préventive
+
+use Getopt::Std;
+
+getopts("hc:v:f:");
+
+my $REP_VERSION = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_CIBLE;
+my $CAT = 1;
+my $VERSION_DLIP;
+my $NOM_TEST;
+my $XHD_FILE;
+
+if ($opt_h) { 
+	print "XHD_conv2unix [-c] [-h] : liste des versions dlip \n";
+	print "XHD_conv2unix [-c] [-v n_version ] : convertit les fichier .xhd au format unix \n";
+}
+if ( ! $opt_h && $opt_c ) {
+  $CAT = $opt_c;
+}
+
+if ($opt_h && $opt_c && !$opt_v ) {
+  print "categorie = $CAT \n";
+  my $LISTE = `ls $REP_VERSION/category$CAT`;
+  print "Liste des versions DLIP en test catégorie $CAT :\n";
+  print "$LISTE";
+  print " \n";
+}
+
+
+if( ! $opt_h && $opt_c && $opt_v ) {
+  #$CAT = $opt_c;
+  $VERSION_DLIP = $opt_v;
+
+
+
+# Positionnement dans le répertoire de test
+  $REP_CIBLE = "$REP_VERSION/category$CAT/$VERSION_DLIP";
+  for $NOM_TEST (`ls $REP_CIBLE`) {
+    chomp $NOM_TEST;
+    print "**$REP_CIBLE/$NOM_TEST\n";
+    if (-d "$REP_CIBLE/$NOM_TEST") {
+      my @XHD_FILE = `ls $REP_CIBLE/$NOM_TEST/*.xhd`;
+      foreach my $XHD_FILE (@XHD_FILE) {
+	chomp $XHD_FILE;
+	print " traitement $XHD_FILE\n -> $REP_CIBLE/$NOM_TEST/TMP.new\n";
+	system("dos2unix $XHD_FILE $REP_CIBLE/$NOM_TEST/TMP.new");
+	system("mv $REP_CIBLE/$NOM_TEST/TMP.new $XHD_FILE");
+      }
+      my @XHD_FILE = `ls $REP_CIBLE/$NOM_TEST/*.ji`;
+      foreach my $XHD_FILE (@XHD_FILE) {
+	chomp $XHD_FILE;
+	print " traitement $XHD_FILE\n -> $REP_CIBLE/$NOM_TEST/TMP.new\n";
+	system("dos2unix $XHD_FILE $REP_CIBLE/$NOM_TEST/TMP.new");
+	system("mv $REP_CIBLE/$NOM_TEST/TMP.new $XHD_FILE");
+      }
+
+    }
+    else {
+      print " $REP_CIBLE/$NOM_TEST n'est pas un répertoire\n";
+    }
+  }
+}
+
+exit 0;

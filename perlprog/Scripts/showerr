@@ -1,0 +1,4 @@
+#!/usr/bin/ksh
+touch loc1_main.log
+tail -f loc1_main.log | grep "*"
+ 

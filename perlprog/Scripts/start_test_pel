@@ -1,0 +1,134 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use Time::Local;
+
+getopts("hxc:v:t:s:l:");
+
+my @PROCESS = ("loc1_main",
+	       "host_test_driver",
+	       "l16_test_driver",
+	       "l11_test_driver",
+	       "dts_control_simulator"
+	       );
+my $REP_BASE = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_SCRIPT = "/data/users/loc1int/DLIP/test/utils/scripts";
+my $REP_RESULTS = "results";
+my $REP_COMMON_FILES = "common_files";
+my $REP_RESULTAT = "results";
+my $REP_CHECKER = "checker_results";
+my $DURATION_FILE="test_duration_list.txt";
+my $REP_DUREE;
+my $REP_CIBLE;
+my $CAT = 1;
+my $VERSION;
+my $NOM_TEST;
+my $TIME = 600;
+my $DELTATPS=5; # declage en seconde pour la synchronisation des executables
+my $RECAP_RESULTS = 0; # si = 1 compil les resultats dans le repertoires result si = 0 lance le test 
+my $PORT_DTS = "7000";
+
+if ($opt_h) { 
+	print "start_test_pel [-h] : liste des versions dlip \n";
+	print "start_test_pel [-s duree ]  : demarre le test dans repertoire Runtime \n";
+
+}
+
+if( ! $opt_h && $opt_s) {
+  $TIME = $opt_s;
+  print "La durée du test $NOM_TEST est égale à $TIME\n";
+  print "Lancement du test $NOM_TEST avec start_test_pel...\n";
+  
+# Calcul de l'heure locale pour la synchronisation des exe
+    ($second, $minute,$hour,$day, $month,$year)=(localtime)[0,1,2,3,4,5];
+    $month = $month+1;
+    $year=$year+1900;
+
+    print "$hour:$minute:$second le $day/$month/$year\n";
+    $second=(($hour*60)+$minute)*60+$second+$DELTATPS;
+# create loc1_main.synchro file
+    open Fout, ">loc1_main.synchro" or die "impossible de creer loc1_main.synchro\n";
+    print Fout "Synchro_Year=$year\n";
+    print Fout "Synchro_Month=$month\n";
+    print Fout "Synchro_Day=$day\n";
+    print Fout "Synchro_Seconds=$second\n";
+    close Fout;
+
+# Lancement des executables
+    for my $PROCESS (@PROCESS) {
+      if ($PROCESS eq "loc1_main") {
+# Pour tracer les appels systeme
+#      system ("truss -t open,close,ioctl,so_socket -s \!14 loc1_main > traces.sys.err 2>&1 &");
+	system ("loc1_main > /dev/null 2>&1  &");
+	print "loc1_main lancé...\n";
+      
+      }
+      if($PROCESS eq "host_test_driver" ) {
+	system("host_test_driver C2_test_driver.conf $year $month $day $second > C2_host_test_driver.log &");
+	print "C2_host_test_driver lancé ...\n";
+	system("host_test_driver L16NCM_test_driver.conf $year $month $day $second > L16NCM_host_test_driver.log &");
+	print "L16NCM_host_test_driver lancé ...\n";
+      }
+
+      if($PROCESS eq "l16_test_driver") {
+	system("l16_test_driver l16_test_driver.conf $year $month $day $second > /dev/null 2>&1 &");
+	print "l16_test_driver lancé ...\n";
+      }
+ 
+    }
+  
+    system("xterm -e showerr &") if(! $opt_x) ;
+    system("xterm -e showlog &") if(! $opt_x);
+
+# création du fichier stop
+    my $PID;
+    my $PROC_NAME = "toto";
+    my @PS = (`ps -f`);
+    open Fout, ">stop" or die "impossible d'ouvrir stop \n";
+    print Fout "#!/bin/ksh\n";
+    for my $LIGNE (@PS) {
+      chomp ($LIGNE);
+      
+      if ($LIGNE =~ /loc1_main/) {
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -15 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+      if ($LIGNE =~ /host_test_driver|l16_test_driver|l11_test_driver/) {
+	print "\n";
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -9 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+       if ($LIGNE =~ /dts_control_simulator/) {
+	print "\n";
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -9 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+    }
+  print Fout "rm stop\n";
+  print Fout "exit 0\n";
+  close Fout;
+  system("chmod +x stop");
+
+# Calcul de la durée du scenario
+  while ( $TIME != 0) {
+    sleep 1;
+    $TIME=$TIME-1;
+  }
+
+# Arret des executables
+  system("./stop");
+  print "Test terminé\n";
+}
+
+
+exit 0;
+

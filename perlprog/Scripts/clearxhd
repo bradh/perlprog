@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+
+use Getopt::Std;
+
+getopts("hf:r:");
+
+# print $ENV{PWD};
+if ($opt_h) { print "clearxhd -f nom_dufichier";
+print "extractIfom permet de supprimer le dernier caractère de chaque ligne lorsque des ctrl M sont rajoutés par le transfert FTP";}
+
+if($opt_f) { $fichierIn = "$opt_f";}
+
+$repOut=".";
+if($opt_r) { $repOut= "./$opt_r";}
+
+open fin, "<$fichierIn" or die "impossible d'ouvrir le fichier d'entree";
+
+open ftemp, ">$repOut/$fichierIn.tmp" or die "impossible de creer le fichier de sortie $repOut/$fichierIn.tmp";
+
+$ligne=0;
+while(<fin>){
+	$_ =~ s/.$//;
+	print ftemp $_;
+
+}
+
+close fin;
+close ftemp;
+
+system ( "rm $fichierIn" ) ;
+system ( " mv $fichierIn.tmp $fichierIn");
+
+exit(0);

@@ -1,0 +1,6 @@
+# Calcul de la duree du scenario
+DUREE=`grep $1 ../../Tests/Duree_des_tests.txt | awk -F: '{print $2}'`
+echo Le test se termine dans `expr $DUREE \* 60` sec
+sleep `expr $DUREE \* 60`
+#sleep $1;
+

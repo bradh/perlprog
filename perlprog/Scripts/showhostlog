@@ -1,0 +1,3 @@
+#!/usr/bin/ksh
+touch host_test_driver.log
+tail -f host_test_driver.log

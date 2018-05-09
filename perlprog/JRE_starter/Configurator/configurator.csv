@@ -1,0 +1,10 @@
+Host name;;;IP@;;;TCP port;;;IP@;;
+h1;Pc-visu;;I01;Toplink broadcast IP@;200.1.18.255;P01;MIDS interface;1024;I01;Toplink broadcast IP@;200.1.18.255
+h2;Pc-dlip;;I02;Toplink IP@;200.1.18.60;P02;DLIP JREP internal link;2703;I02;Toplink IP@;200.1.18.60
+;;;I03;Toplink remote @IP;127.0.0.1;P03;Host interface min;1030;I03;Toplink remote @IP;127.0.0.1
+;;;;;;P04;Host interface max;1039;;;
+;;;;;;P05;Channel 4 server;50014;;;
+;;;;;;P06;Channel 4 client;50015;;;
+;;;;;;P07;Toplink persistant;3026;;;
+;;;;;;P08;SIMPLE technical;2399;;;
+;;;;;;P09;SIMPLE tactical;2400;;;

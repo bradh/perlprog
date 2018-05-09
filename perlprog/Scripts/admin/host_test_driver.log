@@ -1,0 +1,49 @@
+Usage : host_test_driver configuration_file [year month day seconds]
+Version : LOC1 Host Test Driver 07/08/2006, TEST_TOOLS_AA_V1R0E11
+
+PARAMETERS :
+ (suffix '_1' means that there can be also '_2', '_3', ..., '_n' : with n a Connection_Number)
+
+Mandatory parameters of configuration_file :
+ Use_Channel_4             = True | False
+ Host_Header_Revision      = V1
+ Connection_Number         = 1 .. 100
+ Socket_Type_1             = TCP_CLIENT | TCP_SERVER | UDP | UDP_BROADCAST
+ Local_Port_1              = 1024 .. 65535 (if Socket_Type_1 = TCP_SERVER | UDP | UDP_BROADCAST
+ Input_File_1              = existing filename
+ Output_File_1             = filename
+Mandatory if Use_Channel_4 = True
+ Host_Name_1               = 10 chars string
+ Host_Logical_ID_1         = 0 .. 65535
+ Channel4_Hosts_Port       = 1024 .. 65535
+ Channel4_DLIP_Port        = 1024 .. 65535
+ Host_Address              = ip address or hostname
+ Network_Broadcast_Address = ip address or hostname (typically 255.255.255.255)
+Mandatory if Use_Channel_4 = False
+ Remote_Port_1             = 1024 .. 65535 (if Socket_Type_1 = UDP | UDP_Broadcast | TCP_CLIENT)
+ Remote_Hostname_1         = ip address or hostname (if Socket_Type_1 = UDP | TCP_CLIENT)
+ Network_Broadcast_Address = ip address or hostname (typically 255.255.255.255) (if Socket_Type_1 = UDP_Broadcast)
+Optional parameters of configuration_file :
+ Host_XML_Dictionnary      = filename of aladdin .xml dictionnary
+ Write_TX_And_RX           = On | Off
+ AHD335_Simulation         = Accepted | Reverted | Rejected ) cannot be used at
+ Update_AHD335             = On | Off                       ) the same time
+ AHD121_Simulation         = On | Off
+ RC_Simulation             = Auto | On | Off
+ SysTN_Alloc               = OFF | INCREMENT | DIFFERENCE
+ First_SysTN               = 0 .. 5000 (needed if SysTN_Alloc /= Off)
+ First_LTN                 = 0 .. 524287 (needed if SysTN_Alloc = Difference
+ Graphical                 = On | Off
+ Graphical_Center_Lat      = -89 .. 89
+ Graphical_Center_Long     = -180 .. 180
+ Graphical_Radius          = 1 .. 90
+ Graphical_Map_Path        = filename without extension
+ Synchro_Dlip              = Ascii Value
+ Synchro_Host              = Ascii Value
+ Graphical_ACCS_LOC1_Links_And_Resources = True | False
+ Auto_Reopen_On_Disconnection = True | False
+LOC1 specific optional parameters of configuration_file :
+ Session_ID                = 0 .. 5
+ MIDS_Host_Name            = ip address or hostname
+ DTS_Host_Name             = ip address or hostname
+ THD082_Update             = True | False

@@ -1,0 +1,225 @@
+#!/bin/ksh
+
+unset opt_h
+unset opt_c
+unset opt_v
+unset opt_w
+unset opt_x
+unset opt_i
+unset opt_t
+REP_BASE="/data/users/loc1int/DLIP/test/test_tu"
+REP_RESULTAT="checker_results"
+
+function Help {
+    echo "Usage: ${0##*/} -h : this help"
+    echo "Usage: ${0##*/} -h -c category : list available version for the given category"
+    echo "Usage: ${0##*/} -h -c category -v version1 -w version2 : list available tests for the given version and category"
+    echo "Usage: ${0##*/} [-x] [-i] -c category -v version1 -w version2 : compare tests results between the 2 given versions"
+    echo "Usage: ${0##*/} [-x] [-i] -c category -v version1 -w version2 -t testname : compare given test results between the 2 given versions"
+    echo "Usage:   -x : use checker for comparison instead of resulter."
+    echo "Usage:   -i : compare also input files."
+}
+
+function Copy {
+    # $1 = extention of files to search copy
+    # $2 = extension to append to filename after copy
+    # $3 = source directory
+    # $4 = target directory
+    for FILE in $3/*.$1
+    do
+	ln -s $3/${FILE##*/} $4/${FILE##*/}$2 2>/dev/null
+    done
+}
+
+function Check_Current_Dir_With_Checker {
+    for FILENAME in `ls | grep "\.ref$"`
+    do
+	SHORT_FILENAME=${FILENAME%.ref}
+	if [ -f $SHORT_FILENAME ]
+	then
+	    /usr/bin/echo "> $SHORT_FILENAME ... \c"
+	    /data/users/loc1int/DLIP/test/test_tu/exe/checker/checker -o \
+		/data/users/loc1int/DLIP/test/test_tu/exe/checker/conf_checker_loc1.txt \
+		$FILENAME $SHORT_FILENAME > ${SHORT_FILENAME}.res
+	    typeset -i NB_NONE=`grep "<none>" ${SHORT_FILENAME}.res | wc -l`
+	    if [ $NB_NONE -eq 3 ]
+	    then
+		/usr/bin/echo "OK"
+	    else		
+		CUR_TEST=`pwd | awk -F\/ '{a=NF-2;b=NF-1;print $a"/"$b"/"$NF}'`
+		/usr/bin/echo "\033[31mDIFF  ( $CUR_TEST/${SHORT_FILENAME}.res )\033[39m"
+	    fi
+	else
+	    /usr/bin/echo "> $SHORT_FILENAME ... \033[31mOnly found reference file\033[39m"
+	fi
+    done
+    for FILENAME in `ls | /usr/xpg4/bin/grep -v -e "\.ref$" -e "\.res$"`
+    do
+	if [ ! -f ${FILENAME}.ref ]
+	then
+	    /usr/bin/echo "> $FILENAME ... \033[31mNo reference file found\033[39m"
+	fi
+    done
+}
+
+function Check_Current_Dir_With_Resulter {
+    /data/users/loc1int/DLIP/test/test_tu/exe/resulter/resulter
+}
+
+
+function Prepare_Checker_Environment_And_Run_Checker {
+    if [ -d "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME" ]
+    then
+	rm -rf "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	fi
+	    mkdir "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+
+	if [ "$opt_i" = "1" ]
+	then
+	    Copy xhd ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy fom ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy ji  ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy mi  ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+
+	    Copy xhd "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy fom "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy ji  "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	    Copy mi  "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	fi
+
+	Copy xdh ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy fim ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy jo  ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy mo  ".ref" "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+
+	Copy xdh "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy fim "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy jo  "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	Copy mo  "" "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+		
+	cd "$REP_BASE/category$CAT/$REP_RESULTAT/$TESTNAME"
+	if [ "$opt_x" = "1" ]
+	then
+	    Check_Current_Dir_With_Checker
+	else
+	    Check_Current_Dir_With_Resulter
+	fi
+}
+
+while getopts hixc:v:w:t: name
+do
+    case $name in
+	h) opt_h=1;;
+	c) opt_c="$OPTARG";;
+	v) opt_v="$OPTARG";;
+	w) opt_w="$OPTARG";;
+	t) opt_t="$OPTARG";;
+	x) opt_x=1;;
+	i) opt_i=1;;
+	?) Help
+           exit 2;;
+    esac
+done
+
+
+function Main {
+    echo "Start date : "`date`
+    echo ""
+    if [ -n "$opt_h" ] && [ -n "$opt_c" ] && [ -z "$opt_v" ] && [ -z "$opt_w" ]
+    then
+	echo "Available DLIP versions for category $CAT :"
+	ls -1 -F $REP_BASE/category$CAT | grep "/" | sed "s/[\/]//g" | /usr/xpg4/bin/grep -v -e common_files -e results
+    elif [ -n "$opt_h" ] && [ -n "$opt_c" ] && [ -n "$opt_v" ] && [ -n "$opt_w" ]
+    then
+	VERSION_DLIP_REF="$opt_v"
+	VERSION_DLIP_NEW="$opt_w"
+	echo "Available tests in versions $VERSION_DLIP_REF and $VERSION_DLIP_NEW for category $CAT :"
+	for REP in `ls -1 -F $REP_BASE/category$CAT/$VERSION_DLIP_REF | grep "/" | sed "s/[\/]//g"` 
+	do
+	    if [ -d $REP_BASE/category$CAT/$VERSION_DLIP_NEW/$REP ]
+	    then
+		echo "$REP"
+	    fi
+	done
+    elif [ -z "$opt_h" ] && [ -n "$opt_c" ] && [ -n "$opt_v" ] && [ -n "$opt_w" ] && [ -z "$opt_t" ]
+    then
+	VERSION_DLIP_REF="$opt_v"
+	VERSION_DLIP_NEW="$opt_w"
+	echo "Checking results for category $CAT between all tests of versions $VERSION_DLIP_REF and $VERSION_DLIP_NEW"
+
+	if [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF" ] && [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW" ]
+	then
+	    for TESTNAME in `ls -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF/"* "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/"* | sed "s/^.*[\/]//" | sort -u`
+	    do
+		echo "*******************************"
+		if [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" ] && [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" ]
+		then
+		    echo "Checking test $TESTNAME"
+		    Prepare_Checker_Environment_And_Run_Checker
+
+		elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" ]
+		then
+		    /usr/bin/echo "\033[31mThe test $TESTNAME does not exist in version $VERSION_DLIP_NEW\033[39m"
+		elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" ]
+		then
+		    /usr/bin/echo "\033[31mThe test $TESTNAME does not exist in version $VERSION_DLIP_REF\033[39m"
+		else
+		    # should never happen
+		    /usr/bin/echo "\033[31mThe test $TESTNAME does not exist in both versions\033[39m"
+		fi
+	    done
+	elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF" ]
+	then
+	    /usr/bin/echo "\033[31mThe version $VERSION_DLIP_NEW does not exist for the category $CAT\033[39m"
+	elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW" ]
+	then
+	    /usr/bin/echo "\033[31mThe version $VERSION_DLIP_REF does not exist for the category $CAT\033[39m"
+	else
+	    /usr/bin/echo "\033[31mBoth versions $VERSION_DLIP_REF and $VERSION_DLIP_NEW do not exist for the category $CAT\033[39m"
+	fi
+    elif [ -z "$opt_h" ] && [ -n "$opt_c" ] && [ -n "$opt_v" ] && [ -n "$opt_w" ] && [ -n "$opt_t" ]
+    then
+	VERSION_DLIP_REF="$opt_v"
+	VERSION_DLIP_NEW="$opt_w"
+	TESTNAME="$opt_t"
+	echo "Checking results for test of category $CAT $TESTNAME between versions $VERSION_DLIP_REF and $VERSION_DLIP_NEW"
+
+	if [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF" ] && [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW" ]
+	then
+	    if [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" ] && [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" ]
+	    then
+		Prepare_Checker_Environment_And_Run_Checker
+
+	    elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF/$TESTNAME" ]
+	    then
+		/usr/bin/echo "\033[31mThe test $TESTNAME does not exist in version $VERSION_DLIP_NEW\033[39m"
+	    elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW/$TESTNAME" ]
+	    then
+		/usr/bin/echo "\033[31mThe test $TESTNAME does not exist in version $VERSION_DLIP_REF\033[39m"
+	    else
+		/usr/bin/echo "\033[31mThe test $TESTNAME does not exist in both versions\033[39m"
+	    fi
+	elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_REF" ]
+	then
+	    /usr/bin/echo "\033[31mThe version $VERSION_DLIP_NEW does not exist for the category $CAT\033[39m"
+	elif [ -d "$REP_BASE/category$CAT/$VERSION_DLIP_NEW" ]
+	then
+	    /usr/bin/echo "\033[31mThe version $VERSION_DLIP_REF does not exist for the category $CAT\033[39m"
+	else
+	    /usr/bin/echo "\033[31mBoth versions $VERSION_DLIP_REF and $VERSION_DLIP_NEW do not exist for the category $CAT\033[39m"
+	fi
+    else
+	Help
+    fi
+    echo ""
+    echo "End date : "`date`
+}
+
+CAT="$opt_c"
+
+if [ ! -d "$REP_BASE/category$CAT/$REP_RESULTAT" ]
+then
+    mkdir "$REP_BASE/category$CAT/$REP_RESULTAT"
+fi
+
+Main | tee "$REP_BASE/category$CAT/$REP_RESULTAT/start_checker.log"

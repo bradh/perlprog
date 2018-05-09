@@ -1,0 +1,238 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use Time::Local;
+
+getopts("hxc:v:t:s:l:");
+
+my @PROCESS = ("loc1_main",
+	       "host_test_driver",
+	       "l16_test_driver",
+	       "l11_test_driver",
+	       "dts_control_simulator"
+	       );
+my $REP_BASE = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_SCRIPT = "/data/users/loc1int/DLIP/test/utils/scripts";
+my $REP_RESULTS = "results";
+my $REP_COMMON_FILES = "common_files";
+my $REP_RESULTAT = "results";
+my $REP_CHECKER = "checker_results";
+my $DURATION_FILE="test_duration_list.txt";
+my $REP_DUREE;
+my $REP_CIBLE;
+my $CAT = 1;
+my $VERSION;
+my $NOM_TEST;
+my $TIME = 600;
+my $DELTATPS=5; # declage en seconde pour la synchronisation des executables
+my $RECAP_RESULTS = 0; # si = 1 compil les resultats dans le repertoires result si = 0 lance le test 
+my $PORT_DTS = "7000";
+
+if ($opt_h) { 
+	print "start_test_local [-c] [-h] : liste des versions dlip \n";
+	print "start_test_local [-c] [-v n_version ][-h] : liste des tests existants \n";
+	print "start_test_local [-c] [-v n_version ][-t nom_du_test][-s temp_du_test][-x] [-l link_type]: lancement d'un test L11 et L16\n";
+	print "l'option -x inhibit le lancement des xterm showlog et showerr\n";
+	print "Si le link_type n'est pas L11, lance un test pure L16 \n";
+	print "Si le link_type n'est L16, lance un test pure L11\n";
+	print "Si le link_type n'est pas defini, lance un test all link\n";
+	print " \n";
+}
+if ($opt_h && $opt_c && ! $opt_v) {
+  $CAT = $opt_c;
+  print "categorie = $CAT \n";
+  my $LISTE = `ls $REP_BASE/category$CAT`;
+  print "Liste des versions DLIP en test catégorie $CAT :\n";
+  print "$LISTE";
+  print " \n";
+}
+if ($opt_h && $opt_c && $opt_v) {
+  $CAT = $opt_c;
+  $VERSION = $opt_v;
+  my $LISTE = `ls $REP_BASE/category$CAT/$VERSION`;
+  print "Liste des tests categorie $CAT pour la version DLIP $VERSION :\n";
+  print "$LISTE";
+  print " \n";
+}
+
+
+if( ! $opt_h && $opt_c && $opt_v && $opt_t && $opt_l) {
+  $CAT = $opt_c;
+  $VERSION = $opt_v;
+  $NOM_TEST = $opt_t;
+  
+# Lecture du fichier duree_des_tests.txt et calcul de la durée du test en seconde
+  if( ! $opt_s) {
+    $REP_DUREE="$REP_BASE/category$CAT/$REP_COMMON_FILES";
+    open Fin, "<$REP_DUREE/$DURATION_FILE" or die "Impossible d'ouvrir $REP_DUREE/$DURATION_FILE\n";
+
+    while(<Fin>){
+      #print "$_\n";
+      my $LINE = $_;
+      my $KEY;
+      if( $LINE =~ /^$NOM_TEST/){
+	($KEY, $VALUE)= split( ":", $_);
+	$TIME = $VALUE*60;
+      }
+    }
+    close Fin;
+  }
+  else {
+    $TIME = $opt_s;
+  }
+  print "La durée du test $NOM_TEST est égale à $TIME\n";
+
+
+# Positionnement dans le répertoire de test
+  my $REP_CIBLE = "$REP_BASE/category$CAT/$VERSION/$NOM_TEST";
+  chdir "$REP_CIBLE" or die "Impossible positionner le rep $REP_CIBLE\n";
+  $TOTO = `pwd`;
+  print "Repertoire de test $TOTO positionné \n";
+
+# Positionnement de la version
+# system("set_dlip_version -v $VERSION");
+ 
+# Nettoyage du repertoire
+  #system("cleanin");
+
+# Affichage des versions des exe positionnés
+  my $TEXT = `show_version`;
+  print "$TEXT";
+
+# Sauvegarde des version des exe positionnés 
+  open Fout,">version.txt" or die "impossible d'ouvrir version.txt\n";
+  print Fout "$TEXT";
+  close Fout;
+  if(! $RECAP_RESULTS){
+  if($TIME ne "x"){
+    print "Lancement du test $NOM_TEST avec start_test_local...\n";
+  
+# Calcul de l'heure locale pour la synchronisation des exe
+    ($second, $minute,$hour,$day, $month,$year)=(localtime)[0,1,2,3,4,5];
+    $month = $month+1;
+    $year=$year+1900;
+
+    print "$hour:$minute:$second le $day/$month/$year\n";
+    $second=(($hour*60)+$minute)*60+$second+$DELTATPS;
+# create loc1_main.synchro file
+    open Fout, ">loc1_main.synchro" or die "impossible de creer loc1_main.synchro\n";
+    print Fout "Synchro_Year=$year\n";
+    print Fout "Synchro_Month=$month\n";
+    print Fout "Synchro_Day=$day\n";
+    print Fout "Synchro_Seconds=$second\n";
+    close Fout;
+
+# Lancement des executables
+    for my $PROCESS (@PROCESS) {
+      if ($PROCESS eq "loc1_main") {
+# Pour tracer les appels systeme
+#      system ("truss -t open,close,ioctl,so_socket -s \!14 loc1_main > traces.sys.err 2>&1 &");
+	system ("loc1_main > /dev/null 2>&1  &");
+	print "loc1_main lancé...\n";
+      
+      }
+      if($PROCESS eq "host_test_driver" && $opt_l ne "L11" ) {
+	system("host_test_driver C2_test_driver.conf $year $month $day $second > C2_host_test_driver.log &");
+	print "C2_host_test_driver lancé ...\n";
+	system("host_test_driver L16NCM_test_driver.conf $year $month $day $second > L16NCM_host_test_driver.log &");
+	print "L16NCM_host_test_driver lancé ...\n";
+      }
+     if($PROCESS eq "host_test_driver" && $opt_l ne "L16" ) {
+	system("host_test_driver C2_test_driver.conf $year $month $day $second > C2_host_test_driver.log &");
+	print "C2_host_test_driver lancé ...\n";
+	system("host_test_driver DLCM_test_driver.conf $year $month $day $second > DLCM_host_test_driver.log &");
+	print "DLCM_host_test_driver lancé ...\n";
+      }
+      if($PROCESS eq "l16_test_driver" && $opt_l ne "L11") {
+	system("l16_test_driver l16_test_driver.conf $year $month $day $second > /dev/null 2>&1 &");
+	print "l16_test_driver lancé ...\n";
+      }
+      if($PROCESS eq "l16_test_driver" && $opt_l ne "L16") {
+	system("l11_test_driver DTS_test_driver.conf $year $month $day $second > /dev/null 2>&1 &");
+	print "l11_test_driver lancé ...\n";
+	system("dts_control_simulator -p $PORT_DTS -d dts_control_simu.log.log > /dev/null 2>&1 &");
+	print "dts_control_simulator lancé ...\n";
+      }
+    }
+  
+ 
+    system("xterm -e showerr &") if(! $opt_x) ;
+    system("xterm -e showlog &") if(! $opt_x);
+
+# création du fichier stop
+    my $PID;
+    my $PROC_NAME = "toto";
+    my @PS = (`ps -f`);
+    open Fout, ">$REP_SCRIPT/stop" or die "impossible d'ouvrir $REP_SCRIPT/stop \n";
+    print Fout "#!/usr/bin/ksh\n";
+    for my $LIGNE (@PS) {
+      chomp ($LIGNE);
+      
+      if ($LIGNE =~ /loc1_main/) {
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -15 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+      if ($LIGNE =~ /host_test_driver|l16_test_driver|l11_test_driver/) {
+	print "\n";
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -9 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+       if ($LIGNE =~ /dts_control_simulator/) {
+	print "\n";
+	#print "$LIGNE \n";
+	$PID = (split " ",$LIGNE) [1];
+	$PROC_NAME = (split " ", $LIGNE)[7];
+	print Fout "kill -9 $PID\n";
+	print "$PROC_NAME PID =  $PID\n";
+      }
+    }
+  print Fout "rm $REP_SCRIPT/stop\n";
+  print Fout "exit 0\n";
+  close Fout;
+  system("chmod +x $REP_SCRIPT/stop");
+
+# Calcul de la durée du scenario
+  while ( $TIME != 0) {
+    sleep 1;
+    $TIME=$TIME-1;
+  }
+
+# Arret des executables
+  system("stop");
+  print "Test terminé\n";
+}
+  else {
+    print "Lancemenant du test $NOM_TEST duree = $TIME\n";
+    system("loc1_launcher loc1_launcher.conf");
+  }
+}
+# Analyse du fichier log
+  system("error_extract.pl -c $CAT -v $VERSION -t $NOM_TEST");
+# Lancement du resulter
+  system("start_checker -c $CAT -v reference -w $VERSION -t $NOM_TEST -x");
+  system("resulter2aladdin.pl -c 2 -t $NOM_TEST");
+  system("cp $REP_BASE/category$CAT/$REP_CHECKER/$NOM_TEST/*.res* $REP_BASE/category$CAT/$VERSION/$NOM_TEST");
+
+# nettoyage du répertoire
+  system("cleanout");
+
+  #system("rm  *.xdh *.jo *.fim $REP_SCRIPT/stop");
+  #system("rm $REP_SCRIPT/stop");
+
+  chdir ".." or die "Impossible positionner le repertoire pere\n";
+  # compilation des résultats avec 
+  system("tar cvf $NOM_TEST.tar $NOM_TEST/*");
+  #system("tar cvf $NOM_TEST.tar *.xhd *.xdh *.jo *.ji *.log* *.f?m");
+  system("gzip -f $NOM_TEST.tar");
+  # Move du tar.gz dans $REP_RESULTS
+  print "rep_result =  $REP_BASE/category$CAT/$REP_RESULTAT\n";
+  system("mv $NOM_TEST.tar.gz $REP_BASE/category$CAT/$REP_RESULTAT");
+}
+exit 0;
+

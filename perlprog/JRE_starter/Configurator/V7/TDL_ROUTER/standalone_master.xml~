@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+# STANDALONE INITIALIZATION DATA FILE
+# (c) 2013 TCS/RCP/ANP/OPS/ANS
+-->
+<standalone>
+	<!-- THD072 -->
+	<link
+		LINK_TYPE="L16"
+		LINK_IDENTIFICATION="1"
+		OWN_PLATFORM_LINK_TN="112"
+		FIRST_ALLOCATED_LINK_TN="513"
+		LAST_ALLOCATED_LINK_TN="550"
+	/>
+       <!-- THD070 -->
+        <resource
+                RESOURCE_ID="2"
+                RESOURCE_TYPE="MIDS"
+                IP_ADDRESS="200.1.18.33"
+                PORT="1024"
+        />
+	<!-- THD070 -->
+	<resource
+		RESOURCE_ID="3"
+		RESOURCE_TYPE="SIMPLE"
+	/>
+	<!-- THD561 -->
+        <route_association
+                RESOURCE_ID="2"
+                ROUTE_ID="2"
+                LINK_IDENTIFICATION="1"
+        />
+	<route_association
+		RESOURCE_ID="3"
+		ROUTE_ID="3"
+		LINK_IDENTIFICATION="1"
+	/>
+	<!-- THD 562 -->
+	<route_connection_matrix LINK_IDENTIFICATION="1">
+		<route_list 
+			ORIGIN_ROUTE_ID="1005" 
+			ROUTE_DESTINATION_LIST="6"
+		/>	
+		<route_list 
+			ORIGIN_ROUTE_ID="2" 
+			ROUTE_DESTINATION_LIST="5"
+		/>
+                <route_list
+                        ORIGIN_ROUTE_ID="3"
+                        ROUTE_DESTINATION_LIST="3"
+                />
+	</route_connection_matrix>	
+</standalone>

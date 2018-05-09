@@ -1,0 +1,23 @@
+<opt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <config_jrep jrep_designator="MARTHA" jrep_sender_id="000160" startup_mode="JRE_MNG">
+    <jrep_dlip_link link_designator="100" />
+    <jrep_ip_link ip_cnx_type="CLIENT" ip_protocol="TCP" link_designator="101" local_ip_address="MARTHA_SUN" local_ip_port="50101" preselection="false" remote_ip_address="JRE_TOOL_SUN" remote_ip_port="50101" sender_id="00100" />
+    <jrep_ip_link ip_cnx_type="SERVER" ip_protocol="TCP" link_designator="103" local_ip_address="MARTHA_SUN" local_ip_port="50103" preselection="false" remote_ip_address="C3M_SUN" remote_ip_port="50103" sender_id="00161" />
+    <secondary_tn_list>
+      <track_number>00071</track_number>
+      <track_number>00007</track_number>
+    </secondary_tn_list>
+  </config_jrep>
+  <config_jrep jrep_designator="C3M" jrep_sender_id="00161" startup_mode="JRE_MNG">
+    <jrep_dlip_link link_designator="1" />
+    <jrep_ip_link ip_cnx_type="CLIENT" ip_protocol="TCP" link_designator="103" local_ip_address="C3M_SUN" local_ip_port="50103" preselection="false" remote_ip_address="MARTHA_SUN" remote_ip_port="50103" sender_id="00160" />
+    <jrep_ip_link ip_cnx_type="CLIENT" ip_protocol="TCP" link_designator="102" local_ip_address="C3M_SUN" local_ip_port="50102" preselection="false" remote_ip_address="JRE_TOOL_SUN" remote_ip_port="50102" sender_id="000031" />
+    <secondary_tn_list track_number="00031" />
+  </config_jrep>
+  <config_jrep jrep_designator="JRE TOOL" jrep_sender_id="00100" startup_mode="JRE_MNG">
+    <jrep_dlip_link link_designator="1" />
+    <jrep_ip_link ip_cnx_type="SERVER" ip_protocol="TCP" link_designator="101" local_ip_address="JRE_TOOL_SUN" local_ip_port="50101" preselection="false" remote_ip_address="MARTHA_SUN" remote_ip_port="50101" sender_id="00160" />
+    <jrep_ip_link ip_cnx_type="SERVER" ip_protocol="TCP" link_designator="102" local_ip_address="JRE_TOOL_SUN" local_ip_port="50102" preselection="false" remote_ip_address="C3M_SUN" remote_ip_port="50102" sender_id="00161" />
+    <secondary_tn_list track_number="00031" />
+  </config_jrep>
+</opt>

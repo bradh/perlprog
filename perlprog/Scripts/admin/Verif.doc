@@ -1,0 +1,7 @@
+A chcker sur le test de capa :
+
+les messages perdus dans le fichier lost_message.txt
+les delta time tout message confondu dans le fichier sorted_delta_time_and_j_reception_time_for_dl_processing.txt
+les delta min et max dans le fichier max_and_min_delta_time.txt
+on peut verifier pour un TN donne le delta time dans le fichier delta_times_for_<numero_TN>.txt
+

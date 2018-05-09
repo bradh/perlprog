@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+# SIMPLE_IF INITIALIZATION DATA FILE
+# (c) 2010 TCS/RCP/ANP/OPS/ANS
+-->
+<GENERAL>
+        <!-- SIMPLE_IF_TASK_PRIORITY : not used -->
+        <SIMPLE_IF
+                SIMPLE_IF_IP_ADDRESS="200.1.18.60"
+
+                SIMPLE_IF_NETWORK_DEBUG="%T401%"
+                SIMPLE_IF_DEBUG="%T402%"
+                SIMPLE_DEBUG="%T403%"
+
+                SIMPLE_IF_TASK_PRIORITY="%T404%"
+        />
+
+        <!-- CORE and DLP Configuration :
+                HOST_TECHNICAL_PROTOCOL                 : Available values are "TCP" or "UDP_MULTICAST" or "UDP_BROADCAST"
+                HOST_CONNECTION_XXXX_ORDERING           : Available values are "BE" for big endianness (sparc/Solaris) or "BE" for little endianness (x86/Linux)
+                HOST_CONNECTION_XXXX_ORDERING           : Available values are "BE" for big endianness (sparc/Solaris) or "LE" for little endianness (x86/Linux)
+                HOST_CONNECTION_TIMEOUT                 : Unit is Millisecond
+                HOST_FREQUENCY_SIMPLE_CONNECTION_STATUS : Unit is Second
+                HOST_FREQUENCY_SIMPLE_TIME_SYNC         : Unit is Second
+        -->
+        <CORE
+                HOST_IP_ADDRESS="200.1.18.60"
+
+                HOST_TECHNICAL_PROTOCOL="%T405%"
+                HOST_TECHNICAL_PORT="2399"
+                HOST_TECHNICAL_DEBUG="%T406%"
+
+                HOST_TACTICAL_PROTOCOL="%T407%"
+                HOST_TACTICAL_PORT="2400"
+                HOST_TACTICAL_DEBUG="%T408%"
+
+                HOST_CONNECTION_BITS_ORDERING="%T409%"
+                HOST_CONNECTION_BYTES_ORDERING="%T410%"
+
+                HOST_CONNECTION_TIMEOUT="%T411%"
+                HOST_CONNECTION_MAX_ERRORS="%T412%"
+
+                HOST_FREQUENCY_SIMPLE_CONNECTION_STATUS="%T413%"
+                HOST_FREQUENCY_SIMPLE_TIME_SYNC="%T414%"
+				
+                SIMPLE_IF_TACTICAL_PORT="0"
+                SIMPLE_IF_TECHNICAL_PORT="0"
+        />
+        <!-- SIMPLE Interface configuration :
+                SIMPLE_PROTOCOL                        : Available values are "TCP_CLIENT" or "TCP_SERVER" or "UDP_MULTICAST" or "UDP_BROADCAST"
+                SIMPLE_CONNECTION_XXXX_ORDERING        : Available values are "BE" for big endianness or "LE" for little endianness
+                SIMPLE_TIME_SYNCHRO_MODE               : Available values are "NO" or "SLAVE" or "MASTER"
+                SIMPLE_CONNECTION_TIMEOUT              : Unit is Millisecond
+                SIMPLE_TIME_SYNCHRO_ALLOWED_DIFFERENCE : Unit is Millisecond
+                SIMPLE_FREQUENCY_STATUS_CONFIGURATION  : Unit is Second
+                SIMPLE_FREQUENCY_STR_TIME_SYNCHRO      : Unit is Minute
+                SIMPLE_EXERCISE_OFFSET                 : Unit is Millisecond
+        -->
+
+        <SIMPLE
+                SIMPLE_NODE_ID="%T415%"
+                SIMPLE_NODE_NAME="%T416%"
+
+                SIMPLE_IP_ADDRESS="200.1.18.28"
+                SIMPLE_PORT="1061"
+                SIMPLE_PROTOCOL="%T417%"
+
+                SIMPLE_CONNECTION_BITS_ORDERING="%T418%"
+                SIMPLE_CONNECTION_BYTES_ORDERING="%T419%"
+                SIMPLE_CONNECTION_TIMEOUT="%T420%"
+
+                SIMPLE_SECURITY_LEVEL="%T421%"
+                SIMPLE_TERMINAL_TYPE="%T422%"
+                SIMPLE_TERMINAL_ROLE="%T423%"
+                SIMPLE_TERMINAL_STN="%T424%"
+
+                SIMPLE_PACKET_TYPE_1_ALLOWED="%T425%"
+                SIMPLE_PACKET_TYPE_5_ALLOWED="%T426%"
+                SIMPLE_PACKET_TYPE_8_ALLOWED="%T427%"
+                SIMPLE_PACKET_TYPE_10_ALLOWED="%T428%"
+
+                SIMPLE_TIME_SYNCHRO_MODE="%T429%"
+                SIMPLE_TIME_SYNCHRO_ALLOWED_DIFFERENCE="%T430%"
+
+                SIMPLE_FREQUENCY_STATUS_CONFIGURATION="%T431%"
+                SIMPLE_FREQUENCY_STR_TIME_SYNCHRO="%T432%"
+
+                SIMPLE_EXERCISE_OFFSET="%T433%"
+                SIMPLE_IF_PORT="0"
+        />
+</GENERAL>

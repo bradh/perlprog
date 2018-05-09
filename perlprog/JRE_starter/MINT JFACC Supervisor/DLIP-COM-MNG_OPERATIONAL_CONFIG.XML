@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DLIP-COM-MNG_OPERATIONAL_CONFIG.xml -->
+<!-- Written by THALES for the DLIP COMMUNICATION MANAGER -->
+<!-- Updated : 17 October 2011 -->
+<dlipComMngOperationalConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- CHANNEL 4 -->
+	<channel4 Enabled="YES"/>
+	<requestChannel4 AppName="COM-MNG" AppLogicalId="2" Protocol="TCP_SERVER" IpAddress="192.168.0.66" DestPort="50014" SrcePort="50015"/>
+	<!-- TCP-IP without CHANNEL 4 -->
+	<tcpIpConnection IpAddress="192.168.0.66" Port="10000"/>
+	<!-- RECORDING MESSAGE-->
+	<recordingMessage Enabled="YES"/>
+	<!--NETWORK NAME-->
+	<identification Known="YES"/>	
+	<!--NETWORK NAME-->
+	<networkName>
+		<linkName NetworkId="1" Name="ETO JREAP">
+			<routeName RouteId="1010" Name="COCCA"/>
+			<routeName RouteId="1011" Name="CDCD"/>
+			<routeName RouteId="1013" Name="CMDAT"/>
+			<routeName RouteId="1100" Name="SAMP"/>
+			<routeName RouteId="1030" Name="CMDAT"/>
+			<routeName RouteId="1200" Name="MIDST"/>
+			<routeName RouteId="101" Name="COCCA"/>
+			<routeName RouteId="104" Name="CMDAT"/>
+			<routeName RouteId="105" Name="CSI"/>
+			<routeName RouteId="106" Name="CMDAA"/>
+			<routeName RouteId="107" Name="SAMP"/>
+		</linkName>
+	</networkName>
+</dlipComMngOperationalConfig>

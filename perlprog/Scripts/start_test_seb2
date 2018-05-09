@@ -1,0 +1,48 @@
+#!/usr/bin/ksh
+
+# Nettoyage du repertoire
+echo "Nettoyage du repertoire en entree"
+cleanin
+
+#Conversion des fichiers au format Unix effectue
+convall > /dev/null 2>&1 &
+echo "Conversion des fichiers au format Unix effectue"
+
+# Lancement des executables
+loc1_main 2004 7 6 41520.0 > /dev/null 2>&1  &
+echo "loc1_main lance..."
+
+l16_test_driver l16_test_driver.conf 2004 7 6 41520.0 > /dev/null 2>&1 &
+echo "l16_test_driver lance ..."
+
+host_test_driver C2_test_driver.conf 2004 7 6 41520.0 > C2_host_test_driver.log &
+echo "C2_host_test_driver lance ..."
+
+host_test_driver L16NCM_test_driver.conf 2004 7 6 41520.0 > L16NCM_host_test_driver.log &
+echo "L16NCM_host_test_driver lance ..."
+
+# Affichage sympa
+xterm -e showerr &
+xterm -e showlog &
+
+# Calcul de la duree du scenario
+DUREE=`grep $1 /h7_usr/sil2_usr/loc1test/Tests/Duree_des_tests.txt | awk -F: '{print $2}'`
+echo Le test se termine dans `expr $DUREE \* 60` sec
+sleep `expr $DUREE \* 60`
+#sleep $1;
+
+# Arret des executables
+killexe
+echo "Test termine";
+
+# Nettoyage du repertoire
+echo "Nettoyage du repertoire en sortie"
+cleanout
+
+# Compilation des resultats
+tar cvf $1.tar *.*
+gzip -f $1.tar
+
+# Fin
+exit 0;
+

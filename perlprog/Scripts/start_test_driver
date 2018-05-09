@@ -1,0 +1,181 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+use Time::Local;
+
+getopts("hxc:v:t:s:");
+
+
+my $REP_VERSION = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_SCRIPT = "/data/users/loc1int/DLIP/test/utils/scripts";
+my $REP_RESULTS = "$REP_VERSION/results";
+my $REP_DUREE = "$REP_VERSION";
+my $REP_CIBLE;
+my $CAT = 1;
+my $VERSION;
+my $NOM_TEST;
+my $DURATION_FILE="Duree_des_tests.txt";
+my $TIME = 600;
+my $DELTATPS=5; # declage en seconde pour la synchronisation des executables
+
+if ($opt_h) { 
+  print "start_test_driver [-c] [-h] : liste des versions dlip \n";
+  print "start_test_driver [-c] [-v n_version ][-h] : liste des tests existants \n";
+  print "start_test_driver [-c] [-v n_version ][-t nom_du_test][-s temp_du_test][-x] : lancement d'un test \n";
+  print "l'option -x inhibit le lancement des xterm showlog et showerr\n";
+  print " \n";
+}
+if ($opt_h && $opt_c && ! $opt_v) {
+  $CAT = $opt_c;
+  print "categorie = $CAT \n";
+  my $LISTE = `ls $REP_VERSION/category$CAT`;
+  print "Liste des versions DLIP en test catégorie $CAT :\n";
+  print "$LISTE";
+  print " \n";
+}
+if ($opt_h && $opt_c && $opt_v) {
+  $CAT = $opt_c;
+  $VERSION = $opt_v;
+  my $LISTE = `ls $REP_VERSION/category$CAT/$VERSION`;
+  print "Liste des tests categorie $CAT pour la version DLIP $VERSION :\n";
+  print "$LISTE";
+  print " \n";
+}
+
+
+if( ! $opt_h && $opt_c && $opt_v && $opt_t) {
+  $CAT = $opt_c;
+  $VERSION = $opt_v;
+  $NOM_TEST = $opt_t;
+
+
+  
+# Lecture du fichier duree_des_tests.txt et calcul de la durée du test en seconde
+  if( ! $opt_s) {
+    open Fin, "<$REP_DUREE/$DURATION_FILE" or die "Impossible d'ouvrir $REP_DUREE/$DURATION_FILE\n";
+
+    while(<Fin>){
+      #print "$_\n";
+      my $LINE = $_;
+      my $KEY;
+      if( $LINE =~ /^$NOM_TEST/){
+	($KEY, $VALUE)= split( ":", $_);
+	$TIME = $VALUE*60;
+	
+      }
+    }
+    close Fin;
+  }
+  else {
+    $TIME = $opt_s;
+  }
+  print "La durée du test $NOM_TEST est égale à $TIME\n";
+
+# Positionnement dans le répertoire de test
+  my $REP_CIBLE = "$REP_VERSION/category$CAT/$VERSION/$NOM_TEST";
+  chdir "$REP_CIBLE" or die "Impossible positionner le rep $REP_CIBLE\n";
+  $TOTO = `pwd`;
+  print "Repertoire de test $TOTO positionné \n";
+
+
+
+# Positionnement de la version
+# system("set_dlip_version -v $VERSION");
+ 
+# Nettoyage du repertoire
+ system("cleanin");
+
+# Affichage des versions des exe positionnés
+  my $TEXT = `show_version`;
+  print "$TEXT";
+
+# Sauvegarde des version des exe positionnés 
+  open Fout,">version.txt" or die "impossible d'ouvrir version.txt\n";
+  print Fout "$TEXT";
+  close Fout;
+
+# Calcul de l'heure locale pour la synchronisation des exe
+  ($second, $minute,$hour,$day, $month,$year)=(localtime)[0,1,2,3,4,5];
+  $month = $month+1;
+  $year=$year+1900;
+
+  print "$hour:$minute:$second le $day/$month/$year\n";
+  $second=(($hour*60)+$minute)*60+$second+$DELTATPS;
+# create loc1_main.synchro file
+  open Fout, ">loc1_main.synchro" or die "impossible de creer loc1_main.synchro\n";
+  print Fout "Synchro_Year=$year\n";
+  print Fout "Synchro_Month=$month\n";
+  print Fout "Synchro_Day=$day\n";
+  print Fout "Synchro_Seconds=$second\n";
+  close Fout;
+
+  system("host_test_driver C2_test_driver.conf $year $month $day $second > C2_host_test_driver.log &");
+  print "C2_host_test_driver lancé ...\n";
+  system("host_test_driver L16NCM_test_driver.conf $year $month $day $second > L16NCM_host_test_driver.log &");
+  print "L16NCM_host_test_driver lancé ...\n";
+  system("l16_test_driver l16_test_driver.conf $year $month $day $second > /dev/null 2>&1 &");
+  print "l16_test_driver lancé ...\n";
+
+
+  system("xterm -e showerr &") if(! $opt_x) ;
+  system("xterm -e showlog &") if(! $opt_x);
+
+# création du fichier stop
+  my $PID;
+  my $PROC_NAME = "toto";
+  my @PS = (`ps -f`);
+  open Fout, ">$REP_SCRIPT/stop" or die "impossible d'ouvrir >$REP_CIBLE/stop \n";
+  print Fout "#!/usr/bin/ksh\n";
+  for my $LIGNE (@PS) {
+    chomp ($LIGNE);
+      
+    if ($LIGNE =~ /loc1_main/) {
+      #print "$LIGNE \n";
+      $PID = (split " ",$LIGNE) [1];
+      $PROC_NAME = (split " ", $LIGNE)[7];
+      print Fout "kill -15 $PID\n";
+      print "$PROC_NAME PID =  $PID\n";
+    }
+    if ($LIGNE =~ /host_test_driver|l16_test_driver|l11_test_driver/) {
+      print "\n";
+      #print "$LIGNE \n";
+      $PID = (split " ",$LIGNE) [1];
+      $PROC_NAME = (split " ", $LIGNE)[7];
+      print Fout "kill -9 $PID\n";
+      print "$PROC_NAME PID =  $PID\n";
+    }
+  }
+  print Fout "rm $REP_SCRIPT/stop\n";
+  print Fout "exit 0\n";
+  close Fout;
+  system("chmod +x $REP_SCRIPT/stop");
+
+# Calcul de la durée du scenario
+  while ( $TIME != 0) {
+    sleep 1;
+    $TIME=$TIME-1;
+  }
+
+# Arret des executables
+  system("stop");
+  print "Test terminé\n";
+
+# Analyse du fichier log
+  system("error_extract.pl -c $CAT -v $VERSION -t $NOM_TEST");
+
+# nettoyage du répertoire
+  system("cleanout");
+#system("rm  *.xdh *.jo *.fim $REP_SCRIPT/stop");
+  system("rm $REP_SCRIPT/stop");
+
+  chdir ".." or die "Impossible positionner le rep père\n";
+# compilation des résultats avec 
+  system("tar cvf $NOM_TEST.tar $NOM_TEST/*");
+#system("tar cvf $NOM_TEST.tar *.xhd *.xdh *.jo *.ji *.log* *.f?m");
+  system("gzip -f $NOM_TEST.tar");
+# Move du tar.gz dans $REP_RESULTS
+  system("mv $NOM_TEST.tar.gz $REP_RESULTS");
+
+}
+exit 0;
+

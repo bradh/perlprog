@@ -1,0 +1,466 @@
+.\" @(#)slcnt.1	2.2 2001/10/28 Thales TRT / ATGL
+.TH SLCNT 1
+.SH NAME
+slcnt - source line counter; comptage de lignes source
+.SH SYNOPSIS
+.B slcnt
+[-l language]
+.br
+[-o output_file]
+.br
+[-c eol_terminated_comment_start]
+.br
+[-cs start_of_nested_comment]
+.br
+[-ce end_of_nested_comment]
+.br
+[-v]   {providing for an extended results display (verbose)}
+.br
+[-132] {providing for a 132 columns output}
+.br
+[-wcl] {output in the 'wc -l' style}
+.br
+[-e]   {providing for list files expansion}
+.br
+[-p]   {disabling pre-expansion of command level list files}
+.br
+.I filenames
+{wildcards not accepted for DOS or AEGIS}
+.br
+   or
+.br
+.I listnames
+{.lst or .lst_src (lowercase) extension}
+.br
+[-x filenames_to_exclude]
+
+or for ClearCase comparison
+
+.B slcnt
+[-l language] -comp
+.I label1 label2
+.SH DESCRIPTION
+.I slcnt
+permet de balayer une liste de fichiers
+pour en extraire les informations suivantes:
+
+    LT  - nombre total de lignes du fichier
+    LS  - nombre de lignes de code source (lignes ni
+          vide, ni commentaire)
+    LI  - nombre de lignes d'instruction (comportant au
+          moins un caractere de fin d'instruction)
+    LC  - nombre de lignes de commentaires
+    LM  - nombre de lignes de code source comportant
+          un commentaire (mixtes).
+
+Ces informations seront fournies individuellement pour chaque composant de la
+liste de fichiers ainsi que cumulees pour l'ensembles de fichiers (elles sont
+suivies alors du nombre de fichiers traites).
+
+L'option d'affichage simplifie
+.I -wcl
+permet d'obtenir seulement le parametre LS, qui est la valeur utilisee lorsqu'on
+parle de "lignes source", sans autre precision (c'est en particulier la mesure
+qui doit figurer dans les "tableaux de bord" logiciels en cours de normalisation
+pour Thomson-CSF).
+
+Les sorties se font soit dans un fichier (parametre output_file) soit sur la
+sortie standard.
+
+On considere une ligne de sortie par fichier traite, plus une ligne de resultat
+cumule par liste.
+
+Une liste peut inclure la definition d'autres listes, ne seront alors fournies
+que les informations pour les listes de second niveau.
+
+Une option d'affichage etendu fournit en plus les donnees suivantes:
+
+     LV  - nombre de lignes vides
+     CT  - nombre de caracteres total
+     CC  - nombre de caracteres dans les commentaires
+.SH OPTIONS
+.I -l langage
+designe le langage selon la syntaxe duquel se fera le traitement.  Les valeurs
+possibles sont:
+
+             ADA
+             C
+	     LEX   (regles C)
+             YACC  (regles C)
+             PASCAL
+             FORTRAN
+             ASSMOUF  (Assembleur MOUFLON)
+             DCL
+             UIL
+             SIAM     (Langage de description
+                       de haut niveau pour MUSTANG)
+             LTR2
+             LTR3
+             ASM68K
+             ASMTMS
+             C++
+
+Ce parametre est facultatif si les regles de reconnaissance des commentaires
+sont explicitement fournies (parametres -c,-cs, -ce). S'il n'y a aucun moyen de
+determiner les regles a appliquer au fichier, une erreur est detectee.
+
+L'association entre l'extension des fichiers et le langage est la suivante:
+
+     "C"     C
+     "H"     C
+     "LEX"   LEX   (regles C)
+     "L"     LEX   (regles C)
+     "Y"     YACC  (regles C)
+     "ADA"   ADA
+     "A"     ADA
+     "PAS"   PASCAL
+     "P"     PASCAL
+     "FOR"   FORTRAN
+     "F"     FORTRAN
+     "CALC"  ASSMOUF  (Assembleur MOUFLON)
+     "SPOR"  ASSMOUF
+     "PERM"  ASSMOUF
+     "INTI"  ASSMOUF
+     "INTO"  ASSMOUF
+     "COM"   DCL
+     "CLD"   DCL
+     "UIL"   UIL
+     "SIAM"  SIAM     (Langage de description
+                       de haut niveau pour MUSTANG)
+     "LTR2"  LTR2
+     "TR"    LTR3
+     "CPP"   C++
+     "HPP"   C++
+     "CC"    C++
+     "HH"    C++
+     "IC"    C++
+
+.I -c eol_terminated_comment_start
+definit une regle de reconnaissance de com-
+mentaire. Cet argument est une chaine de caractere
+qui delimite un debut de commentaire. Un tel
+commentaire sera ferme par un retour chariot.
+Cet argument permet le traitement de l'assembleur
+TUS par exemple.
+Si cette regle est fournie en meme TEMPS qu'est
+defini un langage (-l), les definitions seront
+cumulatives.
+Nota: preciser ce caractere entre doubles
+quotes ("c").
+
+.I -cs start_of_nested_comment
+definit une regle de reconnaissance de commentaire. Cet argument est une chaine
+de caracteres qui delimite un debut de commentaire.  Un tel commentaire sera
+ferme par le parametres (-ce).  Cet argument permet la definition de
+commentaires de type bloc et est utile notamment pour le langage LTR2 ou les
+delimiteurs de commentaire sont frequemment redefinis.  Si cette regle est
+fournie en meme qu'est defini un langage (-l), les definitions seront
+cumulatives.
+
+.I -ce end_of_nested_comment
+definit une regle de reconnaissance de commentaire.
+Cet argument est une chaine de caracteres qui
+delimite la fin de commentaire qui debute par
+la chaine de caracteres decrite par le parametre
+(-cs).
+
+.I -o output_file
+designe le nom du fichier dans lequel sera ecrit
+les resultats (la syntaxe doit etre correcte
+pour le systeme d'exploitation courant).
+Si cet argument est omis, les resultats seront
+affiches a l'ecran.
+
+.I -v
+verbose.
+demande un affichage etendu.
+
+.I -132
+demande un affichage sur 132 colonnes.
+
+.I -wcl
+demande un affichage simplifie, ne comportant que le nom de fichier et la
+valeur du parametre LS.
+
+.I -e
+permet d'interpreter le contenu des listes
+quelque soit leur niveau d'imbrication.
+
+.I -p
+ne detaille pas le contenu des listes
+(situees au niveau commande).
+
+.I filenames
+liste de fichiers a traiter. Cette liste est composee de nom de fichiers
+contenant eventuellement des 'wildcards' (sauf sous DOS ou AEGIS).  Si
+l'extension d'un nom de fichier est '.lst' ou '.liste_src' (en minuscule sous
+UNIX), ce fichier est interprete comme contenant les noms de fichiers a traiter
+(sans 'wildcards') a raison d'un fichier par ligne.  Dans tous les cas, les noms
+de fichiers pourront facultativement preciser les devices (VMS) et/ou directory.
+
+.I exclude_files
+liste de noms de fichier a exclure du traitement.
+
+.I -comp label1 label2
+permet de comparer deux versions d'un  fichier gere sous ClearCase.
+.I label1
+et
+.I label2
+sont les labels ClearCase des deux versions a comparer.
+
+NOTE: si aucun fichier a traiter n'est fourni, l'outil
+affiche sa syntaxe.
+.SH DIAGNOSTICS
+.LP
+Les erreurs detectees sont repercutees  a  la  fois  sur  le
+fichier de sortie et sur l'ecran.
+.LP
+Les erreurs possibles sont:
+
+.I<filename>:can't open
+
+fichier inexistant dans le repertoire
+indique
+
+ slcnt abc.a
+ abc.a: can't open
+ Total             LT:    0 LS:    0 LI:  0...
+
+.I <language name>:unknown language
+
+langage inconnu, precise par le parametre -l
+
+ slcnt prog_asmtms.asm - abcd
+ abcd: unknown language
+ Total            LT:    0 LS:    0 LI:  0...
+
+
+.I <filename>:unable to find language
+
+l'extension du fichier n'est pas implicitement associee a un langage dans la
+table de conversion: extension/langage; le preciser a l'aide du parametre -l
+
+ slcnt prog_asmtms.asm
+ prog_asmtms.asm: unable to find language
+ TOTAL              LT:    0 LS:    0 LI:  0...
+
+.I slcnt:define the start of comment matching 'caractere'
+
+omission du caractere de debut du
+commentaire
+
+ slcnt prog_c.c -ce '/'
+ slcnt: define the start of comment matching '/'
+
+.I <filename>: end of character not found
+
+WARNING signalant que le delimiteur
+de caractere n'a pas ete ferme:
+le comptage de lignes peut etre faux.
+
+
+EX: dans le programme source p_error_1.c, une
+    quote n'a pas ete fermee:
+          .............
+       static CODEST table_desc [] {
+             '  ,
+       }
+          .............
+
+    slcnt p_error_1.c
+    p_error_1.c: end of character not found
+    p_error_1.c       LT:    0 LS:     0 LI:   0...
+ 
+.I <filename> end of string not found
+
+WARNING signalant que le delimiteur
+de chaine n'a pas ete ferme:
+le comptage de lignes peut etre faux.
+
+ EX: dans le programme C p_error_2.c, une double
+     quote n'a pas ete fermee
+           ...........
+        static CODEST table_desc [] {
+           "  ,
+           ...........
+     slcnt p_error_2.c
+     p_error_2.c:end of string not found
+     p_error_2.c       LT:     0 LS:    0 LI:   0...
+
+Si une erreur est detectee sur l'un des fichiers a  traiter,
+l'outil  passe  au  traitement  du  fichier suivant.  Si une
+erreur sur l'un des fichiers a traiter est detectee, l'outil
+retourne  la  valeur  1 au systeme d'exploitation, sinon, il
+retourne la valeur 0.
+
+.SH UTILISATION SOUS VMS
+.LP
+Les exemples suivants sont fournis pour un environnement
+VMS.
+
+  $ slcnt mon_fichier.pas
+
+compte les lignes du fichier 'mon_fichier.pas'.
+De par l'extension '.pas', les regles de PASCAL
+seront appliquees au comptage.
+
+  $ slcnt -l C -c "//" mon_fichier.c_plus_plus
+
+compte les lignes du fichier 'mon_fichier.c_plus_plus'.
+Puisque le parametre -l est precise et a la valeur C
+(et non CPP), les regles de comptage du langage C seront
+appliquees. De plus on precise par l'argument -c que la
+chaine '//' debute un commentaire qui sera clos par
+une fin de ligne.
+
+  $ slcnt ma_liste.lst mon_fichier.ada
+
+  contenu du fichier ma_liste.lst:
+       | mon_fichier.pas
+       | mon_fichier.c
+       | mon_fichier.for
+       | mon_fichier.tr
+       | ma_sous_liste.lst
+
+  contenu du fichier ma_sous_liste.lst:
+       | mon_fichier.com
+       | mon_fichier.siam
+       | mon_fichier.calc
+
+compte les lignes des fichiers 'mon_fichier.pas',
+'mon_fichier.c','mon_fichier.for', 'mon_fichier.tr'
+'mon_fichier.com','mon_fichier.siam', 'mon_fichier.calc',
+'mon_fichier.ada'. Les extensions respectives des fichiers
+appliquent les regles respectivement des languages PASCAL,
+C, FORTRAN, LTR3, DCL (VMS), SIAM, CALC (niveau 1 Mouflon)
+et ADA. Au niveau du resultat, on remarquera que le
+comptage des fichiers mon_fichier.com, mon_fichier.siam,
+mon_fichier.calc est cumule et fourni en comptage du
+fichier ma_sous_liste.lst.
+
+Exemples d'obtention des fichiers de liste: la commande DCL suivante:
+
+ $ DIR/NOHEADING/NOTRAILING/EXCLUDE=*.dir
+      /OUTPUT=ma_liste.lst [...]*.*
+
+construit un fichier 'ma_liste.lst' qui contient l'ensemble
+des fichiers accessibles sous la directory courante a
+l'exception des fichiers directory eux-meme. Pour compter
+les lignes de ces fichiers, il suffit d'utiliser la com-
+-mande suivante:
+
+  $ slcnt ma_liste.lst
+
+On notera que la commande suivante est equivalente aux deux
+commandes precedentes:
+
+  $ slcnt [...]*.* -x *.dir
+
+.SH UTILISATION SOUS DOS
+La commande DOS suivante:
+
+ $ for %0 in (*.*) do echo %0 >> ma_liste.lst
+
+permet de creer un fichier 'ma_liste.lst' contenant tous
+les fichiers selectionnees. Si ceci doit etre integre dans
+un fichier procedure doubler les % de la facon suivante:
+
+   echo off
+   for %%0 in (%1) do echo %%0 >> %2
+
+et appeler ce fichier ".bat" en passant les criteres de
+selection (*.ada) en 1er argument et le fichier liste
+(ma_liste.lst) en 2nd argument.
+
+.SH BUGS
+La sortie au format "wcl" (uniquement la valeur de LS) devrait etre le
+choix par defaut, car l'experience a montre que l'affichage par defaut peut
+causer des confusions entre les parametres LT/LS/LI. L'option
+.I -wcl
+a ete introduite dans la version 1.7, mais le comportement par defaut
+n'a pas ete modifie par souci de compatibilite avec les versions
+precedentes. L'utilisation de cette option est cependant fortement conseillee.
+
+Les clauses liees a un preprocesseur ne sont pas
+traitees.
+
+L'analyse des commentaires se situe au niveau lexical
+et ne comporte pas d'interpretation syntaxique.
+
+L'analyse des instructions est relativement simpliste
+(par identification d'un caractere).
+
+L'expansion des 'wildcards' sous DOS ou AEGIS
+n'est pas traitee. Voir le paragraphe "UTILISATION SOUS DOS".
+Sur APPOLO, utiliser un shell Unix.
+
+Sous VMS, l'utilisation des 'wildcards' pour la
+specification de fichiers de type .lst
+(ou .liste_src) n'est pas autorisee.
+
+Pour le langage C, le nombre de lignes d'instructions (LI)(comportant au moins
+un caractere de fin d'instruction) ne comptabilise donc pas l'instruction
+conditionnelle elle-meme.
+
+ exemple:
+  if (condition) {
+                  action1;
+                  action2;
+                  }
+ donne LS=4 LI=2
+
+En assembleur TUS, le double quote doit etre utilisee
+pour autre chose que des chaines de caracteres.
+
+Il n'est pas aise sous Unix de construire une liste de fichiers en parcourant
+recursivement les sous directory car la commande d'affichage de contenu de
+directory ('ls') ne prefixe pas les noms de fichier par le chemin absolu pour y
+acceder. A contrario, le 'dir' de VMS le permet. Sous Unix, il faut typiquement
+utiliser
+.I find
+pour construire les listes de fichiers qui seront exploitees par
+.I slcnt
+
+Exemple:
+
+ slcnt -wcl `find /home/projet -name '*.[ch]' -o -name SCCS -prune`
+
+L'association des parametres en fonction du langage ne figure pas dans la
+documentation. Il faut regarder dans le fichier source "slcnt.c" apres le
+commentaire "formal description of languages"
+autour des lignes 630 et suivantes.
+
+L'assembleur Mouflon est peu utilise en dehors de TUS...
+
+La documentation est succinte et les caracteres ne sont pas accentues.
+
+.SH SEE ALSO
+Sous Unix, find(1) sera avantageusement utilise pour constituer des lites de
+fichiers a traiter par
+.I slcnt
+
+Le lancement de
+.I slcnt
+sera souvent fait sytematiquement, par exemple chaque nuit, par cron(1) 
+
+.SH AUTHOR
+Contributions de Slavko Konc, Honore Moni, Bertrand Chague, Alain Paresi,
+Philippe Raulic, Gerard Cristau, Pascal Dumon (Thales Under Sea, Pole
+Electronique et Informatique, Sophia-Antipolis), Maintenance Christophe
+Mari TRT / ATGL, 
+et des nombreux utilisateurs de Thales Under Sea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

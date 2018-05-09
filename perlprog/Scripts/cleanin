@@ -1,0 +1,12 @@
+#!/usr/bin/ksh
+rm -f *.log*
+rm -f *.xdh
+rm -f *.res
+rm -f *.trt
+rm -f result/*
+rm -f *.*~
+rm -f *.jo
+rm -f *.fim
+rm -f errors.log
+rm -f *.gz
+rm -f *.txt

@@ -1,0 +1,7 @@
+#!/usr/bin/ksh
+rm -f *.trt
+rm -f result/*
+rm -f *.*~
+rm -f stop
+
+

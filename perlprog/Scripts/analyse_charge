@@ -1,0 +1,66 @@
+#!/usr/bin/perl -w
+
+use Getopt::Std;
+
+getopts("hf:n:");
+
+my $FILEIN = "std_process.als";
+my $FILEOUT1 = "analyse_CPU.rslt";
+my $FILEOUT2 = "analyse_RAM.rslt";
+if ($opt_f){
+  $FILEIN = "$opt_f";
+  $FILEOUT1 = "$FILEIN.CPU";
+  $FILEOUT2 = "$FILEIN.RAM";
+}
+
+if ($opt_h) {
+  print "analyse_charge [-f nom du fichier][-n nom du process] \n";
+  print "extrait les données CPU et RAM des fichiers journaux de StdProcess (*.als) .\n";
+  exit(0);
+}
+$NOM_PROCESS = "loc1_main";
+if ($opt_n) {
+  $NOM_PROCESS = $opt_n;
+}
+print " Nom du process analysé = $NOM_PROCESS \n";
+$NOM_PROCESS = substr($NOM_PROCESS, 0, 8);
+print "$NOM_PROCESS\n";
+
+open fout1, "> $FILEOUT1" or die "impossible d'ouvrir $FILEOUT1\n";
+open fout2, "> $FILEOUT2" or die "impossible d'ouvrir $FILEOUT2\n";
+
+open fin, "<$FILEIN" or die "impossible d'ouvrir $FILEIN";
+$I = 0;
+#$J = 0;
+while(<fin>) {
+  if ( $_ !~ /^./) { next;}
+  @MOT = split;
+  #print "$MOT[0] ; $MOT[1] ; $MOT[2] ; $MOT[3] ; $MOT[4] \n";
+  if ( $MOT[0] =~ /Marque/ ) { next;}
+  if ( $MOT[0] =~ /ID/) { next;}
+  if ( $MOT[1] =~ /$NOM_PROCESS/ ) { 
+    #print " $FILEIN : CPU = $MOT[3]; RAM = $MOT[4] \n";
+    #			if ( ($J%2) == 0 ) {
+    $CPU[$I] = $MOT[3];
+    $RAM[$I] = $MOT[4];
+    $I = $I+1;
+    #			}
+    #			$J= $J+1;
+  }
+}	
+#	print " Nbre d'échantillons prélevés = $J\n";
+print " Nbre d'échantillons analysés = $I\n";
+#print "nbre elts dans tableau CPU $#CPU\n";
+print fout1 "$FILEIN CPU :\n";
+foreach $LIGNE (@CPU){
+  $LIGNE =~ s/\./\,/g;
+  print fout1 "$LIGNE\n";
+}
+print fout2 "$FILEIN RAM :\n";
+foreach $LIGNE (@RAM){
+  print fout2 "$LIGNE\n";
+}
+close fin;
+close fout1;
+close fout2;
+exit 0;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_jre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <config_jrep startup_mode="JRE_MNG" jrep_designator="JRE">
+    <jrep_sender_id>00000</jrep_sender_id>
+	<secondary_tn_list>
+      <track_number>00001</track_number>
+    </secondary_tn_list>
+    <jrep_dlip_link>
+      <link_designator>1</link_designator>
+    </jrep_dlip_link>
+  </config_jrep>
+</config_jre>

@@ -1,0 +1,142 @@
+    #!/usr/bin/perl -w
+    use strict;
+    use lib qw(/media/stephane/TRANSCEND/Tools/perlprog/lib);
+    use POSIX ":sys_wait_h"; # for nonblocking read
+    use IO::Socket;
+    #use fim02_processing;   
+    #use bxm_processing;
+    
+    my %children;
+    
+    my  $socket_dlip;
+my $cnx_dlip;
+my $cnx_mids;
+my $child_dead = 0;
+my $kidpid;
+my ($host, $port, $kidpid, $cnx_mids, $line, $byte);
+
+$SIG{CHLD} = sub {
+	# don't change $! and $? outside handler
+	local ($!, $?);
+	print " $! and $?\n";
+	while ( (my $pid = waitpid(-1, WNOHANG)) > 0 ) {
+		delete $children{$pid};
+		print "toto is dead !\n";
+		$child_dead = 1;
+		open_dlip_cnx();
+		#cleanup_child($pid, $?);
+	}
+};
+
+unless (@ARGV == 3) { die "usage: $0 host1 port1 port2" }
+my ($host1, $port1, $port2) = @ARGV;
+
+print "Hello world !\n";
+sleep 1;
+
+ # Creation du serveur                           
+ #server Input
+
+
+
+sub open_dlip_cnx{
+	eval {
+		$socket_dlip = IO::Socket::INET->new( Proto     => "tcp",
+	                                  LocalPort => $port2,
+	                                  Listen    => SOMAXCONN,
+	                                  Reuse     => 1);
+		                                 
+		die "can't setup server 2" unless $socket_dlip;
+		print "[Waiting DLIP connection]\n";
+		$cnx_dlip = $socket_dlip->accept();
+	
+		print "[Accept client dlip]\n";
+		$cnx_dlip->autoflush(1);
+		print "[DLIP connected on port $port2]\n";
+	}	   
+}
+
+open_dlip_cnx();
+print "cnx dlip OK\n" if(! $cnx_dlip);
+
+while(1){
+	$child_dead = 0;
+	print "[Try to connect to MIDS on host $host1 and port $port1]\n";
+	
+	sleep 1;
+	eval {
+		$cnx_mids = IO::Socket::INET->new(Proto     => "tcp",
+                                    PeerAddr  => $host1,
+                                    PeerPort  => $port1)
+		or die "can't connect to port $port1 on $host1: $!";
+ 	};
+	next if($@ =~ /can't connect/);
+
+	$cnx_mids->autoflush(1);       # so output gets there right away
+	print "[Connected to MIDS $host1:$port1]\n";
+
+# split the program into two processes, identical twins
+	die "can't fork: $!" unless defined($kidpid = fork());
+
+	# the if{} block runs only in the parent process
+	if ($kidpid) {
+		# copy the socket to standard output
+		while (1){
+			eval{
+				my $byte1;
+				if(sysread($cnx_mids, $byte1, 1) == 1) {
+					print "mids -> dlip $byte1\n";
+					$cnx_dlip->send($byte1);
+				}
+				else{
+					die "no read";
+				}
+				#process_rxdata($byte);     			
+			};
+			last if($@ =~ /no read/ || $child_dead);
+		}
+		print "parent kill its child...\n";
+		$child_dead = 0;
+		close $cnx_mids;
+		sleep 20;
+		kill("TERM", $kidpid);   # send SIGTERM to child
+	}
+	# the else{} block runs only in the child process
+	else {
+		my $i = 0;
+		# copy standard input to the socket
+		while (1){
+			#my $fim02 = fim02_processing::fim02_create($i, 1, 8, 151, 0);
+			#my $bim02 = bxm_processing::bxm_create($fim02, 2);
+			#print unpack("B*", $bim02)."\n";
+			#$line = "Ici client from port $port $i\n";
+			#$i += 1;
+			#$i = $i % 32;
+			eval {
+				if( sysread($cnx_dlip, my $byte, 1) == 1 ) {
+					print "dlip -> mids $byte\n";
+					#syswrite $cnx_mids, $byte or die "syswrite m'a tuer$!";
+					$cnx_mids->send($byte);
+					#$cnx_mids->flush();
+				}
+				else {die "no read"}
+			};
+			last if($@ =~ /no read/);
+			#sleep 1;
+			#syswrite $cnx_mids, "Hello MIDS\n";
+			#$cnx_mids->flush();
+			#sleep 1;
+		}
+		close $cnx_dlip;
+		close $socket_dlip;
+		print "child will kill himself...\n";
+        exit(0);                # just in case
+    }
+}
+    
+sub process_rxdata {
+    	my $byte = shift;
+    	print "Client receiving : ";
+    	syswrite STDOUT,  $byte;
+    	print "\n";   	
+    }

@@ -1,0 +1,111 @@
+lat = 0
+long = 519918
+setSTN
+mot = 000000300E0302000000000000000000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0000
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+mot = 0000000000000000090C
+
+19, 37, C0
+1
+first digit = 4
+last digit = 9
+mot hexa =  000000
+ 0, 1536
+ 0, 600
+masque = 600
+chaine à remplacer = 000600
+nouveau mot = 0000000000000600090C
+set long
+mot = 00000000000000000002
+
+27, 48, 7EEEE
+1
+first digit = 6
+last digit = 12
+mot hexa =  0000000
+ 0, 4159344
+ 0, 3F7770
+masque = 3F7770
+chaine à remplacer = 03F7770
+nouveau mot = 000000003F7770000002
+set TQ
+mot = 0000000000000600090C
+
+58, 61, C
+1
+first digit = 14
+last digit = 15
+mot hexa =  00
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000600090C
+lat = 11650
+long = 519894
+setSTN
+mot = 000000300E0302000000000000110000000000000000
+first digit = 8
+last digit = 11
+mot hexa =  0011
+masque = 17
+chaine à remplacer = 0011
+nouveau mot = 000000300E0302000000000000110000000000000000
+set TN
+mot = 0000300000000600090C
+
+19, 37, C1
+1
+first digit = 4
+last digit = 9
+mot hexa =  000600
+ 0, 1544
+ 0, 608
+masque = 608
+chaine à remplacer = 000608
+nouveau mot = 0000300000000608090C
+set lat
+mot = 000000003F7770000002
+
+4, 24, 2D82
+1
+first digit = 1
+last digit = 6
+mot hexa =  000000
+ 0, 11650
+ 0, 2D82
+masque = 2D82
+chaine à remplacer = 002D82
+nouveau mot = 000000003F777002D822
+set long
+mot = 000000003F777002D822
+
+27, 48, 7EED6
+1
+first digit = 6
+last digit = 12
+mot hexa =  03F7770
+ 0, 4159152
+ 0, 3F76B0
+masque = 3F76B0
+chaine à remplacer = 03F76B0
+nouveau mot = 000000003F76B002D822
+set TQ
+mot = 0000300000000608090C
+
+58, 61, C
+1
+first digit = 14
+last digit = 15
+mot hexa =  30
+ 0, 48
+ 0, 30
+masque = 30
+chaine à remplacer = 30
+nouveau mot = 0000300000000608090C

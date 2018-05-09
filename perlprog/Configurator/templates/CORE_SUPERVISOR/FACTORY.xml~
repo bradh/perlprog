@@ -1,0 +1,51 @@
+<factory>
+
+  <states>
+    <state id="BOOT"        default-context="Start" aggregate="AND"/>
+    <state id="OPERATIONAL" default-context="Green" aggregate="AND"/>
+    <state id="DEGRADED"    default-context="Amber" aggregate="OR"/>
+    <state id="STOPPED"     default-context="Red"   aggregate="AND"/>
+  </states>
+
+  <types>
+    <type id="CoreManager"> <!--5 seconds to receive a keep alive message -->
+      <state idref="BOOT"          security-level=""/>
+      <state idref="OPERATIONAL"   security-level="7-6-5-4-3"/>
+      <state idref="DEGRADED"      security-level="2"/>
+      <state idref="STOPPED"       security-level="0-1"/>
+    </type>
+    <type id="HMIManager">
+      <state idref="BOOT"          security-level=""/>
+      <state idref="OPERATIONAL"   security-level="7-6-5-4-3"/>
+      <state idref="DEGRADED"      security-level="2"/>
+      <state idref="STOPPED"       security-level="0-1"/>
+    </type>
+    <type id="TopLink_Commander">
+      <state idref="BOOT"          security-level=""/>
+      <state idref="OPERATIONAL"   security-level="7-6-5-4-3"/>
+      <state idref="DEGRADED"      security-level="2"/>
+      <state idref="STOPPED"       security-level="0-1"/>
+    </type>
+  </types>
+
+  <supervision context-id="TopLink_Solution">
+
+    <system id="DLP" name="DLP" access-group="ALL">
+      <action id="start"  script="test.bat"   stateref ="BOOT"/>
+      <action id="stop"   script="test.bat"   stateref ="STOPPED" context="Stop"/>
+      
+
+      <system id="TopLink_Manager" name="TOPLINK MANAGER" state-spread="true" access-group="ALL">
+        <action id="start"  script="test.bat"   stateref ="BOOT"/>
+        
+        <component id="Core_Manager"  name="CORE MANAGER" typeref="CoreManager" state-spread="true" access-group="ALL"/>
+        <component id="HMI_Manager"   name="HMI MANAGER"  typeref="HMIManager"  state-spread="true" access-group="ALL"/>  
+      </system>
+
+      <component id="TopLink" name="TOPLINK COMMANDER" typeref="TopLink_Commander" state-spread="true" access-group="ALL"/>
+
+    </system>
+    
+  </supervision>
+  
+</factory>

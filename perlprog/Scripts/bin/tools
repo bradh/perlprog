@@ -1,0 +1,1061 @@
+#!/usr/bin/ksh -p
+
+function _dispo
+{
+	echo "_ls         : fait un ls mais marque vers ou pointent les liens symboliques"
+	echo "_ls2        : affiche le nom complet des fichiers en argument ainsi que leur"
+	echo "              version si ce sont des objets clearcase"
+	echo "_timelog    : epure les fichiers de log du DLIP et des TD"
+	echo "_death      : tue des process en donnant leur nom au lieu du PID"
+	echo "_clean      : efface les fichiers .ali et .o du repertoire courant"
+	echo "_tree       : donne l'arbo des repertoires"
+	echo "_time       : transforme un temps en secondes en jour/heures/minutes/secondes"
+	echo "_tv         : comme le viewer tv mais n'est pas interractif"
+	echo "_LScount    : cree la liste des fichiers ADA utilises dans une librairie GNAT"
+	echo "              (fichiers .ali)"
+	echo "_LScount2   : compte le nombre de lignes de code de fichiers ADA"
+	echo "_LScount3   : compte le nombre de lignes de code qui ont change entre 2 versions"
+	echo "_choice     : affiche des cases a cocher par l'utilisateur"
+	echo "_verify     : verifie que tous les CSCs utilises par les sources du rep courant"
+	echo "              ont des versions de positionnees"
+	echo "_verify2    : idem _verify mais ne regarde que les fichiers sources vraiment"
+	echo "              utilises"
+	echo "_setview    : affiche une liste des vues dispo et demande de choisir une vue"
+	echo "_lnsf       : fait un ln -sf mais marche sous solaris"
+	echo "_count      : affiche un compte a rebour"
+	echo "_cksum      : fait le checksum de tous les fichier sources du repertoire"
+	echo "_cmp_cksum  : cherche les differences entre 2 fichiers checksum"
+	echo "_lnbin      : tire des liens vers les tests_drivers et les fichiers de conf"
+	echo "_lnscenario : tire des liens vers les fichier du scenario donne en argument"
+	echo "_lnbinscenario : tire des liens vers les packages pour la complilation des scenarii"
+	echo "_rmbinscenario : supprime les liens vers les packages après la compilation du scenario"
+	echo "_gbuild     : compile avec gnat"
+	echo "_gbuild_dbg : compile avec gnat en mode debug"
+	echo "_gbuildpg   : compile avec gnat en mode profiling"
+	echo "_gbuild_lscm: compile avec les stub tcf des common services"
+	echo "_gbuild_vscm: compile avec les common services en vob"
+	echo "_gcc_lscm	  : compile les stub tcf des common services"
+	echo "_getversions: donne les versions d'un CSC"
+	echo "_setversion : positionne une version sur un CSC"
+	echo "_tarcvf     : copie des fichier directement sur la bande du lecteur de verdi"
+	echo "_tarxvf     : recupere directement les fichiers de la bande du lecteur de verdi"
+	echo "_tartvf     : liste le contenu de la bande du lecteur de verdi"
+	echo "_savevob    : sauvegarde la vob /loc1_vob sous /share"
+	echo "              n'utiliser cette fonction qu'en tant que root"
+	echo "_mkview     : cree une nouvelle vue clearcase"
+	echo "_setview    : se positionne dans une vue clearcase"
+	echo "_rmview     : detruit une vue clearcase"
+}
+
+
+
+function _time
+{
+	if [ $# -lt 1 ]
+	then
+		echo "utilisation : _time seconds"
+		echo "Prends un temps en secondes et le donne en jours/heures/minutes/secondes"
+		return 1
+	fi
+	typeset -i TEMPS=`echo ${1} | awk -F\. '{print $1}'`
+	RESTE=`echo ${1} | awk -F\. '{print $2}'`
+	typeset -i DAY=${TEMPS}/86400
+	typeset -i DAYLEFT=${TEMPS}%86400
+	typeset -i HOUR=${DAYLEFT}/3600
+	typeset -i HOURLEFT=${DAYLEFT}%3600
+	typeset -i MINUTE=${HOURLEFT}/60
+	typeset -i SECOND=${HOURLEFT}%60
+	if [ "$RESTE" = "" ]
+ 	then
+		echo "${TEMPS}s = ${DAY}d ${HOUR}h ${MINUTE}min ${SECOND}s ${RESTE}"	
+	else
+		echo "${TEMPS}.${RESTE}s = ${DAY}d ${HOUR}h ${MINUTE}min ${SECOND}s ${RESTE}"
+	fi	
+}
+
+
+function _ls
+{
+	ls -l $* | awk '{print $9" "$10" "$11;}'
+}
+
+function _timelog
+{
+	if [ $# -lt 1 ]
+	then
+		echo "utilisation : _timelog logfilename"
+		echo "Modifie le fichier de log pour pouvoir faire des diffs entre"
+		echo "plusieurs fichiers log."
+		echo "Enleve les temps."
+		echo "Enleve les numeros de taches."
+		echo "Mets les noms de fonctions ObjectAda a la sauce GNAT."
+		return 1
+	fi	
+	cat $* | nawk '{
+		place=match($1,"[*+]"); 
+		if (place==1) {
+			debut=substr($0,1,5);
+			fin=substr($0,15,1000);	
+			sub("\/..$","",fin);
+			printf debut"         "fin"\n";
+		}
+		if (place==0) {
+			place2=match($0,"__");
+			if (place2!=0) {
+				ligne=toupper($0);
+				gsub("__",".",ligne);
+			}
+			if (place2==0) {
+				ligne=$0;
+			}
+			print ligne;
+		}
+	}'
+}
+
+function _death
+{
+	if [ $# -lt 1 ] 
+	then
+		echo "$0 [chaine1] [chaine2] [chaine3]"
+		echo " recherche les chaines donnee dans les process actifs et tue les process correspondants."
+		return 1
+	fi
+
+	BIBI=`whoami`	
+
+	PIDS=`ps -A -o "user pid pcpu args" | grep "$BIBI" | grep -i "$1" | grep -i "$2" | grep -i "$3" | grep -v "grep" | grep -v $0 | awk '{printf $2" ";}'`
+	if [ "$PIDS" != "" ]
+	then
+		/usr/bin/echo "Voulez-vous tuer les process suivants ?\n"
+		ps -A -o "user pid pcpu args" | grep "$BIBI" | grep -i "$1" | grep -i "$2" | grep -i "$3" | grep -v "grep" | grep -v $0 | awk '{for (i=4; i<=NF; i++) {printf $i" ";} print "";}'
+		/usr/bin/echo "\n[yes/no] : \c"
+		read REP
+		if [ "$REP" = "yes" ]
+		then
+			kill -9 $PIDS
+		else
+			echo "Abandon"
+		fi
+	else
+		echo "Aucun process ne correspond aux criteres de recherche"
+	fi
+}
+
+function _clean
+{
+	echo "Etes-vous sur de vouloir effacer tous les fichiers .ali et .o du repertoire courant ?"
+	/usr/bin/echo "[yes/no] : \c"
+	read REP
+	if [ "$REP" != "yes" ]
+	then
+		echo "Operation abandonee"
+		return 0
+	fi
+	echo ""
+	echo "Effacement des fichiers .ali et .o en cours ..."
+	typeset -i I
+	I=0
+	ALIFILES=`ls -1 | grep "\.ali"`
+	typeset -i TOTAL
+	TOTAL=0
+	for JJ in $ALIFILES
+	do
+		TOTAL=$TOTAL+1
+	done
+	if [ $TOTAL -eq 0 ]
+	then
+		echo "Pas de fichier .ali"
+	else
+		for FILE in $ALIFILES
+		do
+			I=$I+1
+			\rm $FILE
+			echo '\rrm *.ali ['$I'/'$TOTAL']\c'
+		done
+		echo ""
+	fi
+	I=0
+	OFILES=`ls -1 | grep "\.o"`
+	TOTAL=0
+	for JJ in $OFILES
+	do
+		TOTAL=$TOTAL+1
+	done
+	if [ $TOTAL -eq 0 ]
+	then
+		echo "Pas de fichier .o"
+	else
+		for FILE in $OFILES
+		do
+			I=$I+1
+			\rm $FILE
+			echo '\rrm *.o   ['$I'/'$TOTAL']\c'
+		done
+		echo ""
+	fi
+}
+
+function _tree
+{
+	CURDIR=`pwd`
+	if [ $# -eq 1 ] 
+	then
+		cd $1
+	fi
+	find . -type d | sed "sZ[^/]*/Z|Zg"
+	cd $CURDIR
+}
+
+
+function _LScount
+{
+	echo "Creation de la liste des fichiers sources utilises"
+	echo "--------------------------------------------------"
+	echo "on se base sur les fichiers .ali pour retrouver les fichiers"
+	echo "qui ont reellement servi a compiler le programme"
+	echo ""
+
+	typeset -i TOTAL=`ls -1 | grep "\.ali" | wc -l`
+	typeset -i NB=1
+	rm -f src_list2.txt
+	echo "Analyse des fichiers .ali, recuperation de la liste des fichiers sources"
+	for FILE in `ls -1 | grep "\.ali"`
+	do
+		cat $FILE | awk '{for (I=1; I<NF; I++) {print $I;}}' | grep "\.ad" >> src_list2.txt
+#		cat $FILE | tr "\040" "\012" >> src_list2.txt
+		/usr/bin/echo "\r$NB/$TOTAL\c"
+		NB=$NB+1
+	done
+	/usr/bin/echo ""
+	echo "Nettoyage de la liste, on ne garde que les fichiers du repertoire courant"
+	cat src_list2.txt | sort -u > src_list3.txt
+	rm -f src_list.txt
+
+	for FILE in `cat src_list3.txt`
+	do
+		if [ -f $FILE ]
+		then
+			echo $FILE >> src_list.txt
+		fi
+	done
+	
+	rm -f src_list2.txt
+	rm -f src_list3.txt
+	echo "Les fichiers sources utilises sont dans src_list.txt"
+	echo "[DONE]"
+}
+
+function _LScount2
+{
+	echo "Comptage des lignes de code source ADA"
+	echo "--------------------------------------"
+	echo ""
+	
+	if [ ! -f src_list.txt ]
+	then
+		echo "Lancez d abord le script _LScount."
+		echo "Ou bien mettez a la main la liste des fichiers sources a analyser dans un fichier src_list.txt."
+		return
+	fi
+	
+	/usr/bin/echo "Preparation ... \c"
+	typeset -i CMPT
+	typeset -i II=1
+	typeset -i TOTAL=0
+	CMPT=`ls -1 | grep "\.ad" | wc -l`
+	
+	typeset -i TAILLEPAQUETS=50
+	typeset -i INDEX=1
+	typeset -i COMPTEUR=0
+	FILES[$INDEX]=""
+	for FILE in `cat src_list.txt`
+	do
+		FILES[$INDEX]="${FILES[$INDEX]} $FILE"
+		COMPTEUR=$COMPTEUR+1
+		if [ $COMPTEUR -gt $TAILLEPAQUETS ]
+		then
+			COMPTEUR=0
+			INDEX=$INDEX+1
+			FILES[$INDEX]=""
+		fi
+	done
+	echo "[OK]"
+	while [ $II -le $INDEX ]
+	do
+		TOTAL=$TOTAL+`slcnt -l ADA ${FILES[$II]} | grep "Total" | sed "s/^.*LS:[ ]*//" | cut -d " " -f 1`
+		/usr/bin/echo "\rResultat intermediaire $II/$INDEX : LS = $TOTAL\c"
+		II=$II+1
+	done
+	/usr/bin/echo "\rResultat final : LS = $TOTAL                    "
+	echo "[DONE]"
+
+}
+
+function _tv
+{
+	if [ $# -lt 2 ] 
+	then
+		echo "_tv input_file output_file"
+		echo " decode les messages contenus dans le fichier d'entree"
+		return 1
+	fi
+/dlip_ref/s_dlip/Tools/tv << FIN
+2
+2
+$1
+$2
+FIN
+}
+
+function _choice
+{
+	if [ $# -lt 1 ] 
+	then
+		echo "usage : _choice choice_1 choice_2 choice_3..."
+		echo "the choosen values are put in the REPLY variable"
+		return
+	fi
+
+	typeset -i TOTAL=3
+	for FILE in $*
+	do
+		TOTAL=$TOTAL+1
+		FILE[$TOTAL]=$FILE
+		STATE[$TOTAL]="_"
+	done
+
+	echo $TOTAL
+
+	LISTE=""
+	typeset -i NB
+
+	update_liste()
+	{
+		NB=4
+		LISTE=""
+		LISTE="$LISTE Done"
+		LISTE="$LISTE All"
+		LISTE="$LISTE None"
+		while [ $NB -le $TOTAL ]
+		do
+			LISTE="$LISTE [${STATE[$NB]}]${FILE[$NB]}"
+			NB=$NB+1
+		done
+	}
+
+	update_liste
+
+	REP="GO_ON"
+	while [ "$REP" = "GO_ON" ]
+	do
+		clear
+		echo "Please choose :"
+		echo ""
+		select FILE in $LISTE
+		do
+			if [ ! "$FILE" = "" ]
+			then
+				if [ "$REPLY" = "1" ]
+				then
+					REP="STOP"
+				elif [ "$REPLY" = "2" ]
+				then
+					NB=4
+					while [ $NB -le $TOTAL ]
+					do
+						STATE[$NB]="X"
+						NB=$NB+1
+					done
+				elif [ "$REPLY" = "3" ]
+				then
+					NB=4
+					while [ $NB -le $TOTAL ]
+					do
+						STATE[$NB]="_"
+						NB=$NB+1
+					done
+				else
+					if [ "${STATE[$REPLY]}" = "_" ]
+					then
+						STATE[$REPLY]="X"
+					else
+						STATE[$REPLY]="_"
+					fi
+				fi
+			fi
+			break
+		done
+	
+		update_liste
+	done
+	
+	TEST_LIST=""
+	NB=4
+	while [ $NB -le $TOTAL ]
+	do
+		if [ "${STATE[$NB]}" = "X" ]
+		then
+			TEST_LIST="$TEST_LIST ${FILE[$NB]}"
+		fi
+		NB=$NB+1
+	done
+	export REPLY=$TEST_LIST
+}
+
+function _verify
+{
+	echo "Analyse des CSCs utilises"
+	OK="YES"
+	CSCS=`_ls *.ad? | grep "vob" | awk -F\/ '{print "/"$2"/"$3;}' | sort -u`
+	for CSC in $CSCS
+	do
+		ct catcs | grep $CSC > /dev/null 2>&1
+		if [ $? -ne 0 ]
+		then
+			if [ "$OK" = "YES" ]
+			then
+				OK="NO"
+				echo "Les CSCs suivants n'ont pas de version positionnee : "
+			fi
+			echo "   $CSC"
+		fi
+	done
+	if [ "$OK" = "YES" ]
+	then
+		echo "Tous les CSCs utilises ont une version de positionnee."
+	fi	
+}
+
+function _verify2
+{
+	echo "Analyse des CSCs utilises"
+	echo "-------------------------"
+
+	if [ ! -f src_list.txt ]
+	then
+		echo "Lancez d abord le script _LScount."
+		echo "Ou bien mettez a la main la liste des fichiers sources a verifier dans un fichier src_list.txt."
+		return
+	fi
+
+	OK="YES"
+	rm -r src_list2.txt >/dev/null 2>&1
+	touch src_list2.txt
+	typeset -i TOTAL=`cat src_list.txt | wc -l`
+	typeset -i NB=1
+	echo "Recuperation des liens vers les vobs"
+	for FILE in `cat src_list.txt`
+	do
+		_ls $FILE >> src_list2.txt
+		/usr/bin/echo "\r$NB/$TOTAL\c"
+		NB=$NB+1
+	done
+	echo ""
+	CSCS=`cat src_list2.txt | grep "vob" | awk -F\/ '{print "/"$2"/"$3;}' | sort -u`
+	for CSC in $CSCS
+	do
+		ct catcs | grep $CSC > /dev/null 2>&1
+		if [ $? -ne 0 ]
+		then
+			if [ "$OK" = "YES" ]
+			then
+				OK="NO"
+				echo "Les CSCs suivants n'ont pas de version positionnee : "
+			fi
+			echo "   $CSC"
+		fi
+	done
+	if [ "$OK" = "YES" ]
+	then
+		echo "Tous les CSCs utilises ont une version de positionnee."
+	fi	
+}
+
+function _setview
+{
+	LISTE=`ct lsview | sed 's/^\*//' | sed 's/^[ ]*//' | cut -f1 -d " "`
+	select FILE in $LISTE
+	do
+		echo "changing for view $FILE"
+		ct setview $FILE
+		break
+	done
+	
+}
+
+function _lnsf
+{
+	if [ $# -ne 2 ]
+	then
+		echo "usage : $0 source target"
+		return
+	fi
+	
+	# $1 is the source file
+	# $2 is the target file name ou directory name
+
+	if [ -f $2 ]
+	then
+		rm -f $2
+	elif [ -d $2 ]
+	then
+		if [ -f ${2%/}/${1##*/} ]
+		then
+			rm -f ${2%/}/${1##*/}
+		fi
+	fi
+
+	ln -s $1 $2
+}
+
+function _count
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _count seconds [suffix] [prefix]"
+		return
+	fi
+
+	typeset -i COUNTER=$1
+	while [ $COUNTER -ge 0 ]
+	do
+		/usr/bin/echo "\r$3$COUNTER$2          \c"
+		sleep 1
+		COUNTER=$COUNTER-1
+	done	
+}
+
+function _man
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _man command"
+		return
+	fi
+
+	PAGES=`\man -a $1 | sed "s/[ 	]/?/g"`
+
+	typeset -i COUNT=0
+	for PAGE in $PAGES
+	do
+		COUNT=$COUNT+1
+		echo $PAGE
+	done
+
+	echo $COUNT
+	if [ $COUNT -eq 1 ]
+	then
+		NUM=`echo $PAGES | sed "s/^.*(//" | sed "s/).*$//"`
+		echo $NUM
+	fi
+	
+}
+
+function _LScount3
+{
+	echo "Comptage des lignes de code source ADA"
+	echo "qui ont changees entre 2 versions     "
+	echo "--------------------------------------"
+	echo ""
+
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _LScount3 MCT_sources_dir"
+		echo "the MCT_sources_dir sould only contain hard files, not links"
+		return
+	fi
+
+	MCTDIR=${1%%/}
+
+	if [ ! -d $MCTDIR ]
+	then
+		echo "the folder $MCTDIR doesn't seem to exist"
+		return
+	fi
+
+	if [ ! -f src_list.txt ]
+	then
+		echo "Lancez d abord le script _LScount."
+		echo "Ou bien mettez a la main la liste des fichiers sources a analyser dans un fichier src_list.txt."
+		return
+	fi
+	
+	/usr/bin/echo "Preparation ... \c"
+	
+	typeset -i COMPTEUR=0
+	typeset -i II=0
+	typeset -i PLUS=0
+	typeset -i MOINS=0
+	typeset -i NOUVEAU=0
+	for FILE in `cat src_list.txt`
+	do
+		COMPTEUR=$COMPTEUR+1
+	done
+	echo "[OK]"
+	
+	for FILE in `cat src_list.txt`
+	do
+		if [ ! -f $MCTDIR/$FILE ]
+		then
+			NOUVEAU=$NOUVEAU+`slcnt -l ADA $FILE | sed "s/^.*LS:/LS:/" |  awk '/LS:/ {print $2}'`
+		else
+			TOTAL=`diff $MCTDIR/$FILE $FILE | awk '
+				BEGIN { OLD=0; NEW=0}
+				/^\>/ {	gsub("[ 	]","");
+					POS=match($0,"--");
+					LENG=length
+					if ((POS != 2) && (LENG > 1)) {
+						NEW += 1;
+					}
+				      }
+				/^\</ { gsub("[ 	]","");
+					POS=match($0,"--");
+					LENG=length
+					if ((POS != 2) && (LENG > 1)) {
+						OLD += 1;
+					}
+				      }
+				END {print OLD" "NEW}'`
+			MOINS=$MOINS+`echo $TOTAL | cut -f 1 -d " "`
+			PLUS=$PLUS+`echo $TOTAL | cut -f 2 -d " "`
+		fi
+		II=$II+1
+		
+		/usr/bin/echo "\r$II/$COMPTEUR     \c"
+	done
+	echo ""
+	/usr/bin/echo "Plus    = $PLUS"
+	/usr/bin/echo "Moins   = $MOINS"
+	/usr/bin/echo "Nouveau = $NOUVEAU"
+	echo "[DONE]"
+
+}
+
+
+function _ls2
+{
+	for FILE in $*
+	do
+		if [ -L $FILE ]
+		then
+			FILE=`ls -l $FILE | awk '{a=index($0,"->")+3; b=substr($0,a); print b;}'`
+		fi
+		LONGNAME=`ct ls "$FILE"  2>/dev/null`
+		if [ $? -eq 0 ] 
+		then
+			LONGNAME=`echo $LONGNAME | awk '{a=index($0,"Rule:")-1; b=substr($0,1,a); print b;}'`
+			echo $LONGNAME
+		else
+			echo $FILE
+		fi
+	done
+}
+
+
+function _cksum
+{
+	if [ ! -f src_list.txt ]
+	then
+		echo "You must launch the _LScount command first"
+		return
+	fi
+	cat src_list.txt | grep -v b~ > src_list.$$
+	typeset -i NB=`cat src_list.$$ | wc -l`
+	typeset -i II=1
+	rm -f cksum.txt
+	echo "The file cksum.txt is being created"
+	for FILE in `cat src_list.$$`
+	do
+		echo "$FILE `sum $FILE | cut -d " " -f 1`" >> cksum.txt
+		/usr/bin/echo "\r$II/$NB\c"
+		II=$II+1
+	done
+	echo ""
+	echo "Done"
+}
+
+function _cmp_cksum
+{
+	if [ $# -lt 2 ]
+	then
+		echo "usage : _cmp_cksum old_file new_file"
+		return
+	else
+		if [ ! -f "$1" ]
+		then
+			echo "cannot find $1"
+			return
+		fi
+		if [ ! -f "$2" ]
+		then
+			echo "cannot find $2"
+			return
+		fi
+	fi
+
+	typeset -i NBFILE1=`cat $1 | wc -l`*2
+	typeset -i NBFILE2=`cat $2 | wc -l`*2
+	typeset -i II=1
+
+	for LINE in `cat $1`
+	do
+		FILE1[$II]="$LINE"
+		II=$II+1
+	done
+	typeset -i II=1
+	for LINE in `cat $2`
+	do
+		FILE2[$II]="$LINE"
+		II=$II+1
+	done
+	typeset -i I1=1
+	typeset -i I2=1
+	while [ $I1 -le $NBFILE1 ] && [ $I2 -le $NBFILE2 ]
+	do
+		if [ "${FILE1[$I1]}" = "${FILE2[$I2]}" ]
+		then
+			FILE=${FILE1[$I1]}
+			I1=$I1+1
+			I2=$I2+1
+			if [ "${FILE1[$I1]}" = "${FILE2[$I2]}" ]
+			then
+				echo "= $FILE"
+			else
+				echo "! $FILE"
+			fi
+			I1=$I1+1
+			I2=$I2+1
+		else
+			if [ "${FILE1[$I1]}" \< "${FILE2[$I2]}" ]
+			then
+				echo "- ${FILE1[$I1]}"
+				I1=$I1+2
+			else
+				echo "+ ${FILE2[$I2]}"
+				I2=$I2+2
+			fi		
+		fi
+	done
+	while [ $I1 -le $NBFILE1 ]
+	do
+		echo "- ${FILE1[$I1]}"
+		I1=$I1+2
+	done
+	while [ $I2 -le $NBFILE2 ]
+	do
+		echo "+ ${FILE2[$I2]}"
+		I2=$I2+2
+	done
+}
+
+function _lnbin
+{
+	ln -s /loc1_vob/link-t/binary/loc1_main ./
+	ln -s /loc1_vob/launcher/binary/loc1_launcher ./
+	ln -s /loc1_vob/c2_host_td/binary/c2_host_test_driver ./
+	ln -s /loc1_vob/mids_td/binary/mids_test_driver ./
+	ln -s /loc1_vob/osim_td/binary/osim_test_driver ./
+	ln -s /loc1_vob/link-t/conf/* ./
+}
+
+function _lnbintesttu
+{
+    	ln -s ../exe/loc1_main ./
+	ln -s ../exe/loc1_launcher ./
+	ln -s ../exe/c2_host_test_driver ./
+	ln -s ../exe/mids_test_driver ./
+	ln -s ../exe/osim_test_driver ./
+	ln -s ../exe/conf/* ./
+}
+
+function _lnscenario
+{
+	DIR_VOB="/loc1_vob/scenarii"
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _lnscenario scenario [-agile]"
+		return
+	fi
+	if [ "$2" = "-agile" ]
+	then
+	    ln -s $DIR_VOB$1/Input/Agile/*.xhd ./
+	fi 
+	ln -s $DIR_VOB/$1/Input/*.trc ./
+	ln -s $DIR_VOB/$1/Input/*.fom ./
+	ln -s $DIR_VOB/$1/Input/*.xhd ./
+	ln -s $DIR_VOB/$1/Input/*.dem_apu ./
+#	cp $1/Input/*.conf ./
+#	chmod a+w *.conf
+}
+
+function _lnbinscenario
+{
+	DIR_VOB="/loc1_vob/scenarii"
+	ln -s $DIR_VOB/_common/*.ads ./
+	ln -s $DIR_VOB/_common/*.adb ./
+}
+
+function _rmbinscenario
+{
+	DIR_VOB="/loc1_vob/scenarii"
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _lnrmscenario scenario "
+		return
+	fi
+	if [ $# -eq 1 ]
+	then
+		if [ ! -f "$1.adb" ] 
+		then
+		    echo " Attention le fichier $1.adb n'a pas été trouvé "
+		else
+		    mv $1.adb $1.toto
+		    echo " $1.adb sauvegardé dans $1.toto "
+		    `rm ./*.ads`
+		    rm ./*.adb
+		    rm ./*.ali
+		    rm ./*.o
+		    mv $1.toto $1.adb
+		    echo " $1.adb restauré"
+		fi
+	fi
+}
+		
+
+function _gbuild_dbg
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _gbuild prog_name [-lgmem]"
+		return
+	fi
+	gnatmake -g -m -fstack-check -funwind-tables $1 -bargs -f -largs -lsocket -lnsl $2
+}
+function _gbuild
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _gbuild prog_name [-lgmem]"
+		return
+	fi
+	gnatmake -m -fstack-check -funwind-tables $1 -bargs -f -largs -lsocket -lnsl $2
+}
+
+function _gbuildpg
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _gbuildpg prog_name"
+		return
+	fi
+	gnatmake -g -pg -m -fstack-check -funwind-tables $1 -bargs -f -largs -pg -lsocket -lnsl comm_interface_services_sc.o -ldl
+}
+
+function _gbuild_lscm
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _gbuild_lscm prog_name"
+		return -1
+	fi
+	gnatmake -m -fstack-check $1 -bargs -f -largs -lsocket -lnsl comm_interface_services_sc.o Alert.o
+}
+
+function _gbuild_vscm
+{
+        if [ $# -lt 1 ]
+	then
+		echo "usage : _gbuild_lscm prog_name"
+		return -1
+	fi
+	gnatmake -m -fstack-check $1 -bargs -f -largs -s -lsocket -lnsl -lcissc
+}
+
+function _gcc_lscm
+{
+	gcc -c -fstack-check comm_interface_services_sc.c SyCns*.c Alert.c sy_ctsal_time.c
+}
+
+function _getversions
+{
+
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _getversions CSC [branch]"
+		return
+	fi
+
+
+	ENTITY="$1"
+	BRANCH="$2"
+	
+	if [ -z "$BRANCH" ]
+	then
+		BRANCH="_"
+	else
+		BRANCH=".${BRANCH}_"
+	fi
+
+	for V in $(cleartool lsvt -a $ENTITY | sed 's/.*\///' | sort -nr)
+	do
+		echo $V
+	done | grep -v "@@" | grep "${ENTITY##*/}$BRANCH" | sed "s/[(),]//g"
+}
+
+function _setversion
+{
+	if [ $# -lt 2 ]
+	then
+		echo "usage : _setversion [-f] CSC Version"
+		return
+	fi
+
+	TEMPFILE="/tmp/setversion.$$"
+	FORCE="False"
+	if [ "$1" = "-f" ]
+	then
+		FORCE="True"
+		shift
+	fi
+	CSCNAME=${1%%/}
+	VERSION=${CSCNAME##*/}_$2
+	CSCNAME=${CSCNAME}/
+
+	if [ ! -d $CSCNAME ]
+	then
+		echo "Directory $CSCNAME does not exist !"
+		return
+	fi
+
+	if [ ! "$2" = "LATEST" ]
+	then
+		_getversions $CSCNAME | grep $VERSION >/dev/null 2>&1
+		if [ $? -ne 0 ]
+		then
+			echo "This label does not exist for this CSC"
+			return
+		fi
+	fi
+
+	cleartool catcs | grep $CSCNAME >/dev/null 2>&1
+	if [ $? = 0 ]
+	then
+		if [ "$FORCE" = "True" ] 
+		then
+			/usr/bin/echo 'element * CHECKEDOUT' > $TEMPFILE
+			if [ ! "$2" = "LATEST" ]
+			then
+				/usr/bin/echo "element ${CSCNAME}... \t $VERSION" >> $TEMPFILE
+			fi
+			cleartool catcs | grep -v "$CSCNAME" | fgrep -v 'element * CHECKEDOUT' >> $TEMPFILE
+			cat $TEMPFILE
+			cleartool setcs $TEMPFILE
+			rm $TEMPFILE
+		else
+			echo "A version already exist for $CSCNAME"
+		fi
+	else
+		/usr/bin/echo 'element * CHECKEDOUT' > $TEMPFILE
+		if [ ! "$2" = "LATEST" ]
+		then
+			/usr/bin/echo "element ${CSCNAME}... \t $VERSION" >> $TEMPFILE
+		fi
+		cleartool catcs | fgrep -v 'element * CHECKEDOUT' >> $TEMPFILE
+		cat $TEMPFILE
+		cleartool setcs $TEMPFILE
+		rm $TEMPFILE
+	fi	
+	
+}
+
+function _tarcvf
+{
+	tar cvfbh - 20 $* | rsh verdi dd of=/dev/rmt/0 obs=20b
+}
+
+function _tarxvf
+{
+	rsh -n verdi dd if=/dev/rmt/0 bs=20b | tar xvBfb - 20
+}
+
+function _tartvf
+{
+	rsh -n verdi tar tv
+}
+
+
+function _savevob
+{
+    DIR=$PWD
+    if [ ! "`/usr/ucb/whoami`" = "root" ]
+    then
+	echo "you must be root to run this command"
+	return
+    fi
+    REP="sav_vobstorage_`date +'%d_%m_%Y'`"
+    if [ -d /share/$REP ]
+    then
+	echo "directory /share/$REP already exists, aborting"
+	return
+    fi
+    mkdir /share/$REP
+    /usr/atria/bin/cleartool lock vob:/loc1_vob
+    cd /space/vobstorage
+    tar cf - ./loc1_vob.vbs | (cd /share/$REP; tar xBpf -)
+    /usr/atria/bin/cleartool unlock vob:/loc1_vob
+    cd $PWD
+}
+
+function _mkview
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _mkview viewname"
+		return
+	fi
+	MYNAME=`whoami`
+	if [ -d /space/viewstorage/$MYNAME.$1 ]
+	then
+	    echo "This view already exists, aborting."
+	    return
+	fi
+	ct mkview -tag ${MYNAME}.$1 /space/viewstorage/${MYNAME}.$1
+}
+
+function _setview
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _setview viewname"
+		return
+	fi
+	MYNAME=`whoami`
+	ct setview ${MYNAME}.$1
+}
+
+function _rmview
+{
+	if [ $# -lt 1 ]
+	then
+		echo "usage : _rmview viewname"
+		return
+	fi
+	MYNAME=`whoami`
+	if [ -d /space/viewstorage/$MYNAME.$1 ]
+	then
+	    echo "Private files will be lost !!!"
+	    echo "Are you sure you want to delete this view ?"
+	    /usr/bin/echo "[yes/no]\c"
+	    read ANSWER
+	    if [ ! "$ANSWER" = "yes" ]
+	    then
+		echo "Aborting."
+		return
+	    fi
+	else
+	    echo "This view does not exists, aborting."
+	    return
+	fi	
+	ct rmview /space/viewstorage/${MYNAME}.$1
+}

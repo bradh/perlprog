@@ -1,0 +1,70 @@
+!--------------------------------------------------------------------------
+! @(#)slcnt.cld	2.1 97/09/03 Thomson-CSF TTM / ATGL
+!--------------------------------------------------------------------------
+! auteur:       S. Konc ( Thomson Sintra ASM)
+! date:         05/10/90
+! description:
+!
+!       Definition de la commande SLCNT permettant d'obtenir des statistiques
+!       diverses sur le source de differents modules de langages differents.
+!       Cette commande possede:
+!               * 1 argument (P1): liste de noms de fichiers (avec joker [%*])
+!               * 1 qualifiant (/exclude): liste de noms de fichiers a exclure
+!                       (avec joker [%*]).
+!               * 1 qualifiant (/language): permet de forcer le type du langage
+!                       pour tous les fichiers
+!               * 1 qualifiant (/nstart): permet de definir un debut de bloc de
+!                       commentaire
+!               * 1 qualifiant (/nend): permet de definir une fin de bloc de
+!                       commentaire
+!               * 1 qualifiant (/estart): permet de definir un debut de
+!                       commentaire se terminant par la fin de ligne
+!               * 1 qualifiant (/verbose): permet d'obtenir des statistiques
+!                       detaillees ou condensees
+!               * 1 qualifiant (/s132): permet d'obtenir un affichage 132
+!                       colonnes
+!       Exemples:
+!               $ SLCNT MY_FILE.IS_BEAUTIFUL
+!               $ SLCNT MY_*.*_BEAUTIFUL,*FILE.IS* /LANGUAGE=C
+!               $ SLCNT/EXCLUDE=(*FILE.IS*) MY_*.*_BEAUTIFUL
+!
+!       Pour la prise en compte de cette commande faire:
+!               $ SET COMMAND SLCNT.CLD
+!--------------------------------------------------------------------------
+MODULE  SLCNT
+IDENT   "V1.7"
+DEFINE  VERB    SLCNT
+        IMAGE   LIBDIR:SLCNT.EXE
+
+        PARAMETER       P1,     LABEL=$INPUT_FILES,
+                                PROMPT="Files",
+                                VALUE(REQUIRED, LIST, TYPE=$INFILE)
+        QUALIFIER       EXCLUDE,LABEL=$EXCLUDE_FILES,
+                                VALUE(LIST, TYPE=$INFILE)
+        QUALIFIER       OUTPUT,LABEL=$OUTPUT_FILE,
+                                VALUE(TYPE=$OUTFILE)
+        QUALIFIER       LANGUAGE,LABEL=$LANGUAGE,
+                                VALUE(TYPE=LANGUAGE)
+        QUALIFIER       NSTART,LABEL=$NSTART,
+                                VALUE(TYPE=$QUOTED_STRING)
+        QUALIFIER       NEND,LABEL=$NEND,
+                                VALUE(TYPE=$QUOTED_STRING)
+        QUALIFIER       ESTART,LABEL=$ESTART,
+                                VALUE(TYPE=$QUOTED_STRING)
+        QUALIFIER       VERBOSE,LABEL=$VERBOSE
+        QUALIFIER       S132,LABEL=$S132
+
+DEFINE TYPE     LANGUAGE
+        KEYWORD ADA
+        KEYWORD ASM68K
+        KEYWORD ASMTMS
+        KEYWORD ASSMOUF
+        KEYWORD C
+        KEYWORD DCL
+        KEYWORD FORTRAN
+        KEYWORD LTR2
+        KEYWORD LTR3
+        KEYWORD PASCAL
+        KEYWORD UIL
+        KEYWORD SIAM
+        KEYWORD CPP

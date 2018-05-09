@@ -1,0 +1,68 @@
+#!/usr/bin/perl
+
+###################################################################################
+# Création d'un répertoire de test et configuration de ce dernier
+# La configuration consiste dans le lien avec les exécutables et la copie des fichiers
+# de configuration.
+# En particulier le nom des fichiers d'entrée est modifié pour matcher 
+# le nom du test. 
+# -c n_categorie -h : permet d'afficher la liste de la version en cours
+# -c n_categorie -v n_version_dlip -h : permet d'afficher la liste des versions disponibles pour une categorie
+# et une version de dlip données
+# -c n_categorie -v n_version_dlip -t nom_du_test : configure le test nom du test
+#
+# S. Mouchot 04/07/03 
+##################################################################################
+
+use Getopt::Std;
+
+getopts("hc:v:t:");
+
+my @NOM_PROCESS = ("loc1_main", "host_test_driver","l16_test_driver");
+my $REP_VERSION = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_EXE = "/data/users/loc1int/DLIP/test/test_tu/exe";
+my $REP_CIBLE;
+my $CAT = 1;
+my $VERSION_DLIP;
+my $NOM_TEST;
+
+if ($opt_h) { 
+	print "L16_test_suppress [-c] [-h] : liste des versions dlip \n";
+#	print "\t liste des versions dlip: \n";
+	print "L16_test_suppress [-c] [-v n_version ][-h] : liste des tests existants \n";
+#	print "\t liste les tests existants \n";
+	print "L16_test_suppress [-c] [-v n_version ][-t nom_du_test] : suppression d'un environnement pour un nouveau test \n";
+	print " \n";
+}
+if ($opt_h && $opt_c && ! $opt_v) {
+  $CAT = $opt_c;
+  print "categorie = $CAT \n";
+  my $LISTE = `ls $REP_VERSION/category$CAT`;
+  print "Liste des versions DLIP en test catégorie $CAT :\n";
+  print "$LISTE";
+  print " \n";
+}
+if ($opt_h && $opt_c && $opt_v) {
+  $CAT = $opt_c;
+  $VERSION_DLIP = $opt_v;
+  my $LISTE = `ls $REP_VERSION/category$CAT/$VERSION_DLIP`;
+  print "Liste des tests categorie $CAT pour la version DLIP $VERSION_DLIP :\n";
+  print "$LISTE";
+  print " \n";
+}
+if( ! $opt_h && $opt_c && $opt_v && $opt_t) {
+  $CAT = $opt_c;
+  $VERSION_DLIP = $opt_v;
+  $NOM_TEST = $opt_t;
+  $REP_CIBLE = "$REP_VERSION/category$CAT/$VERSION_DLIP/$NOM_TEST";
+  if ( -d "$REP_CIBLE") {
+    print "Suppression du répertoire $REP_CIBLE \n";
+    system("rm -fRi $REP_CIBLE");
+    
+  }
+  else {
+    print " le test $REP_CIBLE n'existe pas deja ! \n";
+  }
+}
+exit 0;
+

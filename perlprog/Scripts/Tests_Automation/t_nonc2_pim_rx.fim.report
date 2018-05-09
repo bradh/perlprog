@@ -1,0 +1,13 @@
+Compared files are: /h7_usr/sil2_usr/samptivq/Tests_Automation/t_nonc2_pim_rx.fim
+***Error : Missing Message***
+FIM              J12.0             00:07:26.117 isn't in Result File
+***Error : Missing Message***
+FIM              J12.0             00:07:36.248 isn't in Result File
+***Error : Missing Message***
+FIM              J12.0             00:07:46.016 isn't in Result File
+***Error : Missing Message***
+FIM              J12.0             00:07:56.107 isn't in Result File
+There are  4 Errors
+There are  4 expected message and  0 result message
+Software_Version 11/10/2006
+Wed May  9 13:14:24 UTC 2007

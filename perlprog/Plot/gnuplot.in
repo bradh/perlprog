@@ -1,0 +1,9 @@
+set data style linespoints 
+set terminal png xdddddd x000000 xffff00 x9500d3 x0000ff 
+set output "toto.png"
+set multiplot
+set yrange[-2:2]
+plot 'gnuplot.dat' palette using 1:2
+plot 'gnuplot.dat' palette using 1:3
+plot 'gnuplot.dat' palette using 1:4
+set nomultiplot

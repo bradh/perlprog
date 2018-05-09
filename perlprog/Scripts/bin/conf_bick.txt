@@ -1,0 +1,154 @@
+#****************************************************************************
+#****************************************************************************
+# Syntaxe pour chaque message:   2 lignes par messages
+# ----------------------------
+#
+# Ligne 1: <type Msg> <Msg id> <A tester: yes|no> <Plage de recherche en ms> 
+# Ligne 2: Masque de test (sans l'heure du test driver): 0 -> bit à tester, 1 -> bit non testé 
+#
+#  Ces 2 lignes doivent etre contigues (non séparées ni par une ligne)
+#
+# -----
+#
+# Type Msg: 0=AHD, 1=ADH, 2=THD, 3=TDH, 4=FOM, 6=FIM, 8=DEM_APU, 9=REP_IND_APU
+#           10=L11IN, 11=L11OUT
+# Msg_id  : code du msg en décimal, 0 signifie tous les messages
+# à tester: yes, no
+# plage de recherche: 0 à 2^31-1 en décimal
+# Ligne 2: chaque bit à 0 sera tester, chaque bit à 1 sera ignoré. Si cette ligne est vide
+#          tous les bits seront testés.
+#
+#        EXEMPLE A:
+#        ----------
+# Exemple de ligne 1:  
+#           1 101 yes 120    => Message ADH101 à tester dans une plage de +/-120 ms
+# Exemple de ligne 2
+#           00000000 00000000 0000 FFFF 0007 00FF FFFF FF03 
+#           Tous les bits à 0 seront comparés et les bits à 1 non
+#
+#        EXEMPLE B:
+#        ----------
+# Exemple de ligne 1:  
+#           1 104 no 0    => Message ADH104 à ne pas tester
+# Exemple de ligne 2
+#            
+#           Ligne vide ou ligne est ignorée (si pas vide) à cause du "no"
+#
+#****************************************************************************
+#****************************************************************************
+#
+#==========================================================
+#              MESSAGES TDH
+#==========================================================
+#
+# Tous messages(0), Plage de temps acceptable(en ms), Masque
+3 0 yes 12000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000
+#
+#==========================================================
+#              MESSAGES ADH
+#==========================================================
+#
+# Messages ADH:
+# ------------
+#
+# Tous messages(0), Plage de temps acceptable(en ms), Masque
+1 0 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000
+#
+# ADH101, Plage de temps acceptable(en ms), Masque
+1 101 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF FFFF FFFF 7F07 7F00 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 3F00 0000 007F 0000 0000 0000 0000 0000 0000 000F
+#
+# ADH102, Plage de temps acceptable(en ms), Masque
+1 102 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH104, Plage de temps acceptable(en ms), Masque
+1 104 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH105, Plage de temps acceptable(en ms), Masque
+1 105 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH106, Plage de temps acceptable(en ms), Masque
+1 106 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH107, Plage de temps acceptable(en ms), Masque
+1 107 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH108, Plage de temps acceptable(en ms), Masque
+1 108 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 0000 000F FFFF FFF0 0000
+#
+# ADH111, Plage de temps acceptable(en ms), Masque
+1 111 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH112, Plage de temps acceptable(en ms), Masque
+1 112 yes 2000 
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 0000 FFFF FFFF 0000
+#
+# ADH113, Plage de temps acceptable(en ms), Masque
+1 113 yes 2000
+00000000 00000000 FFFF FFFF 0000 0000 FFFF FFFF 0000 0000 0000 0000 0000 0000 0000 007F 003F 001F 7F00 007F 0000 003F 7F00 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 007F 00
+#
+#==========================================================
+#              MESSAGES THD
+#==========================================================
+#
+# Tous messages(0), Plage de temps acceptable(en ms), Masque
+2 0 no 2000 
+
+#==========================================================
+#              MESSAGES AHD
+#==========================================================
+#
+# Tous messages(0), Plage de temps acceptable(en ms), Masque
+0 0 no 12000 
+
+#
+#==========================================================
+#              MESSAGES FIM
+#==========================================================
+#
+# Tous messages (0), Plage de temps acceptable(en ms), Masque(Aucun)
+6 0 yes 12000 
+
+#
+# FIM01, Plage de temps acceptable(en ms), Masque(Time tag)
+6 1 yes 12000 
+00000000 00000000 0000 0000 FFFF FFFF
+#
+#
+#
+#==========================================================
+#              MESSAGES FOM
+#==========================================================
+#
+# Tous messages (0), Plage de temps acceptable(en ms), Masque(Aucun)
+4 0 no 12000 
+
+#==========================================================
+#              MESSAGES REP_IND_APU
+#==========================================================
+#
+# Tous messages (0), Plage de temps acceptable(en ms), Masque(Aucun)
+9 0 yes 15000 
+
+# IND_STATUS, Plage de temps acceptable(en ms), Masque
+9 215 yes 15000 
+00000000 00000000 0000 0000 0000 FFFF FFFF 0000 0000 FFFF FFFF 
+#
+#
+#==========================================================
+#              MESSAGES DEM_APU
+#==========================================================
+#
+# Tous messages (0), Plage de temps acceptable(en ms), Masque(Aucun)
+8 0 no 12000 
+
+#

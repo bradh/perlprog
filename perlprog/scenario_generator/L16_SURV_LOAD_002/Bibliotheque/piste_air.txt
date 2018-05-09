@@ -1,0 +1,80 @@
+C:\WINDOWS\Profiles\stéphane\SendTo\Mes Documents\piste_air.ji
+00:00:00.000 00000030 0E030200 FFFF 0020 7FFE 0000 0000 0000 0000 090C 0000 0000 0000 0000 0002 0000 0000 0000 0000 0005 0000 0000 0000 0000
+Ligne #0: --> J3.2
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+Universal J Input Header
+0-000       HEADER VERSION                                                      65535: 65535
+0-000       R/C MESSAGE ID                                                      0: 0
+0-000       RELAY INDICATOR                                                     1: Message is a relay
+0-000       RX MODE                                                             0: Message received on a PG
+0-000       NOT LAST J IN SEQUENCE                                              0: Message is the last one in sequence
+756-008     SPARE EIGHT BITS                                                    0: 0
+0-000       SOURCE TRACK NUMBER                                                 32766: 32766
+756-001     SPARE ONE BIT                                                       0: 0
+0-000       PARTICIPATION GROUP (PG)                                            0: NO STATEMENT
+756-007     SPARE SEVEN BITS                                                    0: 0
+0-000       NEEDLINE ID                                                         0: NO STATEMENT
+756-016     SPARE SIXTEEN BITS                                                  0: 0
+756-016     SPARE SIXTEEN BITS                                                  0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J3.2I
+1550-001    WORD FORMAT                                                         0: INITIAL
+270-004     LABEL, J-SERIES                                                     3: 3
+271-005     SUBLABEL, J-SERIES                                                  2: 2
+800-001     MESSAGE LENGTH INDICATOR                                            2: 
+385-003     EXERCISE_INDICATOR                                                  0: NON-EXERCISE TRACK
+839-001     PPLI_TRACK_NUMBER_&_IDENTITY INDICATOR                              0: NO STATEMENT
+354-002     FORCE_TELL_INDICATOR                                                0: NO STATEMENT
+355-002     EMERGENCY_INDICATOR                                                 0: NO STATEMENT
+292-002     SPECIAL_PROCESSING INDICATOR                                        0: SPECIAL PROCESSING NOT REQUIRED
+1604-001    SIMULATION_INDICATOR                                                0: REAL TRACK OR UNIT
+769-002     TRACK NUMBER, REFERENCE                                             0: 0
+386-013     STRENGTH                                                            0: NO STATEMENT
+364-001     ALTITUDE_SOURCE                                                     0: NO STATEMENT
+365-033     ALTITUDE_25FT                                                       0: 0
+1860-001    IDENTITY DIFFERENCE INDICATOR                                       0: NO STATEMENT
+280-001     TRACK_QUALITY                                                       0: NON-REALTIME TRACK
+1663-001    IDENTITY_CONFIDENCE                                                 0: 0
+376-007     IDENTITY                                                            0: PENDING
+376-001     IDENTITY_AMPLIFYING DESCRIPTOR                                      0: EXERCISE PENDING
+1861-001    SPECIAL_INTEREST_INDICATOR                                          0: NO STATEMENT
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J3.2E0
+1550-001    WORD FORMAT                                                         2: EXTENSION
+756-002     SPARE TWO BITS                                                      0: 0
+281-014     LATITUDE_.0051_MINUTES                                              0: 0
+1812-002    SOURCE INDICATOR (SI)                                               0: NO STATEMENT
+756-001     SPARE ONE BIT                                                       0: 0
+282-014     LONGITUDE_.0051_MINUTES                                             0: 0
+892-001     PASSIVE_ACTIVE_INDICATOR                                            0: PASSIVE
+371-015     COURSE                                                              0: 0
+367-018     SPEED                                                               0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+FIELD ID    FIELD NAME                                                          FIELD VALUE
+--------    ----------                                                          -----------
+J3.2C1
+1550-001    WORD FORMAT                                                         1: CONTINUATION
+1551-001    CONTINUATION_WORD_LABEL                                             1: 1
+267-002     AIR_SPECIFIC_TYPE INDICATOR                                         0: AIR PLATFORM/AIR PLATFORM ACTIVITY BEING REPORTED
+293-003     MODE_I_CODE                                                         0: NO STATEMENT
+294-002     MODE_II_CODE                                                        0: NO STATEMENT
+295-002     MODE_III_CODE                                                       0: NO STATEMENT
+298-001     MODE_IV_INDICATOR                                                   0: NO STATEMENT
+839-002     PPLI IFF/SIF INDICATOR                                              0: NO STATEMENT
+1797-001    AIR PLATFORM                                                        0: NO STATEMENT
+804-001     AIR SPECIFIC TYPE                                                   0: NO STATEMENT
+1798-001    AIR_PLATFORM_ACTIVITY                                               0: NO STATEMENT
+756-001     SPARE ONE BIT                                                       0: 0
+756-005     SPARE FIVE BITS                                                     0: 0
+797-004     MINUTE                                                              0: 0
+792-001     HOUR                                                                0: 0
+756-010     SPARE TEN BITS                                                      0: 0
+
+

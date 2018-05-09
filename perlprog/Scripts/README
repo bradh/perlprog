@@ -1,0 +1,67 @@
+@(#)README	2.2 2001/10/28 Thales TRT / ATGL
+
+L'outil "SLCNT: Source Lines CouNTer", developpe par Thomson-Sintra ASM,
+est dorenavant maintenu par Thales TRT / ATGL.
+
+DESCRIPTION
+
+Cet outil permet le comptage de lignes source de divers langages de
+programmation.
+
+- Les langages generaux supportes par la release 2.2 sont:
+ C (dont Lex et Yacc), Ada, Pascal, FORTRAN, Assembleur 68k, UIL, LTR2, LTR3, DCL, C++
+- Les langages suivants, egalement supportes, sont specifiques Thomson
+ Assembleur (Machine Mouflon), SIAM (Machine MUSTANG)
+
+- Les environnements d'execution possibles sont:
+ VMS (VAX), AEGIS (APOLLO), DOS (PC),
+ UNIX (SUN3, SUN4, Solaris, SILICON GRAPHICS, DEC Alpha OSF/1, IBM RS6000, HP 9000,
+       UNIGRAPH, CONVEX )
+
+Les dependances systeme sont limitees a stdio.h, ctype.h, string.h, d'ou
+une bonne portabilite a priori sur la plupart des machines Unix.
+
+Nota : Seuls les portages sur les machines UNIX de l'ATGL ont ete testes.
+
+CONTENU DE LA DISTRIBUTION
+
+./README        - le present fichier
+./slcnt.c       - le source de l'outil
+./slcnt.1       - documentation au format 'man page' Unix
+./slcnt.pl      - script utilise pour la comparison de deux versions ClearCase
+./slcnt.txt     - documentation en format ASCII standard
+./slcnt.cld     - fichier CLD pour VMS
+./makefile.mms  - Makefile pour VMS
+./mkslcnt.com   - fichier de compilation pour VMS
+
+GENERATION ET INSTALLATION
+
+La distribution est sous forme de fichier tar. Pour lire le fichier :
+"tar xvf nom_fichier.tar
+
+Sous Unix, utiliser la commande "cc slcnt.c -o slcnt -DUNIX"
+  L'option -DUNIX est necessaire pour des raisons historiques 
+  (outil initialement developpe pour VMS...) 
+Copier ensuite l'executable slcnt et la documentation slcnt.1 dans les
+directories appropriees (typiquement /usr/local/bin et /usr/local/man/man1).
+
+Sous VMS, on peut utiliser l'outil avec la syntaxe d'appel Unix ou la syntaxe
+d'appel VMS. Dans le premier cas, faire "@MKSLCNT", sinon "@MKSLCNT VMS". Voir
+les fichiers mkslcnt.com et makefile.mms pour plus de precisions.
+
+Sous DOS, ne pas oublier de faire au prealable la conversion de format (avec
+par exemple l'utilitaire unix2dos sur Sun), et utiliser votre compilateur C
+favori (Turbo-C, Quick-C, Borland C++).
+
+ANOMALIES CONNUES
+
+Au niveau de l'installation, l'outil est penalise par son origine VMS (l'option
+-DUNIX devrait etre par defaut).
+
+Voir dans les commentaires d'en-tete de slcnt.c l'historique des corrections
+d'anomalies.  Voir la liste des defauts applicatifs residuels a la rubrique BUGS
+de la man-page.
+
+Les (13 x 9) = 117 combinaisons (langages x machines) n'ont jamais ete testees
+systematiquement...
+

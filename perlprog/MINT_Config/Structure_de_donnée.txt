@@ -1,0 +1,44 @@
+Machine						
+	name					
+	OS					
+	interfaces					
+		interface				
+			name			
+			type			
+			ip@			
+			netmask			
+			broadcast@			
+		/interface				
+	/interfaces					
+	processes					
+		process				
+			name			
+			start_cmd			
+			stop_cmd			
+			run_dir			
+			config_dir			
+			log_dir			
+			tcp_links			
+				tcp_link		
+					name	
+					type	server/client
+					local_tcp_port	
+					remote_ip@	
+					remote_tcp_port	
+					remote_machine_name	
+				/tcp_link		
+			/tcp_links			
+			config_files			
+				config_file		
+					name	
+					dir	
+					separateur	
+					param1	
+						name
+						value
+					/param1	
+				/config_file		
+			/config_files			
+		/process				
+	/processes					
+/machine						

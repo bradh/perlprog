@@ -1,0 +1,62 @@
+#! /bin/ksh
+# date : 10/09/2001
+# auteur : O. GOURJON
+##################################################################
+[ -n "${interface_Trace}" ] && set -o xtrace
+
+Trace=OUI
+
+LANG=C
+
+v_tool=${0##*/}
+crd=0
+START=$(/bin/date +'%d-%h-%y %T')
+Arch=$(arch)
+OsName=$(osname)
+
+case ${Arch}-${OsName} in
+  sun4-sunos)
+         OS_TYPE=SunOS
+              ;;
+  sun4-solaris)
+         OS_TYPE=solaris
+              ;;
+  rs6000-aix)
+         OS_TYPE=rs6000
+              ;;
+  hp700-hpux)
+         OS_TYPE=hp700
+              ;;
+  *) # not available for these hosts
+        if [ -z "$AGLOMRSH" ]
+        then
+            print -u2 "Erreur:  $v_tool is not available on ${Arch}-${OsName} !!!"
+            print -u2 "        \$AGLOMRSH is undefined !!!"
+            print -u2 "        set it to a valid host"
+            exit 1
+        fi
+        if [ "$(/usr/atelier/config/bin/aglomrsh ~config/bin/osname)" != "sunos" ]
+        then
+            print -u2 "Erreur: \$AGLOMRSH is not set to a valid host !!!"
+            print -u2 "        set it to a valid host"
+            exit 1
+        fi
+        /usr/atelier/config/bin/aglomrsh -x $0 "$@"
+        exit $?
+     ;;
+esac
+
+
+/usr/atelier/slcnt/v2.1/$OS_TYPE/bin/$v_tool "$@"
+
+crd=$?
+
+
+
+if [ $Trace = OUI ]
+then
+	FIN=$(/bin/date +'%d-%h-%y %T')
+	/usr/atelier/config/bin/trace_outil slcnt $START $v_tool 2.1 ${Arch}-${OsName} $crd $FIN
+fi
+
+exit $crd

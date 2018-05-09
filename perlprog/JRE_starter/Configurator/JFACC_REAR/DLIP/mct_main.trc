@@ -1,0 +1,141 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The mct_main.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [EVENT | NORMAL_DEBUG | %D101% | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+CSC_RTE                                 EVENT
+CSC_RTE_FULL_SOCKET_DUMP                EVENT
+CSC_OS                                  EVENT
+CSC_ADT                                 EVENT
+CSC_PERSISTENCE                         EVENT
+RTE_ACTIVE_QUEUE_BUS                    EVENT
+--
+-- Group :  2
+CSC_APU_MSG                             EVENT
+--
+-- Group :  4
+CSC_AC_COMMON_SERVICES                  EVENT
+CSC_KERNEL                              EVENT
+CSC_KERNEL_AC_API                       EVENT
+--
+-- Group :  5
+CSC_INIT_MIDS_CONNECTION                EVENT
+CSC_MIDS_INIT_AND_STATUS                EVENT
+CSC_TEST_AND_MONITORING                 EVENT
+CSC_MIDS_INIT_DATA_UPDATE               EVENT
+CSC_MIDS_IF_RECORDING                   EVENT
+CSC_JFT                                 DETAILED_DEBUG
+CSC_MIDS_TIME                           EVENT
+--
+-- Group :  7
+ADT                                     EVENT
+AIRFIELD_STATUS_MGR                     EVENT
+C2_TO_C2_FLIGHT_PATH_MGR                EVENT
+CU_CHANGE_MGR                           EVENT
+CU_REPORT_MGR                           EVENT
+COMMAND_MGR                             EVENT
+CONFLICTS_MGR                           EVENT
+CONFLICTS_MGR_UTILITIES                 EVENT
+CORRELATION_MGR                         EVENT
+DLIP_DD                                 EVENT
+DL_MSG                                  EVENT
+DATA_UPDATE_REQUEST_MGR                 EVENT
+DB                                      EVENT
+EMERGENCY_STATUS_MGR                    EVENT
+EMERGENCY_STATUS_MGR_UTILITIES          EVENT
+EMISSION_MGR                            EVENT
+EMISSION_MGR_UTILITIES                  EVENT
+ENGAGEMENT_STATUS_MGR                   EVENT
+EXERCISE_STATUS_MGR                     EVENT
+FOM02_ANALYSER                          EVENT
+FILTER_ROUTE                            EVENT
+FILTER_ROUTE_UTILITIES                  EVENT
+FILTERING                               EVENT
+FLIGHT_PATH_MGR                         EVENT
+FORCE_TELL_STATUS_MGR                   EVENT
+FORCE_TELL_STATUS_MGR_UTILITIES         EVENT
+FREE_TEXT_MGR                           EVENT
+HANDOVER_MGR                            EVENT
+HOST_DD                                 EVENT
+HOST_CONVERTER                          EVENT
+HOST_MSG                                EVENT
+INDIRECT_PPLI_MGR                       EVENT
+INTERNAL_MSG                            EVENT
+QHSM_MGR                                EVENT
+L11_DD                                  EVENT
+FXM_PACKER                              EVENT
+L16_AIRFIELD_STATUS_MGR                 EVENT
+L16_CONVERSIONS                         EVENT
+L16_DD                                  0
+L16_EMERGENCY_STATUS_MGR                0
+L16_EMISSION_MGR                        0
+L16_ENGAGEMENT_STATUS_MGR               EVENT
+L16_EXERCISE_STATUS_MGR                 EVENT
+L16_FILTER_ROUTE                        EVENT
+L16_FORCE_TELL_STATUS_MGR               EVENT
+L16_FREE_TEXT_MGR                       EVENT
+L16_MISSION_ASSIGNMENT_MGR              EVENT
+L16_PAIRING_MGR                         EVENT
+L16_PLATFORM_STATUS_MGR                 EVENT
+L16_R2_MGR                              EVENT
+L16_REMOTE_TRACK_DROP_MGR               EVENT
+L16_RECEIPT_COMPLIANCE_MGR              EVENT
+L16_STRENGTH_UPDATE_MGR                 EVENT
+L16_VECTOR_MGR                          EVENT
+LTN_SERVER                              EVENT
+LINK_CTRL                               EVENT
+MANUAL_TRANSMISSION_MGR                 EVENT
+MLK                                     EVENT
+MISSION_ASSIGNMENT_MGR                  EVENT
+MISSION_CORRELATOR_MGR                  EVENT
+MISSION_MNGT_MGR                        EVENT
+MSG_FLOW_TRACER                         DETAILED_DEBUG
+MSG_QUEUE_MGR                           DETAILED_DEBUG
+OBSERVERS                               EVENT
+OWN_UNIT_DATA_MGR                       EVENT
+PAIRING_MGR                             EVENT
+PARAMETERS_MGR                          EVENT
+PLATFORM_STATUS_MGR                     EVENT
+POINTER_MGR                             EVENT
+R2_MGR                                  EVENT
+R2_MGR_UTILITIES                        EVENT
+RECEIPT_COMPLIANCE_MGR                  EVENT
+REMOTE_TRACK_DROP_MGR                   EVENT
+SLAVE_MGR                               EVENT
+STRENGTH_UPDATE_MGR                     EVENT
+SUPERVISION_API                         EVENT
+SYSTN_LTN_ASSOCIATION_MGR               EVENT
+TARGET_CORL_MGR                         EVENT
+TARGET_MGR                              EVENT
+TRACK_IDENTIFIER_MGR                    EVENT
+TRACK_STATISTIC_MGR                     EVENT
+TRANSMISSION_STATUS_MGR                 EVENT
+VECTOR_MGR                              EVENT
+
+--
+-- Group :  9
+HOST_INTERFACE                          DETAILED_DEBUG
+L16_CTRL                                EVENT
+OSIM_INTERFACE                          EVENT
+INTERFACE_CORE_ADAPTER                  EVENT
+SUPERVISION                             DETAILED_DEBUG
+MCT_TIME                                EVENT
+RECORDER                                EVENT
+--
+-- Group :  11
+PRIORITY_MGR                            EVENT
+--
+-- Group :  17
+CSC_MIDS_INTERFACE_CORE_ADAPTER         EVENT
+CSC_MIDS_INTERFACE_ABSTRACT             EVENT
+CSC_MIDS_INTERFACE_MULTI_PLATFORM_D     EVENT
+--
+-- Group :  18
+DATA_BUS                                EVENT
+L16_DATA_BUS                            EVENT

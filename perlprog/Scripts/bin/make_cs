@@ -1,0 +1,18 @@
+#!/bin/ksh
+
+alias ct=cleartool
+TOUT=""
+for REP in `ct lsvob | awk '{print $2}'`
+do 
+  LIST=`ct lsvt $REP | awk '{print $2}' | sed "s/[(),]//g"` 
+  for LABEL in $LIST 
+  do 
+    TOUT="element£${REP}/...£$LABEL "$TOUT
+  done
+  TOUT=$TOUT" element£${REP}/...£/main/LATEST"
+  for LINE in $TOUT
+  do
+    echo $LINE | sed "s/£/ /g"
+  done
+  TOUT=""
+done

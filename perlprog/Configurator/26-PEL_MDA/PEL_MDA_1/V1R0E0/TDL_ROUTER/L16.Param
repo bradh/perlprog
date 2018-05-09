@@ -1,0 +1,16 @@
+Nb_buf_presat_threshold_PGx    =  0.2
+Nb_buf_sat_threshold_PGx       =  0.0
+Nb_buf_presat_threshold_PG_All =  0.2
+Nb_buf_sat_threshold_PG_All    =  0.0
+FIM01_Feedback_Enable          =  true
+FOM12_Reporting_Enable         =  true
+FOM02_Loopback_Enable          = true
+AIS_Is_Used                    =  false
+K_LinkT_Delta_Time_Limit       = 10
+K_LinkT_Delta_Time_Default     = 0
+J_Elimination_Window_Size      =  7.03125
+Platform_Nb                    = 1
+Platform_List                  = 16
+Platform_Role_List             =  Master
+Platform_Port_List             = 1025
+IU_Remote_Staleness_Limit      = 60

@@ -1,0 +1,144 @@
+#!/usr/bin/perl
+
+###################################################################################
+# Création d'un répertoire de test et configuration de ce dernier
+# La configuration consiste dans le lien avec les exécutables et la copie des fichiers
+# de configuration.
+# En particulier le nom des fichiers d'entrée est modifié pour matcher 
+# le nom du test. 
+# -c n_categorie -h : permet d'afficher la liste de la version en cours
+# -c n_categorie -v n_version_dlip -h : permet d'afficher la liste des versions disponibles pour une categorie
+# et une version de dlip données
+# -c n_categorie -v n_version_dlip -t nom_du_test : configure le test nom du test
+#
+# S. Mouchot 28/08/03 
+##################################################################################
+
+use Getopt::Std;
+
+getopts("hc:v:t:");
+
+my @NOM_PROCESS = ("loc1_main", "host_test_driver");
+my $REP_VERSION = "/data/users/loc1int/DLIP/test/test_tu";
+my $REP_EXE = "/data/users/loc1int/DLIP/test/test_tu/exe";
+my $REP_CIBLE;# répertoire du test
+my $CAT = 1;
+my $VERSION_DLIP;
+my $NOM_TEST;
+my $COMMON_FILES = "common_files"; # répertoire des fichiers communs sous $REP_VERSION
+
+if ($opt_h) { 
+	print "L11_test_config [-c] [-h] : liste des versions dlip \n";
+#	print "\t liste des versions dlip: \n";
+	print "L11_test_config [-c] [-v n_version ][-h] : liste des tests existants \n";
+#	print "\t liste les tests existants \n";
+	print "L11_test_config [-c] [-v n_version ][-t nom_du_test] : création d'un environnement pour un nouveau test \n";
+	print " \n";
+}
+if ($opt_h && $opt_c && ! $opt_v) {
+  $CAT = $opt_c;
+  print "categorie = $CAT \n";
+  my $LISTE = `ls $REP_VERSION/category$CAT`;
+  print "Liste des versions DLIP en test catégorie $CAT :\n";
+  print "$LISTE";
+  print " \n";
+}
+if ($opt_h && $opt_c && $opt_v) {
+  $CAT = $opt_c;
+  $VERSION_DLIP = $opt_v;
+  my $LISTE = `ls $REP_VERSION/category$CAT/$VERSION_DLIP`;
+  print "Liste des tests categorie $CAT pour la version DLIP $VERSION_DLIP :\n";
+  print "$LISTE";
+  print " \n";
+}
+if( ! $opt_h && $opt_c && $opt_v && $opt_t) {
+  my $CAT = $opt_c;
+  my $VERSION_DLIP = $opt_v;
+  my $NOM_TEST = $opt_t;
+  my $REP_CIBLE = "$REP_VERSION/category$CAT/$VERSION_DLIP/$NOM_TEST";
+  if ( ! -d "$REP_CIBLE") {
+    print "Création du répertoire $REP_CIBLE \n";
+    system("mkdir $REP_CIBLE");
+  }
+  system("rm -i $REP_CIBLE/*");
+    for my $EXE  (@NOM_PROCESS) {
+      print "$EXE\n";
+	for $FILE (`ls  $REP_EXE/$EXE`) {
+	  chomp($FILE);
+	  print "$FILE\n";
+	  if( -l "$REP_CIBLE/$FILE" || -f "$REP_CIBLE/$FILE" ) {
+	    print "suppression du fichier existant $REP_CIBLE/$FILE\n";
+	    system("ls -al $REP_CIBLE/$FILE");
+	    }
+	 
+	  if( -l "$REP_EXE/$EXE/$FILE") {
+	   
+	    print "Création d'un lien $REP_CIBLE/$FILE\n";
+	    system("ln -s $REP_EXE/$EXE/$FILE $REP_CIBLE") ;
+	  }
+	  if( -f "$REP_EXE/$EXE/$FILE") {
+	    print "Copie de $REP_CIBLE/$FILE\n";
+	    system("cp $REP_EXE/$EXE/$FILE $REP_CIBLE");
+	  }
+	  if ( ! -l "$REP_EXE/$EXE/$FILE" && ! -f "$REP_EXE/$EXE/$FILE" ) {
+	    print " $FILE n'est pas un fichier ni un lien \n";
+	    die "impossible de continuer le programme...";
+	  }
+	}
+       
+    }
+ 
+# Création du fichier C2_test_driver.conf
+  my $APPLI_NAME = "C2_DLCM";
+  my $LOGICAL_ID = 101;
+  my $PORT = 18201;
+  my  $InputFile = "host_test_driver.conf";
+  my  $OutputFile = "C2_test_driver.conf";
+  my $Modif = 0;
+    open Fin , "<$REP_CIBLE/$InputFile" or die "Impossible d'ouvrir le fichier $InputFile\n";
+    open Fout , ">$REP_CIBLE/$OutputFile" or die "Impossible de créer le fichier $OutputFile\n";
+    while (<Fin>) {
+      $Modif = 0;
+      if (/(Host_Name_1\s*=\s*)/) {
+	print Fout "$1$APPLI_NAME\n";
+	$Modif = 1;
+      }
+      if (/(Host_Logical_ID_1\s*=\s*)/) {
+	print Fout "$1$LOGICAL_ID\n";
+	$Modif = 1;
+      }
+      if (/(Local_Host_Port_1\s*=\s*)/) {
+	print Fout "$1$PORT\n";
+	$Modif = 1;
+      }
+	    if($_ =~ /(^Host_Input_File_1\s*=\s*)/ ) {
+	      print Fout "$1$NOM_TEST.xhd\n";
+	      $Modif = 1;
+	    }
+	    if($_ =~ /(^Host_Output_File_1\s*=\s*)/ ) {
+	      print Fout "$1$NOM_TEST.xdh\n";
+	      $Modif = 1;
+	    }
+	    if (! $Modif ) {
+	      print Fout "$_";
+	    }
+    }
+    close Fin;
+    close Fout;
+    print "suppression du fichier $InputFile \n";
+    system(" rm $REP_CIBLE/$InputFile");
+
+# Copie des fichiers du répertoire common_files dans le répertoire cible
+  my $REP_COMMON_FILES = "$REP_VERSION/category$CAT/$COMMON_FILES" ;
+  # print "$REP_COMMON_FILES \n";
+  if ( -d "$REP_COMMON_FILES") {
+    for $FILE (`ls  $REP_COMMON_FILES`) {
+      chomp($FILE);
+      system("cp $REP_COMMON_FILES/$FILE $REP_CIBLE");
+      print "Copie de $FILE dans $REP_CIBLE \n";
+    }
+  } 
+   
+}
+exit 0;
+

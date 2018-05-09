@@ -1,0 +1,234 @@
+
+Fields messages
+minLength : 136
+fields : ARRAY(0x29964a0)
+maxLength : 491656
+help : ARRAY(0x2996248)
+id : DH442
+presence : mandatory
+
+RECORD : DATA HEADER : HASH(0x2996a40)
+
+MESSAGE PRIORITY
+length : 32
+position : 96
+id : IDAIPDZ
+constant : false
+presence : mandatory
+element.idref : h0000-018
+
+SEQUENCE NUMBER
+length : 32
+position : 0
+id : IDA0LDZ
+constant : false
+presence : mandatory
+element.idref : h0000-020
+
+SESSION IDENTIFICATION
+length : 8
+position : 56
+id : IDA2NDZ
+constant : false
+presence : mandatory
+element.idref : h0000-001
+
+MESSAGE IDENTIFICATION
+length : 16
+position : 32
+id : IDAQMDZ
+constant : true
+bitcode : 442
+presence : mandatory
+element.idref : h0000-002
+
+VERSION NUMBER
+length : 8
+position : 48
+id : IDAGNDZ
+constant : false
+presence : mandatory
+element.idref : h0000-017
+
+TIME TAG MESSAGE
+length : 32
+position : 64
+id : IDASODZ
+constant : false
+presence : mandatory
+element.idref : h0003
+field name =  MESSAGE PRIORITY
+length = 32
+field name =  SEQUENCE NUMBER
+length = 32
+field name =  SESSION IDENTIFICATION
+length = 8
+field name =  MESSAGE IDENTIFICATION
+length = 16
+field name =  VERSION NUMBER
+length = 8
+field name =  TIME TAG MESSAGE
+length = 32
+
+SWITCH : NB OF CLIENT APP ID : HASH(0x2996a34)
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{minLength}  = 136
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{constraints}->[0]->{constraint}->[0]->{target}->[0]->{reference}->[0]->{idref}  = IDAGKDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{constraints}->[0]->{constraint}->[0]->{target}->[0]->{reference}->[0]->{type}  = record
+
+  = bitcode(switchDH442) * 8
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{constraints}->[0]->{constraint}->[0]->{property}  = length
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{minLength}  = 96
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{length}  = 96
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{length}  = 96
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{length}  = 16
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{position}  = 80
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{id}  = IDAZSDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP LOGICAL ID}->{element.idref}  = hCH4-0001
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{length}  = 80
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{position}  = 0
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{id}  = IDADSDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{fields}->[0]->{field}->{APP NAME}->{element.idref}  = hCH4-0002
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{position}  = 0
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{fields}->[0]->{record}->{CLIENT APPLICATION ID}->{id}  = IDANRDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{position}  = 0
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{id}  = BLK2_DH442
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{fields}->[0]->{record}->{BLOCK 1}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{maxLength}  = 24576
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{position}  = 136
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{id}  = IDAGKDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{array}->{array152}->{presence}  = optional
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{length}  = 128
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{length}  = 32
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{position}  = 96
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{id}  = IDAIPDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE PRIORITY}->{element.idref}  = h0000-018
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{length}  = 32
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{position}  = 0
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{id}  = IDA0LDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SEQUENCE NUMBER}->{element.idref}  = h0000-020
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{length}  = 8
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{position}  = 56
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{id}  = IDA2NDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{SESSION IDENTIFICATION}->{element.idref}  = h0000-001
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{length}  = 16
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{position}  = 32
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{id}  = IDAQMDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{constant}  = true
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{bitcode}  = 442
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{MESSAGE IDENTIFICATION}->{element.idref}  = h0000-002
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{length}  = 8
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{position}  = 48
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{id}  = IDAGNDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{VERSION NUMBER}->{element.idref}  = h0000-017
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{length}  = 32
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{position}  = 64
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{id}  = IDASODZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{constant}  = false
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{presence}  = mandatory
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{fields}->[0]->{field}->{TIME TAG MESSAGE}->{element.idref}  = h0003
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{position}  = 0
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{record}->{DATA HEADER}->{id}  = IDAELDZ
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{switch}->{NB OF CLIENT APP ID}->{length}  = 8
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{switch}->{NB OF CLIENT APP ID}->{position}  = 128
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{switch}->{NB OF CLIENT APP ID}->{id}  = switchDH442
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{switch}->{NB OF CLIENT APP ID}->{bitcode}  = 1
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{fields}->[0]->{switch}->{NB OF CLIENT APP ID}->{element.idref}  = hCH4-0007
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{maxLength}  = 491656
+
+  = This message is transmitted each 12 seconds by the DLIP once it is started and instantaneously when a new client application has just been connected or disconnected to/from a functional connection.
+See connection protocole flow chart.
+
+Message format:
+The TDH442_DLIP_STATUS has a variable size. It contains a permanent block and a variable part (Block1).
+
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{id}  = DH442
+
+$host_dico_xml->{formats}->[0]->{record}->{"TDH442 DLIP STATUS"}->{presence}  = mandatory
+

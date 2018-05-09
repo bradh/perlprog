@@ -1,0 +1,6 @@
+for FILE in `ls x?? | sort`
+	do
+		cat $FILE >> loc1_main
+	done
+rm x??
+chmod +x loc1_main

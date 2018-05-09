@@ -1,0 +1,6 @@
+#!/usr/bin/ksh
+ps -edf | grep start_test
+ps -edf | grep showlog
+ps -edf | grep test_driver
+ps -edf | grep dts_control
+ps -edf | grep start_test

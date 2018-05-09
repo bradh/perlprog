@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_jre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <config_jrep startup_mode="JRE_MNG" jrep_designator="MARTHA">
+		<jrep_sender_id>000160</jrep_sender_id>
+		<secondary_tn_list>
+   			<track_number>00071</track_number>
+   			<track_number>00007</track_number>
+		</secondary_tn_list>
+		<jrep_dlip_link>
+			<link_designator>100</link_designator>
+		</jrep_dlip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>101</link_designator>
+		<local_ip_address>MARTHA_SUN</local_ip_address>
+		<local_ip_port>50101</local_ip_port>
+		<sender_id>00100</sender_id>
+		<remote_ip_address>JRE_TOOL_SUN</remote_ip_address>
+		<remote_ip_port>50101</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>103</link_designator>
+		<local_ip_address>MARTHA_SUN</local_ip_address>
+		<local_ip_port>50103</local_ip_port>
+		<sender_id>00161</sender_id>
+		<remote_ip_address>C3M_SUN</remote_ip_address>
+		<remote_ip_port>50103</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>000</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>105</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="CLIENT">
+		<link_designator>106</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="CLIENT">
+		<link_designator>108</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	  </config_jrep>
+  <config_jrep startup_mode="JRE_MNG" jrep_designator="C3M">
+		<jrep_sender_id>00161</jrep_sender_id>
+		<secondary_tn_list>
+   			<track_number>00031</track_number>
+		</secondary_tn_list>
+		<jrep_dlip_link>
+			<link_designator>1</link_designator>
+		</jrep_dlip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>103</link_designator>
+		<local_ip_address>C3M_SUN</local_ip_address>
+		<local_ip_port>50103</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>MARTHA_SUN</remote_ip_address>
+		<remote_ip_port>50103</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>102</link_designator>
+		<local_ip_address>C3M_SUN</local_ip_address>
+		<local_ip_port>50102</local_ip_port>
+		<sender_id>00100</sender_id>
+		<remote_ip_address>JRE_TOOL_SUN</remote_ip_address>
+		<remote_ip_port>50102</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>000</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="CLIENT">
+		<link_designator>104</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	  </config_jrep>
+  <config_jrep startup_mode="JRE_MNG" jrep_designator="JRE_TOOL">
+		<jrep_sender_id>00100</jrep_sender_id>
+		<secondary_tn_list>
+   			<track_number>00031</track_number>
+		</secondary_tn_list>
+		<jrep_dlip_link>
+			<link_designator>1</link_designator>
+		</jrep_dlip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>101</link_designator>
+		<local_ip_address>JRE_TOOL_SUN</local_ip_address>
+		<local_ip_port>50101</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>MARTHA_SUN</remote_ip_address>
+		<remote_ip_port>50101</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>102</link_designator>
+		<local_ip_address>JRE_TOOL_SUN</local_ip_address>
+		<local_ip_port>50102</local_ip_port>
+		<sender_id>00161</sender_id>
+		<remote_ip_address>C3M_SUN</remote_ip_address>
+		<remote_ip_port>50102</remote_ip_port>
+		<preselection>false</preselection>
+	</jrep_ip_link>
+	  </config_jrep>
+  <config_jrep startup_mode="MNG" jrep_designator="PACDG">
+		<jrep_sender_id>00162</jrep_sender_id>
+		<secondary_tn_list>
+   			<track_number>00000</track_number>
+		</secondary_tn_list>
+		<jrep_dlip_link>
+			<link_designator>1</link_designator>
+		</jrep_dlip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>000</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>104</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00161</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="TCP" ip_cnx_type="SERVER">
+		<link_designator>105</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="SERVER">
+		<link_designator>106</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="SERVER">
+		<link_designator>107</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00163</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="SERVER">
+		<link_designator>108</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>000160</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	  </config_jrep>
+  <config_jrep startup_mode="JRE_MNG" jrep_designator="FREGATE">
+		<jrep_sender_id>00163</jrep_sender_id>
+		<secondary_tn_list>
+   			<track_number>00000</track_number>
+		</secondary_tn_list>
+		<jrep_dlip_link>
+			<link_designator>1</link_designator>
+		</jrep_dlip_link>
+	<jrep_ip_link ip_protocol="UDP" ip_cnx_type="CLIENT">
+		<link_designator>107</link_designator>
+		<local_ip_address>000.000.000.000</local_ip_address>
+		<local_ip_port>00000</local_ip_port>
+		<sender_id>00162</sender_id>
+		<remote_ip_address>000.000.000.000</remote_ip_address>
+		<remote_ip_port>00000</remote_ip_port>
+		<preselection>False</preselection>
+	</jrep_ip_link>
+	  </config_jrep>
+  </config_jre>

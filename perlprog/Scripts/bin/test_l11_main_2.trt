@@ -1,0 +1,60 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The test_l11_main_2.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [DETAILED_DEBUG | NORMAL_DEBUG | EVENT | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+-- CSC_RTE                                 EVENT
+-- CSC_OS                                  EVENT
+-- CSC_ADT                                 EVENT
+--
+-- Group :  7
+-- ADT                                     EVENT
+-- C2_TO_C2_FLIGHT_PATH_MGR                EVENT
+-- CORRELATION_MGR                         EVENT
+-- DLIP_DD                                 EVENT
+-- DL_MSG                                  EVENT
+-- DB                                      EVENT
+-- EMISSION_MGR                            EVENT
+-- ENGAGEMENT_STATUS_MGR                   EVENT
+-- HOST_DD                                 EVENT
+-- HOST_MSG                                EVENT
+-- INTERNAL_MSG                            EVENT
+-- IU_STATUS_CHANGE_NOTIFY_LNK_CTRL        EVENT
+-- L11_DD                                  EVENT
+-- L11_EMISSION_MGR                        EVENT
+-- L11_LINK_CONVERTER                      EVENT
+-- FXM_PACKER                              EVENT
+-- L16_CONVERSIONS                         EVENT
+-- L16_DD                                  EVENT
+-- L16_EMISSION_MGR                        EVENT
+-- LTN_SERVER                              EVENT
+-- LINK_CTRL                               DETAILED_DEBUG
+-- MLK                                     EVENT
+-- OBSERVERS                               EVENT
+-- PARAMETERS_MGR                          EVENT
+-- RECEIPT_COMPLIANCE_MGR                  EVENT
+-- SUPERVISION_API                         EVENT
+-- SYSTN_LTN_ASSOCIATION_MGR               EVENT
+-- TARGET_MGR                              EVENT
+-- TRANSMISSION_STATUS_MGR                 EVENT
+--
+-- Group :  10
+-- HOST_INTERFACE                          EVENT
+-- LOG_FILE_MSG_HOST                       EVENT
+-- LOC1_PARAMETERS_MGR                     EVENT
+-- L16_CTRL                                EVENT
+-- L16_SIM                                 EVENT
+-- L11_CTRL                                NORMAL_DEBUG
+-- INTERNAL_RESOURCE_MGR                   EVENT
+-- TDS_IF                                  NORMAL_DEBUG
+--
+-- Group :  17
+-- CSC_MIDS_INTERFACE_CORE_ADAPTER         EVENT
+-- CSC_MIDS_INTERFACE_ABSTRACT             EVENT
+-- CSC_MIDS_INTERFACE_MULTI_PLATFORM_D     EVENT

@@ -1,0 +1,7 @@
+!/bin/ksh
+kill -9 3621
+kill -9 3625
+kill -9 3623
+kill -15 3619
+rm /data/users/loc1int/DLIP/test/utils/scripts/stop
+exit 0

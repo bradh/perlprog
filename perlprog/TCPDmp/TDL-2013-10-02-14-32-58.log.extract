@@ -1,0 +1,382 @@
+454:	              Global_State_Mgr : GETTING_SESSION_AND_STATE
+455:	++++ 08:28:09 STATE_CHANGING                                      in CSC_ADT/CSU_FINITE_STATE_MACHINE (MAIN)
+455:	              Global_State_Mgr : ACTIVE_LIVE
+456:	++++ 08:28:09 KERNEL_INITIALIZED                                  in CSC_KERNEL/KERNEL_CSU (MAIN)
+484:	              Link_16_Mgr (2) : PENDING
+485:	***  08:28:09 OBJECT_IS_NULL                                      in CSC_ADT/CSU_FINITE_STATE_MACHINE (MAIN)
+485:	              Link_16_Mgr, Get_State
+486:	++   08:28:09 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (MAIN)
+1330:	              Channel_4_Mgr : C4_INITIALIZATION
+1331:	++   08:28:10 CREATING_NEW_CONNECTION                             in HOST_INTERFACE/HOST_INTERFACE (MAIN)
+1339:	              Channel_4_Mgr : C4_CONNECTED
+1340:	++   08:28:10 HOST_MSG_CALLBACK_RECORDED                          in HOST_INTERFACE/PROTECTED_VARIABLES (AQ_SUPERVISION)
+1561:	              Application_Mgr (2) : CONNECTION_PENDING
+1562:	++   08:28:12 CREATING_NEW_CONNECTION                             in HOST_INTERFACE/HOST_INTERFACE (AQ_SUPERVISION)
+1575:	              Application_Mgr (2) : CONNECTION
+1576:	++   08:28:12 CREATION_TASK_FINISHED                              in HOST_INTERFACE/HOST_INTERFACE (AQ_HOST_INTERFACE)
+1592:	              Application_Mgr (2) : CONNECTED
+1593:	++   08:28:12 READING_SOCKET                                      in HOST_INTERFACE/SOCKETS_MGR (?)
+1598:	              Application_Mgr (3) : CONNECTION_PENDING
+1599:	++   08:28:12 CREATING_NEW_CONNECTION                             in HOST_INTERFACE/HOST_INTERFACE (AQ_SUPERVISION)
+1615:	              Application_Mgr (3) : CONNECTION
+1616:	++   08:28:12 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1630:	              Application_Mgr (3) : CONNECTED
+1631:	++   08:28:12 READING_SOCKET                                      in HOST_INTERFACE/SOCKETS_MGR (?)
+1636:	              Application_Mgr (3) : REGISTRATION
+1637:	++   08:28:12 ALL_MSG_DEREGISTERED_FROM_HOST                      in HOST_INTERFACE/PROTECTED_VARIABLES (AQ_SUPERVISION)
+1645:	              Application_Mgr (3) : INITIALIZED
+1646:	++   08:28:12 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1656:	              Application_Mgr (2) : REGISTRATION
+1657:	++   08:28:13 ALL_MSG_DEREGISTERED_FROM_HOST                      in HOST_INTERFACE/PROTECTED_VARIABLES (AQ_SUPERVISION)
+1683:	              Application_Mgr (2) : INITIALIZED
+1684:	++   08:28:13 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1790:	              Link_16_Mgr (2) : INITIALIZED
+1791:	++++ 08:28:20 CREATION_OF_A_NEW_RESOURCE_ID                       in INTERNAL_RESOURCE_MGR/LIST (AQ_SUPERVISION)
+1897:	              MIDS_Mgr (1) : WAITING_CONNECTION
+1898:	++   08:28:22 FLOW_TRACER                          DLIP --> DEM_CNX_ADDRESSED_TERM (1)
+1899:	              MIDS_Mgr, Get_State
+1900:	++   08:28:22 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+1947:	              MIDS_Mgr (1) : WAITING_REGISTRATION
+1948:	++   08:28:22 FLOW_TRACER                          DLIP --> DEM_INS_SERV (1)
+1981:	              MIDS_Mgr (1) : CONNECTED
+1982:	++   08:28:22 FLOW_TRACER                          DLIP --> DEM_CTRL_ENREGISTREMENT_FXMS_MIDS (1)
+2028:	              MIDS_Mgr (1) : WAITING_SYNCH
+2029:	++   08:28:23 FLOW_TRACER                          DLIP --> DEM_PARAM_TERM_SEG (1)
+2319:	              Link_16_Mgr (2) : ACTIVE
+2320:	++   08:28:26 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+18771:	              MIDS_Mgr (1) : CONNECTED
+18772:	++   08:38:10 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+18777:	              Link_16_Mgr (2) : Current State = ACTIVE, Event = NO_MORE_INIT_RESOURCE
+18778:	++   08:38:10 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+21115:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+21116:	++   08:38:29 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+21740:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+21741:	++   08:38:33 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+21895:	              MIDS_Mgr (1) : WAITING_SYNCH
+21896:	++   08:38:36 FLOW_TRACER                          DLIP --> DEM_PARAM_TERM_SEG (1)
+21900:	              Link_16_Mgr (2) : Current State = ACTIVE, Event = ONE_INITIALIZED_RESOURCE
+21901:	++   08:38:36 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+30786:	              MIDS_Mgr (1) : Current State = WAITING_SYNCH, Event = VALID_DATA
+30787:	++   08:40:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+30790:	              MIDS_Mgr (1) : Current State = WAITING_SYNCH, Event = VALID_DATA
+30791:	++   08:40:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+30856:	              MIDS_Mgr (1) : ACTIVE_COARSE
+30857:	++   08:40:23 ADDRESSEE_UNITS                                     in ROUTER_MGR/MAIN (AQ_L16_CTRL)
+31741:	              MIDS_Mgr (1) : Current State = ACTIVE_COARSE, Event = TIMEOUT_OF_48S
+31742:	+    08:40:24 IFOM_RECEIVED                                       in CSC_MIDS_INTERFACE_CORE_ADAPTER/CSU_CORE_ADAPTER (MIDS_IF_LISTENER)
+34959:	              MIDS_Mgr (1) : Current State = ACTIVE_COARSE, Event = VALID_DATA_AND_COARSE_SYNCH_REMOTE
+34960:	***  08:40:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+39139:	              MIDS_Mgr (1) : Current State = ACTIVE_COARSE, Event = VALID_DATA_AND_COARSE_SYNCH_REMOTE
+39140:	++   08:40:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+44644:	              MIDS_Mgr (1) : ACTIVE
+44645:	++   08:41:02 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+44655:	              MIDS_Mgr (1) : Current State = ACTIVE, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+44656:	++   08:41:02 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+45736:	              MIDS_Mgr (1) : OPERATIONAL
+45737:	+    08:41:03 IFOM_RECEIVED                                       in CSC_MIDS_INTERFACE_CORE_ADAPTER/CSU_CORE_ADAPTER (MIDS_IF_LISTENER)
+45750:	              Link_16_Mgr (2) : OPERATIONAL
+45751:	++   08:41:03 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+116385:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+116386:	++   08:44:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+122358:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+122359:	++   08:44:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+274163:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+274164:	++   08:50:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+279278:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+279279:	++   08:50:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+606134:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+606135:	***  08:57:47 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+621015:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+621016:	++   08:57:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+777196:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+777197:	++   08:59:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+792495:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+792496:	++   09:00:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+928631:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+928632:	++   09:01:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+943430:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+943431:	++   09:02:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+959837:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+959838:	++   09:02:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+976065:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+976066:	++   09:02:35 DUPLICATE_FOM_FINDER                                in FOM_ROUTING_AND_FILTERING/DUPLICATED_FOM01_ELIMINATION (AQ_FOM_R_AND_F)
+1042809:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1042810:	++   09:03:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1059319:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1059320:	++   09:03:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1532123:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1532124:	++   09:09:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1548541:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1548542:	++   09:10:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1669915:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1669916:	++   09:14:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1674737:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1674738:	++   09:14:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1722280:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1722281:	++   09:16:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1728192:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1728193:	++   09:16:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1851896:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1851897:	++   09:18:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+1863453:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+1863454:	++   09:19:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2163641:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2163642:	++   09:23:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2176231:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2176232:	++   09:24:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2418792:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2418793:	++   09:28:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2429567:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2429568:	++   09:28:35 DUPLICATE_FOM_FINDER                                in FOM_ROUTING_AND_FILTERING/DUPLICATED_FOM01_ELIMINATION (AQ_FOM_R_AND_F)
+2440481:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2440482:	***  09:28:47 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+2452223:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2452224:	***  09:28:59 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+2511362:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2511363:	***  09:30:11 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+2522069:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2522070:	++   09:30:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2683878:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2683879:	++   09:33:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2696088:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2696089:	++   09:33:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2963844:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2963845:	++   09:37:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+2978381:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+2978382:	++   09:37:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3292040:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3292041:	++++ 09:41:52 STATE_CHANGING                                      in CSC_ADT/CSU_FINITE_STATE_MACHINE (AQ_SUPERVISION)
+3292041:	              MIDS_Mgr (1) : OPERATIONAL_RS
+3292042:	++   09:41:52 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3292044:	              Link_16_Mgr (2) : OPERATIONAL_RS
+3292045:	++   09:41:52 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3292176:	              MIDS_Mgr (1) : OPERATIONAL_RS_COARSE
+3292177:	++   09:41:52 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3292280:	              MIDS_Mgr (1) : CONNECTED
+3292281:	++   09:41:52 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3292286:	              Link_16_Mgr (2) : ACTIVE
+3292287:	++   09:41:52 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3292292:	              Link_16_Mgr (2) : Current State = ACTIVE, Event = NO_MORE_INIT_RESOURCE
+3292293:	++   09:41:52 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3292364:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3292365:	++   09:41:52 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3292450:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3292451:	++   09:41:52 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3292979:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3292980:	++   09:42:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3509367:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3509368:	++   11:49:28 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3509760:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3509761:	++   11:49:32 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3509801:	              MIDS_Mgr (1) : Current State = CONNECTED, Event = NOT_VALID_DATA
+3509802:	++   11:49:32 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3510209:	              MIDS_Mgr (1) : WAITING_SYNCH
+3510210:	++   11:49:34 FLOW_TRACER                          DLIP --> DEM_PARAM_TERM_SEG (1)
+3510214:	              Link_16_Mgr (2) : Current State = ACTIVE, Event = ONE_INITIALIZED_RESOURCE
+3510215:	++   11:49:34 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3515863:	              MIDS_Mgr (1) : Current State = WAITING_SYNCH, Event = VALID_DATA
+3515864:	+    11:50:23 J_MESSAGE_NOT_PROCESSED_BY_DLIP                     in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (AQ_FOM_R_AND_F)
+3515942:	              MIDS_Mgr (1) : ACTIVE_COARSE
+3515943:	++   11:50:23 DUPLICATE_FOM_FINDER                                in FOM_ROUTING_AND_FILTERING/DUPLICATED_FOM01_ELIMINATION (AQ_FOM_R_AND_F)
+3517085:	              MIDS_Mgr (1) : Current State = ACTIVE_COARSE, Event = TIMEOUT_OF_48S
+3517086:	+    11:50:24 FOM_TIME_TAG_CALLBACK                               in CSC_MIDS_INTERFACE_CORE_ADAPTER/CSU_CORE_ADAPTER (MIDS_IF_LISTENER)
+3547373:	              MIDS_Mgr (1) : ACTIVE
+3547374:	++   11:51:05 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3547384:	              MIDS_Mgr (1) : Current State = ACTIVE, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3547385:	++   11:51:05 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3549598:	              MIDS_Mgr (1) : OPERATIONAL
+3549599:	++   11:51:06 ENTRY_PROCESS_FOM                                   in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (MIDS_IF_LISTENER)
+3549607:	              Link_16_Mgr (2) : OPERATIONAL
+3549608:	++   11:51:06 UPDATE_TRANSMISSION_MODE_SIMULATION                 in DLP_IF/DLP_IF (AQ_SUPERVISION)
+3689233:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3689234:	++   11:54:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3693920:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3693921:	++   11:54:23 DUPLICATE_FOM_FINDER                                in FOM_ROUTING_AND_FILTERING/DUPLICATED_FOM01_ELIMINATION (AQ_FOM_R_AND_F)
+3717585:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3717586:	++   11:55:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3723373:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3723374:	***  11:55:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+3781669:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3781670:	++   11:57:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3787479:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3787480:	+    11:57:47 J_MESSAGE_NOT_PROCESSED_BY_DLIP                     in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (AQ_FOM_R_AND_F)
+3793275:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3793276:	++   11:57:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3799065:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3799066:	++   11:58:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3827462:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3827463:	++   11:59:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3832157:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3832158:	++   11:59:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3940147:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3940148:	++   12:03:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3944858:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3944859:	++   12:04:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3949532:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3949533:	++   12:04:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+3954226:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3954227:	++   12:04:35 DUPLICATE_FOM_FINDER                                in FOM_ROUTING_AND_FILTERING/DUPLICATED_FOM01_ELIMINATION (AQ_FOM_R_AND_F)
+3991955:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3991956:	***  12:06:11 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+3996670:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+3996671:	++   12:06:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4071849:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4071850:	+    12:09:35 LABEL_SUBLABEL                                      in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (AQ_FOM_R_AND_F)
+4076539:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4076540:	++   12:09:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4206283:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4206284:	++   12:16:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4211587:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4211588:	++   12:16:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4217435:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4217436:	***  12:16:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+4223341:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4223342:	++   12:16:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4362415:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4362416:	++   12:22:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4366624:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4366625:	++   12:22:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4377863:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4377864:	++   12:22:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4382369:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4382370:	***  12:23:11 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+4401994:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4401995:	++   12:24:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4406526:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4406527:	++   12:24:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4537832:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4537833:	++   12:29:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4542976:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4542977:	***  12:29:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+4646063:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4646064:	++   12:33:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4650907:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4650908:	++   12:34:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4680370:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4680371:	++   12:35:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4685204:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4685205:	++   12:35:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4738995:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4738996:	++   12:37:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4744099:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4744100:	++   12:37:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+4758539:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4758540:	***  12:38:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+4763374:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+4763375:	***  12:38:47 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+5116656:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5116657:	++   12:53:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5121414:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5121415:	++   12:53:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5131225:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5131226:	++   12:53:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5140651:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5140652:	++   12:54:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5337895:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5337896:	++   12:57:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5349791:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5349792:	++   12:57:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5471490:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5471491:	++   12:59:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5483751:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5483752:	***  12:59:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+5809305:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5809306:	++   13:04:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5821854:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5821855:	***  13:04:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+5961039:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5961040:	++   13:07:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+5966006:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+5966007:	++   13:07:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6011767:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6011768:	++   13:08:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6017593:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6017594:	++   13:09:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6023657:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6023658:	++   13:09:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6029771:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6029772:	++   13:09:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6071331:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6071332:	++   13:11:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6076017:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6076018:	++   13:11:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6115501:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6115502:	++   13:12:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6121328:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6121329:	++   13:12:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6481328:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6481329:	++   13:24:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6492668:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6492669:	++   13:24:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6596705:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6596706:	+    13:26:23 J_MESSAGE_NOT_PROCESSED_BY_DLIP                     in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (AQ_FOM_R_AND_F)
+6608083:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6608084:	***  13:26:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+6644150:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6644151:	++   13:27:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+6655317:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+6655318:	++   13:27:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+7327455:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7327456:	***  13:39:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+7339803:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7339804:	***  13:39:47 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+7663859:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7663860:	++   13:46:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+7676609:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7676610:	++   13:46:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+7987433:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7987434:	++   13:51:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+7997997:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+7997998:	++   13:52:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8027982:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8027983:	***  13:52:47 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+8039158:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8039159:	++   13:52:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8104256:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8104257:	++   13:53:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8116305:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8116306:	***  13:54:11 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+8139780:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8139781:	++   13:54:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8153521:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8153522:	+    13:54:47 LABEL_SUBLABEL                                      in FOM_ROUTING_AND_FILTERING/FOM_ROUTING_AND_FILTERING (AQ_FOM_R_AND_F)
+8277785:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8277786:	++   13:56:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8290054:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8290055:	++   13:56:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8331771:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8331772:	++   13:57:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8346756:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8346757:	++   13:57:47 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8600934:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8600935:	++   14:02:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8611971:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8611972:	++   14:02:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8820523:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8820524:	++   14:06:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+8831552:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+8831553:	++   14:06:35 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+9726182:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9726183:	++   14:22:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+9737097:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9737098:	***  14:22:35 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+9934696:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9934697:	++   14:25:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+9946001:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9946002:	++   14:26:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+9988071:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9988072:	++   14:26:59 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+9997344:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+9997345:	++   14:27:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+10032987:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+10032988:	***  14:27:59 HOST_MESSAGE_PROCESSING_FAILURE                     in L16_CTRL/QUEUE_MGR (AQ_SUPERVISION)
+10042819:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+10042820:	++   14:28:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+10106271:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+10106272:	++   14:29:11 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+10120514:	              MIDS_Mgr (1) : Current State = OPERATIONAL, Event = VALID_DATA_AND_FINE_SYNCH_REMOTE
+10120515:	++   14:29:23 PROCESS_TX_MSG                                      in HOST_INTERFACE/SENDER (AQ_SUPERVISION)
+10281588:	              Application_Mgr (3) : OFF
+10281589:	++   14:32:53 MSG_DEREGISTERED_FROM_HOST                          in HOST_INTERFACE/PROTECTED_VARIABLES (?)
+10281607:	              Application_Mgr (3)
+10281608:	+    14:32:53 FOM_TIME_TAG_CALLBACK                               in CSC_MIDS_INTERFACE_CORE_ADAPTER/CSU_CORE_ADAPTER (MIDS_IF_LISTENER)

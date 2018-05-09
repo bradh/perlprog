@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_jre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <config_jrep startup_mode="JRE_MNG" jrep_designator="NULL">
+      <jrep_sender_id>32</jrep_sender_id>
+   <jrep_mngt_link>
+      <local_ip_port>20777</local_ip_port>
+   </jrep_mngt_link>
+   </config_jrep>
+</config_jre>

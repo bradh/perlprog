@@ -1,0 +1,273 @@
+<!-- 
+ THALES COMMUNICATIONS FRANCE                          UNITE AREO NAVALE (UAN)
+                                DOMAINE DES COMMUNICATIONS AERONAUTIQUES (DCA)
+ =============================================================================
+ PROJECT : ALADDIN
+ CSCI    : LDT TEST_TOOLS
+ CSC     : 
+ =============================================================================
+ .DESCRIPTION         : DTD for Aladdin dictionnary
+
+ .TRACEABILITY        : N/A
+
+ =============================================================================
+
+ .HISTORY :
+   03 nov 02, M. Bossant : creation
+   25 jul 05, O. Richard : added block element
+-->
+
+<!ELEMENT tactical_data_link (dictionary, formats, elements)>
+
+<!ATTLIST tactical_data_link
+			    version CDATA #FIXED "1.0">
+
+<!ELEMENT dictionary (data_source, protocol, mip)>
+<!ATTLIST dictionary
+	  			id ID #REQUIRED
+	  			name CDATA #REQUIRED
+	  			version CDATA #REQUIRED
+	  			date CDATA #REQUIRED>
+
+<!ELEMENT data_source (#PCDATA)>
+<!ATTLIST data_source
+          file_name CDATA #REQUIRED
+          file_date CDATA #REQUIRED
+          file_version CDATA #REQUIRED>
+
+
+<!ELEMENT protocol (storage_layout)>
+<!ATTLIST protocol
+	name (FIM_FOM | L16 | UNIVERSAL_J | L11 | L11A | L11B | IJMS | HOST | SLP) #REQUIRED>
+
+<!ELEMENT storage_layout (word, byte, bit)>
+<!ELEMENT word EMPTY>
+<!ATTLIST word
+	size CDATA "1"
+	order (left_to_right | right_to_left) "left_to_right">
+
+<!ELEMENT byte EMPTY>
+<!ATTLIST byte
+	order (msb_to_lsb | lsb_to_msb) "msb_to_lsb">
+
+<!ELEMENT bit EMPTY>
+<!ATTLIST bit
+	order (msb_to_lsb | lsb_to_msb) "msb_to_lsb">
+
+<!ELEMENT mip (messages)>
+
+<!ELEMENT messages (message)*>
+<!ELEMENT message (help?, format, amplifier?)>
+<!ATTLIST message
+	name CDATA #REQUIRED
+	tx_rule (tx | nt | tnp) "tx"
+	rx_rule (rx | dm | rnp) "rx">
+	
+<!ELEMENT format (reference)>
+
+<!ELEMENT amplifier (reference)>
+
+<!--
+		 This element enables to reference another element.
+     The referenced node can be inside the same document, 
+     and the idref attribute must be set
+     otherwise the referenced node is outside the current
+     document and the attribute href must be set.
+-->
+<!ELEMENT reference EMPTY>
+<!ATTLIST reference
+          type (field | record | alternative | switch | array) #REQUIRED
+          mode (include | replace | child | sibling) "include"
+          idref IDREF #IMPLIED
+          href CDATA #IMPLIED>
+
+<!ELEMENT formats (record)*>
+
+<!ELEMENT block (record)*>
+<!ATTLIST block
+	  			id ID #REQUIRED
+	  			name CDATA #REQUIRED
+	  			position CDATA #REQUIRED
+          presence (mandatory | optional) "optional">
+
+
+<!ELEMENT record (help?, fields, constraints?)>
+<!ATTLIST record
+	  			id ID #REQUIRED
+	  			name CDATA #REQUIRED
+	  			position CDATA #IMPLIED
+	  			length CDATA #IMPLIED
+	  			minLength CDATA #IMPLIED
+	  			maxLength CDATA #IMPLIED
+          presence (mandatory | optional | amplify) "mandatory">
+
+<!ELEMENT fields (field | switch | spare | alternative | reference | record | array | block)*>
+
+<!ELEMENT help ANY>
+<!ATTLIST help
+	  lang (en | fr) "en">
+
+<!-- fields -->
+<!-- Simple field -->
+<!ELEMENT field EMPTY>
+<!ATTLIST field
+          id ID #REQUIRED
+          name CDATA #IMPLIED
+          abbr CDATA #IMPLIED
+          position CDATA #REQUIRED
+          length CDATA #REQUIRED
+          element.idref IDREF #REQUIRED
+          presence (mandatory | optional) "mandatory"
+          constant (true | false) "false"
+          bitcode CDATA #IMPLIED>
+
+<!-- Switch field -->
+<!ELEMENT switch EMPTY>
+<!ATTLIST switch
+          id ID #REQUIRED
+          name CDATA #IMPLIED
+          abbr CDATA #IMPLIED
+          length CDATA #REQUIRED
+          position CDATA #REQUIRED
+          element.idref IDREF #REQUIRED
+          bitcode CDATA #IMPLIED
+          presence (mandatory | optional) "mandatory">
+
+
+<!-- Spare field -->
+<!ELEMENT spare EMPTY>
+<!ATTLIST spare
+          length CDATA #REQUIRED
+          position CDATA #REQUIRED>
+
+<!-- Alternative field -->
+<!ELEMENT alternative (choice)*>
+<!ATTLIST alternative
+          id ID #REQUIRED
+          position CDATA #REQUIRED
+	  			length CDATA #IMPLIED
+	  			minLength CDATA #IMPLIED
+	  			maxLength CDATA #IMPLIED
+          switch.idref IDREF #REQUIRED
+          presence (mandatory | optional) "mandatory">
+
+<!ELEMENT choice (fields)*>
+<!ATTLIST choice
+	  			default (true | false) "false"
+          bitcode CDATA #REQUIRED>
+
+<!-- array field -->
+<!ELEMENT array (fields, constraints?)>
+<!ATTLIST array
+          id ID #REQUIRED
+          name CDATA #REQUIRED
+          position CDATA #REQUIRED
+          minLength CDATA #REQUIRED
+          maxLength CDATA #REQUIRED
+          presence (mandatory | optional) "mandatory">
+
+<!ELEMENT constraints (constraint)*>
+<!ELEMENT constraint (target, value)>
+<!ATTLIST constraint
+          property (bitcode | length | offset | presence) #REQUIRED>
+
+<!ELEMENT target (reference)>
+<!ELEMENT value (#PCDATA)>
+
+<!-- replace element
+ The replace element is used to provide a means for expressing encapsulation
+ between upper and lower protocols
+-->
+
+
+<!ELEMENT elements (element)*>
+
+<!-- TODO: add record and set -->
+<!ELEMENT element (items | union | group)>
+<!ATTLIST element
+	  			id ID #REQUIRED
+	  			dfi CDATA #IMPLIED
+	  			dui CDATA #IMPLIED
+	  			name CDATA #REQUIRED
+	  			abbr CDATA #IMPLIED
+	  			length CDATA #REQUIRED
+	  			is_value_switch (true | false) "false"
+	  			help CDATA #IMPLIED>
+
+<!ELEMENT items (logical | generic | numeric)*>
+
+<!ELEMENT logical EMPTY>
+<!-- TODO: use an enumeration for measurement unit -->
+<!ATTLIST logical
+	  			bitcode CDATA #REQUIRED
+	  			value CDATA #REQUIRED
+	  			unit CDATA #IMPLIED
+	  			help CDATA #IMPLIED>
+
+<!ELEMENT generic EMPTY>
+<!ATTLIST generic
+	  			type (not_used | undefined | illegal | no_statement) #REQUIRED
+	  			bitcode CDATA #IMPLIED
+	  			low_bitcode CDATA #IMPLIED
+	  			high_bitcode CDATA #IMPLIED
+	  			value CDATA #IMPLIED
+	  			help CDATA #IMPLIED>
+
+<!ELEMENT numeric EMPTY>
+<!ATTLIST numeric
+	  			low_bitcode CDATA #REQUIRED
+	  			high_bitcode CDATA #REQUIRED
+	  			numerator CDATA "1"
+	  			denominator CDATA "1"
+	  			start_value CDATA "0"
+	  			unit CDATA #IMPLIED
+	  			format (octal | dms | decimal) "decimal" 
+	  			help CDATA #IMPLIED>
+
+<!ELEMENT union (member)*>
+<!ATTLIST union
+          value_switch.idref IDREF #REQUIRED>
+
+<!ELEMENT member (items)>
+<!ATTLIST member
+          offset CDATA #IMPLIED
+          length CDATA #IMPLIED
+          value_switch.bitcode CDATA #IMPLIED>
+
+<!ELEMENT group (member)*>
+<!ATTLIST group
+          count CDATA #IMPLIED>
+
+<!-- alternative: &#x03C0; -->
+<!ENTITY pi "&#960;">
+
+<!ENTITY nbsp "&#32;">
+
+<!-- TODO: authorize only legal measurement unit names
+MS milliseconds
+MIN minutes of time
+HOUR hours
+FT feet
+DEG degrees
+DPH Data Miles per Hour
+DM Data Miles
+MINUTES minutes of arc
+M metres
+SEC seconds of time
+HZ Hertz
+KTS knots
+LBS pounds weight
+DEG/S degrees per second
+NM nautical miles
+YARD yards
+NS Nanoseconds
+FT/SEC Feet per Second
+M/S Metres per Second
+NM/H Nautical Miles per Hour
+FT-SQ Feet Squared
+FT-SQ/SEC-SQ Feet Squared per Second Squared
+G Acceleration of Gravity
+RAD/S Radians per Second
+NS-SQ Nanoseconds Squared
+% Percent
+-->

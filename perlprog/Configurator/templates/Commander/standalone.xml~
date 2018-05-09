@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+# STANDALONE INITIALIZATION DATA FILE
+# (c) 2013 TCS/RCP/ANP/OPS/ANS
+-->
+<standalone>
+	<!-- THD072 -->
+	<link
+		LINK_TYPE="%T301%"
+		LINK_IDENTIFICATION="%T302%"
+		OWN_PLATFORM_LINK_TN="%T303%"
+		FIRST_ALLOCATED_LINK_TN="%T304%"
+		LAST_ALLOCATED_LINK_TN="%T305%"
+	/>
+       <!-- THD070 -->
+        <resource
+                RESOURCE_ID="%T306%"
+                RESOURCE_TYPE="%T307%"
+                IP_ADDRESS="%I04%"
+                PORT="%P01%"
+        />
+	<!-- THD070 -->
+	<resource
+		RESOURCE_ID="%T308%"
+		RESOURCE_TYPE="%T309%"
+	/>
+	<!-- THD561 -->
+        <route_association
+                RESOURCE_ID="%T310%"
+                ROUTE_ID="%T311%"
+                LINK_IDENTIFICATION="%T302%"
+        />
+	<route_association
+		RESOURCE_ID="%T312%"
+		ROUTE_ID="%T313%"
+		LINK_IDENTIFICATION="%T302%"
+	/>
+	<!-- THD 562 -->
+	<route_connection_matrix LINK_IDENTIFICATION="1">
+		<route_list 
+			ORIGIN_ROUTE_ID="%T314%" 
+			ROUTE_DESTINATION_LIST="%T315%"
+		/>	
+		<route_list 
+			ORIGIN_ROUTE_ID="%T316%" 
+			ROUTE_DESTINATION_LIST="%T317%"
+		/>
+                <route_list
+                        ORIGIN_ROUTE_ID="%T318%"
+                        ROUTE_DESTINATION_LIST="%T319%"
+                />
+	</route_connection_matrix>	
+</standalone>

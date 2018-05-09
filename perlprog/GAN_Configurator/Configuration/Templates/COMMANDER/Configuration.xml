@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- L11 configuration file -->
+
+<configuration version=%C601%
+               name=%C602%>
+               
+<!-- Local L11 configuration -->
+
+<!-- TOPLINK ADDRESS : TopLink Address (IPv4 format) -->
+<!-- TOPLINK PORT_TX : TopLink port TX range 2050 to 65535 -->
+<!-- TOPLINK PORT_RX : TopLink port RX range 2050 to 65535 -->
+    <TopLinK address="localhost"
+             porT_tx=%P19%
+             Port_rx=%P21%
+    />
+    
+<!-- Remote L11 configuration -->    
+    <remote_l11>
+        <!-- REMOTE LINK_ID : Remote ID -->
+        <!-- REMOTE DEVICE  : Remote equipment type : Available values are SILN/NTDS -->
+        <remote link_id=%C603% device=%C604%>
+            <!-- NETWORK ADDRESS         : Local remote address (IPv4 format)-->
+            <!-- NETWORK TOPLINK_PORT_TX : Local remote TX port to connect to TopLink TX port : range 2050 to 65535 -->
+            <!-- NETWORK TOPLINK_PORT_RX : Local remote RX port to connect to TopLink TX port : range 2050 to 65535 -->
+            <!-- NETWORK SIMPLE_PORT     : Local remote SIMPLE port to connect to TopLink SILN port : range 2050 to 65535 -->
+            <network address="localhost"
+                     TopLink_port_tx=%P20%
+                     TopLink_port_rx=%P22%
+                     SImple_PORT="27_001"
+            />
+            <!-- SIMPLE PORT    : SILN port : range 2050 to 65535 -->
+            <!-- SIMPLE ADDRESS : SILN address (IPv4 format) -->
+            <simple
+                port=%P24%
+                address="localhost"
+		single_m_tx=%C605%
+            />
+            <!-- QUEUE SIZE      : FIFO size in Remote : range 1 to 200 -->
+            <!-- QUEUE THRESHOLD : FIFO warning threshold in Remote : range 1 to 200 -->
+            <queue size=%C606%
+                   threshold=%C607%
+            />
+            <!-- CPU BSP_TASK : CPU affinity of the Bsp task : range 0 to 8 -->
+            <!-- CPU RX_TASK  : CPU affinity of the Rx task : range 0 to 8 -->
+            <!-- CPU TX_TASK  : CPU affinity of the Tx task : range 0 to 8 -->
+            <cpu bsp_task=%C608%
+                 rx_task=%C609%
+                 tx_task=%C610%
+            />
+        </remote>
+    </remote_l11>
+    <!-- LOG INFO    : INFO Log activation in remote : available values are "YES", "NO" -->
+    <!-- LOG WARNING : WARNING Log activation in remote : available values are "YES", "NO" -->
+    <!-- LOG ERROR   : ERROR Log activation in remote : available values are "YES", "NO" -->
+    <!-- LOG DEBUG   : DEBUG Log activation in remote : available values are "YES", "NO" -->
+    <log info=%C611%
+         warning=%C612%
+         error=%C613%
+         debug=%C614%
+    />
+
+</configuration>

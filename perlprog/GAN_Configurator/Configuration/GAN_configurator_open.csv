@@ -1,0 +1,101 @@
+Projet;0;0;IP@;0;0;TCP port;0;0;COMMANDER;tdl_router_main.cfg;0;COMMANDER;L16.Param;0;COMMANDER;midsRegistration.xml;0;CORE_MANAGER;DEPLOYMENT.xml;0;CORE_SUPERVISOR;DEPLOYMENT.xml;0;CORE_SUPERVISOR;FACTORY.xml;0
+Name;GAN;0;I01;Toplink broadcast IP@;192.168.0.251;P01;MIDS interface port;1025;T001;Own_Unit_System_TN;5;T101;Nb_buf_presat_threshold_PGx;0.2;T201;PPLI_TYPE;OWN;M001;INTERFACE_CONFIGURATION NAME_1;HMI;S001;Remote_Syslog_Port;0;S101;supervision_id;DLP
+GAN;V1R0E0;0;I02;PC GAN Cible 1 IP@;192.168.0.93;P02;DLIP JREP internal link  port;2704;T002;Source_Node;60;T102;Nb_buf_sat_threshold_PGx;0.0;T202;PPLI_ENV;LAND;M002;INTERFACE_CONFIGURATION NAME_2;DLIP;S002;TcpIp_Server_Port;0;S102;supervision_name;DLP
+COMMANDER;V3R1E5;0;I03;Toplink remote @IP;127.0.0.1;P03;Host interface min  port;1031;T003;Source_Sub_Node_L16;206;T103;Nb_buf_presat_threshold_PG_All;0.2;T203;COMMAND_AND_CONTROL_INDICATOR;1;M003;LINK_CONFIGURATION ID;1;S003;TcpIp_Server_Visu_Adress;0;S103;supervision_access-group;ALL
+CORE_MANAGER;V1R0E0;0;I04;MIDS @IP;N_A;P04;Host interface max  port;1039;T004;Source_Sub_Node_L11A;205;T104;Nb_buf_sat_threshold_PG_All;0.0;T204;RTT_REPLY_STATUS_INDICATOR;1;M004;LINK_CONFIGURATION TYPE;L11;S004;KeepAliveMessageFrequency;5000;S104;system_action id;start
+CORE_SUPERVISOR;V1R0E1;0;I05;SIMPLE remote server 1 @IP;192.168.0.54;P05;Channel 4 server  port;50014;T005;Test_Mode;True;T105;FIM01_Feedback_Enable;true;T205;TIME_QUALITY;15;M005;LINK_CONFIGURATION NAME;link L11;0;0;0;S105;system_action script;../Scripts/start_ALL_HOLLYGRAAL
+0;0;0;I06;SLP_TCP  @IP;N/A;P06;Channel 4 client  port;50015;T006;Overall_Filter_Timeout;1.0;T106;FOM12_Reporting_Enable;true;T206;GEODETIC_HORIZONTAL_POSITION_QUALITY;14;M006;RESOURCE_CONFIGURATION ID;1;0;0;0;S106;system_action stateref;BOOT
+0;0;0;I07;TcpIp_Server_Visu_ @IP;192.168.0.93;P07;Toplink persistant  port;3026;T007;K_LINKT_Active_Without_R2_Timeout;48.0;T107;FOM02_Loopback_Enable;true;T207;ELEVATION;100;M007;RESOURCE_CONFIGURATION NAME;MODEM1;0;0;0;S107;system_action id;stop
+0;0;0;I08;INTERFACE_CONFIGURATION @IP;192.168.0.255;P08;SIMPLE technical  port;2399;T008;Hot_Data_Root_Dir;.;T108;K_LinkT_Delta_Time_Limit;10;T208;MISSION_CORRELATOR;10;M008;RESOURCE_CONFIGURATION TYPE;L11_MODEM;0;0;0;S108;system_action script;../Scripts/stop_ALL
+0;0;0;0;0;0;P09;SIMPLE tactical  port;2400;T009;Ctrl_Data_Req_Timeout;1.0;T109;K_LinkT_Delta_Time_Default;0;T209;ELEVATION_QUALITY;15;M009;PLAT_PARAM URL;plat14.xml;0;0;0;S109;system_action stateref;STOPPED
+0;0;0;0;0;0;P10;DLP interface  port;1025;T010;Max_Msg_In_Arcade_Buffer;200;T110;J_Elimination_Window_Size;7.03125;T210;LATITUDE;11;0;0;0;0;0;0;S110;system_action context;Stop
+0;0;0;0;0;0;P11;SIMPLE remote server1;1061;T011;Max_Time_Before_Forcing_Recording;7;T111;Platform_Nb;1;T211;LONGITUDE;-1;0;0;0;0;0;0;S111;component_id_1;TopLink
+0;0;0;0;0;0;P12;SIMPLE_IF_TACTICAL_PORT;0;T012;ACCS_LOC1_Centre_Name;ROUTEUR;T112;Platform_List;2;T212;VOICE_CALL_SIGN_INDICATOR;1;0;0;0;0;0;0;S112;component_name_1;COMMANDER
+0;0;0;0;0;0;P13;SIMPLE_IF_TECHNICAL_PORT;0;T013;Switchover;FALSE;T113;Platform_Role_List;Master;T213;VOICE_CALL_SIGN;GAN1;0;0;0;0;0;0;S113;component_typeref_1;TopLink_Commander
+0;0;0;0;0;0;P14;SIMPLE_IF_PORT;0;T014;Recording_File_Name;TDL_Kernel_L16_MIDS;T114;Platform_Port_List;2048;T214;PLATFORM;57;0;0;0;0;0;0;S114;component_state-spread_1;true
+0;0;0;0;0;0;P15;JREP mngt link port;20777;T015;Recording_File_Max_Size;50;T115;Voice_Call_Sign;GAN1;T215;PLATFORM_ACTIVITY;61;0;0;0;0;0;0;S115;component_access-group_1;ALL
+0;0;0;0;0;0;P16;SLP_TCP_Port                ;5005;T016;Recording_Files_Max_Count;10;T116;Latitude;43.12;T216;VOICE_FREQUENCY_CHANNEL;7295;0;0;0;0;0;0;S116;component_action_id_1_1;start
+0;0;0;0;0;0;P17;OSIM port;8200;T017;L16_MIDS_Recording;No_Recording;T117;Longitude;-2.89;T217;CONTROL_CHANNEL;126;0;0;0;0;0;0;S117;component_action_script_1_1;../Scripts/start_COMMANDER
+0;0;0;0;0;0;P18;C2 Host port (DLIP);8202;T018;L16_JRE_Recording;No_Recording;T118;Elevation;300;T218;Platform_Nb;1;0;0;0;0;0;0;S118;component_action_stateref_1_1;BOOT
+0;0;0;0;0;0;P19;Remote L11 TX server  port;30001;T019;L16_SIMPLE_Recording;No_Recording;0;0;0;T219;Platform_List;9;0;0;0;0;0;0;S119;component_action_id_1_2;stop
+0;0;0;0;0;0;P20;Remote L11 TX client  port;28001;T020;MIDS_PLATFORM_Recording;No_Recording;0;0;0;T220;Platform_Role_List;Master;0;0;0;0;0;0;S120;component_action_script_1_2;../Scripts/stop_COMMANDER
+0;0;0;0;0;0;P21;Remote L11 RX server  port;31001;T021;MR_Routing_DLP_Indicator;False;0;0;0;T221;Platform_Port;2048;0;0;0;0;0;0;S121;component_action_stateref_1_2;STOPPED
+0;0;0;0;0;0;P22;Remote L11 RX client  port;29001;T022;MR_Routing_JRE_Indicator;False;0;0;0;T222;MIDS_TYPE;D;0;0;0;0;0;0;S122;component_action_context_1;Stop
+0;0;0;0;0;0;P23;Remote L11 SIMPLE  port;27000;T023;MR_Routing_MIDS_Indicator;False;0;0;0;T223;TP;4096;0;0;0;0;0;0;S123;component_id_2;Core_Manager
+0;0;0;0;0;0;P24;SILN server  port;40001;T024;MR_Routing_SIMPLE_Indicator;False;0;0;0;T224;ACP;1282;0;0;0;0;0;0;S124;component_name_2;CORE MANAGER
+0;0;0;0;0;0;P25;Core Technical Host  port;2399;T025;Context_File;./DLIP_CONTEXT.xml;0;0;0;T225;GCP;1792;0;0;0;0;0;0;S125;component_typeref_2;CoreManager
+0;0;0;0;0;0;P26;Core Tactical L16 Host  port;2400;T026;DLP_default_STN;N/A;0;0;0;T226;CORE;2562;0;0;0;0;0;0;S126;component_state-spread_2;true
+0;0;0;0;0;0;P27;Core Tactical L16 SIMPLE IF  port;0;T027;Management_Configuration;Standalone;0;0;0;T227;MSG;769;0;0;0;0;0;0;S127;component_access-group_2;ALL
+0;0;0;0;0;0;P28;Core Tactical L11 Host  port;24000;T028;Routing_Config;Normal;0;0;0;0;0;0;0;0;0;0;0;0;S128;component_action_id_2_1;start
+0;0;0;0;0;0;P29;Core Tactical L11 SIMPLE IF  port;40000;T029;L16_Designator_Id;N/A;0;0;0;0;0;0;0;0;0;0;0;0;S129;component_action_script_2_1;../Scripts/start_CORE_MANAGER APP_NAME
+0;0;0;0;0;0;P30;Navigation interface  port;10240;T030;ISIS_Reception_Time_Out;180;0;0;0;0;0;0;0;0;0;0;0;0;S130;component_action_stateref_2_1;BOOT
+0;0;0;0;0;0;P31;Remote_Syslog_Port;44512;T031;Terminate_DLIP_Upon_ISIS_Lost;False;0;0;0;0;0;0;0;0;0;0;0;0;S131;component_action_id_2_2;stop
+0;0;0;0;0;0;P32;TcpIp_Server_Port;45555;T032;SIMPLE_Synchro_Time_Timeout;15;0;0;0;0;0;0;0;0;0;0;0;0;S132;component_action_script_2_2;../Scripts/stop_CORE_MANAGER
+0;0;0;0;0;0;P33;INTERFACE_CONFIGURATION_1  port;2125;T033;SIMPLE_Start_Stop_Acknowledgement_Timeout;15;0;0;0;0;0;0;0;0;0;0;0;0;S133;component_action_stateref_2_2;STOPPED
+0;0;0;0;0;0;P34;INTERFACE_CONFIGURATION_2  port;14008;T034;SIMPLE_Technical_Connection_Alive_Timeout;15;0;0;0;0;0;0;0;0;0;0;0;0;S134;component_action_context_2_2;stop
+0;0;0;0;0;0;0;0;0;T035;Startup_Mode;Single_Cold;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T036;Routing_Config;N/A;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T037;Route_Identifier;100;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T038;Switchover_Timeout;6.0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T039;DLP_Routing_Mode;Auto_Configuration;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T040;Recording_Files_Max_Count;N/A;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T041;Recording_File_Max_Size;N/A;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T042;Monitor_Live_Check;True;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;T043;Live_Check_Send_Period;12.0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0

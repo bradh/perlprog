@@ -1,0 +1,535 @@
+#!/bin/bash
+##########################################
+# Script de deploiement des applicatifs GAN sur des machines distantes ou locales
+# la version à déployer se trouve dans l'espace de reference sur le reseau partagé
+# le No de Version à deployer se trouve dans un fichier GAN_Version.txt au dessus de l'espace de reference
+# la liste des machines à deployer se trouve dans un fichier Machines_cibles.txt au dessus de l'espace de reference
+# Si les fichiers Machines_cibles.txt et GAN_Version.txt ne sont pas présents alors on est dans une instal LOCALE
+##########################################
+
+
+##########################################
+# declaration des chemins d'acces
+##########################################
+DIR_SAVE=/h7_usr/sil2_usr/ganivq/Depot_archive_installation
+ESPACE_REF=/h7_usr/sil2_usr/ganivq/Espace_de_reference
+SCRIPTS_DEPLOIEMENT=/h7_usr/sil2_usr/ganivq/Scripts
+DIR_LIVRAISON=/dlip_ref/dlip_doc/TopLink/07-GestionConfiguration/06-Livraisons/Binaries_and_configuration_files/TopLink_Commander
+
+##########################################
+# declaration des variables
+##########################################
+TARGET_USER_GAN="toplink"
+TARGET_REP_GAN=/toplink
+CPT_TOPLINK=/home/toplink
+SUFFIX_TARGZ=.tar.gz
+SUFFIX_TAR=.tar
+SEPARATEUR=_
+MACHINES_CIBLES=Machines_cibles.txt
+FILE_VERSION=GAN_Version.txt
+FILE_TAR_PREFIX=GAN_installation_toplink_lcall_
+SCRIPT_LIENS=script_liens_GAN.sh
+REP_COMMANDER=COMMANDER
+BIN_COMMANDER=commander_main_linux
+
+CPT_INSTAL=0
+CPT_ERROR=0
+INSTAL_LOCAL=0
+RE_DEPLOIEMENT=0
+
+#set -x
+ERROR=0
+
+##########################################
+# FONCTIONS
+##########################################
+
+# fonction de creation du fichier tar et compression
+function create_targz {
+if test $TARGZ_EXISTE -eq 0
+then
+    DIR_TAR=`basename $DIR_SAVE`
+	cd $ESPACE_REF
+	tar cvf ../$DIR_TAR/$FILE_TAR *
+	cd $DIR_SAVE
+	echo "===================================================================="
+	echo "Compression du fichier : $FILE_TAR ...."
+	echo "===================================================================="
+	gzip -f $FILE_TAR
+#else
+#	ERROR=1	
+#	CPT_ERROR=`expr $CPT_ERROR + 1`
+fi
+return $ERROR
+}
+
+# fonction de la copie de fichier sur une machine distante
+function scp_put {
+if test $ERROR -eq 0
+then
+    scp $1 $2@$3:$4/$5
+	if [ $? -ne 0 ]; then
+		ERROR=1
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi
+fi
+return $ERROR		
+}
+
+# fonction de la recuperation de fichier depuis une machine distante
+function scp_get {
+if test $ERROR -eq 0
+then
+    scp $1@$2:$3/$4/$5 $6
+	if [ $? -ne 0 ]; then
+		ERROR=1		
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi	
+fi
+return $ERROR		
+}
+
+# fonction d'arret des services GAN sur une machine distante
+function stop_ALL {
+if test $ERROR -eq 0
+then
+	if test $INSTAL_LOCAL -eq 0
+	then
+		ssh $TARGET_USER_GAN@$MACHINE_IP "cd Scripts; ./stop_ALL_ALL "
+	else
+		cd ~toplink/Scripts; ./stop_ALL_ALL
+	fi
+#	if [ $? -ne 0 ]; then
+# 		ERROR=1	
+#		CPT_ERROR=`expr $CPT_ERROR + 1`		
+#	fi	
+fi
+return $ERROR
+}
+
+# fonction de deploiement du fichier tar sur une machine distante
+function deploy {
+if test $ERROR -eq 0
+then
+	echo "===================================================================="
+	echo "Decompression du fichier : $FILE_TARGZ sur la machine $MACHINE_NAME ...."
+	echo "===================================================================="
+	if test $INSTAL_LOCAL -eq 0
+	then
+		ssh $TARGET_USER_GAN@$MACHINE_IP "cd $TARGET_REP_GAN; gunzip $FILE_TARGZ ; tar xvf $FILE_TAR "
+	else
+		gunzip $DIR_SAVE/$FILE_TARGZ ; cd /toplink ;tar xvf $DIR_SAVE/$FILE_TAR 
+	fi
+	if [ $? -ne 0 ]; then
+ 		ERROR=1	
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi	
+fi
+return $ERROR
+}
+
+# fonction de suppression du contenu GAN sur une machine distante
+function delete_gan {
+if test $ERROR -eq 0
+then
+	if test $INSTAL_LOCAL -eq 0
+	then
+		ssh $TARGET_USER_GAN@$MACHINE_IP "cd $TARGET_REP_GAN; rm -rf *"
+	else
+		cd $TARGET_REP_GAN; rm -rf *
+	fi
+	if [ $? -ne 0 ]; then
+        ERROR=1
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi
+fi
+return $ERROR
+}
+
+# fonction de suppresion du fichier tar sur la machine distante
+function delete_tar {
+if test $ERROR -eq 0
+then
+	if test $INSTAL_LOCAL -eq 0
+	then
+		ssh $TARGET_USER_GAN@$MACHINE_IP "cd $TARGET_REP_GAN; rm -f $FILE_TAR "
+	#else
+		#cd $TARGET_REP_GAN; rm -f $FILE_TAR
+	fi
+	if [ $? -ne 0 ]; then
+		ERROR=1
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi			
+fi
+return $ERROR
+}
+
+# fonction de pousser le fichier tar.gz sur une machine distante
+function put_targz {	
+if test -f $DIR_SAVE/$FILE_TARGZ
+then	
+	echo "===================================================================="
+	echo "Transfert du fichier : $FILE_TAR sur machine cible : $MACHINE_NAME ...."
+	echo "===================================================================="
+	scp_put $DIR_SAVE/$FILE_TARGZ $TARGET_USER_GAN $MACHINE_IP $TARGET_REP_GAN $FILE_TARGZ
+	if [ $? -ne 0 ]; then
+		ERROR=1	
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi
+else
+	ERROR=1	
+	CPT_ERROR=`expr $CPT_ERROR + 1`
+fi
+return $ERROR
+}
+
+# fonction de pousser le script de construction de liens sur une machine distante
+function put_liens {	
+if test -f $SCRIPTS_DEPLOIEMENT/$SCRIPT_LIENS
+then	
+	echo "scp_put $SCRIPTS_DEPLOIEMENT/$SCRIPT_LIENS $TARGET_USER_GAN $MACHINE_IP $CPT_TOPLINK $SCRIPT_LIENS"
+	scp_put $SCRIPTS_DEPLOIEMENT/$SCRIPT_LIENS $TARGET_USER_GAN $MACHINE_IP $CPT_TOPLINK $SCRIPT_LIENS
+	if [ $? -ne 0 ]; then
+		ERROR=1
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi
+else
+	ERROR=1
+	CPT_ERROR=`expr $CPT_ERROR + 1`
+fi
+return $ERROR
+}
+
+# fonction de lancement du script de construction de liens la machine distante
+function link_cpt {
+if test $ERROR -eq 0
+then
+    ssh $TARGET_USER_GAN@$MACHINE_IP "cd $CPT_TOPLINK; ./$SCRIPT_LIENS ; rm -f ./$SCRIPT_LIENS"
+	if [ $? -ne 0 ]; then
+		ERROR=1	
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+	fi		
+fi
+return $ERROR	
+}
+
+function verif_tar {
+
+# on est sur une installation distante
+if test $INSTAL_LOCAL -eq 0
+then
+
+	# on verifie si le fichier GAN_VERSION existe
+	if test "$GAN_VERSION" = ""
+	then
+		echo
+		echo "=================================================================================================================================="
+		echo "Attention : Le fichier $ESPACE_REF/$FILE_VERSION n'existe pas ou ne contient pas la variable GAN_VERSION"
+		echo "=================================================================================================================================="	
+		ERROR=1	
+		CPT_ERROR=`expr $CPT_ERROR + 1`
+		exit $ERROR
+	fi
+
+	TARGZ_EXISTE=0
+# construction du nom du fichier TAR en fonction de la version trouvée dans le fichier "GAN_Version.txt" ou celle donnee en parametre	
+	FILE_TARGZ=$FILE_TAR_PREFIX$GAN_VERSION$SEPARATEUR$MACHINE_NAME$SUFFIX_TARGZ
+	FILE_TAR=$FILE_TAR_PREFIX$GAN_VERSION$SEPARATEUR$MACHINE_NAME$SUFFIX_TAR	
+	if test $RE_DEPLOIEMENT -eq 0 # On n'est pas dans un redeploiement
+	then	
+# on verifie si la version TAR existe deja et n'est pas deja compressee
+		if test -f $DIR_SAVE/$FILE_TARGZ
+		then	
+			echo "===================================================================="
+			echo "Attention  L'archive : $FILE_TARGZ existe deja dans $DIR_SAVE"
+			echo "===================================================================="
+			TARGZ_EXISTE=1
+		fi
+	else # on est dans un redeploiement d'une version passee en parametre
+		if ! test -f $DIR_SAVE/$FILE_TARGZ # la version passee en parametre n'existe pas dans les achives
+		then	
+			echo "===================================================================="
+			echo "Attention : Le fichier $FILE_TARGZ n'existe pas dans $DIR_SAVE"
+			echo "===================================================================="
+			exit=1
+		fi
+	fi
+	
+# Il existe une version TAR compressée : on demande si on regenere une nouvelle archive ou pas
+	if test $TARGZ_EXISTE -eq 1 && test $RE_DEPLOIEMENT -eq 0
+	then
+		echo "
+
+Voulez-vous regenerer l archive :  [O/o/oui - N/n/non]
+                        "
+	read reponse
+
+		case $reponse in
+		O|o|oui|OUI)
+			TARGZ_EXISTE=0
+			;;
+		N|n|non|NON)
+			TARGZ_EXISTE=1
+			;;
+		*)
+			echo "Abandon"
+			exit 1
+			;;
+		esac
+	fi
+
+# creation de l'archivage TAR GZ a partir de l'espace de reference
+	if test $RE_DEPLOIEMENT -eq 0
+		then
+		create_targz
+		if [ $? -ne 0 ]; then
+			echo "===================================================================="
+			echo "Probleme archivage $FILE_TARGZ"
+			echo "===================================================================="
+			ERROR=1
+			exit $ERROR
+		fi
+	cp $ESPACE_REF/../$MACHINES_CIBLES .
+	fi
+fi
+}
+
+##########################################
+# DEBUT du PROGRAMME
+##########################################
+
+
+# on verifie avant de deployer si dans le fichier GAN_Version.txt les No version des applicaiton on été vérifiée
+# dans le cas contraire on trouve en face du nom de l'appli ERROR
+# et dans ce cas on arrete tout
+
+VERIF_GAN_VERSION=`cat $ESPACE_REF/../$FILE_VERSION | grep -w ERROR`
+if ! test "$VERIF_GAN_VERSION" = "" # il y a des erreurs dans le fichier GAN_verison.txt
+then
+	echo "===================================================================="
+	echo "Il y a des Erreurs dans le fichier $FILE_VERSION"
+	echo "===================================================================="
+	exit 1
+fi
+
+# on recupere le No de version a deployer, dans le fichier GAN_version.txt
+GAN_VERSION=`cat $ESPACE_REF/../$FILE_VERSION | grep -w GAN | awk '{print $2}'`
+
+#Verification si arguments alors on deploie le tar choisi en parametre  
+if test $# -eq 2
+then
+    #parametrage deploement local
+	GAN_VERSION=$1
+	MACHINE_NAME=$2
+	MACHINE_IP=`cat $ESPACE_REF/../$MACHINES_CIBLES | grep -w $MACHINE_NAME | awk '{print $2}'`
+	echo $MACHINE_NAME $MACHINE_IP > $ESPACE_REF/../$SEPARATEUR$MACHINES_CIBLES
+	MACHINES_CIBLES=$ESPACE_REF/../$SEPARATEUR$MACHINES_CIBLES
+	RE_DEPLOIEMENT=1
+fi
+
+# On verifie si on est dans une instal LOCALE
+if ! test -f $ESPACE_REF/../$FILE_VERSION && ! test -f $ESPACE_REF/../$MACHINES_CIBLES
+then # cas de non presence des fichiers Machines_cibles.txt et GAN_Version.txt
+	echo "On installe en LOCAL"
+    #parametrage deploiement local
+	MACHINE_IP="127.0.0.1"
+	MACHINE_NAME=`hostname`
+	FILE_TARGZ=`ls *.tar.gz`
+	FILE_TAR=`ls *.tar.gz | cut -d. -f1`$SUFFIX_TAR
+	INSTAL_LOCAL=1
+	echo "$MACHINE_NAME $MACHINE_IP" > ./$MACHINES_CIBLES
+	DIR_SAVE=`pwd`
+
+# on doit etre sur le compte user "toplink si on est en deploiement local"	
+	ID_TOPLINK=`id | awk '{print $1'} | cut -d\( -f2 | cut -d\) -f1`
+	echo $ID_TOPLINK
+	if test "$ID_TOPLINK" != "$TARGET_USER_GAN"
+	then
+		echo "=================================================================================================================================="
+		echo "Attention : Vous devez etre sous le compte toplink"
+		echo "=================================================================================================================================="	
+		exit
+	fi 
+	if ! test -f ./$FILE_TARGZ
+	then
+		echo "=================================================================================================================================="
+		echo "Attention : le fichier TAR $FILE_TARGZ n'existe pas"
+		echo "=================================================================================================================================="	
+		exit
+	fi 		
+fi
+
+# on lit le fichier "Machines_cible.txt" contenant toutes les machines GAN à deployer
+for f in $(cat $ESPACE_REF/../$MACHINES_CIBLES  | awk '{print $2}') # On boucle sur chaque ligne trouvee dans ce fichier
+do
+
+ERROR=0
+
+# on extrait du fichier "Machines_cible.txt" le nom de la machine et son IP
+MACHINE_IP=$f
+MACHINE_NAME=`cat  $ESPACE_REF/../$MACHINES_CIBLES | grep -w $MACHINE_IP | awk '{print $1'}`
+
+# on verifie si l'archive existe ou pas
+verif_tar
+
+# on verifie si la variable MACHINE_IP n'est pas vide
+if test -z "$MACHINE_IP"
+then
+	continue
+fi
+
+# on verifie si la machine cible est presente et accessible
+if ! ping -c 1 $MACHINE_IP
+then
+	echo "===================================================================="
+	echo "Probleme d'acces a la machine $MACHINE_NAME"
+	echo "===================================================================="
+	continue
+fi
+
+# on stop les services GAN sur la machine cible
+stop_ALL
+if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " Arret des applicatifs GAN sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+        ERROR=0
+else
+        echo "===================================================================="
+        echo " Arret des applicatifs GAN sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+fi
+
+# on supprime la precedente version sur la machine cible
+delete_gan
+if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " Suppression des applicatifs GAN sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+else
+        echo "===================================================================="
+        echo " Suppression des applicatifs GAN sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+fi
+
+# on transfert le fichier targz sur la machine coble
+if test $INSTAL_LOCAL -eq 0
+then
+	put_targz
+	if [ $? -ne 0 ]; then
+		echo "===================================================================="
+		echo "transfert du TARGZ sur Machine $MACHINE_NAME KO"
+		echo "===================================================================="
+	else
+		echo "===================================================================="
+		echo "transfert du TARGZ sur Machine $MACHINE_NAME OK"
+		echo "===================================================================="		
+	fi
+fi
+
+# on deploie le fichier tar.gz sur la machine cible
+deploy
+if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " deploiement des applicatifs GAN sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+else
+        echo "===================================================================="
+        echo " deploiement des applicatifs GAN sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+fi
+
+# On supprime le fichier tar sur la machine cible
+delete_tar
+if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " suppression du fichier $TAR_FILE sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+else
+        echo "===================================================================="
+        echo " suppression du fichier $FILE_TAR sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+fi
+
+# on est dans un deploiement distant
+if test $INSTAL_LOCAL -eq 0
+then
+# On recupere le No de version de la derniere livraison de Commander faite par l equipe DEV
+	cd $DIR_LIVRAISON
+	COMMANDER_VERSION_LIVRE=`ls -rtd COMMANDER_SW_* | tail -1 | cut -d_ -f3`
+fi
+
+# on recupere le No de version installe sur la machione cible 
+if test $INSTAL_LOCAL -eq 0 # dans le cas de deploiemnt distant 
+then
+	COMMANDER_VERSION_INSTAL=`ssh $TARGET_USER_GAN@$MACHINE_IP "ulimit -s unlimited;cd $CPT_TOPLINK/$REP_COMMANDER; ./$BIN_COMMANDER -V  " | awk '{print $2'}`
+else # dans le cas de deploement locale 
+	COMMANDER_VERSION_INSTAL=`ulimit -s unlimited;cd $CPT_TOPLINK/$REP_COMMANDER; ./$BIN_COMMANDER -V | awk '{print $2'}`
+fi
+if [ $? -ne 0 ]; then
+	echo "===================================================================="
+	echo " verification de l'installation echouee sur la machine $MACHINE_NAME KO"
+	echo " les binaires ne sont pas installés"
+	echo "===================================================================="
+	ERROR=1
+	CPT_ERROR=`expr $CPT_ERROR + 1`
+else
+	echo "===================================================================="
+	echo " verification du deploiement installe avec succes sur la machine $MACHINE_NAME OK"
+	echo "===================================================================="
+fi	
+echo "Version $BIN_COMMANDER sur cible = $COMMANDER_VERSION_INSTAL"
+echo "Version $BIN_COMMANDER sur livraison = $COMMANDER_VERSION_LIVRE"
+
+if test $INSTAL_LOCAL -eq 0	# on est en deploiemnt distant
+then
+	if test $COMMANDER_VERSION_LIVRE = $COMMANDER_VERSION_INSTAL  # la version installe est identique a la version livree par l equipe DEV
+		then
+		echo "===================================================================="
+		echo " verification de l'installation reussie sur la machine $MACHINE_NAME OK"
+		echo "===================================================================="
+	else # il existe une version plus recente que celle deployee
+		echo "===================================================================="
+		echo " "
+		echo " ATTENTION : la version $BIN_COMMANDER $COMMANDER_VERSION_INSTAL n'est pas la derniere version trouvee dans $DIR_LIVRAISON $COMMANDER_VERSION_LIVRE"
+		echo "===================================================================="
+	fi
+
+# Transfert du script de construction de liens du compte toplink vers /toplink
+	put_liens
+	if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " transfert du fichier $SCRIPT_LIENS sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+	else
+        echo "===================================================================="
+        echo " transfert du fichier $SCRIPT_LIENS  sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+	fi
+
+# Lancement du script de construction de liens du compte toplink vers /toplink
+	link_cpt
+	if [ $? -ne 0 ]; then
+        echo "===================================================================="
+        echo " Lancement du script liens $SCRIPT_LIENS sur la machine $MACHINE_NAME KO"
+        echo "===================================================================="
+	else
+        echo "===================================================================="
+        echo " Lancement du script liens $SCRIPT_LIENS  sur la machine $MACHINE_NAME OK"
+        echo "===================================================================="
+	fi
+fi
+
+CPT_INSTAL=`expr $CPT_INSTAL + 1`
+done
+######################################################
+# FIN de la lecture du fichier Machines_cibles
+######################################################
+rm -f $DIR_SAVE/$MACHINES_CIBLES
+if ! test $INSTAL_LOCAL -eq 0
+then
+	rm $MACHINES_CIBLES
+fi
+echo "TOTAL MACHINES DEPLOYEES = $CPT_INSTAL"
+echo "Nb Erreurs trouvees = $CPT_ERROR"
+

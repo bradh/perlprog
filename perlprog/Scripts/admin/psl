@@ -1,0 +1,2 @@
+#!/usr/bin/ksh
+ps -edf | grep loc1_main

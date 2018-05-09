@@ -1,0 +1,18 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The filter_maker.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [DETAILED_DEBUG | NORMAL_DEBUG | EVENT | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+-- CSC_RTE                                 EVENT
+-- CSC_OS                                  EVENT
+--
+-- Group :  10
+-- SCENARIO_IO                             EVENT
+-- SIMULATION                              EVENT
+-- SYNCHRO                                 EVENT

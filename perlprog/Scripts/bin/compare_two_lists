@@ -1,0 +1,4 @@
+for LINE in `cat $1`
+do
+	echo $LINE
+done

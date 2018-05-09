@@ -1,0 +1,20 @@
+#! /bin/ksh
+
+
+# HiSTORY :
+#----------
+# - 07 Nov 02, E. Berry : creation
+
+SYSTEM=`uname`
+
+if [ $SYSTEM = "AIX" ]
+then
+   /usr/bin/echo "SYSTEM: AIX" 
+   /dlip_ref/others/bin/AIX/convert ${*}
+elif [ $SYSTEM = "SunOS" ] 
+then
+   /usr/bin/echo "SYSTEM: Solaris" ${*}
+   /dlip_ref/others/bin/SOLARIS/convert ${*}
+else
+   /usr/bin/echo "error: system is unknow"
+fi
