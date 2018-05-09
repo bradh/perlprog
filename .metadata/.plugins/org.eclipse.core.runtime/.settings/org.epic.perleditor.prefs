@@ -1,0 +1,10 @@
+PERL_EXECUTABLE=/usr/bin/perl
+eclipse.preferences.version=1
+moduleStarterLocation=/usr/bin/module-starter
+sourceCriticLevel1=Warning
+sourceCriticLevel2=Warning
+sourceCriticLevel3=Warning
+sourceCriticLevel4=Warning
+sourceCriticLevel5=Warning
+sourceCriticLocation=/usr/bin/perlcritic
+sourceCriticSeverity=default

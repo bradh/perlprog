@@ -1,0 +1,34 @@
+#!/usr/bin/perl -w
+
+$SIG{INT} = \&got_int;
+$SIG{ALRM} = sub { die "timeout" };
+while (1) {
+	print "still living...\n";
+	eval {
+	    alarm(3);
+	    
+	    print "waiting 3s...\n";
+	    my $time = 0 ;
+	    while (1){
+	    	print "it is $time\n";
+	    	sleep 1;
+	    	$time =+1;
+	    }
+	    alarm(0);
+	};
+
+	if ($@) {
+	    if ($@ =~ /timeout/) {
+	    		print "timeout 3s\n";
+	    		print "check FOM03\n";		                            # timed out; do what you will here
+	    } else {
+	        alarm(0);           # clear the still-pending alarm
+	        die;                # propagate unexpected exception
+	    } 
+	} 
+}
+
+sub got_int {
+	print " I'm got interrupt, bye !\n";
+	exit 0;
+}

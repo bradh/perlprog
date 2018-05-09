@@ -1,0 +1,41 @@
+#!/usr/bin/perl -w
+
+$SIG{INT} = \&got_int;
+$SIG{ALRM} = sub { die "timeout" };
+die "can't fork: $!" unless defined($kidpid = fork());
+if($kidpid){
+	while (1) {
+		print "still living...\n";
+
+		    my $time = 0 ;
+		    while (1){
+		    	print "it is $time\n";
+		    	sleep 1;
+		    	$time += 1;
+		    }
+		    alarm(0);
+	}
+}
+else{
+	while(1){
+		eval {
+		    alarm(3);		    
+		    print "waiting 3s...\n";
+		    sleep 10;
+		    alarm(0);
+		};
+	    if ($@ =~ /timeout/) {
+    		print "check FOM03\n";		                            # timed out; do what you will here
+		    print "timeout 3s\n";
+	    }
+	    else {
+	        alarm(0);           # clear the still-pending alarm
+	        die;                # propagate unexpected exception
+	    } 
+	} 
+}
+
+sub got_int {
+	print " I'm got interrupt, bye !\n";
+	exit 0;
+}

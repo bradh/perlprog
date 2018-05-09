@@ -1,0 +1,13 @@
+#!/usr/bin/perl -w
+
+$SIG{INT} = \&got_int;
+
+while (1) {
+	print "still living...\n";
+	sleep 1;
+}
+
+sub got_int {
+	print " I'm got interrupt, bye !\n";
+	exit 0;
+}

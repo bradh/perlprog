@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;perlprog/Launcher/tcpdump2Aladdin_V5_4_5.pl&apos; to &apos;Launcher_V1.pl&apos;" description="Rename resource &apos;tcpdump2Aladdin_V5_4_5.pl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Launcher/tcpdump2Aladdin_V5_4_5.pl" name="Launcher_V1.pl" stamp="1522903443155" updateReferences="true"/>
+</session>

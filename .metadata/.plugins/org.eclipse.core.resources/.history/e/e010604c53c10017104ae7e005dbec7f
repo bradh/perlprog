@@ -1,0 +1,121 @@
+#!/usr/bin/perl -w
+        
+ use POSIX ":sys_wait_h"; # for nonblocking read
+ use IO::Socket;
+ use Net::hostent;      # for OOish version of gethostbyaddr
+ use lib qw(/media/stephane/TRANSCEND/Tools/perlprog/lib);
+ use lib qw(G:/Tools/perlprog/lib);
+ use lib qw(/h7_usr/sil2_usr/samptivq/tools/Scripts/admin/lib);
+ use lib qw(D:/Users/t00283692/Documents/Mes\ outils\ personnels/perlprog/lib);
+ use lib qw(F:/Tools/perlprog/lib);
+ 
+ #use bxm_processing;
+ use Conversion;
+
+ my $debug = 1;
+ 
+ my $stream;
+
+ my ($host, $port, $kidpid, $handle, $line, $byte);
+
+my %children;
+
+#$SIG{CHLD} = sub {
+#	# don't change $! and $? outside handler
+#	local ($!, $?);
+#	print " $! and $?\n";
+#	while ( (my $pid = waitpid(-1, WNOHANG)) > 0 ) {
+#		delete $children{$pid};
+		#cleanup_child($pid, $?);
+#	}
+#};
+
+ unless (@ARGV == 3) { die "usage: $0 host1 port1 port2" }
+ ($host1, $port1, $port2) = @ARGV;
+
+print "Hello world !\n";
+sleep 1;
+ # Creation du serveur                           
+ #server Input
+ $socket_dlip = IO::Socket::INET->new( Proto     => "tcp",
+                                  LocalPort => $port2,
+                                  Listen    => SOMAXCONN,
+                                  Reuse     => 1);
+	                                 
+ die "can't setup server 2" unless $socket_dlip;
+ $socket_dlip->autoflush(1);
+	 
+#print "[Server $0 accepting clients]\n";
+# create a tcp connection to the specified host and port
+	
+ 	# Attente de la connextion du client TCP
+ 	print "Waiting for connection of client on port $port2\n";
+ 	$cnx_dlip = $socket_dlip->accept();
+ 	print "Accept client dlip\n";
+ 	$cnx_dlip->autoflush(1);
+ 	#print $cnx_dlip "Welcome to $0;\n";
+ 	$hostinfo = gethostbyaddr($cnx_dlip->peeraddr);
+ 	
+ 	printf "[Connect from %s sur port %s]\n", $hostinfo, $port1;
+ 	
+my $cnx_mids;
+while(1){
+	# Tentative de connexion to remote server
+ 	print "trying to connect to server $host1 sur port $port1\n";
+ 	eval {
+ 		
+ 		$cnx_mids = IO::Socket::INET->new(Proto     => "tcp",
+                                 PeerAddr  => $host1,
+                                 PeerPort  => $port1)
+               || die "can't connect to port $port1 on $host1: $!";
+ 	};
+ 	
+ 	if($@ =~ /can't connect/){
+ 		
+ 		next;
+ 	}
+ 	$cnx_mids->autoflush(1);
+ 	
+ 	# Creation du thread de communication MIDS vers DLIP
+	die "can't fork: $!" unless defined($kidpid = fork());
+	if($kidpid){
+		#while(kill 0 => $kidpid){
+		while(1){
+			#print "parent is running...\n";
+			print "kid $kidpid is alive...\n";
+
+			# Communication DLIP vers MIDS
+			eval {
+	        		if(sysread($cnx_dlip, $byte, 1) == 1) {
+	           			syswrite $cnx_mids, "byte" or die "syswrite m'a tuer$!";
+	           			#$cnx_mids->send("byte\n") or die "syswrite m'a tuer$!";
+	           			$cnx_mids->flush();
+	        		}
+	        		else {die "no read"}
+	      	};
+	      	last if($@ =~ /no read/);
+	      	sleep 1;
+		}
+		print "kid is dead !\n";
+		print "a new will be done...\n";
+		close $cnx_mids;
+		kill("TERM", $kidpid);
+	}
+	else{
+		$children{$kidpid} = 1;
+		my $i = 10;
+		while (1){
+  			# Communication MIDS vers DLIP			
+  		   	eval {
+       			#if(sysread($cnx_mids, $byte, 1) == 1) {      				
+					#syswrite $cnx_dlip, $byte;
+       			#}
+       			
+       		};
+       		last if($@ =~ /no read/);       		                # just in case
+  		}
+  		print "kid is dying...\n";
+		exit 0;       	
+	}
+}
+exit 0;

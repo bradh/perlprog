@@ -1,0 +1,74 @@
+ #!/usr/bin/perl -w
+ 
+ use IO::Socket;
+ use Net::hostent;      # for OOish version of gethostbyaddr
+
+ unless (@ARGV == 1) { die "usage: $0 port1 " }
+ ($port1) = @ARGV;
+ 
+ while (1) {
+ 	
+ 	#eval {
+ 		$server1 = IO::Socket::INET->new( Proto     => "tcp",
+                                  LocalPort => $port1,
+                                  Listen    => SOMAXCONN,
+                                  Reuse     => 1) unless $server1;
+        die "can't setup server" unless $server1;
+ 		print "[Server $0 accepting clients on port $port1]\n";
+ 
+ 		$client1 = $server1->accept();
+ 		print "Accept client1 \n";
+ 		$client1->autoflush(1);
+ 		print "Welcome to $0;\n";
+ 		$hostinfo = gethostbyaddr($client1->peeraddr);
+ 		printf "[Connect from %s]\n", $hostinfo ? $hostinfo->name : $client1->peerhost;
+   		die "can't fork: $!" unless defined($kidpid1 = fork());
+		if($kidpid1){
+			#print "$kidpid1 $!\n";
+			local $@;
+			my $i = 0;
+   			# copy the socket to standard output
+        	while (1){
+        		#print STDOUT "run pere $i";
+        		eval {
+ 					if(sysread($client1, $byte2, 1) == 1) {
+ 						print "$byte2\n";
+            			syswrite $client1, $byte2;
+ 					}
+ 					else {die "no read"}
+ 				};
+ 				# print "error $@\n";
+ 				if($@ =~  /no read/) {					
+ 					next;
+ 				}
+ 				$i += 1;
+        	}
+        	#
+        	kill("TERM", $kidpid1);   # send SIGTERM to child
+		}
+   	 	else {
+   	 		local $@;
+     		# copy standard input to the socket
+     		my $i = 0;
+        	while (1){
+        		eval {
+        			#print "$kidpid1 $!\n";
+        			$line = "Hello DLIP\n";
+        			#print "Hello DLIP\n";
+        			syswrite $client1, $line or die "erreur ecriture\n";
+        			$i += 1;
+        			sleep 1;
+        		};
+        		if ($@) {
+        			print "erreur socket $@ \n";
+        			last;
+        		
+        		}
+        	}
+		}
+	#};	
+	close $server1;
+	close $client1;
+	print "$@ restart server...\n";
+ }
+ 

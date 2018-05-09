@@ -1,0 +1,80 @@
+#!/usr/bin/perl -w
+
+use Threads;
+
+$SIG{INT} = \&got_int;
+$SIG{ALRM} = sub { die "timeout" };
+my $kidAlive = 0;
+my $fom03Present = 1;
+share($fom03Present);
+
+
+die "can't fork: $!" unless defined($kidpid = fork());
+# Le thread parent
+if($kidpid){
+	while(1){
+		print "kidpid1 : $kidpid\n";
+		eval {
+			alarm(3);		    
+		    print "waiting 3s...\n";
+		    sleep 10;
+		    alarm(0);
+		};
+		if ($@ =~ /timeout/) {
+	    	print "check FOM03\n";
+	    	$fom03Present = 0;		                            # timed out; do what you will here
+			print "timeout 3s\n";
+		}
+	    else {
+	        alarm(0);           # clear the still-pending alarm
+	        die;                # propagate unexpected exception
+	    } 
+	    alarm(0);	
+	}
+} 
+# le thread fils
+else{
+	my $kidAlive = 0;
+	while(1){		
+		if (! $kidAlive){
+			die "can't fork: $!" unless defined($kidpid = fork());
+			print "start kidpid2 : $kidpid\n";
+			$kidAlive = 1;
+		}
+		if($kidpid){
+			print "kid2 : $kidpid\n";
+			while(1){
+				print "fom03 present ? $fom03Present\n";				
+				if($fom03Present){
+					# on lit la socket
+					print "reading socket\n";
+				}
+				else{
+					# on ferme la socket
+					# on tue le fils
+					print "kill kid\n";
+					kill 9 => $kidpid;
+					$kidAlive = 0;
+					# on ouvre une nouvelle socket
+					last;
+				}
+				sleep 1;				
+			}
+		}
+		else{
+			my $time = 0 ;
+			while(1){
+				print "still living...\n";
+				print "it is $time\n";
+				sleep 1;
+				$time += 1;
+			}
+		}
+	}
+		
+}
+
+sub got_int {
+	print " I'm got interrupt, bye !\n";
+	exit 0;
+}
