@@ -6,14 +6,27 @@ Created on 8 mai 2018
 import sys
 import fileinput
 
+import os.path
+import posixpath
+
+
+
 
 sum3 = 0
 levelMax = 3
 
+dirname = sys.argv[1]
+#if os.path.exists(dirname):
+#    print '{0} exits'.format(dirname)
+dirname = posixpath.Path(sys.argv[1]) 
+   
 
-levelMax = sys.argv[1]
 
-print 'level max = %(levelMax) s' % vars()
+levelMax = int(sys.argv[2])
+
+print 'file name is {0}'.format(dirname)
+print 'level max = {0}'.format(levelMax)
+
 
 
 
