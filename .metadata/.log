@@ -5618,3 +5618,294 @@ java.lang.RuntimeException: Finished restoring information for: /usr/bin/python 
 
 !ENTRY org.python.pydev.shared_core 4 4 2018-05-10 01:08:56.709
 !MESSAGE Info: Rebuilding internal caches: /home/stephane/Informatique/perlprog_repo/.metadata/.plugins/org.eclipse.core.resources/.projects/pythonprog/com.python.pydev.analysis/AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+!SESSION 2018-05-10 10:52:18.531 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_162
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.epic.perleditor 4 0 2018-05-10 11:08:52.033
+!MESSAGE An unexpected exception occurred while validating TCPDmp/tcpdump2Aladdin_V3.pl
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+	at org.epic.core.util.PerlExecutor.throwCoreException(PerlExecutor.java:226)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:154)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	... 7 more
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:52.035
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:52.035
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.epic.perleditor 4 0 2018-05-10 11:08:53.919
+!MESSAGE An unexpected exception occurred while validating TCPDmp/tcpdump2Aladdin_V5_3.pl
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+	at org.epic.core.util.PerlExecutor.throwCoreException(PerlExecutor.java:226)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:154)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	... 7 more
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:53.919
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:53.919
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.epic.perleditor 4 0 2018-05-10 11:08:55.881
+!MESSAGE An unexpected exception occurred while validating TCPDmp/tcpdump2Aladdin_V4.pl
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+	at org.epic.core.util.PerlExecutor.throwCoreException(PerlExecutor.java:226)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:154)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	... 7 more
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:55.881
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:55.881
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Relais brisé (pipe)
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.epic.perleditor 4 0 2018-05-10 11:08:56.048
+!MESSAGE An unexpected exception occurred while validating TCPDmp/tcpdump2Aladdin_V5_2.pl
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+	at org.epic.core.util.PerlExecutor.throwCoreException(PerlExecutor.java:226)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:154)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	... 7 more
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:56.048
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SUBENTRY 1 org.epic.perleditor 4 0 2018-05-10 11:08:56.048
+!MESSAGE Failed to execute command line: "/usr/bin/perl" "-c" "-w"
+!STACK 0
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.FilterOutputStream.close(FilterOutputStream.java:158)
+	at sun.nio.cs.StreamEncoder.implClose(StreamEncoder.java:320)
+	at sun.nio.cs.StreamEncoder.close(StreamEncoder.java:149)
+	at java.io.OutputStreamWriter.close(OutputStreamWriter.java:233)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:187)
+	at org.epic.core.util.ProcessExecutor.execute(ProcessExecutor.java:71)
+	at org.epic.core.util.PerlExecutor.execute(PerlExecutor.java:147)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.runPerl(PerlValidatorBase.java:326)
+	at org.epic.perleditor.editors.util.PerlValidatorBase.validate(PerlValidatorBase.java:69)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:1)
+	at org.epic.perleditor.editors.util.PerlValidator.validate(PerlValidator.java:79)
+	at org.epic.core.builders.PerlBuilderJob.buildResource(PerlBuilderJob.java:116)
+	at org.epic.core.builders.PerlBuilderJob.run(PerlBuilderJob.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
