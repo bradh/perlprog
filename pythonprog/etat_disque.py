@@ -7,14 +7,14 @@ import sys
 import fileinput
 
 import os.path
-import posixpath
+from os import *
 
-
-
+import subprocess
 
 sum3 = 0
 levelMax = 3
-
+output=subprocess.check_output("dmesg | grep hda", shell=True)
+print (output)
 dirname = sys.argv[1]
 #if os.path.exists(dirname):
 #    print '{0} exits'.format(dirname)
@@ -22,21 +22,24 @@ dirname = sys.argv[1]
 dirname = "."
 
 for path, dirs, files in os.walk(dirname):
-    print "Liste des chemins"
-    print path
-    print "miste des directories"
+    print ("Liste des chemins")
+    output = subprocess.check_output(["ls", "-l", path])
+    print (path, output)
+'''
+    print "Liste des directories"
     for dir in dirs:
         print dir
     print "Liste des fichiers"
     for filename in files:
         print(filename)
+ '''
    
 
 
 levelMax = int(sys.argv[2])
 
-print 'file name is {0}'.format(dirname)
-print 'level max = {0}'.format(levelMax)
+print ('file name is {0}'.format(dirname))
+print ('level max = {0}'.format(levelMax))
 
 
 
