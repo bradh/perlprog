@@ -18,7 +18,18 @@ levelMax = 3
 dirname = sys.argv[1]
 #if os.path.exists(dirname):
 #    print '{0} exits'.format(dirname)
-dirname = posixpath.Path(sys.argv[1]) 
+#dirname = sys.argv[1]
+dirname = "."
+
+for path, dirs, files in os.walk(dirname):
+    print "Liste des chemins"
+    print path
+    print "miste des directories"
+    for dir in dirs:
+        print dir
+    print "Liste des fichiers"
+    for filename in files:
+        print(filename)
    
 
 
