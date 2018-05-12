@@ -181,4 +181,69 @@ f.closed
 import sys
 print (sys.path)
 
+'''
+fonction entrée  sorite
 
+formatage des données en sortie str() et repr()
+'''
+for x in range(1, 11):
+    print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
+    # Note use of 'end' on previous line
+    print(repr(x*x*x).rjust(4))
+for x in range(1, 11):
+    print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
+print('12'.zfill(5))
+
+while True:
+    try:
+        x = int(input("Please enter a number: "))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
+print('good entry !')
+
+'''
+ espace de nom et portée
+ '''
+def scope_test():
+    def do_local():
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)
+
+for element in [1, 2, 3]:
+    print(element)
+for element in (1, 2, 3):
+    print(element)
+for key in {'one':1, 'two':2}:
+    print(key)
+for char in "123":
+    print(char)
+for line in open("formation_python.py"):
+    #print(line, end='')
+    pass
+'''
+Les iterateur dans les class
+'''
+def reverse(data):
+    for index in range(len(data)-1, -1, -1):
+        yield data[index]
+for char in reverse('golf'):
+    print(char)

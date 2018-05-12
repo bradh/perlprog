@@ -13,9 +13,7 @@ import subprocess
 
 sum3 = 0
 levelMax = 3
-output=subprocess.check_output("dmesg | grep hda", shell=True)
-print (output)
-dirname = sys.argv[1]
+
 #if os.path.exists(dirname):
 #    print '{0} exits'.format(dirname)
 #dirname = sys.argv[1]
@@ -23,8 +21,11 @@ dirname = "."
 
 for path, dirs, files in os.walk(dirname):
     print ("Liste des chemins")
-    output = subprocess.check_output(["ls", "-l", path])
-    print (path, output)
+    output = str(subprocess.check_output(["du", "-k", path])).rsplit('\n"')
+    for line in output:
+        print (line)
+ 
+        
 '''
     print "Liste des directories"
     for dir in dirs:
