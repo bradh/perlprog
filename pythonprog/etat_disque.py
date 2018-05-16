@@ -21,7 +21,7 @@ dirname = "."
 
 for path, dirs, files in os.walk(dirname):
     print ("Liste des chemins")
-    output = str(subprocess.check_output(["du", "-k", path])).rsplit('\n"')
+    output = subprocess.check_output(["du", "-k", path]).decode('UTF-8').split('\n"')
     for line in output:
         print (line)
  
