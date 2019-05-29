@@ -1,0 +1,209 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The commander_main_linux.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [DETAILED_DEBUG | NORMAL_DEBUG | EVENT | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+-- CSC_RTE                                 EVENT
+-- CSC_RTE_FULL_SOCKET_DUMP                EVENT
+-- CSC_OS                                  EVENT
+-- CSC_ADT                                 EVENT
+-- CSC_PERSISTENCE                         EVENT
+-- RTE_ACTIVE_QUEUE_BUS                    EVENT
+--
+-- Group :  2
+-- CSC_APU_MSG                             EVENT
+--
+-- Group :  4
+-- CSC_AC_COMMON_SERVICES                  EVENT
+-- CSC_KERNEL                              EVENT
+-- CSC_KERNEL_AC_API                       EVENT
+--
+-- Group :  5
+-- DATA_BUS                                EVENT
+-- CSC_MIDS_INIT_AND_STATUS                EVENT
+-- CSC_TEST_AND_MONITORING                 EVENT
+-- CSC_MIDS_INIT_DATA_UPDATE               EVENT
+-- CSC_MIDS_IF_RECORDING                   EVENT
+-- CSC_JFT                                 EVENT
+-- CSC_MIDS_TIME                           EVENT
+--
+-- Group :  7
+-- ADT                                     EVENT
+-- AIRFIELD_STATUS_MGR                     EVENT
+-- ASSOCIATION_MGR                         EVENT
+-- C2_TO_C2_FLIGHT_PATH_MGR                EVENT
+-- CU_CHANGE_MGR                           EVENT
+-- CU_REPORT_MGR                           EVENT
+-- COMMAND_MGR                             EVENT
+-- CONFLICTS_MGR                           EVENT
+-- CONFLICTS_MGR_UTILITIES                 EVENT
+-- CORRELATION_MGR                         EVENT
+-- DLIP_DD                                 EVENT
+-- DL_MSG                                  EVENT
+-- DATA_LINK_FILTER_MGR                    EVENT
+-- DATA_UPDATE_REQUEST_MGR                 EVENT
+-- DB                                      EVENT
+-- ECCM_COORDINATION_MGR                   EVENT
+-- EMERGENCY_STATUS_MGR                    EVENT
+-- EMERGENCY_STATUS_MGR_UTILITIES          EVENT
+-- EMISSION_MGR                            DETAILED_DEBUG
+-- EMISSION_MGR_UTILITIES                  EVENT
+-- ENGAGEMENT_COORDINATION_MGR             EVENT
+-- ENGAGEMENT_STATUS_MGR                   EVENT
+-- EW_CONTROL_COORD_MGR                    EVENT
+-- EW_PARAMETRIC_MGR                       EVENT
+-- EXERCISE_STATUS_MGR                     EVENT
+-- FOM02_ANALYSER                          EVENT
+-- FILTER_ROUTE                            EVENT
+-- FILTER_ROUTE_UTILITIES                  EVENT
+-- FILTERING                               EVENT
+-- FLIGHT_PATH_MGR                         EVENT
+-- FORCE_TELL_STATUS_MGR                   EVENT
+-- FORCE_TELL_STATUS_MGR_UTILITIES         EVENT
+-- FREE_TEXT_MGR                           EVENT
+-- GENERIC_MESSAGE_MGR                     EVENT
+-- HANDOVER_MGR                            EVENT
+-- HOST_DD                                 EVENT
+-- HOST_MSG                                DETAILED_DEBUG
+-- INFORMATION_REQUEST_MGR                 EVENT
+-- INDIRECT_PPLI_MGR                       EVENT
+-- INTELLIGENCE_MGR                        EVENT
+-- INTERNAL_MSG                            EVENT
+-- IU_STATUS_CHANGE_NOTIFY_LNK_CTRL        EVENT
+-- QHSM_MGR                                EVENT
+-- L11_ASSOCIATION_MGR                     EVENT
+-- L11_CORRELATION_MGR                     EVENT
+-- L11_DD                                  EVENT
+-- L11_EMERGENCY_STATUS_MGR                EVENT
+-- L11_EMISSION_MGR                        EVENT
+-- L11_EW_CONTROL_COORD_MGR                EVENT
+-- L11_FILTER_ROUTE                        EVENT
+-- L11_FORCE_TELL_STATUS_MGR               EVENT
+-- L11_LINK_CONVERTER                      EVENT
+-- L11_PLATFORM_STATUS_MGR                 EVENT
+-- L11_POINTER_MGR                         EVENT
+-- L11_R2_MGR                              EVENT
+-- L11_RECEIPT_COMPLIANCE_MGR              EVENT
+-- L11_STRENGTH_UPDATE_MGR                 EVENT
+-- FXM_PACKER                              EVENT
+-- L16_AIRFIELD_STATUS_MGR                 EVENT
+-- L16_CONVERSIONS                         EVENT
+-- L16_DD                                  EVENT
+-- L16_ECCM_COORDINATION_MGR               EVENT
+-- L16_EMERGENCY_STATUS_MGR                EVENT
+-- L16_EMISSION_MGR                        EVENT
+-- L16_ENGAGEMENT_COORDINATION_MGR         EVENT
+-- L16_EW_CONTROL_COORD_MGR                EVENT
+-- L16_EXERCISE_STATUS_MGR                 EVENT
+-- L16_FILTER_ROUTE                        EVENT
+-- L16_FORCE_TELL_STATUS_MGR               EVENT
+-- L16_FREE_TEXT_MGR                       EVENT
+-- L16_GENERIC_MESSAGE_MGR                 EVENT
+-- L16_MISSION_ASSIGNMENT_MGR              EVENT
+-- L16_PAIRING_MGR                         EVENT
+-- L16_PLATFORM_STATUS_MGR                 EVENT
+-- L16_R2_MGR                              EVENT
+-- L16_REMOTE_TRACK_DROP_MGR               EVENT
+-- L16_RECEIPT_COMPLIANCE_MGR              EVENT
+-- L16_STRENGTH_UPDATE_MGR                 EVENT
+-- L16_VECTOR_MGR                          EVENT
+-- SAT_IND_MGR_WITH_REPORT_TO_HOST         EVENT
+-- LTN_SERVER                              EVENT
+-- LINK_CTRL                               DETAILED_DEBUG
+-- MANUAL_TRANSMISSION_MGR                 EVENT
+-- MLK                                     EVENT
+-- MISSION_ASSIGNMENT_MGR                  EVENT
+-- MISSION_CORRELATOR_MGR                  EVENT
+-- MISSION_MNGT_MGR                        EVENT
+-- MISSION_NUMBER_MGR                      EVENT
+-- MSG_FLOW_TRACER                         DETAILED_DEBUG
+-- OBSERVERS                               EVENT
+-- OWN_UNIT_DATA_MGR                       EVENT
+-- PAIRING_MGR                             EVENT
+-- PARAMETERS_MGR                          DETAILED_DEBUG
+-- PARAMETERS_LOADER                       DETAILED_DEBUG
+-- PLATFORM_STATUS_MGR                     EVENT
+-- POINTER_MGR                             EVENT
+-- R2_MGR                                  EVENT
+-- R2_MGR_UTILITIES                        EVENT
+-- RECEIPT_COMPLIANCE_MGR                  EVENT
+-- REMOTE_TRACK_DROP_MGR                   EVENT
+-- SLAVE_MGR                               EVENT
+-- STRENGTH_UPDATE_MGR                     EVENT
+-- SYSTN_LTN_ASSOCIATION_MGR               EVENT
+-- TARGET_BEARING_MGR                      EVENT
+-- TARGET_CORL_MGR                         EVENT
+-- TARGET_MGR                              EVENT
+-- THREAT_WARNING_MGR                      EVENT
+-- TRACK_IDENTIFIER_MGR                    EVENT
+-- TRACK_STATISTIC_MGR                     EVENT
+-- TRANSMISSION_STATUS_MGR                 EVENT
+-- VECTOR_MGR                              EVENT
+-- VOICE_CALL_SIGN_MGR                     EVENT
+--
+-- Group :  8
+-- FORWARDING_MGR                          EVENT
+--
+-- Group :  9
+-- HOST_INTERFACE                          DETAILED_DEBUG
+-- LOG_FILE_MSG_HOST                       DETAILED_DEBUG
+-- LOC1_PARAMETERS_MGR                     EVENT
+-- FOM_ROUTING_AND_FILTERING               EVENT
+-- L16_CTRL                                EVENT
+-- UDI_MSG                                 EVENT
+-- FLOW_TRACER                             DETAILED_DEBUG
+-- TARGET_ROUTING                          EVENT
+-- ROUTING_TABLE                           EVENT
+-- TABLE_IO                                EVENT
+-- DLP_IF                                  EVENT
+-- LINK_CTRL_L11_TX                        EVENT
+-- LINK_CTRL_L11_RX                        EVENT
+-- L11_SERVICES                            EVENT
+-- COMMON_INITIALIZE                       EVENT
+-- COMMON_FINALIZE                         EVENT
+--
+-- Group :  10
+-- JRE_CTRL                                EVENT
+--
+-- Group :  11
+-- PRIORITY_MGR                            EVENT
+--
+-- Group :  17
+-- CSC_MIDS_INTERFACE_CORE_ADAPTER         EVENT
+-- CSC_MIDS_INTERFACE_ABSTRACT             EVENT
+-- CSC_MIDS_INTERFACE_MULTI_PLATFORM_D     EVENT
+--
+-- Group :  20
+-- SUPERVISION                             DETAILED_DEBUG
+-- INTERNAL_RESOURCE_MGR                   DETAILED_DEBUG
+-- PERSISTENCE_MGR                         EVENT
+-- STANDALONE                              EVENT
+-- NMS_INTERFACE                           EVENT
+-- CONTEXT_SAVE_MGR                        EVENT
+--
+-- Group :  21
+-- SIMPLE_IF                               EVENT
+-- SIMPLE_MSG                              EVENT
+--
+-- Group :  22
+-- NAV_IF                                  EVENT
+-- NAV_CTRL                                EVENT
+--
+-- Group :  23
+-- TACTICAL_MGR                            EVENT
+--
+-- Group :  24
+-- NETWORK_MGR                             DETAILED_DEBUG
+-- TDMA_TRG_IF                             DETAILED_DEBUG
+-- ACTIVE_SOCKET_CONTAINER                 EVENT
+-- SOCKET_HANDLERS                         EVENT
+--
+-- Group :  25
+-- LINK_CTRL_LCALL                         DETAILED_DEBUG
+-- LINK_CTRL_COMMON                        DETAILED_DEBUG
