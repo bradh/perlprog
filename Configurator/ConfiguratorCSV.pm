@@ -3,16 +3,18 @@ package ConfiguratorCSV;
 
 use ConfiguratorMenu;
 
-my $rproject_dir;
-my $rproject_file;
-my $rproject_name;
-my $rproject_version;
+my $rPROJECT_DIR;
+my $rPROJECT_FILE;
+my $rPROJECT_NAME;
+my $rPROJECT_VERSION;
 my $rproject_param;
 my $rIP_address;
 my $rTCP_port;
 my $rprocess_list;
 my $rconfigurator_data;
 my @project_data;
+
+# prototype de la variable $rconfigurator_data
 # $rconfigurator_data = { 'process_name' =>	{'configuration_file' => [
 #						  												[0, 1 , 2]				  												
 #						  											 ]
@@ -20,17 +22,15 @@ my @project_data;
 #						  };
 
 sub init_data {
-	$rproject_dir = shift;
-	$rproject_file = shift;
-	$rproject_name = shift;
-	$rproject_version = shift;
+	$rPROJECT_DIR = shift;
+	$rPROJECT_FILE = shift;
+	$rPROJECT_NAME = shift;
+	$rPROJECT_VERSION = shift;
 	$rprocess_list = shift;
 	$rconfigurator_data = shift;
 
-	open Fin, "<$$rproject_dir/$$rproject_file" or die "file $$rproject_dir/$$rproject_file do not exist";
-	#read first line
-	#<Fin>;
-	# read data
+	open Fin, "<$$rPROJECT_DIR\\$$rPROJECT_FILE" or die "file $$rPROJECT_DIR\\$$rPROJECT_FILE do not exist";
+# Lecture du fichier CSV ligne par ligne
 	my $i = 0;
 	while(<Fin>){
 		chomp;
@@ -83,7 +83,7 @@ sub init_data {
 		#						  					}
 		#						};
 		$rconfigurator_data->{$process} = {} ;
-		ConfiguratorCSV::getFileList($process, \@fileList);
+		getFileList($process, \@fileList);
 		foreach my $file (@fileList) {
 			#print "file $file !\n";
 			$rconfigurator_data->{$process}->{$file} = [];
@@ -119,27 +119,28 @@ sub init_data {
 }
 
 sub saveasProject{
-	my $dirname = Tkx::tk___chooseDirectory(-initialdir => $$rproject_dir );
-		$dirname =~ s/\//\\\\/g;
+	my $dirname = $rPROJECT_FILE_2;
+	#my $dirname = Tkx::tk___chooseDirectory(-initialdir => $$rPROJECT_DIR );
+	$dirname =~ s/\//\\\\/g;
 	print "$dirname\n";
 	#print "$dirname";
 	chdir $dirname;
-	mkdir "$$rproject_name" if (! -d $$rproject_name);
-	chdir $$rproject_name;
-	mkdir "$$rproject_version" if (! -d $$rproject_version);
-	chdir $$rproject_name;
-	$$rproject_dir = "$dirname\\$$rproject_name\\$$rproject_version";
-	print "$$rproject_dir\n";
-	if( -d $$rproject_dir){
+	mkdir "$$rPROJECT_NAME" if (! -d $$rPROJECT_NAME);
+	chdir $$rPROJECT_NAME;
+	mkdir "$$rPROJECT_VERSION" if (! -d $$rPROJECT_VERSION);
+	chdir $$rPROJECT_NAME;
+	$$rPROJECT_DIR = "$dirname\\$$rPROJECT_NAME\\$$rPROJECT_VERSION";
+	print "$$rPROJECT_DIR\n";
+	if( -d $$rPROJECT_DIR){
 		saveProject() ;
 	}else {
-		ConfiguratorMenu::confirmAction("Project not save : unknown dir $$rproject_dir ");
+		ConfiguratorMenu::confirmAction("Project not save : unknown dir $$rPROJECT_DIR ");
 	}
 	return 0;
 }
 
 sub saveProject{
-	open Fout, ">$$rproject_dir\\tmp.csv" or die "file $$rproject_dir\\$$rproject_file do not exist";
+	open Fout, ">$$rPROJECT_DIR\\tmp.csv" or die "file $$rPROJECT_DIR\\$$rPROJECT_FILE do not exist";
 	# calcul du nombre de ligne max @project_data
 	# Pour toutes les lignes de 0 à max , on joint les 3 valeurs du tableau @{$rconfigurator_data->{$processus}->{$file}->[$i]}
 	# Si le n° de ligne est supérieur à la taille du tableau $#{$rconfigurator_data->{$processus}->{$file}->[]}, on remplace par la valeur 0;
@@ -201,8 +202,8 @@ sub saveProject{
 		print Fout "$new_line\n";
 	}
 	close Fout;
-	print "\n\nxcopy  $$rproject_dir\\tmp.csv $$rproject_dir\\configurator_$$rproject_name.csv\n";
-	system("xcopy  $$rproject_dir\\tmp.csv $$rproject_dir\\configurator_$$rproject_name.csv");
+	print "\n\nxcopy  $$rPROJECT_DIR\\tmp.csv $$rPROJECT_DIR\\configurator_$$rPROJECT_NAME.csv\n";
+	system("xcopy  $$rPROJECT_DIR\\tmp.csv $$rPROJECT_DIR\\configurator_$$rPROJECT_NAME.csv");
 }
 
 sub displayAllParameters {

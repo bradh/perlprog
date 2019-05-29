@@ -5,10 +5,10 @@ use File::Basename;
 use ConfiguratorMenu;
 use ConfiguratorFile;
 
-my $dir = "/media/stephane/TRANSCEND/Tools/perlprog/Configurator";
+#my $dir = "/media/stephane/TRANSCEND/Tools/perlprog/Configurator";
 #my $dir = "H:\\Tools\\perlprog\\Configurator";
-my $rproject_dir;
-my $rproject_file;
+my $rPROJECT_DIR;
+my $rPROJECT_FILE;
 
 my $param_max = 35; # par onglet
 my $mw;
@@ -23,9 +23,9 @@ my $project_notebook;
 my $IP_address_notebook;
 my $TCP_port_notebook;
 
-my $rscript_dir;
-my $rproject_name;
-my $rproject_version;
+my $rSCRIPT_DIR;
+my $rPROJECT_NAME;
+my $rPROJECT_VERSION;
 my $rproject_param;
 my $rIP_address;
 my $rTCP_port;
@@ -33,11 +33,11 @@ my $rprocess_list;
 my $rconfigurator_data;
 
 sub init{
-	$rscript_dir = shift;
-	$rproject_dir =shift;
-	$rproject_file =shift;
-	$rproject_name =shift;
-	$rproject_version = shift;
+	$rSCRIPT_DIR = shift;
+	$rPROJECT_DIR = shift;
+	$rPROJECT_FILE =shift;
+	$rPROJECT_VERSION =shift;
+	$rPROJECT_VERSION = shift;
 	$rprocess_list = shift;
 	$rconfigurator_data = shift;
 	
@@ -55,8 +55,8 @@ sub init{
 
 sub applyConfiguration  {
 	print "apply configuration ...\n";
-	$$rproject_name = getProjectName();
-	$$rproject_version = getProjectVersion();
+	#$$rPROJECT_NAME = getProjectName();
+	#$$rPROJECT_VERSION = getProjectVersion();
 	ConfiguratorFile::applyConfiguration();
 }
 
@@ -67,22 +67,23 @@ sub updateFiles {
 }
 
 sub selectProject {
-	my $project_file = Tkx::tk___getOpenFile();
-	$project_file =~ s/\//\\\\/g;
-	print "$project_file\n";
-	chomp $project_file;
-	($$rproject_file, $$rproject_dir) = fileparse($project_file);
-	print "$$rproject_file,$$rproject_dir\n";
+	my $PROJECT_FILE = Tkx::tk___getOpenFile();
+	$PROJECT_FILE =~ s/\//\\\\/g;
+	print "$$PROJECT_FILE\n";
+	chomp $PROJECT_FILE;
+	# initialisation de $PROJECT_DIR $PROJECT_FILE
+	($$rPROJECT_FILE, $$rPROJECT_DIR) = fileparse($PROJECT_FILE);
+	print "$$rPROJECT_FILE,$$rPROJECT_DIR\n";
 	#exit 0; 
 	#$filename = Tkx::tk___getSaveFile();
 	#$dirname = Tkx::tk___chooseDirectory();
-	print "$$rproject_file\n";
+	print "$$rPROJECT_FILE\n";
 	initConfigurator();	
 }
 
 sub saveasProject {
-	$$rproject_name = getProjectName();
-	$$rproject_version = getProjectVersion();
+	$$rPROJECT_NAME = getProjectName();
+	$$rPROJECT_VERSION = getProjectVersion();
 	ConfiguratorCSV::saveasProject();
 }
 
@@ -91,30 +92,30 @@ sub saveProject {
 }
 
 sub initConfigurator{
-	#print "Project Name : $$rproject_name\n";
+	#print "Project Name : $$rPROJECT_NAME\n";
 	my $toto = 50;
 	#my $p = $mw->new_ttk__progressbar();
 	#my $p= $mw2->new_ttk__progressbar(-orient => 'horizontal', -maximum => 100, -variable => \&toto, -mode => 'determinate' );
 	#$p->start();
-	ConfiguratorCSV::init_data(	$rproject_dir,
-								$rproject_file,
-								$rproject_name,
-								$rproject_version,
+	ConfiguratorCSV::init_data(	$rPROJECT_DIR,
+								$rPROJECT_FILE,
+								$rPROJECT_NAME,
+								$rPROJECT_VERSION,
 								$rprocess_list,
 								$rconfigurator_data);
 								
 	print "process list : @$rprocess_list\n";	
-	$$rproject_name = getProjectName();
-	print "Project Name : $$rproject_name\n";
-	$$rproject_version = getProjectVersion();
-	print "Project Version : $$rproject_version\n";
+	$$rPROJECT_NAME = getProjectName();
+	print "Project Name : $$rPROJECT_NAME\n";
+	$$rPROJECT_VERSION = getProjectVersion();
+	print "Project Version : $$rPROJECT_VERSION\n";
 		
 	ConfiguratorFile::init_data(	
-								$rscript_dir,
-								$rproject_dir,
-								$rproject_file,
-								$rproject_name,
-								$rproject_version,
+								$rSCRIPT_DIR,
+								$rPROJECT_DIR,
+								$rPROJECT_FILE,
+								$rPROJECT_NAME,
+								$rPROJECT_VERSION,
 								$rprocess_list,
 								$rconfigurator_data);
 	
@@ -154,7 +155,7 @@ sub initNotebook {
 															-background => 'yellow');
 																
 					$entry1 = $frame1[$notebook1_index]->new_ttk__label(-textvariable => \$rconfigurator_data->{$process}->{'NULL'}->[$param]->[1],
-																-background => 'lightblue');	
+																-background => 'lightblue', );	
 					$entry2 = $frame1[$notebook1_index]->new_ttk__entry(-textvariable => \$rconfigurator_data->{$process}->{'NULL'}->[$param]->[2]);
 					$label-> g_grid(-column => 1, -row => $param);									
 					$entry1->g_grid(-column => 2, -row => $param);

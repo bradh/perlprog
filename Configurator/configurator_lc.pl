@@ -5,18 +5,18 @@ use Tkx;
 use ConfiguratorProject;
 use ConfiguratorCSV;
 
-my $SCRIPT_DIR = $ENV{'PWD'};
+my $script_dir = $ENV{'PWD'};
 
-#$SCRIPT_DIR = "/media/stephane/TRANSCEND/Tools/perlprog/Configurator";
-$SCRIPT_DIR = '   ';
-#my $osname = `uname -u`;
-#print "$osname, $SCRIPT_DIR\n";
+#$script_dir = "/media/stephane/TRANSCEND/Tools/perlprog/Configurator";
+$script_dir = "H:\\Tools\\perlprog\\Configurator";
+#my $osname = $OSNAME;
+#print "$osname, $script_dir\n";
 
-my $PROJECT_DIR = 'D:\\Users\\t0028369\\Documents\\Mes outils personnels\\perlprog\\Configurator';
-my $PROJECT_FILE;
+my $project_dir;
+my $project_file;
 
-my $PROJECT_NAME;
-my $PROJECT_VERSION;
+my $project_name;
+my $project_version;
 my @project_param;
 my @IP_address;
 my @TCP_port;
@@ -29,11 +29,11 @@ my %configurator_data;
 		#	
 							
 # Main window Tak$e top and the bottom - now implicit top is in the middle
-ConfiguratorProject::init(	\$SCRIPT_DIR,
-							\$PROJECT_DIR,
-							\$PROJECT_FILE,
-							\$PROJECT_NAME,
-							\$PROJECT_VERSION,
+ConfiguratorProject::init(	\$script_dir,
+							\$project_dir,
+							\$project_file,
+							\$project_name,
+							\$project_version,
 							\@process_list,
 							\%configurator_data,
 							);

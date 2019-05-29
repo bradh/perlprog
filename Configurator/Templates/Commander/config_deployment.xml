@@ -1,0 +1,22 @@
+<TopLink>
+    <Core>
+        <TDL_Kernel>
+            <DLIP_Address>%I02%</DLIP_Address>
+            <DLIP_Remote_Address>%I03%</DLIP_Remote_Address>
+            <JREP_TCP_Port>%P02%</JREP_TCP_Port>
+            <MIDS_TCP_Port>%P01%</MIDS_TCP_Port>
+            <Own_Unit_System_TN>1</Own_Unit_System_TN>
+            <SIMPLE_IF>
+                <SIMPLE>
+                    <SIMPLE_NODE_ID>1</SIMPLE_NODE_ID>
+                    <SIMPLE_NODE_NAME>TOPLINK</SIMPLE_NODE_NAME>
+                    <SIMPLE_IP_ADDRESS>%I05%</SIMPLE_IP_ADDRESS>
+                    <SIMPLE_PORT>%P11%</SIMPLE_PORT>
+                </SIMPLE>
+            </SIMPLE_IF>
+        </TDL_Kernel>
+        <JREP />
+        <Remote_L11 />
+    </Core>
+    <C2 />
+</TopLink>

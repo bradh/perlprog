@@ -1,0 +1,10 @@
+<TopLink>
+    <Core>
+        <TDL_Kernel>
+            <DLP_DEFAULT_STN>34</DLP_DEFAULT_STN>
+        </TDL_Kernel>
+        <JREP />
+        <Remote_L11 />
+    </Core>
+    <C2 />
+</TopLink>

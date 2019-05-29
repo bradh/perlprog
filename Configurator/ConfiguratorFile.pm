@@ -1,72 +1,74 @@
 package ConfiguratorFile;
 
-use ConfiguratorProject;
-use ConfiguratorMenu;
-my $rscript_dir;
-my $rproject_dir;
-my $rproject_file;
-my $rproject_name;
-my $rproject_version;
+my $TEMPLATE_DIR = "Templates";
+my $APPPLICABLE_DIR = "Applicable";
+
+my $rPROJECT_DIR;
+my $rPROJECT_FILE;
+my $rPROJECT_NAME;
+my $rPROJECT_VERSION;
 my $rprocess_list;
 my $rconfigurator_data;
 my $rprojectName;
 
+my $TARGET_DIR;
+
 						
 sub init_data {
-	$rscript_dir = shift;
-	$rproject_dir = shift;
-	$rproject_file = shift;
-	$rproject_name = shift;
-	$rproject_version = shift;
+	$rPROJECT_DIR = shift;
+	$rPROJECT_FILE = shift;
+	$rPROJECT_NAME = shift;
+	$rPROJECT_VERSION = shift;
 	$rprocess_list = shift;
 	$rconfigurator_data = shift;
+	
+	my $TARGET_DIR = $$rPROJECT_DIR;
 }
 
 sub applyConfiguration {
-	my $dirname = Tkx::tk___chooseDirectory(-initialdir => $$rproject_dir );
-	$dirname =~ s/\//\\\\/g;
-	print "$dirname\n";
+	#my $dirname = Tkx::tk___chooseDirectory(-initialdir => $$rPROJECT_DIR );
+	#$dirname =~ s/\//\\\\/g;
+	#print "$dirname\n";
 	foreach my $process ( @$rprocess_list){
 		# on recupere la version du process
 		print "get process : $process\n";
-		print "$$rscript_dir\n";
-		my $process_version = ConfiguratorProject::getProcessVersion($process);
-		print "$process_version\n";
-		#On verifie la presence du repertoire template
-		if( ! -d "$$rscript_dir\\Template\\$process\\$process_version"){
-			print "$$rscript_dir\\Template\\$process\\$process_version\n";
-			ConfiguratorMenu::acquittementAction("Sorry ! Template for $process version $process_version not available ...");
-			return -1;
+		#On verifie la presence du repertoire template 
+		if( ! -d "$$rPROJECT_DIR\\$TEMPLATE_DIR\\$process"){
+			print "$$rPROJECT_DIR\\$TEMPLATE_DIR\\$process not existing \n";
+			exit -1;
 		}
 		else{
 			# On verifie la presence du repertoire cible sinon on le cree
-			my $dir = "$dirname\\$$rproject_name";
+			my $dir = "$TARGET_DIR\\$APPLICABLE_DIR";
 			mkdir ($dir) if( ! -d $dir);
-			$dir = "$dirname\\$$rproject_name\\$$rproject_version";
-			mkdir ($dir) if( ! -d $dir);
-			$dir = "$dirname\\$$rproject_name\\$$rproject_version\\$process";
+			$dir = "$TARGET_DIR\\$APPLICABLE_DIR\\$process";
 			mkdir ($dir) if( ! -d $dir);
 			chdir ($dir);
 			# pour chaque fichier template , on cree un fichier cible
-			opendir DIR, "$$rscript_dir\\Template\\$process\\$process_version";
+			opendir DIR, "$$rPROJECT_DIR\\$TEMPLATE_DIR\\$process";
 			while(readdir(DIR)){
 				my $file = $_;
+				# on saute les fichiers commencant par un .
 				next if($file =~ /^\./ || $file =~ /\~$/);
 				print "process $file ...\n";
-				print ">$dir\\$$rproject_name\\$$rproject_version\\$process\\$file\n";
-				open Fin , "<$$rscript_dir\\Template\\$process\\$process_version\\$file" or die "not possible open $$rscript_dir/Template/$process/$process_version/$file... ";;
-				open Fout, ">$dirname\\$$rproject_name\\$$rproject_version\\$process\\$file" or die "not possible open $dirname/$$rproject_name/$$rproject_version/$process/$file... ";
+				print ">$dir\\$APPLICABLE_DIR\\$process\\$file\n";
+				# on ouvre le fichier template et l'on crée le fichier applicable
+				open Fin , "<$$rPROJECT_DIR\\$TEMPLATE_DIR\\$process\\$file" or die "not possible open $$rSCRIPT_DIR/Template/$process/$process_version/$file... ";;
+				open Fout, ">$TARGET_DIR\\$APPLICABLE_DIR\\$process\\$file" or die "not possible open $dirname/$$rPROJECT_NAME/$$rPROJECT_VERSION/$process/$file... ";
 				# Modification des @IP
 				while(<Fin>){
 					$line = $_;
 					chomp $line;
 					print "$line\n";
+					# on remplace l'index par sa valeur
 					if ($line =~ /\%(I\d+)\%/) {
 						my $index = $1;
 						print "index : $index\n";
 						#print "$line\n";
+						# on recherche l'index dans la hash table
 						foreach my $rarray (@{$rconfigurator_data->{'IP@'}->{'NULL'}}) {
 							print "$rarray->[0]\n";
+							# si l'index est le bon , on le remplace par la valeur
 							if ($rarray->[0] eq "$index") {
 								#print "$line\n";
 								$line =~ s/\%I\d+\%/$rarray->[2]/;
@@ -89,7 +91,8 @@ sub applyConfiguration {
 							}					
 						}
 					}
-					if ($line =~ /\%([DTJ]\d+)\%/) {
+					# Modification des index specifique aux applicatifs
+					if ($line =~ /\%([DTJC]\d+)\%/) {
 						my $index = $1;
 						print "index : $index\n";
 						foreach my $rarray ( @{$rconfigurator_data->{$process}->{$file}}) {
@@ -110,23 +113,20 @@ sub applyConfiguration {
 				
 				# Modification des parametres propres
 				foreach my $rparam_param (@{$rconfiguration_data->{'$process'}->{'$file_template'}}){
-					
-				} 
-				
+				} 		
 			}
 			close DIR;
-		}
-		
+		}		
 	}
 }
 
 sub update_DLIP_files {
-	mkdir ("$$rprojectName") if (! -d "$$rprojectName" );
-	mkdir ("$$rprojectName\\DLIP")  if (! -d "$$rprojectName/DLIP" );
+	mkdir ("$APPLICABLE_DIR") if (! -d "$APPLICABLE_DIR" );
+	mkdir ("$APPLICABLE_DIR\\DLIP")  if (! -d "$APPLICABLE_DIR/DLIP" );
 	foreach my $file (@DLIP_file) {
 		print "process $file ...\n";
 		open Fin , "<V7\\DLIP\\$file" or die "not possible open V7/DLIP/$file... ";;
-		open Fout, ">$$rprojectName\\DLIP\\$file" or die "not possible open $$rprojectName/DLIP/$file... ";
+		open Fout, ">$APPLICABLE_DIR\\DLIP\\$file" or die "not possible open $APPLICABLE_DIR/DLIP/$file... ";
 		while(<Fin>){
 			$line = $_;
 			chomp $line;
@@ -196,12 +196,12 @@ sub update_DLIP_files {
 }
 
 sub update_TDL_ROUTER_files {
-	mkdir ("$$rprojectName") if (! -d "$$rprojectName" );
-	mkdir ("$$rprojectName\\TDL_ROUTER")  if (! -d "$$rprojectName\\TDL_ROUTER" );
+	mkdir ("$APPLICABLE_DIR") if (! -d "$APPLICABLE_DIR" );
+	mkdir ("$APPLICABLE_DIR\\TDL_ROUTER")  if (! -d "$APPLICABLE_DIR\\TDL_ROUTER" );
 	foreach my $file (@TDL_ROUTER_file) {
 		print "process $file ...\n";
 		open Fin , "<V7\\TDL_ROUTER\\$file" or die "not possible open V7\\TDL_ROUTER\\$file... ";;
-		open Fout, ">$$rprojectName\\TDL_ROUTER\\$file" or die "not possible open $$rprojectName\\TDL_ROUTER\\$file... ";
+		open Fout, ">$APPLICABLE_DIR\\TDL_ROUTER\\$file" or die "not possible open $APPLICABLE_DIR\\TDL_ROUTER\\$file... ";
 		while(<Fin>){
 			$line = $_;
 			chomp $line;
@@ -272,12 +272,12 @@ sub update_TDL_ROUTER_files {
 }
 
 sub update_JREP_files {
-	mkdir ("$$rprojectName") if (! -d "$$rprojectName" );
-	mkdir ("$$rprojectName\\JREP")  if (! -d "$$rprojectName\\JREP" );
+	mkdir ("$APPLICABLE_DIR") if (! -d "$APPLICABLE_DIR" );
+	mkdir ("$APPLICABLE_DIR\\JREP")  if (! -d "$APPLICABLE_DIR\\JREP" );
 	foreach my $file (@JREP_file) {
 		print "process $file ...\n";
 		open Fin , "<V7\\JREP\\$file" or  ConfiguratorMenu::acquittementAction(" V7\\JREP\\$file do not exist !");
-		open Fout, ">$$rprojectName\\JREP\\$file" or ConfiguratorMenu::acquittementAction("$$rprojectName\\JREP\\$file");
+		open Fout, ">$APPLICABLE_DIR\\JREP\\$file" or ConfiguratorMenu::acquittementAction("$APPLICABLE_DIR\\JREP\\$file");
 		while(<Fin>){
 			$line = $_;
 			chomp $line;
@@ -334,12 +334,12 @@ sub update_JREP_files {
 }
 
 sub update_Supervisor_files {
-	mkdir ("$$rprojectName") if (! -d "$$rprojectName" );
-	mkdir ("$$rprojectName\\Supervisor")  if (! -d "$$rprojectName\\Supervisor" );
+	mkdir ("$APPLICABLE_DIR") if (! -d "$APPLICABLE_DIR" );
+	mkdir ("$APPLICABLE_DIR\\Supervisor")  if (! -d "$APPLICABLE_DIR\\Supervisor" );
 	foreach my $file (@Supervisor_file) {
 		print "process $file ...\n";
 		open Fin , "<V7\\Supervisor\\$file" or  ConfiguratorMenu::acquittementAction(" V7\\Supervisor\\$file do not exist !");
-		open Fout, ">$$rprojectName\\Supervisor\\$file" or ConfiguratorMenu::acquittementAction("$$rprojectName\\Supervisor\\$file");
+		open Fout, ">$APPLICABLE_DIR\\Supervisor\\$file" or ConfiguratorMenu::acquittementAction("$APPLICABLE_DIR\\Supervisor\\$file");
 		while(<Fin>){
 			$line = $_;
 			chomp $line;

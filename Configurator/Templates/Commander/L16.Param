@@ -1,0 +1,16 @@
+Nb_buf_presat_threshold_PGx    = %C101%
+Nb_buf_sat_threshold_PGx       = %C102%
+Nb_buf_presat_threshold_PG_All = %C103%
+Nb_buf_sat_threshold_PG_All    = %C104%
+FIM01_Feedback_Enable          = %C105%
+FOM12_Reporting_Enable         = %C106%
+FOM02_Loopback_Enable          = %C107%
+AIS_Is_Used                    = %C108%
+K_LinkT_Delta_Time_Limit       = %C109%
+K_LinkT_Delta_Time_Default     = %C110%
+J_Elimination_Window_Size      = %C111%
+Platform_Nb                    = %C112%
+Platform_List                  = %C113%
+Platform_Role_List             = %C114%
+Platform_Port_List             = %P10%
+IU_Remote_Staleness_Limit      = %C115%
