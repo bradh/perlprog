@@ -13,7 +13,93 @@ package Conversion;
 
 my $debug = 0;
 
+if($debug == 5){
+	foreach my $latitude ( 180, -180, 90, -90, 45, -45, 45.5, -45.5, 0){
+		latitude2BAM_32($latitude);
+	}
+	foreach my $longitude ( 180, -180, 90, -90, 45, -45, 45.5, -45.5, 0){
+		longitude2BAM_32($longitude);
+	}
+	exit 0;
+}
 
+sub latitude2BAM_32 {
+	my $latitude = shift;
+	my $quadran = 0;
+	my $BAM = 0;
+	# si latitude hors range BAM = N/S value
+	if($latitude > 90 || $latitude < -90){
+		$BAM = 0x80000000;
+	}
+	else {
+		 if($latitude < 0){
+			$latitude = 180 + $latitude;
+			$quadran = -1;  
+		}
+		foreach my $i (1..31){
+			my $puissance = 2**$i;
+			$diff = $latitude-180/$puissance;
+			
+			if ( $diff > 0){
+				$BAM = $BAM + 2**(31-$i);
+				$latitude = $diff;
+			}
+			my $hexa = toHexaString($BAM, 8);
+			#print "$i: $puissance:$diff:$hexa :$latitude\n";
+			#print "$latitude:$BAM\n";
+			$i += 1;
+		}
+		$BAM = $BAM + 2**31 + 1 if($quadran < 0);		
+	}
+
+	my $HexaBAM = toHexaString($BAM, 8);
+	print "$latitude: $BAM: $HexaBAM\n";
+	return $HexaBAM; 
+	
+}
+
+sub longitude2BAM_32 {
+	
+	my $longitude = shift;
+	my $quadran = 0;
+	my $BAM = 0;
+	# si longitude hors range BAM = N/S value
+	if($longitude > 180 || $longitude < -180){
+		$BAM = 0x80000000;
+	}
+	else {
+		if($longitude == 180 || $longitude == -180){
+			$BAM = 0x80000001if($longitude == -180);
+			$BAM = 0x7FFFFFFF if($longitude == 180);
+			
+		}
+		else {
+			 if($longitude < 0){
+				$longitude = 180 + $longitude;
+				$quadran = -1;  
+			}
+			foreach my $i (1..31){
+				my $puissance = 2**$i;
+				$diff = $longitude-180/$puissance;
+				
+				if ( $diff > 0){
+					$BAM = $BAM + 2**(31-$i);
+					$longitude = $diff;
+				}
+				my $hexa = toHexaString($BAM, 8);
+				#print "$i: $puissance:$diff:$hexa :$longitude\n";
+				#print "$longitude:$BAM\n";
+				$i += 1;
+			}
+			$BAM = $BAM + 2**31 + 1 if($quadran < 0);		
+		}	
+	}
+
+
+	my $HexaBAM = toHexaString($BAM, 8);
+	print "$longitude: $BAM: $HexaBAM\n";
+	return $HexaBAM;
+}
 
 sub toChrono {
 	my $heure = shift;
@@ -29,23 +115,59 @@ sub toChrono {
 	return $chrono;
 	
 }
+
+sub timeToChrono {
+	my $time = shift;
+ 	my ($hour, $minute, $second) = split ":", $time;
+ 	print "hour : $hour $minute $second \n" if($debug == 1);
+	($second, my $millisecond) = split '\.', $second;
+	print "hour : $hour $minute $second $millisecond\n" if($debug == 1);
+	$second = $second + ($millisecond/1000);
+	print "hour : $hour $minute $second $millisecond\n" if($debug == 1);
+	my $chrono = $hour*3600 + $minute*60 + $second;
+	print "chrono : $chrono\n" if($debug == 1);
+	#<>;
+	return $chrono;
+	
+}
+
+sub time2Chrono {
+	my $time = shift;
+ 	my ($hour, $minute, $second) = split ":", $time;
+ 	print "hour : $hour $minute $second \n" if($debug == 1);
+	($second, my $millisecond) = split '\.', $second;
+	print "hour : $hour $minute $second $millisecond\n" if($debug == 1);
+	$second = $second + ($millisecond/1000);
+	print "hour : $hour $minute $second $millisecond\n" if($debug == 1);
+	my $chrono = $hour*3600 + $minute*60 + $second;
+	print "chrono : $chrono\n" if($debug == 1);
+	#<>;
+	return $chrono;
+	
+}
+
 sub toTime {
 	#shift;
 	my $chrono = shift;
 	my  $heure = formatHeure(int $chrono/3600);
+	#print "format heure : $heure\n";
 	if( $heure > 23 ) {die "convChrono : chrono depasse 24 heures\n";}
-	my $minute = formatHeure(int (($chrono - ($heure*3600))/60));
-	my $seconde = formatSec($chrono - ($heure*3600) - ($minute *60));
-	my $time = "$heure:$minute:$seconde";
+	my $minute = int(($chrono - ($heure*3600))/60);
+	$minute = sprintf("%02d", $minute);
+	my $seconde = ($chrono - ($heure*3600) - ($minute *60));
+	my $milliseconde = int(($seconde-int($seconde))*1000);
+	$milliseconde = sprintf("%03d", $milliseconde);
+	$seconde = sprintf("%02d", $seconde);
+	$milliseconde = substr($milliseconde,0,3);
+	print "$heure:$minute:$seconde.$milliseconde\n";
+	my $time = "$heure:$minute:$seconde.$milliseconde";
 	#<>;
 	return $time;
 }
 sub formatHeure {
 	#shift;
 	my $chiffre = shift;
-	if ( length "$chiffre" < 2) {
-		$chiffre = "0$chiffre";
-	}
+	$chiffre = sprintf("%02d", $chiffre);
 	return $chiffre;
 }
 sub formatSec {
@@ -156,7 +278,7 @@ sub toRelative{
 sub micro2Milli{
 	my $micro = shift;
 	($micro < 1000000 && $micro >= 0)or die "micro2Milli micro exceed 1 million\n";
-	my $milli = int($micro/1000);
+	my $milli = sprintf("%02d",int($micro/1000));
 	return $milli;
 }
 

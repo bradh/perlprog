@@ -3,10 +3,6 @@ package BoctetProcessing;
 my $Offset_mot=0; # offset du mot I dans le tableau @MOT $MOT[11] est le 1er boctet pour les fim ; 8 pour les fom
 my $r_array;
 
-sub setOffsetMotI {
-	$Offset_mot = shift;
-	return 0;
-}
 sub getValue {
 	$r_array = shift;
 	my $Bit_offset = shift; # compris entre 0 et 79

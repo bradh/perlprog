@@ -61,9 +61,9 @@ sub get_fxm_length {
 	#print unpack("B*", $bim)."\n";
 	$bim = unpack("B*", $bim);
 	my $bxm_length = substr($bim, 15 - $bxm_structure->[0]->[2]->{last_bit}, $bxm_structure->[0]->[2]->{last_bit} - $bxm_structure->[0]->[2]->{first_bit} + 1);
-	#print "bxm_length (bin) = $bxm_length\n";
+	print "bxm_length (bin) = $bxm_length\n";
 	$bxm_length = oct("0b$bxm_length");
-	#print "bxm_length (dec) = $bxm_length\n";
+	print "bxm_length (dec) = $bxm_length\n";
 	return $bxm_length;
 }
 
@@ -85,7 +85,7 @@ sub bxm_create {
 	$bxm = '';
 	foreach my $word ( @$bxm_structure ){
 		my $word2 = "0"x16;
-		#print $word2."\n";
+		print $word2."\n";
 		foreach my $field (@$word){
 			print $field->{"field_name"}."\n";
 			my $digitNumber = $field->{"last_bit"} - $field->{"first_bit"} + 1;
@@ -123,17 +123,6 @@ sub populate_field_name_array {
 			push @field_name_array, $field->{"field_name"};
 		}
 	}
-}
-
-sub extract_fxm {
-	my $bxm = shift;
-	my $debug = 1;
-	$bxm = unpack('H*', $bxm);
-	print "extract_fxm : $bxm\n" if($debug);
-	$bxm = substr($bxm, 4);
-	print "extract_fxm : $bxm\n" if($debug);
-	$bxm = pack('H*', $bxm);
-	return $bxm;
 }
 
 sub get_field_by_name {

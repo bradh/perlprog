@@ -1,6 +1,7 @@
-package fom04_processing;
+package fom01_processing;
 
-use lib qw(/media/stephane/TRANSCEND/Tools/perlprog/lib);
+#use lib qw(/media/stephane/TRANSCEND/Tools/perlprog/lib);
+use lib qw(../lib);
 use Conversion;
 
 	my $word_number = 2;
