@@ -1,0 +1,1 @@
+ACTION=="add", KERNEL=="sd?1", RUN+="/etc/init.d/do_it_on_usb_connection.sh"
