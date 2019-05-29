@@ -3,13 +3,17 @@
 # l'état de staturation du MIDS 0/1
 # l'état du DLIP
 # l'envoi du TDH029
+# traces à positionner
+# SAT_IND_MGR_WITH_REPORT_TO_HOST
+# SUPERVISION
+# L16_CTRL
 
 
 use strict;
 use Getopt::Std;
 
 #use lib qw(c:/cygwin/home/Stephane/perlprog/Scripts/lib);
-use lib qw(c:/perlprog/lib);
+use lib qw(D:\Users\t0028369\perlprog\lib);
 use Conversion;
 use J_Msg;
 use Time_conversion; 
@@ -33,8 +37,8 @@ my $dlipStatus2 = 0;
 my $tdh0292 = 0;
 
 open Fin, "<$inFileName" or die "impossible open $inFileName ....\n";
-#open Fout1, ">$outFileName1" or die "impossible open $outFileName1 ....\n";
-#open Fout2, ">$outFileName2" or die "impossible open $outFileName2 ....\n";
+open Fout1, ">$outFileName1" or die "impossible open $outFileName1 ....\n";
+open Fout2, ">$outFileName2" or die "impossible open $outFileName2 ....\n";
 
 #print Fout1 "Chrono;Time;MIDS Status;DLIP Saturation;TDH079\n";
 #print Fout2 "Chrono;Time;MIDS Status;DLIP Saturation;TDH079\n";
@@ -55,7 +59,7 @@ while(<Fin>){
 	#$time = Conversion::toTime($chrono);
 	#print "$time\n";
 	
-	if ( 	$line =~ /\| 2  -->/  )
+	if ( 	$line =~ /\| 2  -->/  ){
 		print "$line\n";
 
 	}

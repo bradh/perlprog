@@ -21,7 +21,7 @@ my $inFileName = $ARGV[0];
 print "$ARGV[0]\n";
 #exit;
 
-my $outFileName1 = "extract_MIDS_Saturation_State.csv";
+my $outputFileName = "extract_log_DLIP.log";
 
 my $line;
 my $result;
@@ -43,17 +43,12 @@ my $tx_j_hostile_2 = 0;
 my $tx_j_suspect_2 = 0;
 my $saturation_state = 0;
 
+my $string_to_extract = [
+	"toto"
+];
+
 open Fin, "<$inFileName" or die "impossible open $inFileName ....\n";
-open Fout1, ">$outFileName1" or die "impossible open $outFileName1 ....\n";
-open Flog, ">extract_Needline.log" or die "extract_Needline.log";
-
-print Fout1 "Chrono;Saturation\n";
-print Flog "log\n";
-
-
- my $event = 1;
- 
-
+open Fout1, ">$outputFileName" or die "impossible open $outputFileName ....\n";
 
 while(<Fin>){
 	$line = $_;
@@ -72,25 +67,15 @@ while(<Fin>){
 	}
 	else {
 		next;
-	}	
-	if ($line =~ /ANALYSE_MIDS_TX_QUEUES_STATUS/){
-		if($line =~/Uncontrolled PGs in saturation state/ || $line =~ /Status = SATURATED/){
-				$saturation_state = 1;
-		}
-		if($line =~/Status = NOT_SATURATED/){
-			$saturation_state = 0;
-		}
-		printFout1();
 	}
-
+	foreach my $string (@$string_to_extract){	
+		if ($line =~ /$string/){
+			print Fout1 $line;
+		}
+		print Fout1 "$line\n";
+	}
 }
-
 close Fin;
 close Fout1;
-close Flog;
-
-sub printFout1 {
-	print Fout1 "$chrono;$saturation_state\n";	
-}
 
 exit 0;

@@ -10,7 +10,10 @@ use strict;
 use Getopt::Std;
 
 #use lib qw(c:/cygwin/home/Stephane/perlprog/Scripts/lib);
-use lib qw(c:/perlprog/lib);
+use lib qw(D:/Users/t0028369/Documents/Mes outils personnels/perlprog/lib);
+
+
+
 use Conversion;
 use J_Msg;
 use Time_conversion;
