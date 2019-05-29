@@ -1,0 +1,33 @@
+# start time
+start:23:12:1
+# stop time
+stop:0:0:2
+j:2:2:STN:0
+j:2:3:STN:0
+j:2:5:STN:0
+j:3:0:STN:0005
+j:3:1:STN:0
+j:3:2:STN:0
+j:3:3:STN:0
+j:3:5:STN:0
+j:3:6:STN:0
+j:3:7:STN:0
+j:6:0:STN:0
+j:7:0:STN:0
+j:7:1:STN:0
+j:7:2:STN:0
+j:7:3:STN:0
+j:7:4:STN:0
+j:7:5:STN:0
+j:7:6:STN:0
+j:7:7:STN:0
+j:10:2:STN:0
+j:10:3:STN:0
+j:10:5:STN:0
+j:12:4:STN:0
+j:12:5:STN:0
+j:12:6:STN:0
+j:14:0:STN:0
+j:14:2:STN:0
+j:15:0:STN:0007
+#j:29:0:STN:0
