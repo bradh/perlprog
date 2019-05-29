@@ -1,0 +1,2 @@
+#!/usr/bin/ksh
+ps -edf | grep altbmd1c_main

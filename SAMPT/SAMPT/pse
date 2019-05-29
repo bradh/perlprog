@@ -1,0 +1,3 @@
+#!/usr/bin/ksh
+ps -edf | grep martha_
+ps -edf | grep -i launch

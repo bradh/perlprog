@@ -1,0 +1,490 @@
+reference;french;english; italian ref.;osim italian dico;result;acceptance
+&6_car_min;(6 caractères minimum);(6 char min);(6 car min);(6 car. minimum);KO
+&Action_Non_Effectuee;Pas d'action effectuée;No Action performed;(no azione effettuata);no azione effettuata;KO
+&Action_OTAR_NOK;Pas d'action OTAR;No OTAR Action;No azione OTAR;No azione OTAR;OK
+&Action_OTAR_OK;Action OTAR;OTAR Action;Azione OTAR;Azione OTAR;OK
+&Activate;Activate;Activate;Attiva;Attiva;OK
+&Activation_Set_M;Activation Set;Set Activation;Attivazione Set;Attivazione Set;OK
+&ActivationTSRD;Activation enregistrement TSRD;TSRD Recording;Attivazione registrazione TSRD;Attivazione registrazione TSRD;OK
+&ACTIVE;Activé;Activated;attivato;attivato;OK
+&ActiverTSRD_M;Activer enregistrement TSRD;Start TSRD Recording;Inizio registrazione TSRD;Inizio registrazione TSRD;OK
+&Add;Add;Add;Aggiungere;Aggiungere;OK
+&Adresse;Adresse;Address;Indirizzo;Indirizzo;OK
+&AffAllTracks;Afficher toutes les unités;Display all JU;Visualizzare tutte le unità;Visualizzare tutte le unità;OK
+&Affectation;Location;Location;Localizzazione;Localizzazione;OK
+&Affectation_Des_Clefs;Affectation des clefs;Key allocation;Allocazione chiave;Allocazione Chiave;KO
+&Aide;Aide;Help;Aiuto;Aiuto;OK
+&Aide_M;Aide;Help;Aiuto;Aiuto;OK
+&AIDE_OSIM;Aide OSIM;OSIM Help;Aiuto OSIM;Aiuto OSIM;OK
+&Alarmes;Alarmes;Alarms;Allarmi;Allarmi;OK
+&ALARME_JDB;ALARME;ALARM;ALLARME;ALLARME;OK
+&Ancien_mdp;Ancien Mot de Passe :;Old password : ;Vecchia password;Vecchia password;OK
+&ANNULATION_TCDE;Annulation Télécommande;Remote control cancelled;Telecomando cancellato;Telecomando cancellato;OK
+&Annuler;Annuler;Cancel;Cancellare;Cancellare;OK
+&Antennes;Antennes;Antennas;Antenne;Antenne;OK
+&Antennes_Cables_M;Antennes & Câbles;Antennas & Cables;Antenne & cavi;Antenne & cavi;OK
+&APP_Heure_MIDS_reelle;Heure MIDS;MIDS Time;Ora MIDS;Ora MIDS;OK
+&APP_Heure_MIDS_sim;Heure MIDS estimée;Estimated MIDS Time;Ora MIDS stimata;Ora MIDS stimata;OK
+&ARCHIVAGE_KO;Archivage KO;Recording NOK;Registrazione NOK;Registrazione NOK;OK
+&Archivage_M;Archivage;Recording;Registrazione;Registrazione;OK
+&ArchiverTSDF_M;Activer enregistrement TSDF;Activate TSDF recording;Attivare registrazione TSDF;Attivare registrazione TSDF;OK
+&Arret_BIT_M;Arrêt BIT;Stop BIT;Sospendere BIT;Sospendere BIT;OK
+&ArreterEnregistrement;Arrêter Enregistrement;Stop Recording;Sospendere registrazione;Sospendere registrazione;OK
+&ATTENDRE_MAP;Chargement de la carte en cours...;Loading map,,,;Caricamento della mappa in corso;Caricamento della mappa in corso;OK
+&AUCUN_FICHIER;aucun fichier;no file;no file;no file;OK
+&Autre_fic_sav;Autre fichier;Other file;Altro file;Altro file;OK
+&Avertissement_Action_Effectuee;Avertissement d'une action effectuée;Performed action warning;avviso azione effetuata;avviso azione effetuata;OK
+&BIT_Messages_M;BIT et Messages;BIT and Messages;BIT e messaggi;BIT e messaggi;OK
+&Canal_A;Phonie A;Voice A;Voce A;Voce A;OK
+&Canal_B;Phonie B;Voice B;Voce B;Voce B;OK
+&Canal_de_controle;PG Contrôle;PG Control;PG Controllo;PG Controllo;OK
+&CENTRE;Centre;Center;Centro;Centro;OK
+&CHAINE_RECHERCHEE_VIDE;la chaîne de caractères\nrecherchée est vide.;String empty;Catena di caratteri vuota;Catena di caratteri vuota;OK
+&ChaineL16;Chaîne L16;L16 System;Catena L16;Catena L16;OK
+&Changement_mdp;Changement du mot de passe;Password Change;Cambio password;Cambio password;OK
+&Changer_mdp;Changer mot de passe;Modify Password;Modificare  password;Modificare  password;OK
+&ChangerMdP_M;Changer mot de passe;Modify Password;Modificare  password;Modificare  password;OK
+&CHAR_NOT_ALLOWED;Un nom de fichier ne peut contenir aucun des caractères suivants : \n\\ / : * ? \;Following extended characters are not supported for filename : \n\\ / : * ? \;Un nome del file non può contenere seguenti caratteri: \n\\ / : * ? \;Un nome del file non può contenere seguenti caratteri: \n\\ / : * ? \"< > |;KO
+&Chargement_Fichier_M;Chargement d'un set;Set Loading;Caricamento di un set;Caricamento di un set;OK
+&Charte_graphique;Charte graphique;Graphic Legend;Leggenda grafica;Leggenda grafica;OK
+&Charte_graphique_M;Charte graphique;Graphic Legend;Leggenda grafica;Leggenda grafica;OK
+&CHGT_MDP;Changement du mot de passe;Password Change;Cambio password;Cambio password;OK
+&COMMANDE;Commande;Command;Comando;Comando;OK
+&COMMANDE_CONF_MIDS;Commande configuration MIDS;MIDS configuration command;Comando configurazione MIDS;Comando configurazione MIDS;OK
+&COMMANDE_KO;Fin Commande KO;End of command NOK;Fine del comando NOK;Fine del comando NOK;OK
+&COMMANDE_OK;Fin Commande OK;End of command OK;Fine del comando OK;Fine del comando OK;OK
+&COMMANDE_QUITTER;Commande Quitter;Quit command;Comando di uscita;Comando di uscita;OK
+&COMMANDE_X;Commande %s;Command %s;Comando %i;Comando %s;KO
+&Commandes;Commandes;Commands;Comandi;Comandi;OK
+&Commandes_M;Commandes;Commands;Comandi;Comandi;OK
+&Compteur_Horaire;Compteur Horaire (H);Hour(s) counter;Conto ore;Conto ore;OK
+&CONF_MIDS_DATA_EN_CRS;Configuration MIDS à partir des données courantes;MIDS configuration from the current data;Configurazione MIDS da dati attuali;Configurazione MIDS da dati attuali;OK
+&CONF_MIDS_FIC_CONF_DEF;Configuration MIDS à partir d'un fichier de configuration prédéfini;MIDS configuration from a pre-defined configuration file;Configurazione MIDS da un file di configurazione predefinito;Configurazione MIDS da un file di configurazione predefinito;OK
+&CONF_MIDS_FIC_INIT;Configuration du MIDS à partir d'un fichier d'intialisation;MIDS configuration from an initialisation data file;Configurazione MIDS da un file di inizializzazione;Configurazione MIDS da un file di inizializzazione;OK
+&CONF_MIDS_FIC_RECENT;Configuration MIDS à partir du fichier de configuration le plus récent;MIDS configuration from the more recent configuration file;Configurazione MIDS dal  file di configurazione  più recente;Configurazione MIDS dal  file di configurazione più recente;KO
+&CONFIRM_INCORRECTE;confirmation incorrecte;Incorrect confirmation;Conferma non coretta;Conferma non coretta;OK
+&CONFIRM_NON_FAITE;confirmation non effectuée;confirmation not completed;Conferma non effetuata;Conferma non effetuata;OK
+&CONFIRM_REMPLACEMENT;Confirmez-vous son remplacement?;Do you confirm the replacement?;Sei sicuro della sostituzione?;Sei sicuro della sostituzione?;OK
+&CONFIRM_TRANS_BLK_DATA;Confirmer le transfert du bloc de données présenté dans la fenêtre;Confirm the transfer of the displayed block of data;Confermare il trasferimento del blocco dati visualizzato;Confermare il trasferimento del blocco dati visualizzato;OK
+&CONFIRM_TRANS_DATA_EN_CRS;Confirmer le transfert de toutes les données courantes;Confirm the transfer of all current data;Conferma il trasferimento dei dati attuali ;Conferma il trasferimento dei dati attuali;KO
+&CONFIRMATION;Confirmation;Confirmation;Conferma;Conferma;OK
+&Confirmation_mdp;Confirmation du nouveau mot de passe :;New password confirmation :;Conferma nuova password:;Conferma nuova password:;OK
+&Confirmer;Confirmer;Confirm;Conferma;Conferma;OK
+&Confirmer_envoi_cmd;Confirmer l'envoi de la commande;Confirm the command;Conferma l'invio del comando;Conferma l'invio del comando;OK
+&CONNEXION_MIDS_ROMPUE;La connexion avec le MIDS vient d'être rompue;Connection with MIDS has been lost;Connessionne con il MIDS persa;Connessionne con il MIDS persa;OK
+&CONTENU;Contenu :;Contents :;Contenuto;Contenuto;OK
+&Continuer;Continuer;Continue;Continua;Continua;OK
+&Controle;Contrôle;Control;Controllo;Controllo;OK
+&Controle_M;Contrôle;Control;Controllo;Controllo;OK
+&Controle_PG_Status;Control PG Status;Control PG Status;Controllo PG Status;Control PG Status;KO
+&ControleEnregistrement;Contrôle enregistrement;Control recording;Controllo registrazione;Controllo registrazione;OK
+&Copie;Copie;Copy;Copia;Copia;OK
+&COPIE_FIC_CONF_MIDS;Copie des fichiers de configuration du MIDS;Copy of Configuration File;Copia dei file di configurazione;Copia dei file di configurazione;OK
+&COPIE_FIC_INIT;Copie des fichiers d'initialisation;Copy of Initialization File;Copia dei file di inizializzazione;Copia dei file di inizializzazione;OK
+&Copier;Copier;Copy;Copia;Copia;OK
+&Copier_M;Copier;Copy;Copia;Copia;OK
+&DataUpLoad_M;Rafraîchissement;Refresh;Aggiornare;Aggiornare;OK
+&DataInitMIDS;Données d'Initialisation du MIDS;Initialization datas of MIDS;Inizializzazione dati MIDS;Inizializzazione dati MIDS;OK
+&DECONNECT_MIDS_INTEMP;Déconnexion du MIDS intempestive;Untimely MIDS disconnection;Sconnessione MIDS intempestiva;Sconnessione MIDS intempestiva;OK
+&Deconnexion_CEN_demandee;Déconnexion CEN demandée;CEN Disconnection asked;Sconnessione CEN richiesta;Sconnessione CEN richiesta;OK
+&Deconnexion_CEN;Déconnexion CEN;CEN Disconnection;Sconnessione CEN;Sconnessione CEN;OK
+&Deconnexion_TSDF;Déconnexion TSDF;TSDF Disconnection;Sconnessione TSDF;Sconnessione TSDF;OK
+&Decrement;Decrement;Discrement;Decremento;Decrement;KO
+&Decryptage;Décryptage;Decryption;Decriptazione;Decriptazione;OK
+&Defaut_Interne;Défaut Interne;Internal Default;Difetto interno;Difetto interno;OK
+&Definition;Définition;Definition;Definizione;Definizione;OK
+&Desactivation_Set_M;Désactivation set;Set Disablement;Invalidità Set;Invalidità  Set;KO
+&DESACTIVE;Désactivé;Disable;Disattivato;Disattivato;OK
+&DesactiverTSDF_M;Désactiver enregistrement TSDF;Stop TSDF Recording;Fine Registrazione TSDF;Fine Registrazione TSDF;OK
+&DesactiverTSRD_M;Désactiver enregistrement TSRD;Stop TSRD Recording;Fine Registrazione TSRD;Fine Registrazione TSRD;OK
+&DESC_MOTS_INIT_MIDS;-Description des 3810 mots du bloc de donnees d'INITIALISATION du MIDS-;-Description of 3810  MIDS INITIALIZATION data words-;Descrizione di 3810 parole di dati di INIZIALIZZAZIONE MIDS;Descrizione di 3810 parole di dati di INIZIALIZZAZIONE MIDS;OK
+&DESC_MOTS_STATUS_MIDS;-Description des 840 mots du bloc de donnees de STATUS du MIDS-;-Description des 840 STATUS MIDS data words-;Descrizione di 840 parole del blocco di dati STATUS MIDS;Descrizione di 840 parole del blocco di dati STATUS MIDS;OK
+&Destination_TN;Destination TN;TN Destination;;Destinazione TN;KO
+&DFI_264_Car_possibles;4 caractères (0:9, A:Z, Espace);4 characters (0:9, A:Z, Space);Destinazione;4 car. (0:9, A:Z, Space);KO
+&DIAGNOSTIC;Diagnostic : ;Diagnosis : ;Diagnostica:;Diagnostica:;OK
+&Diagnostic;Diagnostic : ;Diagnosis : ;Diagnostica:;Diagnostica:;OK
+&Directory;Répertoire;Directory;Cartella;Cartella;OK
+&DisplayMAP;Afficher la carte;Display Map;Visualizza la mappa;Visualizza la mappa;OK
+&Disquette;Disquette;Floppy disk;Dischetto;Dischetto;OK
+&DONNEES_COURANTES;Données courantes;Current data;Dati attuali;Dati attuali;OK
+&Donnees_courantes;Données courantes;Current data;Dati attuali;Dati attuali;OK
+&Donnees_defaut;Données par défaut :;Default data :;dati di default;dati di default :;KO
+&Donnees_MIDS_LVT;Données MIDS-LVT;MIDS-LVT data;Dati MIDS-LVT;Dati MIDS-LVT;OK
+&Donnees_PG_Emission;Données PG Emission;TX PG data;Dati PG trasmessi (TX);Dati PG trasmessi (TX);OK
+&Donnees_PG_Mesure_De_Distance;Données PG Mesure de distance;PG data Measure of Distance;Dati PG Misura di distanza;Dati PG Misura di distanza;OK
+&Donnees_PG_Reception;Données PG Réception;RX PG data;Dati PG ricevuti (RX);Dati PG ricevuti (RX);OK
+&Dual_Antenna_TX;Dual Antenna TX;Dual Antenna TX;Dual Antenna di Trasmissione (TX);Dual Antenna TX;KO
+&ECR_DISQUE_ARCH_NOK;Ecriture sur le disque d'archivage impossible : disque plein ou absent;Recording error : disk full ou disk missing;Errore di registrazione :  disco pieno o mancante;Errore di registrazione :  disco pieno o mancante;OK
+&Effacement_BIT_M;Effacement BIT;BIT Reset;reset BIT;Cancellazione BIT;KO
+&Effacement_Buffer_M;Effacement Buffer;Clear Buffer;Cancellazione buffer;Cancellazione buffer;OK
+&EFFACEMENT_CLE;Effacement Clé (SDU Zéroize);SDU Zeroize;Cancellazione Chiave (SDU Zéroize);Cancellazione Chiave (SDU Zeroize);KO
+&Effacement_Cle;Effacement Clé;SDU Zeroize;Cancellazione Chiave;Cancellazione Chiave;OK
+&Effacement_Cle_M;Effacement Clés;SDU Zeroize;Cancellazione Chiavi;Cancellazione Chiavi;OK
+&Effacement_IPF;Effacement IPF;IPF Reset;Reset IPF;Cancellazione IPF;KO
+&EFFACEMENT_IPF;Effacement IPF (IPF Reset);IPF Reset;Reset IPF;Cancellazione IPF;KO
+&Effacement_IPF_M;Effacement IPF;IPF Reset;Reset IPF;Cancellazione IPF;KO
+&Enregistrer;Enregistrer;Save;Salva;Salva;OK
+&ENREGISTRER;Enregistrer;Save;Salva;Salva;OK
+&Enregistrer_sous;Enregistrer sous ...;Save as ...;Salva come …;Salva come ...;KO
+&Entree_Initiale_M;Entrée Initiale;Initial Entry;Ingresso iniziale;Ingresso Ini.;KO
+&Entree_Initiale;Entrée Initiale;Initial Entry;Ingresso iniziale;Ingresso Ini.;KO
+&ENTREE_RESEAU;Entrée Réseau (Net Entry Reset);Net Entry (Net Entry Reset);Ingresso Rete (Net Entry Reset);Ingresso Rete (Net Entry Reset);OK
+&Entree_Reseau;Entrée Réseau;Net Entry;Ingresso Rete;Ingresso Rete;OK
+&Entree_Reseau_M;Entrée Réseau;Net Entry;Ingresso Rete;Ingresso Rete;OK
+&Environnement_Limite;Environnement Limite;Environment Limit;Limite Ambiente;Limite Ambiente;OK
+&ENVOI_BLK_DATA_CRYPTO_DATE;Envoi bloc paramètres CRYPTO et DATE;Sending of Crypto and Date block parameters;Invio blocco di parametri CRYPTO e DATI;Invio blocco di parametri Chiave e Data;KO
+&ENVOI_BLK_DATA_PHONIE_CTRL;Envoi bloc paramètres PHONIE;Sending of Voice block parameters;Invio blocco parametri FONIA;Invio blocco parametri FONIA;OK
+&ENVOI_BLK_DATA_PORTS_PHONIE;Envoi bloc paramètres PORTS PHONIE;Sending of Voice Ports block parameters;Invio blocco parametri PORTE FONIA;Invio blocco parametri PORTE FONIA;OK
+&ENVOI_BLK_DATA_RADIO;Envoi bloc paramètres RADIO;Sending of Radio block parameters;Invio blocco di parametri RADIO;Invio blocco di parametri RADIO;OK
+&ENVOI_BLK_DATA_ENTREE_INITIALE;Envoi bloc paramètres ENTREE INITIALE;Sending of Initial Entry block parameters;Invio blocco di parametri INGRESSO INIZIALE;Invio blocco di parametri INGRESSO INIZIALE;OK
+&ENVOI_BLK_DATA_J0_0;Envoi bloc paramètres J0.0;Sending of J0.0 block parameters;Invio blocco di parametri J0.0;Invio blocco di parametri J0.0;OK
+&ENVOI_BLK_DATA_ANTENNES_CABLES;Envoi bloc paramètres ANTENNES et CABLES;Sending of Antennas and Cables block parameters;Invio blocco di parametri ANTENNE e CAVI;Invio blocco di parametri ANTENNE e CAVI;OK
+&ENVOI_BLK_DATA_TX_RX_PG;Envoi bloc paramètres TX/RX PG;Sending of TX/RX PG block parameters;Invio blocco di parametri TX/RX PG;Invio blocco di parametri TX/RX PG;OK
+&ENVOI_BLK_DATA_REPROMUL;Envoi paramètres blocs repromulgation;Sending of Repromulgation block parameters;Invio blocco di parametri Ripromulgazione;Invio blocco di parametri Ripromulgazione;OK
+&ENVOI_BLK_DATA_STATION;Envoi bloc paramètres STATION;Sending of Station block parameters;Invio blocco di parametri STAZIONE;Invio blocco di parametri STAZIONE;OK
+&ENVOI_BLK_DATA_PLATEFORME;Envoi bloc paramètres PLATE-FORME;Sending of Platform block parameters;Invio blocco di parametri PIATTAFORMA;Invio blocco di parametri PIATTAFORMA;OK
+&ENVOI_BLK_DATA_POSITIONS;Envoi bloc paramètres POSITIONS;Sending of Positions block parameters;Invio blocco di parametri Posizione;Invio blocco di parametri Posizione;OK
+&ENVOI_BLK_DATA_TSA_RSA;Envoi paramètres blocs TSA/RSA;Sending of TSA/RSA block parameters;Invio blocco di parametri TSA/RSA;Invio blocco di parametri TSA/RSA;OK
+&EnvoiFichier;Envoi du fichier :;Sending of file :;Invio del file: ;Invio del file: ;OK
+&ERR_CARTOGRAPHIE_NON_DISPONIBLE;Cartographie non disponible;Map unavailable;Mappa mancante;Mappa mancante;OK
+&ERR_COPIE_FICHIER;Copie du fichier impossible;Cannot copy file;Copia del file impossibile;Copia del file impossibile;OK
+&ERR_LANCER_MAPPOINT;Erreur au lancement de MapPoint;MapPoint launching error;Errore all'avvio del MapPoint;Errore all'avvio del MapPoint;OK
+&ERR_LECT_FIC_CONF;Erreur de lecture du fichier de configuration;Configuration file reading error;Errore di lettura del file di configurazione;Errore di lettura del file di configurazione;OK
+&ERR_SAISIE_ANCIEN_MDP;Erreur pendant la saisie de l'ancien mot de passe. Veuillez recommencer.;Old password input error. Try again.;Errore durante l'imissione della vecchia password. Prova nuovamente;Errore durante l'imissione della vecchia password. Prova nuovamente;OK
+&ERR_SAISIE_NOUVEAU_MDP;Erreur pendant la saisie du nouveau mot de passe. Veuillez recommencer.;New password input error. Try again.;Errore durante l'imissione della nuova password. Prova nuovamente;Errore durante l'imissione della nuova password. Prova nuovamente;OK
+&ERR_SUPPRESSION_FICHIER;Suppression du fichier impossible;Cannot suppress file;Cancellazione del file impossibile;Cancellazione del file impossibile;OK
+&ERR_TCDE;Erreur Télécommande;Remote control error;Errore Telecomando;Errore Telecomando;OK
+&ERREUR;Erreur;Error;Errore;Errore;OK
+&ERREUR_ARCHIVAGE;Erreur Archivage;Records error;Errore archiviazione;Errore archiviazione;OK
+&ERREUR_INTERNE_APPLI;Erreur interne de\nl'application.;Internal program error.;Errore interno dell'applicazione;Errore interno dell'applicazione;OK
+&ERREUR_SAISIE;Erreur de saisie;Input error;Errore di input;Errore di input;OK
+&Erreur_saisie;Erreur de saisie;Input error;Errore di input;Errore di input;OK
+&ERREUR_SAISIE_SET_INDEX_NUMBER;Erreur de saisie le numéro d'index doit-être compris entre 1 et 255;Input error : Index number must be included in 1 and 255;Errore di ingresso: il numero index deve essere compreso tra 1 e 255;Errore di ingresso: il numero index deve essere compreso tra 1 e 255;OK
+&ERREUR_OUVERTURE_FIC_CONF;Erreur d'ouverture de fichier de configuration;Cannot open Configuration file;Errore dell'apertura del file di configurazione;Errore dell'apertura del file di configurazione;OK
+&Estimee;Estimée;Estimated;Stimata;Stimata;OK
+&Etat_connu_elt;Etats connus des alarmes;Known states of alarms;Stati conosciuti degli allarmi;Stati conosciuti degli allarmi;OK
+&Etat_estime_elt;Etats estimés des éléments;Estimated states of components;Stati stimati dei componenti;Stati stimati dei componenti;OK
+&Etat_fenetre_consultation;Etats des champs dans les fenêtres de consultation;States of supervision fields;Stati dei campi nelle finestre di consultazione;Stati dei campi nelle finestre di consultazione;OK
+&Etat_fenetre_edition;Etats des champs dans les fenêtres d'édition;States of editing fields;Stato dei campi di modifica;Stato dei campi di modifica;OK
+&Etat_KO;Mauvais (connexion rompue, alarme);NOK (broken connection, alarm);NOK (connessione rotta, allarme);NOK (connessione rotta, allarme);OK
+&Etat_OK;Bon (connexion établie, fonctionnement correct);OK (etablished connection, correct running);OK (connessione creata, funzionamento correto);OK (connessione creata, funzionamento correto);OK
+&Execution;Exécution;Running;Esecuzione;Esecuzione;OK
+&EXPORT;Exporter;Export;Esporta;Esporta;OK
+&Exporter_Fic_Init_M;Exporter un fichier d'initialisation;Export Initialization File;Esporta un file di inizializzazione;Esporta un file di inizializzazione;OK
+&Exporter_Fic_Conf_M;Exporter un fichier de configuration;Export Configuration File;Esporta un file di configurazione;Esporta un file di configurazione;OK
+&Fermer;Fermer;Close;Chiudere;Chiudere;OK
+&FIC_ARCH_VIDE;Le fichier d'archivage est vide;Recording file empty;Il file di registrazione è vuoto;Il file di registrazione è vuoto;OK
+&FIC_ENREGISTRE_SOUS;Le fichier %s est enregistré sous %s;File %s is recorded as %s;Il file %s è registrato su %s;Il file %s è registrato su %s;OK
+&FIC_EXISTE_DEJA;Le fichier %s existe déjà;File %s already exists;Il file%s è già esistente;Il file %s è già  esistente;KO
+&FIC_LECTURE_SEULE;Le ficher %s est en lecture seule;File %s is read only;Il file %s è solo in lettura;Il file %s è solo in lettura;OK
+&FIC_NON_CHARGE;Le fichier %s n'a pas pu être chargé;File %s not downloaded;Il file %s non è caricato;Il file %s non è caricato;OK
+&Fichier;Fichier;File;File;File;OK
+&Fichier_conf_MIDS;Fichier de configuration;Configuration File;File di configurazione;File di configurazione;OK
+&Fichier_conf_MIDS_M;Fichier de configuration;Configuration File;File di configurazione;File di configurazione;OK
+&Fichier_de_reference;Fichier de référence :;Reference filename :;File di riferimento:;File di riferimento:;OK
+&Fichier_don_MIDS;Fichier de sauvegarde;Backup filename;File di Backup;File di Backup;OK
+&Fichier_don_MIDS_M;Fichier de sauvegarde;Backup filename;File di Backup;File di Backup;OK
+&Fichier_enregistrement;Fichier d'enregistrement :;Recording filename :;File di registrazione:;File di registrazione :;KO
+&Fichier_M;Fichier;File;File;File;OK
+&Fichiers_disque_dur;Fichiers sur disque dur;Hard Disk Files;I File sul Hard Disk;I File sul Hard Disk;OK
+&File;Fichier;File;File;File;OK
+&FILE_JOURNAL;journal;Logbook;Diario;Diario;OK
+&Forcage_Marche;Forçage Marche;Alarm Override;Funzionamento forzato;Funzionamento forzato;OK
+&FXMs_Recording_Control;Contrôle Enregistrement;Recording Control;Controllo registrazioni;Controllo registrazioni;OK
+&General;Général;General;Generale;Generale;OK
+&Gestion_Du_Jour;Gestion du jour;Management of Day;Gestione del giorno;Gestione del giorno;OK
+&GridOrigin;Origine Grille;Grid Origin;Griglia di origine;Griglia di origine;OK
+&Grid_Origin_Latitude;Grid Origin Latitude;Grid Origin Latitude;Griglia di origine Latitudine;Grid Origin Latitude;KO
+&Grid_Origin_Longitude;Grid Origin Longitude;Grid Origin Longitude;Griglia di origine Longitudine;Grid Origin Longitude;KO
+&GrilleOrigine_M;Origine Grille;Grid Origin;Griglia di origine;Griglia di origine;OK
+&Heure;Heure;Time;Tempo;Tempo;OK
+&heure(s);hour(s);hour(s);ora(e);ora(e);OK
+&Heure_M;Mise à l'heure;Set Time;Aggiornamento dell'ora;Aggiornamento dell'ora;OK
+&HeureDateLocale;Heure et Date Locales;Local Time and Date;Ora e data locale;Ora e data locale;OK
+&HeureLocale;Heure Locale;Local Time;Ora locale;Ora locale;OK
+&HeureMIDS;Heure MIDS;MIDS Time;Ora MIDS;Ora MIDS;OK
+&Illegal;Interdite;Illegal;Vietato;Vietato;OK
+&Importer_Exporter;Importer/Exporter;Import/Export;Importa/Esporta;Importa/Esporta;OK
+&Importer_Fic_Init_M;Importer un fichier d'initialisation;Import Initialization File;Importa file di inizializzazione;Importa file di inizializzazione;OK
+&Importer_Fic_Conf_M;Importer un fichier de configuration;Import Configuration File;Importa file di configurazione;Importa file di configurazione;OK
+&IMPRESSION_INITIALISEE;Impression initialisée;Printing is initialized;Stampa iniziata;Stampa iniziata;OK
+&Imprimer;Imprimer;Print;Stampa;Stampa;OK
+&INCONNU;INCONNU;UNKNOWN;Sconosciuto;Sconosciuto;OK
+&INDEX_NON_AUTORISE;Index number non autorisé;Index Number unavailable ;Numero index non autorizzato;Numero index non autorizzato;OK
+&Init_Terminal_M;Initialisation;Initialization;Inizializzazione;Inizializzazione;OK
+&Initialisation;Initialisation;Initialization;Inizializzazione;Inizializzazione;OK
+&Initialisation_du_terminal;Initialisation du terminal;Terminal Initialization;Inizializzazione del Terminale;Inizializzazione del Terminale;OK
+&Initialisation_M;Initialisation;Initialization;Inizializzazione;Inizializzazione;OK
+&InsererTexteLibre_M;Insérer texte libre;Insert Free-Text;Inserire testo libero;Inserire testo libero;OK
+&INSERT_LIBELLE_JDB;Insertion d'un libellé libre dans le journal de bord;Insert Free-Text in Logbook;Inserimento di un testo libero nel diario;Inserimento di un testo libero nel diario;OK
+&INTR_TCDE_TIMEOUT;Interruption de la télécommande sur hors-temps;Remote control aborted on timeout;Interruzione del telecomando su time-out;Interruzione del telecomando su time-out;OK
+&IPF_Reset_M;Effacement IPF;IPF Reset;IPF reset;IPF reset;OK
+&Invalid;Invalide;Invalid;Invalido;Invalido;OK
+&JdB;Journal de Bord;Logbook;Diario;Diario;OK
+&JDB_COURANT_TEMPO;\\JdBCourant_tempo.txt;\\CurrentLogbook.tmp;\\DiarioCorrente_Tempo.txt;\\DiarioCorrente_Tempo.txt;OK
+&JDB_VIDE;Le journal de bord est vide;Logbook empty;Il diario è vuoto;Il diario è vuoto;OK
+&Journal;Journal;Logbook;Diario;Diario;OK
+&Journal_M;Journal;Logbook;Diario;Diario;OK
+&JUdistantes_M;JU Distantes;Distant JUs;JU distante;JU distanti;KO
+&LancerEnregistrement;Lancer Enregistrement;Start Recording;Avvia Registrzione;Avvia Registrazione;KO
+&LECT_ALL_DATA_INIT_MIDS;Lecture Données INIT complètes MIDS;Reading of all MIDS initialization data;Lettura dei dati INIT MIDS completi;Lettura dei dati INIT MIDS completi;OK
+&LECT_DATA_INIT_MIDS;Lecture des données d'initialisation du MIDS;Reading of MIDS initialization data;Lettura dei dati INIT MIDS;Lettura dei dati INIT MIDS;OK
+&Level;Niveau;Level;Livello;Livello;OK
+&Le_fichier_a_ete_exporte;Le fichier sélectionné a été exporté;Selected file successfully exported;Il file è esportato con successo;Il file è esportato con successo;OK
+&Le_fichier_na_pas_ete_exporte;Le fichier sélectionné n'a pas pu être exporté;Cannot export selected file;Il file non è esportato ;Il file non è esportato ;OK
+&LIAIS_DLIP_OSIM_OK_MIDS_NOK;Liaison DLIP/OSIM établie - DLIP/MIDS non établie;DLIP/OSIM connected - DLIP/MIDS not connected;DLIP/OSIM connessi - DLIP/OSIM non connessi;DLIP/OSIM connessi - DLIP/OSIM non connessi;OK
+&LIAIS_OSIM_DLIP_MIDS_OK;Liaison OSIM/DLIP/MIDS établie;OSIM/DLIP/MIDS link established;OSIM/DLIP/MIDS connessi;OSIM/DLIP/MIDS connessi;OK
+&Liaisons_externes; OSIM                            DLIP                           MIDS; OSIM                            DLIP                           MIDS; OSIM                            DLIP                           MIDS; OSIM                            DLIP                           MIDS;OK
+&Liste_Des_CT_DTB_A_Enregistrer;Liste des CT DTBs à enregistrer (Core to Tailored Data Transfer Blocks);List of CT DTBs to record (Core to Tailored Data Transfer Blocks);Elenco dei CT DTB da registrare (Core to Tailored Data Transfer Blocks);Elenco dei CT DTB da registrare (Core to Tailored Data Transfer Blocks);OK
+&Liste_Des_FIMs_A_Enregistrer;Liste des FIMs à enregistrer (Functional Input Message);List of FIMs to record (Functional Input Message);Elenco dei FIM da registrare (Functional Input Message);Elenco dei FIM da registrare (Functional Input Message);OK
+&Liste_Des_FOMs_A_Enregistrer;Liste des FOMs à enregistrer (Functional Output Message);List of FOMs to record (Functional Output Message);Elenco dei FOM da registrare (Functional Output Message);Elenco dei FOM da registrare (Functional Output Message);OK
+&Liste_Des_JU_Distantes;Liste des JUs distantes;List of Distant JUs;Elenco delle JU distanti;Elenco delle JU distanti;OK
+&Liste_Des_TC_DTB_A_Enregistrer;Liste des TC DTBs à enregistrer (Tailored to Core Data Transfer Blocks);List of TC DTBs to record (Tailored to Core Data Transfer Blocks);Elenco dei TC DTB da registrare (Tailored to Core Data Transfer Blocks);Elenco dei TC DTB da registrare (Tailored to Core Data Transfer Blocks);OK
+&LISTE_FIC_CONF_MIDS;Liste des fichiers de configuration du MIDS;List of Configuration Files;Elenco dei file di configurazione;Elenco dei file di configurazione MIDS;KO
+&LISTE_FIC_INIT;Liste des fichiers d'initialisation;List of Initialization Files;Elenco dei file di inizializzazione;Elenco dei file di inizializzazione;OK
+&Load_Complete_M;Chargement terminé;Load Complete;Caricamento completo;Caricamento completo;OK
+&LONGUEUR_INSUFFISANTE;Longueur insuffisante;Short length;Lunghezza insufficiente;Lunghezza insufficiente;OK
+&Maj_Heure;Mise à l'heure;Set Time;Aggiornamento dell'ora;Aggiornamento dell'ora;OK
+&MAJ_HEURE_IN_PROGRESS;MAJ_HEURE_IN_PROGRESS;TIME_REFRESH_IN_PROGRESS;Aggiornamento dell'ora in corso;Aggiornamento dell'ora in corso;OK
+&MAJ_HEURE_MIDS;Mise à jour heure MIDS;Set MIDS Time of Day;Aggiornamento dell'ora MIDS;Aggiornamento dell'ora MIDS;OK
+&MAJHeureReseau_M;Mise à jour de l'heure réseau;MIDS Time of Day;Aggiornamento dell'ora Rete MIDS;Aggiornamento dell'ora Rete MIDS;OK
+&Manuel_complet;Manuel complet;Full manual;Manuale completo;Manuale completo;OK
+&Manuel_complet_M;Manuel complet;Full manual;Manuale completo;Manuale completo;OK
+&Map;Cartographie;Map;Mappa;Mappa;OK
+&Marche_ON_OFF;Marche ON/OFF;Switch ON/OFF;Switch ON/OFF;Switch ON/OFF;OK
+&Messages;Messages;Messages;Messaggi;Messaggi;OK
+&minute(s);minute(s);minute(s);minuto(i);minuto(i);OK
+&Mise_A_Heure;Mise à l'heure;Set Time of Day;Aggiornamento Ora;Aggiornamento Ora;OK
+&Mise_A_Heure_M;Mise à l'heure du MIDS;MIDS Time of Day;Aggiornamento Ora MIDS;Aggiornamento Ora MIDS;OK
+&MISE_HEURE_MIDS;Mise à l'heure du MIDS;MIDS Time of Day;Aggiornamento Ora MIDS;Aggiornamento Ora MIDS;OK
+&MODIF_HEURE_RESEAU_MIDS;Modification de l'heure réseau MIDS;MIDS Network Time Modification;Modificazione dell'ora Rete MIDS;Modificazione dell'ora Rete MIDS;OK
+&MODIFICATION_RSA_PU;Modification RSA PU;PU's RSA Modification;Modificazione RSA PU;Modificazione RSA PU;OK
+&MODIFICATION_TSA_PU;Modification TSA PU;PU's TSA Modification;Modificazione TSA PU;Modificazione TSA PU;OK
+&Modifier;Modifier;Modify;Modifica;Modifica;OK
+&MODIFIER;Modifier;Modify;Modifica;Modifica;OK
+&MODIFIER_RSA_JU;Modifier RSA d'une JU;Modify JU's RSA;Modifica RSA di una JU;Modifica RSA di una JU;OK
+&MODIFIER_TSA_JU;Modifier TSA d'une JU;Modify JU's TSA;Modifica TSA di una JU;Modifica TSA di una JU;OK
+&ModifRSA_JU_M;Modifier RSA d'une JU;Modify JU's RSA;Modifica RSA di una JU;Modifica RSA di una JU;OK
+&ModifTSA_JU_M;Modifier TSA d'une JU;Modify JU's TSA;Modifica TSA di una JU;Modifica TSA di una JU;OK
+&Mot_De_Passe;Mot de passe;Password;Password;Password;OK
+&MSG_NOK_CF_JDB;Message de retour erroné (voir journal de bord);Erroneous return message (see logbook);Messaggio di risposta NOK (vedi diario);Messaggio di risposta NOK (vedi diario);OK
+&Multiplexage;Multiplexage;Multiplexing;Multiplexing;Multiplexing;OK
+&NB_PAGES_CONFIRM_IMPRESS;Nombre de pages : %d. Confirmez-vous l'impression?;Number of pages : %d. Confirm?;Numero di pagine:%d. Conferma la stampa?;Numero di pagine:%d. Conferma la stampa?;OK
+&NB_STN;NB STN;STN Nber;NUM_STN;NUM_STN;OK
+&NbTrack:;Nombre d'unités :;Number of JU:;Numero di JU:;Numero di JU:;OK
+&Net_Entry_Reset_M;Entrée Réseau;Net Entry Reset;Reset ingresso rete ;Reset ingresso rete;KO
+&NO_ERROR;Pas d'erreur;No error;No errore;No errore;OK
+&NO_FILE_FOUND;Fichier non trouvé;File not found;File non trovato;File non trovato;OK
+&NOM_COPIE_FIC;copie(%d)_%s;copy(%d)_%s;Copia(%d)_%s;Copia(%d)_%s;OK
+&Nom_espace;Nom de l'espace consulté;Pathname:;Nome dello spazio consultato;Nome dello spazio;KO
+&NOM_FIC_ERR_FATALE;ErreurFatale.txt;FatalError.txt;ErroreFatale.txt;ErroreFatale.txt;OK
+&Nom_fic_select;Nom du fichier sélectionné :;Selected filename :;Nome del file selezionato;Nome del file selezionato : ;KO
+&Nom_repertoire;Nom répertoire;Directory name;Nome della cartella:;Nome della cartella:;OK
+&Nouveau_mdp;Nouveau mot de passe :;New Password :;Nuova password;Nuova password:;KO
+&Nouvelle_heure;Nouvelle heure;New Time;Nuova ora;Nuova ora;OK
+&NTR;Net Time Reference;Net Time Reference;Net Time Reference;Net Time Reference;OK
+&NUM_BLK_NOT_IN_1_TO_31;Le numéro de bloc n'est pas compris entre 1 et 31;Block number is not between 1 to 31;Il numero di blocco non è tra 1 e 31;Il numero di blocco non è tra 1 e 31;OK
+&NUM_BLK_NOT_IN_1_TO_32;Le numéro de bloc n'est pas compris entre 1 et 32;Block number is not between 1 to 32;Il numero di blocco non è tra 1 e 32;Il numero di blocco non è tra 1 e 32;OK
+&NUM_BLK_NOT_IN_1_TO_64;Le numéro de bloc n'est pas compris entre 1 et 64;Block number is not between 1 to 64;Il numero di blocco non è tra 1 e 64;Il numero di blocco non è tra 1 e 64;OK
+&NUM_BLK_NOT_VALID;Le numéro de bloc n'est pas validé;Unavailable Block Number;Il numero di blocco non è valido;Il numero di blocco non è valido;OK
+&Onglet_CtrlTSRD;Contrôle TSRD;TSRD Control;Controllo TSRD;Controllo TSRD;OK
+&Origine_Grille;Origine Grille;Grid Origin;Origine Griglia;Origine Griglia;OK
+&OUTIL_SPV_INIT_MIDS; - Outil de Supervision et d'Initialisation du MIDS-LVT; - MIDS-LVT control and monitoring tool;#NOM?; - Tool di Supervisione e inizializzazione del MIDS-LVT;KO
+&Outils;Outils;Tools;Tools;Tools;OK
+&Ouvrir;Ouvrir;Open;Aprire;Aprire;OK
+&OUVRIR;Ouvrir;Open;Aprire;Aprire;OK
+&Ouvrir_M;Ouvrir;Open;Aprire;Aprire;OK
+&PARA_CRYPTO_DATE;Paramètres - Crypto et Date;Parameters - Crypto and Date;Parametri - Crypto e Data;Parametri - Chiave e Data;KO
+&PARA_CRYPTO_DATE_BASE;Paramètres - Crypto et Date - Base <%s>;Parameters - Crypto and Date - Base <%s>;Parametri - Crypto e Data - Base <%s>;Parametri - Chiave e Data - Base <%s>;KO
+&PARA_PHONIE_CTRL;Paramètres - Phonie et Contrôle (1/2);Parameters - Voice and Control (1/2);Parametri - Fonia e Controllo (1/2);Parametri - Fonia e Controllo (1/2);OK
+&PARA_PHONIE_CTRL_BASE;Paramètres - Phonie et Contrôle (1/2) - Base <%s>;Parameters - Voice and Control (1/2) - Base <%s>;Parametri - Fonia e Controllo (1/2) - Base <%s>;Parametri - Fonia e Controllo (1/2) - Base <%s>;OK
+&PARA_PHONIE_IN_PROGRESS;PARA_PHONIE_IN_PROGRESS;PARA_VOICE_IN_PROGRESS;PARA_VOCE_IN_CORSO;PARA_VOCE_IN_CORSO;OK
+&PARA_PLATEFORME;Paramètres - Station (2/3);Parameters - Station (2/3);Parametri - Stazione (2/3);Parametri - Stazione (2/3);OK
+&PARA_PLATEFORME_BASE;Paramètres - Station (2/3) - Base <%s>;Parameters - Station (2/3) - Base <%s>;Parametri - Stazione (2/3) - Base <%s>;Parametri - Stazione (2/3) - Base <%s>;OK
+&PARA_PORTS_PHONIE;Paramètres - Phonie et Contrôle (2/2);Parameters - Voice and Control (2/2);Parametri - Fonia e Controllo (2/2);Parametri - Fonia e Controllo (2/2);OK
+&PARA_PORTS_PHONIE_BASE;Paramètres - Phonie et Contrôle (2/2) - Base <%s>;Parameters - Voice and Control (2/2) - Base <%s>;Parametri - Fonia e Controllo (2/2) - Base <%s>;Parametri - Fonia e Controllo (2/2) - Base <%s>;OK
+&PARA_POSITIONS;Paramètres - Station (3/3);Parameters - Station (3/3);Parametri - Stazione (3/3);Parametri - Stazione (3/3);OK
+&PARA_POSITIONS_BASE;Paramètres - Station (3/3) - Base <%s>;Parameters - Station (3/3) - Base <%s>;Parametri - Stazione (3/3) - Base <%s>;Parametri - Stazione (3/3) - Base <%s>;OK
+&PARA_RADIO;Paramètres - Radio (1/5);Parameters - Radio (1/5);Parametri - Radio (1/5);Parametri - Radio (1/5);OK
+&PARA_RADIO_BASE;Paramètres - Radio (1/5) - Base <%s>;Parameters - Radio (1/5) - Base <%s>;Parametri - Radio (1/5) - Base <%s>;Parametri - Radio (1/5) - Base <%s>;OK
+&PARA_RADIO_ANTENNES_CABLES;Paramètres - Radio (5/5);Parameters - Radio (5/5);Parametri - Radio (5/5);Parametri - Radio (5/5);OK
+&PARA_RADIO_ANTENNES_CABLES_BASE;Paramètres - Radio (5/5) - Base <%s>;Parameters - Radio (5/5) - Base <%s>;Parametri - Radio (5/5) - Base <%s>;Parametri - Radio (5/5) - Base <%s>;OK
+&PARA_RADIO_ENTREE_INITIALE;Paramètres - Radio (2/5);Parameters - Radio (2/5);Parametri - Radio (2/5);Parametri - Radio (2/5);OK
+&PARA_RADIO_ENTREE_INITIALE_BASE;Paramètres - Radio (2/5) - Base <%s>;Parameters - Radio (2/5) - Base <%s>;Parametri - Radio (2/5) - Base <%s>;Parametri - Radio (2/5) - Base <%s>;OK
+&PARA_RADIO_J0_0;Paramètres - Radio (3/5);Parameters - Radio (3/5);Parametri - Radio (3/5);Parametri - Radio (3/5);OK
+&PARA_RADIO_J0_0_BASE;Paramètres - Radio (3/5) - Base <%s>;Parameters - Radio (3/5) - Base <%s>;Parametri - Radio (3/5) - Base <%s>;Parametri - Radio (3/5) - Base <%s>;OK
+&PARA_RADIO_TX_RX_PG;Paramètres - Radio (4/5);Parameters - Radio (4/5);Parametri - Radio (4/5);Parametri - Radio (4/5);OK
+&PARA_RADIO_TX_RX_PG_BASE;Paramètres - Radio (4/5) - Base <%s>;Parameters - Radio (4/5) - Base <%s>;Parametri - Radio (4/5) - Base <%s>;Parametri - Radio (4/5) - Base <%s>;OK
+&PARA_RADIO_IN_PROGRESS;PARA_RADIO_IN_PROGRESS;PARA_RADIO_IN_PROGRESS;PARA_RADIO_IN_PROGRESS;PARA_RADIO_IN_PROGRESS;OK
+&PARA_REPROMULGATION;Paramètres - Repromulgation;Parameters - Repromulgation;Parametri - Ripromulgazione;Parametri - Ripromulgazione;OK
+&PARA_REPROMULGATION_BASE;Paramètres - Repromulgation - Base <%s>;Parameters - Repromulgation - Base <%s>;Parametri - Ripromulgazione - Base <%s>;Parametri - Ripromulgazione - Base <%s>;OK
+&PARA_STATION;Paramètres - Station (1/3);Parameters - Station (1/3);Parametri - Stazione (1/3);Parametri - Stazione (1/3);OK
+&PARA_STATION_BASE;Paramètres - Station (1/3) - Base <%s>;Parameters - Station (1/3) - Base <%s>;Parametri - Stazione (1/3) - Base <%s>;Parametri - Stazione (1/3) - Base <%s>;OK
+&PARA_TSA_RSA;Paramètres - TSA/RSA;Parameters - TSA/RSA;Parametri - TSA/RSA;Parametri - TSA/RSA;OK
+&PARA_TSA_RSA_BASE;Paramètres - TSA/RSA - Base <%s>;Parameters - TSA/RSA - Base <%s>;Parametri - TSA/RSA - Base <%s>;Parametri - TSA/RSA - Base <%s>;OK
+&Parametre_Modifiable;Paramètre modifiable;Changing parameter;Parametro modificabile;Parametro modificabile;OK
+&Parametre_Modifiable_Persistant;Paramètre modifiable et persistant;Changing and persistent parameter;Parametro modificabile e persistente;Parametro modificabile e persistente;OK
+&Parametre_non_modifiable_fixe;Paramètre non modifiable et fixe;Not changing and fixed parameter;Parametro non modificabile e fisso;Parametro non modificabile e fisso;OK
+&Parametre_non_persistant;Paramètre non persistant;Not persistent parameter;Parametro non persistente;Parametro non persistente;OK
+&Parametre_Persistant;Paramètre persistant;Persistent parameter;Parametro persistente;Parametro persistente;OK
+&Parametres;Paramètres;Parameters;Parametri;Parametri;OK
+&Parametres_J0_0;Paramètres J0.0;J0.0 parameters;Parametri J0.0;Parametri J0.0;OK
+&Parametres_M;Paramètres;Parameters;Parametri;Parametri;OK
+&PB_LECT_DISQUETTE;Problème de lecture de la disquette;Floppy disk access error;Errore di accesso al dischetto;Errore di accesso al dischetto;OK
+&PB_MEM_SYSTEM_NO_TCDE;Pb mémoire système : l'application ne peut pas envoyer la télécommande;System memory error : the program can't send the remote control message;Errore memoria sistema: il SW non può inviare il messaggio di controllo del telecomando;Errore memoria sistema: il SW non può inviare il messaggio di controllo del telecomando;OK
+&PB_SAISIE_CHAMP_CONF;Problème de saisie sur un champ de configuration;Setting field input error;Errore sull'ingresso di un campo di configurazione;Errore sull'ingresso di un campo di configurazione;OK
+&PG_En_Emission;PG en émission;TX PG;PG trasmissione (TX);PG trasmissione (TX);OK
+&Platform_M;Plate-forme;Platform;Piattaforma;Piattaforma;OK
+&Plateforme;Plate-forme;Platform;Piattaforma;Piattaforma;OK
+&Phonie;Phonie;Voice;Fonia;Fonia;OK
+&Phonie_Ctrl;Phonie & Ctrl;Voice & Ctrl;Fonia & Ctrl;Fonia & Ctrl;OK
+&Phonie_M;Phonie & Contrôle;Voice & Control;Fonia & Controllo;Fonia & Controllo;OK
+&Ports_Phonie;Ports Phonie;Voice Ports;Porti Fonia;Porti Fonia;OK
+&Ports_Phonie_M;Ports Phonie;Voice Ports;Porti Fonia;Porti Fonia;OK
+&Precedent;Précédent;Previous;Precedente;Precedente;OK
+&Quality;Qualité;Quality;Qualità;Qualità ;KO
+&QUESTION_ALLUMER_TERMINAL;Voulez-vous allumer le terminal ?;Do you want switch ON the terminal ?;Sei sicuro di voler accendere il terminale?;Sei sicuro di voler accendere il terminale?;OK
+&QUESTION_EFFACER_LES_CLES;Voulez-vous effacer les clés ?;Do you want clear the keys ?;Sei sicuro di voler cancellare le chiavi?;Sei sicuro di voler cancellare le chiavi?;OK
+&QUESTION_ETEINDRE_TERMINAL;Voulez-vous éteindre le terminal ?;Do you want switch OFF the terminal ?;Sei sicuro di voler spegnere il terminale?;Sei sicuro di voler spegnere il terminale?;OK
+&QUESTION_FORCAGE_MARCHE_OFF;Voulez-vous désactiver le forçage de la mise en marche du terminal ?;Do you want desactivate Alarm Override ?;Sei sicuro di voler disattivare il funzionamento forzato del terminale?;Sei sicuro di voler disattivare il funzionamento forzato del terminale?;OK
+&QUESTION_FORCAGE_MARCHE_ON;Voulez-vous activer le forçage de la mise en marche du terminal ?;Do you want activate Alarm Override ?;Sei sicuro di voler attivare il funzionamento forzato?;Sei sicuro di voler attivare il funzionamento forzato?;OK
+&QUESTION_QUITTER_APPLI;Etes-vous sûr de vouloir quitter l'application ?;Do you want to exit?;Sei sicuro di voler uscire?;Sei sicuro di voler uscire?;OK
+&QUESTION_STANDBY_OFF;Voulez-vous désactiver le standby ?;Confirm set standby OFF;Sei sicuro di voler disattivare lo standby?;Sei sicuro di voler disattivare lo standby?;OK
+&QUESTION_STANDBY_ON;Voulez-vous activer le standby ?;Confirm set standby ON;Sei sicuro di voler attivare lo standby?;Sei sicuro di voler attivare lo standby?;OK
+&Quitter;Quitter;Quit;Uscire;Uscire;OK
+&Quitter_M;Quitter;Quit;Uscire;Uscire;OK
+&Raz_Cles;Raz Clés;Clear keys;Reset chiave;Reset chiave;OK
+&RAZ_RX_FLOW_CONTROL_BUFFER;Efface RX Flow Control Buffer;Clear RX Flow Control Buffer;Cancella RX Flow Control buffer;Cancella RX Flow Control buffer;OK
+&RAZ_TX_PG_QUEUES_1_10;Efface TX PG Queues 1 to 10;Clear TX PG Queues 1 to 10;Cancella TX PG Queues 1 to 10;Cancella TX PG Queues 1 - 10;KO
+&RAZ_TX_OTHER_PGS_QUEUE;Efface TX Other PGs Queue;Clear TX Other PGs Queue;Cancella TX Other PGs Queue;Cancella TX Other PGs Queue;OK
+&RAZ_TX_PG_QUEUE_10;Efface TX PG Queue 10;Clear TX PG Queue 10;Cancella TX PG Queue 10;Cancella TX PG Queue 10;OK
+&RAZ_TX_PG_QUEUE_9;Efface TX PG Queue 9;Clear TX PG Queue 9;Cancella TX PG Queue 9;Cancella TX PG Queue 9;OK
+&RAZ_TX_PG_QUEUE_8;Efface TX PG Queue 8;Clear TX PG Queue 8;Cancella TX PG Queue 8;Cancella TX PG Queue 8;OK
+&RAZ_TX_PG_QUEUE_7;Efface TX PG Queue 7;Clear TX PG Queue 7;Cancella TX PG Queue 7;Cancella TX PG Queue 7;OK
+&RAZ_TX_PG_QUEUE_6;Efface TX PG Queue 6;Clear TX PG Queue 6;Cancella TX PG Queue 6;Cancella TX PG Queue 6;OK
+&RAZ_TX_PG_QUEUE_5;Efface TX PG Queue 5;Clear TX PG Queue 5;Cancella TX PG Queue 5;Cancella TX PG Queue 5;OK
+&RAZ_TX_PG_QUEUE_4;Efface TX PG Queue 4;Clear TX PG Queue 4;Cancella TX PG Queue 4;Cancella TX PG Queue 4;OK
+&RAZ_TX_PG_QUEUE_3;Efface TX PG Queue 3;Clear TX PG Queue 3;Cancella TX PG Queue 3;Cancella TX PG Queue 3;OK
+&RAZ_TX_PG_QUEUE_2;Efface TX PG Queue 2;Clear TX PG Queue 2;Cancella TX PG Queue 2;Cancella TX PG Queue 2;OK
+&RAZ_TX_PG_QUEUE_1;Efface TX PG Queue 1;Clear TX PG Queue 1;Cancella TX PG Queue 1;Cancella TX PG Queue 1;OK
+&Rechercher;Rechercher;Search;Cerca;Cerca;OK
+&REGARD_FORMAT_DATA;Regarder le format de la donnée qui est surlignée;Check the highlighted data format;Visualizza il formato dati evidenziato;Visualizza il formato dati evidenziato;OK
+&Re_Initialisation_M;Réinitialisation;Reloading;Ripristinare;Ripristinare;OK
+&Reinitialisation_Nav_M;Réinitialisation Navigation;Navigation Reset;Ripristinare la Navigazione;Ripristinare la Navigazione;OK
+&REINIT_NAV;Réinitialisation Navigation;Navigation Reset;Ripristinare la Navigazione;Ripristinare la Navigazione;OK
+&REINIT_LOAD_COMPLETE;Réinitialisation Chargement terminé;Load Complete;Cariamento completo;Cariamento completo;OK
+&REINIT_VALEURS_COURANTES;Réinitialisation avec les valeurs courantes;Reset with the Current Data;Ripristinare con i dati attuali;Ripristinare con i dati attuali;OK
+&REINIT_VALEURS_PAR_DEFAUT;Réinitialisation avec les valeurs par défaut;Reset with the Default Data;Ripristinare con i dati di default;Ripristinare con i dati di default;OK
+&Relayage;Relayage;Relay;;Funzione di Relè;KO
+&repertoire;<répertoire>;<directory>;<cartella>;<cartella>;OK
+&Reseau_M;Réseau;Network;Rete;Rete;OK
+&Reseau_variables;Réseau et Variables par Défaut;Default Network and Variables;Rete e variabile di Default;Rete e variabile di Default;OK
+&RESERVE;Réservé;Reserve;Riservato;Riservato;OK
+&Restart_default_data;Sortie Réseau;Net Exit;Uscita Rete;Uscita Rete;OK
+&Retard_cables;Retard Câbles;Cables delay;Ritardo Cavi;Ritardo Cavi;OK
+&SAISIE_INCORRECTE;Saisie incorrecte;Invalid input;Immissione non corretta;Immissione non corretta;OK
+&SAISIE_MDP;Saisie de mot de passe;Password input;Immissione del password;Immissione del password;OK
+&SAISIE_NON_FAITE;Saisie non effectuée;Input not completed;Immissione non effetuata;Immissione non effetuata;OK
+&Sauvegarde;Sauvegarde;Saving;Salvaguardare;Salvaguardare;OK
+&Sauvegarder;Sauvegarder;Save;Salva;Salva;OK
+&Sauvegarder_M;Sauvegarder;Save;Salva;Salva;OK
+&Scenario_ODER;Fichier d'initialisation;Initialization File;File di inizializzazione;File di inizializzazione;OK
+&Scenario_ODER_M;Fichier d'initialisation;Initialization File;File di inizializzazione;File di inizializzazione;OK
+&SDU_Zeroize;Effacement Clés;Clear keys;Cancellazione Chiave;Cancellazione Chiave;OK
+&SDU_Zeroize_M;Effacement Clés;Clear Keys;Cancellazione Chiave;Cancellazione Chiave;OK
+&Securite;Sécurité;Security;Sicurezza;Sicurezza;OK
+&Securite_M;Sécurité;Security;Sicurezza;Sicurezza;OK
+&Select_Arch_To_Edit;Sélection de l'archive à visualiser;Selection of the recording file to display;Selezione dei record da visualizzare;Selezione dei record da visualizzare;OK
+&SELECT_FIM_FOM_TO_RECORD;Sélection des FIMs et des FOMs à enregistrer;Select FIMs and FOMs to record;Selezione dei FIM e dei FOM da registrare;Selezione dei FIM e dei FOM da registrare;OK
+&Select_JdB_To_Edit;Sélection du journal de bord à visualiser;Select the logbook to display;Selezione del diario da visualizzare;Selezione del diario da visualizzare;OK
+&SELECT_TSRD_TO_RECORD;Sélection des TSRDs à enregistrer;Select TSRDs to record;Selezione di TSRD da registrare;Selezione di TSRD da registrare;OK
+&SELECT_UN_FIC;Veuillez sélectionner un fichier !;Select a file !;Seleziona un file!;Seleziona un file!;OK
+&Selection_Antennes;Sélection Antennes;Antennas Selection;Selezione Antenne;Selezione Antenne;OK
+&SORTIE_RESEAU;Sortie Réseau (TDMA Silent);Net Exit (TDMA Silent);Uscita Rete (TDMA Silent);Uscita Rete (TDMA Silent);OK
+&Sortie_Reseau;Sortie Réseau;Net Exit;Uscita Rete;Uscita Rete;OK
+&Sortie_Reseau_M;Sortie Réseau;Net Exit;Uscita Rete;Uscita Rete;OK
+&Source;Source;Source;Sorgente;Sorgente;OK
+&SPV_MSG;Supervision - Messages;Supervision - Messages;Supervizione - Messaggi;Supervisione - Messaggi;KO
+&SPV_RESEAU_MIDS;Supervision du réseau MIDS - Liste des JU distantes;Supervision of MIDS network - List of distant JU;Supervizione del rete MIDS - Elenco di JU distanti;Supervisione del rete MIDS - Elenco di JU distanti;KO
+&SPV_SETS;Supervision - Stored Sets;Supervision - Stored Sets;Supervisione - Stored Sets;Supervisione - Stored Sets;OK
+&SPV_TERMINAL;Supervision - Terminal;Supervision - Terminal;Supervisione - Terminale;Supervisione - Terminale;OK
+&SPV_TERMINAL_INHIBEE;Supervision du terminal inhibée;Supervision of Terminal Disabled;Supervisione del Terminale disattivato;Supervisione del Terminale disattivato;OK
+&Status_A_Enregistrer;Status Data Segments à enregistrer ;Status Data Segments to record;Status Data Segments da registrare;Status Data Segments da registrare;OK
+&Status_Crypto;Status Crypto;Crypto Status;Stato Crypto;Stato Chiave;KO
+&Suivant;Suivant;Next;Seguente;Seguente;OK
+&Supervision;Supervision;Supervision;Supervisione;Supervisione;OK
+&Supervision;Supervision;Supervision;Supervisione;Supervisione;OK
+&Supervision_M;Supervision;Supervision;Supervisione;Supervisione;OK
+&SUPPR_FIC_CONF_MIDS;Suppression des fichiers de configuration du MIDS;Delete MIDS Configuration Files;Cancellazione dei file di configurazione MIDS;Cancellazione dei file di configurazione MIDS;OK
+&SUPPR_FIC_IMPOSSIBLE;Suppression impossible d'un fichier;Impossible to delete file;Il file non è cancellabile;Il file non è cancellabile;OK
+&SUPPR_FIC_INIT_ODER;Suppression des fichiers d'initialisation;Delete Initialization files;Cancellazione dei file di inizializzazione;Cancellazione dei file di inizializzazione;OK
+&Suppression_Set_M;Suppression Set;Set Deletion;Cancellazione Set;Cancellazione Set;OK
+&Supprimer;Supprimer;Delete;Cancella;Cancella;OK
+&SUPPRIMER;Supprimer;Delete;Cancella;Cancella;OK
+&Supprimer_M;Supprimer;Delete;Cancella;Cancella;OK
+&T1_Temp_Entree_Air;T1 : Temp. Entrée Air (°C);T1 : Temp. Air In (?C);T1: Temp. Ingresso Aero (°C);T1: Temp. Ingresso Aero (°C);OK
+&T2_Temp_Sortie_Air;T2 : Temp. Sortie Air (°C);T2 : Temp. Air Out (?C);T2: Temp. Uscita Aero (°C);T2: Temp. Uscita Aero (°C);OK
+&Temperature_Critique;Température Critique;Critical Temperature;Temperatura critica;Temperatura critica;OK
+&TEST_JU_DISTANTE;Test JU distante;Distant JU Test;Test JU distante;Test JU distanti;KO
+&TestJUdistante_M;Test JU distante;Distant JU Test;Test JU distante;Test JU distanti;KO
+&TEXT_NOK_DANS_TEXTE;Il n'y a pas la chaîne de caractères cherchée dans le document.;String not found in the document;Non c'è la catena dei caratteri cercata nel documento;Non c'è la catena dei caratteri cercata nel documento;OK
+&TEXT_NOK_PRECEDENT_TEXTE;Il n'y a pas la chaîne de caractères cherchée dans le texte précédent.;String not found in the previous part of document.;Non c'è la catena dei caratteri cercata nel precedente testo;Non c'è la catena dei caratteri cercata nel precedente testo;OK
+&TEXT_NOK_SUITE_TEXTE;Il n'y a pas la chaîne de caractères cherchée dans la suite du document.;String not found in the next part of document.;la stringa dei caratteri non è stata trovata nel resto del documento;la stringa dei caratteri non è stata trovata nel resto del documento;OK
+&Texte_Libre;Texte libre;Free text;Testo libero;Testo libero;OK
+&TEXTE_LIBRE;**Texte libre**;**Free text**;*Testo libero*;**Testo libero**;KO
+&Titre_Charte_Graphique;Définition des couleurs utilisées;Used colors definition;Definizione degli colori utilizzati;Definizione degli colori utilizzati;OK
+&Track_Number;Track number;Track number;Track number;Track number;OK
+&TRANS_ALL_DATA_INIT_MIDS;Transfert complet des données initiales MIDS;All Initial MIDS Data Transfer;Trasferimento completo di dati iniziali MIDS;Trasferimento completo di dati iniziali MIDS;OK
+&TRANS_BLK_DATA_INIT_MIDS;Transfert d'un bloc de données initiales MIDS;Initial MIDS Data Block Transfer;Trasferimento di un blocco di dati iniziali MIDS;Trasferimento di un blocco di dati iniziali MIDS;OK
+&TRANS_PARA_ANTENNES_CABLES;Transfert Paramètres Antennes et Câbles;Antennas and Cables Parameters Transfer;Trasferimento Parametri Antenne e Cavi;Trasferimento Parametri Antenne e Cavi;OK
+&TRANS_PARA_CRYPTO_DATE;Transfert Paramètres Crypto et Date;Crypto and Date Parameters Transfer;Trasferimento Parametri Crypto e Data;Trasferimento Parametri Chiave e Data;KO
+&TRANS_PARA_ENTREE_INITIALE;Transfert Paramètres Entrée Initiale;Initial Entry Parameters Transfer;Trasferimento Parametri Ingresso Iniziali;Trasferimento Parametri Ingresso Iniziali;OK
+&TRANS_PARA_J0_0;Transfert Paramètres J0.0;J0.0  Parameters Transfer;Trasferimento Parametri J0.0;Trasferimento Parametri J0.0;OK
+&TRANS_PARA_PHONIE;Transfert Paramètres Phonie;Voice Parameters Transfer;Trasferimento Parametri Fonia;Trasferimento Parametri Fonia;OK
+&TRANS_PARA_PLATEFORME;Transfert Paramètres Plate-forme;Platform Parameters Transfer;Trasferimento Parametri Piattaforma;Trasferimento Parametri Piattaforma;OK
+&TRANS_PARA_PORTS_PHONIE;Transfert Paramètres Ports Phonie;Voice Ports Parameters Transfer;Trasferimento Parametri Porte Fonia;Trasferimento Parametri Porte Fonia;OK
+&TRANS_PARA_POSITIONS;Transfert Paramètres Positions;Positions Parameters Transfer;Trasferimento Parametri Posizione;Trasferimento Parametri Posizione;OK
+&TRANS_PARA_RADIO;Transfert Paramètres Radio;Radio Parameters Transfer;Trasferimento Parametri Radio;Trasferimento Parametri Radio;OK
+&TRANS_PARA_REPROMULGATION;Transfert Paramètres Repromulgation;Repromulgation Parameters Transfer;Trasferimento Parametri Ripromulgazione;Trasferimento Parametri Ripromulgazione;OK
+&TRANS_PARA_STATION;Transfert Paramètres Station;Station Parameters Transfer;Trasferimento Parametri Stazione;Trasferimento Parametri Stazione;OK
+&TRANS_PARA_TSA_RSA;Transfert Paramètres TSA RSA;TSA/RSA Parameters Transfer;Trasferimento Parametri TSA/RSA ;Trasferimento Parametri TSA/RSA;KO
+&TRANS_PARA_TX_RX_PG;Transfert Paramètres TX/RX PG;TX/RX PG Parameters Transfer;Trasferimento Parametri TX/RX PG ;Trasferimento Parametri TX/RX PG;KO
+&Transferer;Transférer;Transfer;Trasferimento;Trasferimento;OK
+&TypeFichierDRP;DRP (arch_AAMMJJ.dmp);DRP (arch_AAMMJJhhmmss.dmp);DRP (arch_AAMMGG.dmp);DRP (arch_AAMMGG.dmp);OK
+&TypeFichierRAW;RAW (arch_AAMMJJ.raw);RAW (arch_AAMMJJhhmmss.raw);RAW (arch_AAMMGG.raw);RAW (arch_AAMMGG.raw);OK
+&TypeFichierRCD;RCD (arch_AAMMJJ.rcd);RCD (arch_AAMMJJhhmmss.rcd);RCD (arch_AAMMGG.rcd);RCD (arch_AAMMGG.rcd);OK
+&UMAT;UMAT;UMAT;UMEI;UMEI;OK
+&UMAT_ALR;UMAT ALR;UMAT ALR;UMEI ALR;UMEI ALR;OK
+&UMAT_CDE;UMAT CDE;UMAT CDE;UMEI CDE;UMEI CDE;OK
+&UMAT_CDE_FORCAGE_MARCHE;Forçage Marche;Alarm Override CDE;Funzionamento forzato;Funzionamento forzato;OK
+&UMAT_CDE_INCONNUE;Commande Inconnue;Unknown Command;Comando sconosciuto;Comando sconosciuto;OK
+&UMAT_CDE_MARCHE_ON_OFF;Marche;ON/OFF CDE;ON/OFF CDE;ON/OFF CDE;OK
+&UMAT_CDE_RAZ_CLES;Raz Clés;Key Zeroise CDE;Reset chiave;Reset chiave;OK
+&UMAT_CDE_STANDBY;Standby;Sandby CDE;Standby;Standby;OK
+&UMAT_MIDS_STS;UMAT MIDS STS;UMAT MIDS STS;UMEI MIDS STS;UMEI MIDS STS;OK
+&UMAT_STS_FAIL_TEMP_CRITIQUE;TEMP_CRITIQUE;CRITICAL_TEMP;TEMP_CRITICA;TEMP_CRITICA;OK
+&UNKOWN_CMD_F;Id Message inconnu : %d;Id Message Unknown : %d;Id Messaggio sconosciutto: %d;Id Messaggio sconosciutto: %d;OK
+&Using_Current_Data_M;Avec Valeurs Courantes;Reset with Current Values;Con valori correnti;Con valori correnti;OK
+&Using_Default_Data_M;Avec Valeurs par défaut;Reset with Default Values;Con valori di default;Con valori di default;OK
+&V1_vitesse_turbine_1;V1 : Vitesse Turbine 1 (tr/s);S1 : Speed Turbine 1 (tr/s);V1: Velocità Turbina 1 (g/s);V1: Velocità  Turbina 1 (g/s);KO
+&V2_vitesse_turbine_2;V2 : Vitesse Turbine 2 (tr/s);S2 : Speed Turbine 2 (tr/s);V2: Velocità Turbina 2 (g/s);V2: Velocità  Turbina 2 (g/s);KO
+&VALID_NOM_FIC;Validation du nom de fichier;Filename Validation;Validazione del nome del file;Validazione del nome del file;OK
+&Validity;Validité;Validity;Validità;Validità ;KO
+&Valider;Valider;Valid;Convalida;Convalida;OK
+&VALIDER;Valider;Valid;Convalida;Convalida;OK
+&VERIF_DISQUETTE_INSEREE;Vérifiez que la disquette est bien insérée;Check the floppy disk;Controlla che il dischetto è corretamente inserito;Controlla che il dischetto è corretamente inserito;OK
+&VERIF_FORMAT_NOM_CHAMP;Placer le curseur sur le nom du champ pour vérifier le format;Place the cursor on the name of the field to check the format;Spostare il cursore sul nome del campo per verificare il formato;Spostare il cursore sul nome del campo per verificare il formato;OK
+&VERIF_FORMAT_OBJ_CONF;Placer le curseur sur l'objet de configuration pour vérifier le format;Place the cursor on the settings object  to check the format;Spostare il cursore sul oggetto di configurazione per verificare il formato;Spostare il cursore sul oggetto di configurazione per verificare il formato;OK
+&VERROU_APPLI;Verrouillage de l'application;Lock the program;Lock il SW;Lock il SW;OK
+&Verrouiller;Verrouiller;Lock;Lock;Lock;OK
+&Verrouiller_M;Verrouiller;Lock;Lock;Lock;OK
+&Vide;Vide;Empty;Vuoto;Vuoto;OK
+&Visualiser;Visualiser;Display;Visualizzare;Visualizzare;OK
+&Visualiser_Arch_Externe_M;Visualiser archive externe;Display External Recording;Visualizzare la registrazione esterna;Visualizzare la registrazione esterna;OK
+&Visualiser_Arch_Local_M;Visualiser archive courante;Display Current Recording;Visualizzare la registrazione attuale;Visualizzare la registrazione attuale;OK
+&Visualiser_Arch_TSDF_M;Visualiser archive TSDF;Display TSDF Recording;Visualizzare la registrazione TSDF;Visualizzare la registrazione TSDF;OK
+&Visualiser_M;Visualiser;Display;Visualizzare;Visualizzare;OK
+&VISU_POSITION_STATIONS;Visualisation : Position des stations;Display : Location of Stations;Visualizzazione: Posizione delle Stazione;Visualizzazione: Posizione delle Stazione;OK
+&ZoomIn;Zoom avant;Zoom In;Zoom in avanti;Zoom in avanti;OK
+&ZoomOut;Zoom arrière;Zoom Out;Zoom in indietro;Zoom in indietro;OK
+&Zoom_Relay;Zoom Relay;Zoom Relay;Zoom Relay;Zoom Relay;OK

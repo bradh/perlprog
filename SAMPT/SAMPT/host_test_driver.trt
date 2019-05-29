@@ -1,0 +1,26 @@
+-- --------------------------------------------------------------
+-- This Examples File Is Automaticly Generated To Be A Model For
+-- The host_test_driver.trc File.
+--
+-- All CSCs Are Listed Here, with the current setting.
+-- Current Level Choice Is : [DETAILED_DEBUG | NORMAL_DEBUG | EVENT | WARNING | MINOR | MAJOR | UNMASKABLE]
+-- ---------------------------------------------
+--  CSC                                    Level
+-- ---------------------------------------------
+--
+-- Group :  1
+-- CSC_RTE                                 EVENT
+-- CSC_OS                                  EVENT
+-- RTE_ACTIVE_QUEUE_BUS                    EVENT
+--
+-- Group :  2
+-- XML_DICTIONNARY_IF                      EVENT
+--
+-- Group :  10
+-- CORE                                    EVENT
+-- SUT_IO                                  EVENT
+-- SCENARIO_IO                             EVENT
+-- SIMULATION                              EVENT
+-- MESSAGE_DATATION                        EVENT
+-- SYNCHRO                                 EVENT
+-- FLOW_TRACER                             EVENT
