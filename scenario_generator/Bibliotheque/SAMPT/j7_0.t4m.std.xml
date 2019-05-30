@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type='text/xsl' href='std.xsl'?><test>
+<testTitle>j7_0</testTitle>
+<testInterfacesCount>1</testInterfacesCount>
+<testInterface>FxM_BC7_RevA</testInterface>
+<step idNumber="0">
+<stepName>Step 0</stepName>
+<message direction="in" interface="FxM_BC7_RevA">
+<messageName>FIM01</messageName>
+<messageDate>00:00:00.100</messageDate>
+<messageMask>mask</messageMask>
+</message>
+</step>
+</test>
