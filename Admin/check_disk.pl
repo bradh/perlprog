@@ -2,7 +2,7 @@
 # Disk Monitor
 # USAGE: dmon <mount> <percent>
 # e.g.: dmon /usr 80
-@notify_cmd = ‘/usr/platform/SUNW,Netra x40/sbin/scadm’;
+@notify_cmd = ‘/usr/platform/SUNW,Netra x40/sbin/scadm;
 if (scalar(@ARGV) != 2)
 {
 print STDERR "USAGE: dmon.pl <mount_point> <percentage>\n";
